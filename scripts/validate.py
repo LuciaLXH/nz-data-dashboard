@@ -1,12 +1,12 @@
-"""W1-minimal validation: sanity checks on data/processed/* + run record.
+"""W1-minimal validation: schema + sanity checks on data/processed/*.
 
 Writes data/processed/_runs.jsonl (one line per run; the W3 Data Health panel
 expands this with null rates / schema version / 20-run colour bars).
 
-W1 checks (record-only, graceful — see engineering decision "缺失率仅记录不硬失败"):
+Checks (record-only, graceful — see engineering decision "缺失率仅记录不硬失败"):
+  - JSON Schema (schemas/*.schema.json) for flow / regions / population
   - flow: ≥1 council with data, ≥1 site, ≥1 point
   - regions: 6 councils present
-  - population: status file present (may be ok=false while ADE is down)
 """
 from __future__ import annotations
 
@@ -15,12 +15,28 @@ import os
 import sys
 from datetime import datetime, timezone
 
+import jsonschema
 
-def _check(checks: list[tuple[str, bool]]) -> tuple[int, int]:
-    passed = sum(1 for _, ok in checks if ok)
-    for name, ok in checks:
-        print(f"  {'✅' if ok else '⚠️'} {name}")
-    return passed, len(checks)
+HERE = os.path.dirname(os.path.abspath(__file__))
+SCHEMAS = {
+    "flow": "schemas/flow.schema.json",
+    "regions": "schemas/regions.schema.json",
+    "population": "schemas/population.schema.json",
+}
+
+
+def _load_schema(name: str) -> dict:
+    path = os.path.join(HERE, "..", SCHEMAS[name])
+    with open(path, encoding="utf-8") as f:
+        return json.load(f)
+
+
+def _schema_check(dataset: str, data: dict) -> tuple[bool, str]:
+    try:
+        jsonschema.validate(data, _load_schema(dataset))
+        return True, "schema ok"
+    except jsonschema.ValidationError as e:
+        return False, f"schema: {e.message}"
 
 
 def main() -> int:
@@ -31,16 +47,28 @@ def main() -> int:
 
     n_sites = sum(len(v.get("sites", [])) for v in flow.get("councils", {}).values())
     n_points = sum(s.get("n_points", 0) for s in flow.get("status", {}).values())
+
+    flow_ok, flow_msg = _schema_check("flow", flow)
+    regions_ok, regions_msg = _schema_check("regions", regions)
+    pop_ok, pop_msg = _schema_check("population", population)
+
     checks = [
-        ("flow: at least one council with data", bool(flow.get("councils"))),
+        ("flow: JSON Schema", flow_ok),
+        (f"flow: at least one council with data ({flow_msg if not flow_ok else 'ok'})",
+         flow_ok and bool(flow.get("councils"))),
         ("flow: at least one site", n_sites >= 1),
         ("flow: at least one point", n_points >= 1),
+        ("regions: JSON Schema", regions_ok),
         ("regions: 6 councils mapped", len(regions.get("regions", [])) == 6),
+        ("population: JSON Schema", pop_ok),
         ("population: status recorded (may be degraded)", "status" in population),
     ]
-    passed, total = _check(checks)
-    degraded = [c for c in flow.get("status", {}).values() if not c.get("ok")]
+    passed, total = 0, len(checks)
+    for name, ok in checks:
+        passed += 1 if ok else 0
+        print(f"  {'✅' if ok else '⚠️'} {name}")
 
+    degraded = [c for c in flow.get("status", {}).values() if not c.get("ok")]
     run = {
         "utc": datetime.now(timezone.utc).isoformat(),
         "schema_version": 1,
