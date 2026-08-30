@@ -67,7 +67,16 @@
 - 求职会话恢复：用 CV 工作区的 `.agents/context_checkpoint.md`
 
 ## 关键文档
-- 执行计划：`docs/PLAN.md`（W0–W4 清单，W1 进度已更新）
+- 执行计划：`docs/PLAN.md`（W0–W4 清单，W1 完成、W2 进行中）
 - 数据源注册表/实测：`docs/W1-data-sources.md`；浏览器验证：`docs/BROWSER-TESTS.md`
+- **审查复盘/讲解素材：`docs/REVIEW-JOURNEY.md`**（用户问题与思考轨迹、三步验证法、面试要点——讲解项目/简历/面试前重读）
 - 评审原件：`docs/review/`；分析大纲：`ANALYSIS.md`
 - 流量取数实测结论：HBRC 3 站 × 5 年日流量、ORC 8 站 × ~10 年日流量（2026-08-30，0 错误）
+
+## W2 进度（2026-08-30）
+- ✅ DuckDB 接入（transform.py 经 DuckDB 跑 sql/；Makefile 用 .venv python）
+- ✅ sql/01 人口增长（YoY + 5yr CAGR → population_growth.json）
+- ✅ sql/02 供需压力（**全量 NEPR 269 系统**，覆盖 68–96%；计量 % 不在 NEPR 单位数据中，已移出 SQL，精选版见 water_demand.json）
+- ✅ ORG_REGION 映射数值验证（TA 求和 = RC；残差为 Taupō→BOP / Waitaki→Canterbury 跨区效应）
+- ⬜ sql/03 流量百分位 → Leaflet 地图 + 2 图 + 3 条发现 → W3/W4
+- 校验：12/12；本地提交至 9c252b2（12 提交已推送 GitHub）
