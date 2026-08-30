@@ -1,6 +1,6 @@
 # 项目检查点 · NZ 数据仪表盘（nz-data-dashboard）
 
-*生成于 2026-08-30（下午更新）。本文件供「以项目目录为工作区」的会话恢复上下文（直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」）。*
+*生成于 2026-08-30（晚更新：**W2 完成，进入 W3**）。本文件供「以项目目录为工作区」的会话恢复上下文（直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」）。*
 *求职（career-ops）相关内容在 CV 工作区：`/Users/liuxiaohan/NZ-Jobseeking/2026 JOB/CV/.agents/context_checkpoint.md`（绝对路径，需要时跨区读取，无需写权限）。*
 
 ## 项目定位（已定稿，勿改）
@@ -39,8 +39,8 @@
   - ✅ **GitHub repo 已建并推送**：`github.com/LuciaLXH/nz-data-dashboard`（private）+ `STATS_NZ_API_KEY` secret 已配置；**8 个提交已推送**（HEAD=49de94d）；已扫描确认 key/token 从未进入 git 历史
   - ✅ **W1 全部完成**（2026-08-30）：流量（HBRC+ORC）、人口（6 council×2018–2025）、NPR/NEPR（water_demand.json）、区域映射（官方 REGC 验证）、边界 4.9KB、`make data` 8/8
   - ⏳ W1.5：LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量（SurfacewaterZones?pageId=25991 返回 zone Id=29298 等，但 FlowSites/flowstats?pageId=<zone> 仍返回 []；**ORC 当前平台=A QWebPortal** data.orc.govt.nz）
-- **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**（人口 2018–2025 与 NPR/NEPR 需求数据已齐，W2 可直接开工；**2026-08-30 晚基本完成**，见下 W2 进度）
-- **W3**：工程+包装（_runs.jsonl/Data Health/6 测试/Attribution/15s GIF/转公开开 Pages/验证 key 不进历史）—— 验收 = 移动端 <3s 无横滚
+- **W2 ✅ 完成**（2026-08-30 晚）：DuckDB + sql/01-03 + 静态站（地图/2 图/consents/发现卡）+ 3 条发现 + STORY-3MIN.md；定位调整（sql/03=旁证层，主线 6/6 NEPR）；本地提交 **45f06e8 → bde5ab8 → 3498ca1**（HEAD=3498ca1，含 3 轮视觉迭代，详见 W2 进度）
+- **W3 ⏳（当前）**：工程+包装 —— 见下方「W3 清单」
 - **W4**：LinkedIn 曝光 + **CV 联动**（见下）
 
 ## 已核实事实（勿虚构）
@@ -53,10 +53,10 @@
 - **Hilltop 编码**：拒绝 `+` 空格（"No Measurements available"），必须 `%20`；`Interval=P1D` 无效 → 客户端日聚合
 
 ## 环境
-- Python 3.12.2；openpyxl 3.1.5；pandas 2.2.3；requests 2.32.3；jsonschema 4.23.0；**duckdb 未安装**（W2 需要时 `pip install duckdb`）
+- Python 3.12.2；openpyxl 3.1.5；pandas 2.2.3；requests 2.32.3；jsonschema 4.23.0；**duckdb 已装（.venv）**
 - **`.venv` 项目虚拟环境**（--system-site-packages，gitignored）：pynacl 已装（建仓脚本用）；pip 直接装包会写 ~/.local 被沙箱拦，**以后装包用 `.venv/bin/pip`**
 - mapshaper 0.7.55 装在 `tools/`（npm --prefix，gitignored）
-- git：user.name=xli246，email=xli246@uclive.ac.nz；本地分支 main（HEAD=49de94d，8 提交已推送）；**GitHub 用户 = LuciaLXH**，repo 私有 + secret 已配 + 推送完成（2026-08-30）；token 用完即 revoke
+- git：user.name=xli246，email=xli246@uclive.ac.nz；本地分支 main（**HEAD=3498ca1**，13 提交；45f06e8/bde5ab8/3498ca1 为 W2 三连，**推送需 GH token，尚未推送**）；**GitHub 用户 = LuciaLXH**，repo 私有 + secret 已配（2026-08-30）；token 用完即 revoke
 - `.env`：`STATS_NZ_API_KEY`（gitignored，勿外传勿提交；已存 GH Secret，**key 值从未出现在 git 历史**）
 - 沙箱注意：本目录为会话工作区时，**项目内写入免审批**；项目外（如 CV 工作区）写入需 danger-full-access 审批
 
@@ -66,26 +66,34 @@
 - 求职会话恢复：用 CV 工作区的 `.agents/context_checkpoint.md`
 
 ## 关键文档
-- 执行计划：`docs/PLAN.md`（W0–W4 清单，W1 完成、W2 进行中）
+- 执行计划：`docs/PLAN.md`（W0–W4 清单，**W1/W2 完成、W3 进行中**）
 - 数据源注册表/实测：`docs/W1-data-sources.md`；浏览器验证：`docs/BROWSER-TESTS.md`
 - **审查复盘/讲解素材：`docs/REVIEW-JOURNEY.md`**（用户问题与思考轨迹、三步验证法、面试要点——讲解项目/简历/面试前重读）
 - 评审原件：`docs/review/`；分析大纲：`ANALYSIS.md`
 - 流量取数实测结论：HBRC 3 站 × 5 年日流量、ORC 8 站 × ~10 年日流量（2026-08-30，0 错误）
 
-## W2 进度（2026-08-30 晚，含定位调整）
-- ✅ DuckDB 接入（transform.py 经 DuckDB 跑 sql/；Makefile 用 .venv python）
-- ✅ sql/01 人口增长（YoY + 5yr CAGR → population_growth.json）
-- ✅ sql/02 供需压力（**全量 NEPR 269 系统**，覆盖 68–96%；计量 % 不在 NEPR 单位数据中，已移出 SQL，精选版见 water_demand.json）
-- ✅ ORG_REGION 映射数值验证（TA 求和 = RC；残差为 Taupō→BOP / Waitaki→Canterbury 跨区效应）
-- ✅ sql/03 流量同期百分位（11 站 → flow_percentile.json；同期窗口跨年按月-日对齐 `dayofyear(date_trunc('year',l.d)+(f.d-date_trunc('year',f.d)))`，排除最新测量本身；独立 pandas 交叉验证一致；<5 历史日=insufficient；`stale_days` 标记 ORC）
-- ✅ **定位调整（用户拍板）**：sql/03 = **旁证/示意层**（精选站点 2/6 大区），**主线押在 6/6 的 NEPR 需求侧**（sql/01×sql/02 → 2030 投影压力排序）。ORC 站点如实标注「公共记录止 2021-04」，不以「当前」示人。
-- ✅ 站点坐标 → `data/ref/flow_sites.json`（8 站有坐标：5 verified=LAWA xlsx / 3 approx=riverapp meta+OSM；3 站无公开坐标只入表不画标记）
-- ✅ **静态站** `site/`（index.html+app.js+style.css，无构建步）：Leaflet choropleth（6 区域按 2030 投影需求增长着色）+ 流量站标记（band 色 + stale 标注）+ 图1 气泡（增长×L/p/d，size=日需水量，color=漏损%）+ 图2 现vs2030 需求柱+漏损线 + 发现卡 + 数据健康表 + 免责块；`make site` 复制 data→site/data/（site/data/ 已 gitignore）
-- ✅ **3 条发现落地**（数字见下）→ ANALYSIS.md + README TL;DR + site Key Findings；故事脚本 `docs/STORY-3MIN.md`
-- ✅ 校验 **14/14**（新增 flow_percentile schema+11 站两项）
-- **关键数字（2026-08-30 run）**：HB 609.7 vs Auckland 269.7 L/p/d（2.3×；HB 省效≈48,800 m³/d≈6 区 2030 增长的 62%）；漏损 298,671 m³/d = 22.5% 供水量（Canterbury 86,832 m³/d = 3.5× 自身 2030 增长；≈110 万人 Auckland 用量）；2030 投影需求 +79,336 m³/d (+6.0%)；Canterbury +8.1% / Waikato +7.2% / Auckland +6.1%（绝对量最大 +29.8k）/ Otago +4.1% / Southland +2.5% / HB +1.1%；流量 Fernhill 9.5th / Mohaka 31.1th / Tukituki 40.5th（2026-08-30）
-- ⏳ W1.5 关键线索（已实测）：**ORC 当前流量平台 = AQWebPortal**（data.orc.govt.nz，本沙箱 DNS 不通）；LAWA Umbraco API 已摸清调用链：region pageId（Otago=26001）→ `mapservice/SurfacewaterZones?pageId=` 返回 zone Id（Amisfield=31611/Arrow=31610/Bannock=31605/Benger=31593/Cardrona=31564/Taieri=31355）→ `mapservice/FlowSites?pageId=<zone>` 稀疏（LAWA 只公开部分站）→ `waterquantityservice/flowstats` / `sensorservice/getLatestSample`（zone 级返回 null，需 site 级 pageId）；riverapp.net 站页有 meta 坐标且实时发布 ORC 流量
-- ✅ **LAWA 取水许可数据打通**（2026-08-30）：`waterquantityservice/waterusage?pageId=<region>&type=region` → `data/ref/water_consents.json`（6 大区 consented volume 份额：Canterbury Irrigation **82.48%**/Auckland Drinking 62.7%/Southland Stock 38.9% 等；**Otago 无数据** hasConsents=false；consent=授权非实取；API 不发布数据年份）。站点新增「Water consents」节：100% 堆叠条（5 区）+ 每区 LAWA 链接
-- ✅ **site/ 改版（用户批准 A+B+C）**：sticky 导航；地图双栏（左图+右站点列表，点击联动 flyTo/highlight）；choropleth 指标切换（2030 增长/人均用水/漏损）；**配色语义统一「红=警惕」**（flow 改 Okabe-Ito 红/琥珀/绿，移除蓝色；region 红渐变=压力大）；发现卡可点击跳转证据；Method 改 details 折叠；Data Health 移页脚细条；as-of 时间戳；色盲安全色板；ORC stale 站灰色标记+「历史记录」标注
-- ⬜ W2 验收（3 分钟故事，docs/STORY-3MIN.md 已写，待演示）→ W3（工程+包装）
-- 校验：**14/14**；本地改动未提交（用户选择先看结果），上次提交 HEAD=dd76263
+## W2 完成（2026-08-30 晚；HEAD=3498ca1）
+- ✅ DuckDB 接入；sql/01 人口增长；sql/02 供需压力（**全量 NEPR 269 系统**，覆盖 68–96%；计量 % 不在 NEPR 单位数据，见 water_demand.json）；ORG_REGION 映射数值验证
+- ✅ sql/03 流量同期百分位（11 站；窗口跨年按月-日对齐 `dayofyear(date_trunc('year',l.d)+(f.d-date_trunc('year',f.d)))`，排除最新测量；pandas 交叉验证一致；`stale_days` 标记 ORC）
+- ✅ **定位（用户拍板）**：sql/03 = 旁证层（2/6 大区精选站）；主线 = 6/6 NEPR 需求侧。ORC 如实标「公共记录止 2021-04」
+- ✅ 站点坐标 `data/ref/flow_sites.json`（8 站有坐标：5 verified=LAWA xlsx / 3 approx=riverapp+OSM；3 站无坐标只入表）
+- ✅ **取水许可** `data/ref/water_consents.json`（LAWA `waterusage?pageId=<region>&type=region`，CC BY 4.0；Canterbury Irrigation 82.48% / Auckland Drinking 62.7% / Southland Stock 38.9%；**Otago 无数据**；consent=授权非实取；API 无数据年份）
+- ✅ 静态站 `site/`（无构建步；`make site` 复制 data→site/data/，gitignored）：左侧导航（透明+绿色字，标题栏下方，sticky）；板块切换（初始仅标题+Findings）；地图双栏（choropleth 指标切换 2030增长/人均/漏损 + 区域/站点列表联动）；**配色语义统一红=警惕**（Okabe-Ito 红/琥珀/绿，色盲安全）；consents 100% 堆叠条 + LAWA 链接；发现卡（484px 正方形 auto-fit 3/2/1 列，悬停 1.2 倍+邻卡变淡，字号 1.1 倍居中，≤10 词总结句，图片位 `site/img/fig1-3.png` 作背景图）；Method details 折叠；页脚 Data Health 细条；as-of 时间戳
+- ✅ 3 条发现（ANALYSIS.md + README TL;DR + site）；`docs/STORY-3MIN.md`（3 分钟故事脚本）
+- ✅ 校验 **14/14**；提交 **45f06e8**（W2 主体）→ **bde5ab8**（布局 v3+发现卡）→ **3498ca1**（484px 方卡+亮银标题）；**未推送**
+- **关键数字（2026-08-30 run）**：HB 609.7 vs Auckland 269.7 L/p/d（2.3×；HB 省效≈48,800 m³/d≈62% 6 区 2030 增长）；漏损 298,671 m³/d=22.5%（Canterbury 86,832 m³/d=3.5× 自身增长；≈110 万人用量）；2030 投影 +79,336 m³/d (+6.0%)；Canterbury +8.1%/Waikato +7.2%/Auckland +6.1%（绝对量最大 +29.8k）/Otago +4.1%/Southland +2.5%/HB +1.1%；流量 Fernhill 9.5th/Mohaka 31.1th/Tukituki 40.5th（2026-08-30）
+- ⏳ **视觉待办（用户明确"后面再慢慢调整"，不阻塞 W3）**：用户补图 `site/img/fig1-3.png`（发现卡背景图，命名对即可显示）；其余微调意见随时回来改
+- ⏳ **W1.5 线索（已实测，供后续）**：ORC 当前平台 = AQWebPortal（data.orc.govt.nz，本沙箱 DNS 不通）；LAWA Umbraco API：region pageId（Otago=26001）→ `mapservice/SurfacewaterZones?pageId=`（Amisfield=31611/Arrow=31610/Bannock=31605/Benger=31593/Cardrona=31564/Taieri=31355）→ `FlowSites?pageId=<zone>` 稀疏 → `waterquantityservice/flowstats`/`sensorservice/getLatestSample` zone 级 null；riverapp 站页有 meta 坐标+实时 ORC 流量
+
+## W3 清单（当前阶段，PLAN.md 为准）
+- [ ] GH Actions 定时节奏：流量 24h→6h、水质/人口月度（workflows/refresh.yml 已脚手架，需调 cron + 部署）
+- [ ] retry + 指数退避 + 缓存上次成功 + 优雅降级（fetch 脚本已有部分，需统一）
+- [ ] **Data Health 面板完善**（站点页脚已有细条版；升级为 last run/行数/空值率/schema ver/近 20 次色条）
+- [ ] 时间：UTC 存储、Pacific/Auckland 显示（DST 测试）
+- [ ] **6 个 pytest**：schema · units · region names · DST boundary · missing-value propagation · percentile（tests/ 尚无，Makefile test 目标已引用）
+- [ ] README 定稿 + **15s GIF**（docs/demo.gif，README 已引用）
+- [ ] Attribution 块（页脚+README 已有，核对完整）
+- [ ] keepalive workflow（已脚手架）+「pipeline paused」回退文案
+- [ ] 数据不进 git（已做到）→ CI 构建 + **deploy-pages 部署**
+- [ ] **转公开 + 开 Pages + 验证 key 从未进历史**（token 流程，用户执行或建仓脚本）
+- 验收：移动端 <3s、无横滚、链接全通
