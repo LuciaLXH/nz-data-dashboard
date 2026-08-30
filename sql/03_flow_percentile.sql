@@ -1,0 +1,4 @@
+-- 03_flow_percentile.sql
+-- Current river flow vs same-week historical percentile (Low/Normal/High).
+-- Source: council Hilltop servers.
+-- TODO(W2): implement against DuckDB.

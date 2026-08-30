@@ -1,0 +1,6 @@
+# Python deps for the data pipeline (W1).
+# IO/orchestration only — business logic lives in sql/ (DuckDB) from W2.
+requests==2.32.3
+openpyxl==3.1.5
+pandas==2.2.3
+# duckdb==1.1.1   # W2: enable when transform moves to DuckDB
