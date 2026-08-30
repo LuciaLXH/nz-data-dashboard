@@ -14,8 +14,12 @@ data:                     ## run the full extract/transform/validate pipeline
 	$(PYTHON) scripts/transform.py
 	$(PYTHON) scripts/validate.py
 
-site:                     ## build the static site into site/ (W2)
-	@echo "TODO(W2): build ECharts + Leaflet site from data/processed/*.json"
+site: data                ## build the static site into site/ (W2)
+	mkdir -p site/data
+	cp data/processed/*.json data/processed/*.jsonl site/data/
+	cp data/ref/boundaries_regions_simple.geojson site/data/boundaries.geojson
+	cp data/ref/flow_sites.json data/ref/water_consents.json site/data/
+	@echo "site: built into site/ — run 'make serve' to preview"
 
 test:                     ## pytest: schema, units, region names, DST, nulls
 	$(PYTHON) -m pytest -q

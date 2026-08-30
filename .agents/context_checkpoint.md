@@ -38,9 +38,8 @@
   - ✅ **`make data` 全绿**（8/8 含 schema；流量 11 站 + 人口 6 区域 + 区域 6）
   - ✅ **GitHub repo 已建并推送**：`github.com/LuciaLXH/nz-data-dashboard`（private）+ `STATS_NZ_API_KEY` secret 已配置；**8 个提交已推送**（HEAD=49de94d）；已扫描确认 key/token 从未进入 git 历史
   - ✅ **W1 全部完成**（2026-08-30）：流量（HBRC+ORC）、人口（6 council×2018–2025）、NPR/NEPR（water_demand.json）、区域映射（官方 REGC 验证）、边界 4.9KB、`make data` 8/8
-  - ⏳ W1.5：LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量（SurfacewaterZones?pageId=25991 返回 zone Id=29298 等，但 FlowSites/flowstats?pageId=<zone> 仍返回 []）
-- **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**（人口 2018–2025 与 NPR/NEPR 需求数据已齐，W2 可直接开工）
-- **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**
+  - ⏳ W1.5：LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量（SurfacewaterZones?pageId=25991 返回 zone Id=29298 等，但 FlowSites/flowstats?pageId=<zone> 仍返回 []；**ORC 当前平台=A QWebPortal** data.orc.govt.nz）
+- **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**（人口 2018–2025 与 NPR/NEPR 需求数据已齐，W2 可直接开工；**2026-08-30 晚基本完成**，见下 W2 进度）
 - **W3**：工程+包装（_runs.jsonl/Data Health/6 测试/Attribution/15s GIF/转公开开 Pages/验证 key 不进历史）—— 验收 = 移动端 <3s 无横滚
 - **W4**：LinkedIn 曝光 + **CV 联动**（见下）
 
@@ -73,10 +72,20 @@
 - 评审原件：`docs/review/`；分析大纲：`ANALYSIS.md`
 - 流量取数实测结论：HBRC 3 站 × 5 年日流量、ORC 8 站 × ~10 年日流量（2026-08-30，0 错误）
 
-## W2 进度（2026-08-30）
+## W2 进度（2026-08-30 晚，含定位调整）
 - ✅ DuckDB 接入（transform.py 经 DuckDB 跑 sql/；Makefile 用 .venv python）
 - ✅ sql/01 人口增长（YoY + 5yr CAGR → population_growth.json）
 - ✅ sql/02 供需压力（**全量 NEPR 269 系统**，覆盖 68–96%；计量 % 不在 NEPR 单位数据中，已移出 SQL，精选版见 water_demand.json）
 - ✅ ORG_REGION 映射数值验证（TA 求和 = RC；残差为 Taupō→BOP / Waitaki→Canterbury 跨区效应）
-- ⬜ sql/03 流量百分位 → Leaflet 地图 + 2 图 + 3 条发现 → W3/W4
-- 校验：12/12；本地提交至 9c252b2（12 提交已推送 GitHub）
+- ✅ sql/03 流量同期百分位（11 站 → flow_percentile.json；同期窗口跨年按月-日对齐 `dayofyear(date_trunc('year',l.d)+(f.d-date_trunc('year',f.d)))`，排除最新测量本身；独立 pandas 交叉验证一致；<5 历史日=insufficient；`stale_days` 标记 ORC）
+- ✅ **定位调整（用户拍板）**：sql/03 = **旁证/示意层**（精选站点 2/6 大区），**主线押在 6/6 的 NEPR 需求侧**（sql/01×sql/02 → 2030 投影压力排序）。ORC 站点如实标注「公共记录止 2021-04」，不以「当前」示人。
+- ✅ 站点坐标 → `data/ref/flow_sites.json`（8 站有坐标：5 verified=LAWA xlsx / 3 approx=riverapp meta+OSM；3 站无公开坐标只入表不画标记）
+- ✅ **静态站** `site/`（index.html+app.js+style.css，无构建步）：Leaflet choropleth（6 区域按 2030 投影需求增长着色）+ 流量站标记（band 色 + stale 标注）+ 图1 气泡（增长×L/p/d，size=日需水量，color=漏损%）+ 图2 现vs2030 需求柱+漏损线 + 发现卡 + 数据健康表 + 免责块；`make site` 复制 data→site/data/（site/data/ 已 gitignore）
+- ✅ **3 条发现落地**（数字见下）→ ANALYSIS.md + README TL;DR + site Key Findings；故事脚本 `docs/STORY-3MIN.md`
+- ✅ 校验 **14/14**（新增 flow_percentile schema+11 站两项）
+- **关键数字（2026-08-30 run）**：HB 609.7 vs Auckland 269.7 L/p/d（2.3×；HB 省效≈48,800 m³/d≈6 区 2030 增长的 62%）；漏损 298,671 m³/d = 22.5% 供水量（Canterbury 86,832 m³/d = 3.5× 自身 2030 增长；≈110 万人 Auckland 用量）；2030 投影需求 +79,336 m³/d (+6.0%)；Canterbury +8.1% / Waikato +7.2% / Auckland +6.1%（绝对量最大 +29.8k）/ Otago +4.1% / Southland +2.5% / HB +1.1%；流量 Fernhill 9.5th / Mohaka 31.1th / Tukituki 40.5th（2026-08-30）
+- ⏳ W1.5 关键线索（已实测）：**ORC 当前流量平台 = AQWebPortal**（data.orc.govt.nz，本沙箱 DNS 不通）；LAWA Umbraco API 已摸清调用链：region pageId（Otago=26001）→ `mapservice/SurfacewaterZones?pageId=` 返回 zone Id（Amisfield=31611/Arrow=31610/Bannock=31605/Benger=31593/Cardrona=31564/Taieri=31355）→ `mapservice/FlowSites?pageId=<zone>` 稀疏（LAWA 只公开部分站）→ `waterquantityservice/flowstats` / `sensorservice/getLatestSample`（zone 级返回 null，需 site 级 pageId）；riverapp.net 站页有 meta 坐标且实时发布 ORC 流量
+- ✅ **LAWA 取水许可数据打通**（2026-08-30）：`waterquantityservice/waterusage?pageId=<region>&type=region` → `data/ref/water_consents.json`（6 大区 consented volume 份额：Canterbury Irrigation **82.48%**/Auckland Drinking 62.7%/Southland Stock 38.9% 等；**Otago 无数据** hasConsents=false；consent=授权非实取；API 不发布数据年份）。站点新增「Water consents」节：100% 堆叠条（5 区）+ 每区 LAWA 链接
+- ✅ **site/ 改版（用户批准 A+B+C）**：sticky 导航；地图双栏（左图+右站点列表，点击联动 flyTo/highlight）；choropleth 指标切换（2030 增长/人均用水/漏损）；**配色语义统一「红=警惕」**（flow 改 Okabe-Ito 红/琥珀/绿，移除蓝色；region 红渐变=压力大）；发现卡可点击跳转证据；Method 改 details 折叠；Data Health 移页脚细条；as-of 时间戳；色盲安全色板；ORC stale 站灰色标记+「历史记录」标注
+- ⬜ W2 验收（3 分钟故事，docs/STORY-3MIN.md 已写，待演示）→ W3（工程+包装）
+- 校验：**14/14**；本地改动未提交（用户选择先看结果），上次提交 HEAD=dd76263

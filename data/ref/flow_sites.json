@@ -1,0 +1,18 @@
+{
+  "schema_version": 1,
+  "compiled_utc": "2026-08-30T06:00:00+00:00",
+  "note": "Coordinates for the 11 curated Hilltop flow sites (sql/03). precision=verified: council-published coordinates from the LAWA bulk datasets held in data/raw/lawa/ (CC BY 4.0); precision=approx: best available third-party source (riverapp.net station metadata — aggregates council telemetry; or OpenStreetMap waterway geometry). Sites with no public coordinates found have lat/lon null and are listed in the site table but NOT drawn on the map. This is a curated sample, NOT the full monitoring network of any council (see docs/W1-data-sources.md).",
+  "sites": [
+    {"council": "hbrc", "site": "Ngaruroro River at Fernhill", "lat": -39.586734, "lon": 176.760320, "precision": "verified", "source": "LAWA river water quality dataset (CouncilSiteID 799)"},
+    {"council": "hbrc", "site": "Tukituki River at Red Bridge", "lat": -39.715466, "lon": 176.927896, "precision": "verified", "source": "LAWA river water quality dataset (CouncilSiteID 1382)"},
+    {"council": "hbrc", "site": "Mohaka River at Raupunga", "lat": -39.072979, "lon": 177.129265, "precision": "verified", "source": "LAWA river water quality dataset (CouncilSiteID 749)"},
+    {"council": "orc", "site": "Arrow at Cornwall street d/s", "lat": -44.947108, "lon": 168.845843, "precision": "verified", "source": "LAWA recreational water quality dataset"},
+    {"council": "orc", "site": "Benger burn at Booths", "lat": -45.650500, "lon": 169.339026, "precision": "verified", "source": "LAWA river water quality dataset (CouncilSiteID EX154)"},
+    {"council": "orc", "site": "3 OClock Stream at Lambhill", "lat": -45.688854, "lon": 170.330569, "precision": "approx", "source": "riverapp.net station metadata (aggregates council telemetry)"},
+    {"council": "orc", "site": "Amisfield Burn at Top Take u/s", "lat": -44.919423, "lon": 169.202527, "precision": "approx", "source": "riverapp.net station metadata (aggregates council telemetry)"},
+    {"council": "orc", "site": "Bannock Burn at Cairnmuir Road 100m upstream", "lat": -45.087990, "lon": 169.173674, "precision": "approx", "source": "OpenStreetMap waterway 'Bannock Burn' (Bannockburn)"},
+    {"council": "orc", "site": "Benger burn at SH8", "lat": null, "lon": null, "precision": null, "source": "no public coordinates found"},
+    {"council": "orc", "site": "Boundary Creek at Top Race u/s", "lat": null, "lon": null, "precision": null, "source": "no public coordinates found"},
+    {"council": "orc", "site": "Branch Burn at Cardrona Valley", "lat": null, "lon": null, "precision": null, "source": "no public coordinates found"}
+  ]
+}

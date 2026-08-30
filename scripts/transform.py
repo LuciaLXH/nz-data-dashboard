@@ -13,7 +13,7 @@ import glob
 import json
 import os
 import sys
-from datetime import datetime, timezone
+from datetime import date, datetime, timezone
 
 import duckdb
 
@@ -21,6 +21,7 @@ SQL_OUTPUTS = [
     # (sql file, output json name, expected top-level key of the result rows)
     ("sql/01_region_population_growth.sql", "population_growth.json", "rows"),
     ("sql/02_supply_per_capita.sql", "supply_per_capita.json", "rows"),
+    ("sql/03_flow_percentile.sql", "flow_percentile.json", "rows"),
 ]
 
 REGION_ORDER = ["auckland", "waikato", "hawkes_bay", "canterbury", "otago", "southland"]
@@ -144,11 +145,31 @@ def _nepr_network_rows() -> list[dict]:
     return sub[sub["region"].notna()].to_dict("records")
 
 
-def _run_sql_analyses(population_raw: dict) -> list[dict]:
+def _flow_rows(flow: dict) -> list[dict]:
+    """Flatten the W1 flow snapshot → one DuckDB row per site-day."""
+    rows = []
+    for council, info in flow.get("councils", {}).items():
+        for site in info.get("sites", []):
+            units = site.get("units", "")
+            for day, value in site.get("series", []):
+                rows.append({
+                    "council": council,
+                    "site": site["site"],
+                    "date": day,
+                    "flow": value,
+                    "units": units,
+                })
+    return rows
+
+
+def _run_sql_analyses(flow: dict, population_raw: dict) -> list[dict]:
     """Run each sql/ analysis against DuckDB; returns [{name, key, sql_file, rows}]."""
     import pandas as pd
 
     con = duckdb.connect()
+    flow_rows = _flow_rows(flow)
+    if flow_rows:
+        con.register("flow", pd.DataFrame(flow_rows))
     rows = _population_records(population_raw)
     if rows:
         con.register("population", pd.DataFrame(rows))
@@ -160,7 +181,18 @@ def _run_sql_analyses(population_raw: dict) -> list[dict]:
     for sql_file, out_name, key in SQL_OUTPUTS:
         sql = open(sql_file, encoding="utf-8").read()
         rel = con.execute(sql)
-        result_rows = [dict(zip([d[0] for d in rel.description], r)) for r in rel.fetchall()]
+        cols = [d[0] for d in rel.description]
+
+        def _jsonable(v):
+            # DuckDB DATE/TIMESTAMP come back as date/datetime → ISO strings
+            if isinstance(v, (date, datetime)):
+                return v.isoformat()
+            return v
+
+        result_rows = [
+            {c: _jsonable(v) for c, v in zip(cols, r)}
+            for r in rel.fetchall()
+        ]
         results.append({"name": out_name, "key": key, "sql_file": sql_file, "rows": result_rows})
     con.close()
     return results
@@ -197,7 +229,7 @@ def main() -> int:
         json.dump(population, f, ensure_ascii=False, indent=1)
 
     # 2) W2 analyses via DuckDB + sql/
-    analyses = _run_sql_analyses(population_raw)
+    analyses = _run_sql_analyses(flow, population_raw)
     for item in analyses:
         out = {
             "schema_version": 1,
@@ -211,8 +243,9 @@ def main() -> int:
     n_flow = sum(len(v.get("sites", [])) for v in flow["councils"].values())
     n_pop = len(population_raw.get("regions", {}))
     n_growth = len(analyses[0]["rows"]) if analyses else 0
+    n_flow_pct = len(analyses[2]["rows"]) if len(analyses) > 2 else 0
     print(f"transform: flow sites={n_flow} | regions={len(regions['regions'])} | "
-          f"population regions={n_pop} | growth rows={n_growth}")
+          f"population regions={n_pop} | growth rows={n_growth} | flow percentile sites={n_flow_pct}")
     return 0
 
 

@@ -9,25 +9,38 @@
 
 ![demo](docs/demo.gif)
 
-> **Status: W1 data landing in progress.** The pipeline, SQL and site are
-> skeletons; the findings below are placeholders to be replaced with real
-> numbers from Water NZ NPR + Stats NZ data during W2 analysis.
-> LAWA water-quality snapshot (7 files) landed 2026-08-30 —
-> see `data/raw/lawa/MANIFEST.md`.
+> **Status: W2 — analysis + static site.** The pipeline is live and the
+> numbers below are real (2026-08-30 run): Stats NZ population (6 regions) ×
+> Taumata Arowai NEPR 2024/25 (all registered supplies) → findings 1–2 below
+> are 6/6-region backed. Finding 3 is the data-availability finding.
+> Section B (water quality vs land use) is outlined in [ANALYSIS.md](ANALYSIS.md).
 
 ---
 
 ## TL;DR — three findings
 
-1. **[Number].** [One sentence of evidence.]
-   *So what:* [what a council planner should do differently.]
+1. **2.3× per-capita gap.** Hawke's Bay supplies **610 L/person/day** vs
+   Auckland **270** (NEPR 2024/25). Matching Auckland's efficiency in HB
+   alone frees ≈ **48,800 m³/day — ~62% of the 6-region demand growth
+   projected to 2030**.
+   *So what:* efficiency and metering buy 1.5–2 years of growth headroom
+   before new capacity is needed.
    ![](docs/fig1.png)
 
-2. **[Number].** [Evidence.]
-   *So what:* [decision implication.]
+2. **22.5% of supply leaks.** **298,671 m³/day** is lost to leaks across the
+   6 regions; Canterbury alone leaks **86,832 m³/day — 3.5× its own
+   projected 2030 demand growth**. The leaked volume ≈ 1.1M people at
+   Auckland's usage.
+   *So what:* fixing leaks is a supply-side lever that doesn't wait for
+   population — Canterbury's leaks already exceed a decade of its growth.
 
-3. **[Number].** [Evidence.]
-   *So what:* [decision implication.]
+3. **2 of 6 councils publish open flow time series.** HBRC is live; ORC's
+   public server froze at 2021-04-23 (current values are on ORC AQWebPortal /
+   LAWA). Where we can look (3 live HB sites, 2026-08-30), flows sit at the
+   **9.5th–40.5th** percentile — Ngaruroro at Fernhill is in the driest ~10%
+   of its 5-year record.
+   *So what:* source-water availability is only locally observable;
+   demand-side planning must lean on 6/6 datasets like NEPR.
 
 > Full write-up, method and caveats: [ANALYSIS.md](ANALYSIS.md)
 
@@ -39,9 +52,10 @@ demand–supply gap under projected population growth over the next 5 years.
 
 Every chart on the site answers one sub-question of that decision.
 Scope: **6 councils** — Auckland · Canterbury · Otago · Hawke's Bay ·
-Southland · Waikato. W1 will verify each council's Hilltop endpoint and swap
-if unavailable (ORC / HBRC are confirmed public endpoints as backups).
-Depth over national coverage, deliberately.
+Southland · Waikato. Depth over national coverage, deliberately.
+Flow coverage: only HBRC (live) and ORC (historical public record) publish
+open flow time series; the other four councils' public endpoints expose
+metadata only — see the flow caveats on the site and in ANALYSIS.md.
 
 ## How it works
 
@@ -66,8 +80,8 @@ All business logic lives in `sql/`; Python only does IO and orchestration (DuckD
 | File | What it does |
 |---|---|
 | [`01_region_population_growth.sql`](sql/01_region_population_growth.sql) | YoY + 5-year CAGR per council (window functions) |
-| [`02_supply_per_capita.sql`](sql/02_supply_per_capita.sql) | Joins population to Water NZ NPR; litres/person/day, leakage, metering |
-| [`03_flow_percentile.sql`](sql/03_flow_percentile.sql) | Current river flow vs same-week historical percentile |
+| [`02_supply_per_capita.sql`](sql/02_supply_per_capita.sql) | Population × NEPR 2024/25 (all registered supplies): litres/person/day, leakage, CARL, ILI, implied daily demand + 2030 projection |
+| [`03_flow_percentile.sql`](sql/03_flow_percentile.sql) | Latest observed river flow vs same-week historical percentile, per monitored site (supporting layer: 11 curated sites, HBRC live + ORC historical) |
 
 ## Why I don't claim causation
 
@@ -77,10 +91,10 @@ All business logic lives in `sql/`; Python only does IO and orchestration (DuckD
   council can flip the sign.
 - **Confounding** — land use (dairy intensity, irrigation) drives NZ river
   water quality far more than urban population. Section B in
-  [ANALYSIS.md](ANALYSIS.md) shows the population signal weakens once land
-  use is accounted for.
+  [ANALYSIS.md](ANALYSIS.md) sets out the test for this claim (population
+  signal vs land use, stratified) — analysis pending after W2.
 - **Site selection bias** — LAWA monitoring sites are not randomly located.
-- Water NZ NPR is self-reported by councils; metering coverage varies.
+- NEPR/NPR figures are council-reported; metering coverage varies.
 
 ## Data sources & licences
 
