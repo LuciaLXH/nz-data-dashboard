@@ -85,15 +85,13 @@
 - ⏳ **视觉待办（用户明确"后面再慢慢调整"，不阻塞 W3）**：用户补图 `site/img/fig1-3.png`（发现卡背景图，命名对即可显示）；其余微调意见随时回来改
 - ⏳ **W1.5 线索（已实测，供后续）**：ORC 当前平台 = AQWebPortal（data.orc.govt.nz，本沙箱 DNS 不通）；LAWA Umbraco API：region pageId（Otago=26001）→ `mapservice/SurfacewaterZones?pageId=`（Amisfield=31611/Arrow=31610/Bannock=31605/Benger=31593/Cardrona=31564/Taieri=31355）→ `FlowSites?pageId=<zone>` 稀疏 → `waterquantityservice/flowstats`/`sensorservice/getLatestSample` zone 级 null；riverapp 站页有 meta 坐标+实时 ORC 流量
 
-## W3 清单（当前阶段，PLAN.md 为准）
-- [ ] GH Actions 定时节奏：流量 24h→6h、水质/人口月度（workflows/refresh.yml 已脚手架，需调 cron + 部署）
-- [ ] retry + 指数退避 + 缓存上次成功 + 优雅降级（fetch 脚本已有部分，需统一）
-- [ ] **Data Health 面板完善**（站点页脚已有细条版；升级为 last run/行数/空值率/schema ver/近 20 次色条）
-- [ ] 时间：UTC 存储、Pacific/Auckland 显示（DST 测试）
-- [ ] **6 个 pytest**：schema · units · region names · DST boundary · missing-value propagation · percentile（tests/ 尚无，Makefile test 目标已引用）
-- [ ] README 定稿 + **15s GIF**（docs/demo.gif，README 已引用）
-- [ ] Attribution 块（页脚+README 已有，核对完整）
-- [ ] keepalive workflow（已脚手架）+「pipeline paused」回退文案
-- [ ] 数据不进 git（已做到）→ CI 构建 + **deploy-pages 部署**
-- [ ] **转公开 + 开 Pages + 验证 key 从未进历史**（token 流程，用户执行或建仓脚本）
-- 验收：移动端 <3s、无横滚、链接全通
+## W3 进度（2026-08-30 晚；HEAD=c507422）
+- ✅ tests/：**6 套件 24 用例**（schema/units/region names/DST/missing-value/percentile；SQL 逻辑测试用内联表跑真实 sql/；离线）
+- ✅ validate.py：_runs.jsonl 增 rows/null_pct；站点 Data Health 面板（last run NZ 时间/行数/空值率/schema ver/**近 20 次色条** + >31 天显示 pipeline paused）
+- ✅ 时间：存储 UTC、站点 Pacific/Auckland 显示（Intl）；tests/test_dst.py 钉死 NZ DST 边界（2026-04-04 14:00 UTC 转 NZST、2026-09-26 14:00 UTC 转 NZDT）
+- ✅ fetch_population 补 retry+指数退避；Hilltop 原有；失败写 _status、transform 读最后快照（cache last success）
+- ✅ refresh.yml：flow cron `0 */6 * * *` + 月度；configure/upload/deploy-pages（permissions+concurrency）；Makefile 拆 `site-data`（仅复制，CI 用）与 `site`
+- ✅ README 更新（Status/测试/部署）；Attribution 核对；keepalive 已有
+- ✅ **key 验证：完整 API key 值（32 位）从未进 git 历史**（git log -p 精确比对；旧历史仅 4 字符 redact 前缀）
+- ⏳ **用户步骤**：① 15s GIF（录屏 → docs/demo.gif）② 转公开 + 开 Pages（需 GH token：`gh repo edit LuciaLXH/nz-data-dashboard --visibility public` + Settings→Pages 开 deploy-pages 源）③ 移动端验收（<3s 无横滚全链接）
+- 本地提交：45f06e8 → bde5ab8 → 3498ca1 → 8bfc43b → **c507422**（W3 工程）；仍未推送
