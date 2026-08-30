@@ -4,7 +4,7 @@ ifneq ("$(wildcard .venv/bin/python)","")
 PYTHON := .venv/bin/python
 endif
 
-.PHONY: all data site site-data test serve clean
+.PHONY: all data site site-data test serve clean gif
 
 all: data site            ## fetch → transform → validate → build site
 
@@ -14,9 +14,14 @@ data:                     ## run the full extract/transform/validate pipeline
 	$(PYTHON) scripts/transform.py
 	$(PYTHON) scripts/validate.py
 
-site-data:                ## copy processed + ref data into site/data (no fetch)
+site-data:                ## copy the files the site actually reads into site/data
+	rm -rf site/data
 	mkdir -p site/data
-	cp data/processed/*.json data/processed/*.jsonl site/data/
+	# only the datasets consumed by site/app.js — raw flow.json (1.3 MB) and
+	# population.json are W1 packaging artifacts, not used by the front end
+	cp data/processed/population_growth.json data/processed/supply_per_capita.json \
+	   data/processed/flow_percentile.json data/processed/regions.json \
+	   data/processed/_runs.jsonl site/data/
 	cp data/ref/boundaries_regions_simple.geojson site/data/boundaries.geojson
 	cp data/ref/flow_sites.json data/ref/water_consents.json site/data/
 
@@ -25,6 +30,9 @@ site: data site-data      ## build the static site into site/ (W2)
 
 test:                     ## pytest: schema, units, region names, DST, nulls
 	$(PYTHON) -m pytest -q
+
+gif:                      ## re-record the 15s demo GIF (needs playwright + pillow)
+	$(PYTHON) scripts/make_demo_gif.py
 
 serve:                    ## preview locally
 	$(PYTHON) -m http.server -d site 8000
