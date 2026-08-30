@@ -32,14 +32,16 @@
 ## 进度
 - **W0 ✅**：脚手架就位（README.md / ANALYSIS.md / Makefile / .gitignore / .env.example / .github/workflows/{refresh,keepalive}.yml / sql/01-03 / scripts 骨架 / docs/PLAN.md / 评审原件 docs/review/）
 - **W1 进行中**（2026-08-30 下午大推进）：
-  - ✅ **`make data` 从零跑通**（11 流量站 + 6 区域 + 人口降级记录，5/5 校验，exit 0）
+  - ✅ **`make data` 从零跑通**（11 流量站 + 6 区域 + 人口降级记录，**8/8 校验含 JSON Schema**，exit 0）
+  - ✅ **JSON Schema**：`schemas/{flow,regions,population}.schema.json`，validate.py 用 jsonschema 校验（W3 的 6 测试将扩展）
   - ✅ **流量取数脚本** `scripts/fetch_hilltop.py`：HBRC 3 站实时（FlowM3S [Water Level]，m³/s）+ ORC 8 站历史（Flow [Water Level]，cumecs）→ 客户端日聚合 → `data/raw/flow/<council>/<date>.json` + `_status.json`
   - ✅ **区域映射表** `data/ref/region_map.json`（REGC 02/03/06/14/15/16 ↔ council ↔ LAWA zone + macron；REGC 标记 verified:false，待 ADE 恢复确认）
   - ✅ **边界** `data/ref/boundaries_regions.geojson`（66KB 全精度）+ `_simple`（4.9KB）
-  - ✅ **首次 git 提交** c1f8f2f（本地仓库；.env/data.raw/data.processed/tools 全排除）
-  - ⏸️ Stats NZ ADE：根路径 502、数据集查询偶发 403（已加入重试集）
-  - 🔄 Water NZ NPR 提取：子代理研究结果待收
-  - ⬜ **W1 剩余**：① GitHub 私有 repo + Secrets（**用户将提供 PAT**，用 API 建仓；repo 名 `nz-data-dashboard`）② NPR 落地 ③ ADE 恢复后跑通人口查询 ④ （W1.5）LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量
+  - ✅ **git 提交** c1f8f2f / 2abc21c / 663b81d（本地 main 分支；.env/data.raw/data.processed/tools/.venv 全排除）
+  - ✅ **建仓脚本** `scripts/create_github_repo.py`（PAT 走 env `GH_TOKEN`，libsodium 加密 Actions secret，pynacl 装在 `.venv`）
+  - ⏸️ Stats NZ ADE：根路径仍 502（整会话未恢复）；fetch_population.py 重试(403/429/5xx)+指数退避+优雅降级已实现
+  - 🔄 Water NZ NPR 提取：子代理研究结果待收（已跑 ~50min）
+  - ⬜ **W1 剩余**：① GitHub 私有 repo + Secrets（**等用户 PAT**，脚本已就绪；repo 名 `nz-data-dashboard`）② NPR 落地 ③ ADE 恢复后跑通人口查询（数据集名待确认为 SubnationalPopulationEstimates）④ （W1.5）LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量——SurfacewaterZones?pageId=25991 可返回 zone（Id=29298 等），但 FlowSites/flowstats?pageId=<zoneId> 仍返回 []，待更深入逆向
 - **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**
 - **W3**：工程+包装（_runs.jsonl/Data Health/6 测试/Attribution/15s GIF/转公开开 Pages/验证 key 不进历史）—— 验收 = 移动端 <3s 无横滚
 - **W4**：LinkedIn 曝光 + **CV 联动**（见下）
@@ -52,9 +54,10 @@
 - **Hilltop 编码**：拒绝 `+` 空格（"No Measurements available"），必须 `%20`；`Interval=P1D` 无效 → 客户端日聚合
 
 ## 环境
-- Python 3.12.2；openpyxl 3.1.5；pandas 2.2.3；requests 2.32.3；**duckdb 未安装**（W2 需要时 `pip install duckdb`）
+- Python 3.12.2；openpyxl 3.1.5；pandas 2.2.3；requests 2.32.3；jsonschema 4.23.0；**duckdb 未安装**（W2 需要时 `pip install duckdb`）
+- **`.venv` 项目虚拟环境**（--system-site-packages，gitignored）：pynacl 已装（建仓脚本用）；pip 直接装包会写 ~/.local 被沙箱拦，**以后装包用 `.venv/bin/pip`**
 - mapshaper 0.7.55 装在 `tools/`（npm --prefix，gitignored）
-- git：user.name=xli246，email=xli246@uclive.ac.nz；**无 gh CLI/ssh key/GH_TOKEN**（建 repo 需用户 PAT）
+- git：user.name=xli246，email=xli246@uclive.ac.nz；本地分支 main（提交 c1f8f2f/2abc21c/663b81d）；**无 gh CLI/ssh key/GH_TOKEN**（建 repo 等用户 PAT）
 - `.env`：`STATS_NZ_API_KEY=3c67...`（gitignored，勿外传勿提交；建 repo 后存 GH Secret）
 - 沙箱注意：本目录为会话工作区时，**项目内写入免审批**；项目外（如 CV 工作区）写入需 danger-full-access 审批
 
