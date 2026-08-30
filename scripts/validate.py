@@ -87,8 +87,14 @@ def main() -> int:
         ("supply: JSON Schema", supply_ok),
         ("supply: rows for all 6 regions", supply_rows >= 6),
         ("flow_percentile: JSON Schema", flow_pct_ok),
-        ("flow_percentile: one row per monitored flow site (>= 11)", flow_pct_rows >= 11),
+        # coverage is record-only (per engineering decision "缺失率仅记录不
+        # 硬失败"): a transient per-site fetch error must NOT fail the run —
+        # the count is recorded in _runs.jsonl and shown on the Data Health
+        # panel; hard-fail only if we have no monitored sites at all
+        ("flow_percentile: at least one monitored site", flow_pct_rows >= 1),
     ]
+    if flow_pct_rows < 11:
+        print(f"  ℹ️ flow_percentile: {flow_pct_rows}/11 sites (transient fetch degradation recorded)")
     passed, total = 0, len(checks)
     for name, ok in checks:
         passed += 1 if ok else 0
