@@ -63,12 +63,16 @@ def main() -> int:
                         {"ok": False, "note": "no population fetch attempted"}),
         "processed_utc": now,
     }
+    pop_files = sorted(glob.glob("data/raw/population/[0-9]*.json"))
+    if pop_files:
+        population["data"] = _load(pop_files[-1], {})
     with open("data/processed/population.json", "w", encoding="utf-8") as f:
         json.dump(population, f, ensure_ascii=False, indent=1)
 
     n_flow = sum(len(v.get("sites", [])) for v in flow["councils"].values())
+    n_pop = len(population.get("data", {}).get("regions", {}))
     print(f"transform: flow sites={n_flow} | regions={len(regions['regions'])} | "
-          f"population ok={population['status'].get('ok')}")
+          f"population regions={n_pop} ok={population['status'].get('ok')}")
     return 0
 
 

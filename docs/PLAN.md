@@ -14,16 +14,16 @@ at 15–20 h/week; ~10–12 days full-time.
 - 验收 ✅ One sentence: who / for what decision / why this page → README
 
 ## W1 · Data landing
-- [x] `.gitignore` + `.env` in place（GH Secrets 待建 repo 时配置）
-- [ ] Stats NZ ADE API key + one working OData query（key 已激活；后端仍 502/403）
-- [ ] Subnational population estimates (6 councils, ~10 years)（fetch_population.py 重试+降级待 API 恢复）
-- [ ] Water NZ NPR extraction: L/person/day, leakage, metering coverage（研究中）
+- [x] `.gitignore` + `.env` in place（GH Secret 已配置：STATS_NZ_API_KEY）
+- [x] Stats NZ 人口 API 跑通 ✅（**新 SDMX API** api.data.stats.govt.nz，2026-08-30；旧 opendata 仍 502）
+- [x] Subnational population estimates ✅（6 councils × 2018–2025，`data/raw/population/`）
+- [x] Water NZ NPR/NEPR 提取 ✅（NPR 2021/22 全量 + NEPR 2024/25 单位级 CSV，`data/ref/water_demand.json`）
 - [x] Boundaries ✅ → `data/ref/boundaries_regions_simple.geojson`（4.9KB；LAWA WKT 替代 Stats NZ GDS，CC BY 4.0）
-- [x] Region-name normalisation map ✅ → `data/ref/region_map.json`（macron · REGC ↔ council ↔ LAWA zone）
+- [x] Region-name normalisation map ✅ → `data/ref/region_map.json`（REGC 官方验证 02/03/06/13/14/15）
 - [x] Hilltop 取数脚本 ✅（HBRC 实时 + ORC 历史；ECan/Southland/Auckland/WRC 无公开时序，W1.5 候选 LAWA flowstats API）
 - [x] LAWA water-quality snapshot downloaded manually, record date + URL
   （2026-08-30：7 个 xlsx → `data/raw/lawa/`，清单 `data/raw/lawa/MANIFEST.md`）
-- [x] One command produces data/processed/*.json + schema + timestamps ✅（`make data`，W1 最小版）
+- [x] One command produces data/processed/*.json + schema + timestamps ✅（`make data`，schema 校验 8/8）
 
 > **W1 进度（2026-08-30 下午）**：流量取数脚本落地 ✅（HBRC 3 站实时 5 年 + ORC 8 站历史 ~10 年，`scripts/fetch_hilltop.py`，日流量，0 错误；其余 council 公开端点无时序，见 `docs/W1-data-sources.md`）；边界简化 ✅（LAWA boundaryforNZ WKT → `data/ref/boundaries_regions_simple.geojson` 4.9KB，替代 Stats NZ GDS）；区域映射表 ✅（`data/ref/region_map.json`）；`make data` 从零跑通 ✅（W1 最小版 transform/validate，5/5 校验；流量 11 站 + 区域 6 + 人口降级记录）。Stats NZ ADE 仍 502/403（`fetch_population.py` 重试+优雅降级已实现）。
 - 验收: `make data` runs from scratch ✅（2026-08-30）
