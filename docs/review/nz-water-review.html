@@ -1,0 +1,1162 @@
+<title>NZ Water × Population 方案评审</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@500;600;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+
+<style>
+/* ── tokens ───────────────────────────────────────────── */
+:root{
+  --ground:#F1F3F0;
+  --surface:#FCFCFA;
+  --surface-2:#E7ECE6;
+  --ink:#19211D;
+  --ink-2:#57635C;
+  --ink-3:#89948D;
+  --line:#D7DDD6;
+  --line-strong:#B7C1B8;
+  --accent:#1C6B67;
+  --accent-deep:#0E3E3B;
+  --accent-soft:#D3E4E0;
+  --p0:#A5382B;   --p0-bg:#F4DFDA;  --p0-line:#D9A79D;
+  --p1:#8E6A15;   --p1-bg:#F2E9CF;  --p1-line:#CFB776;
+  --p2:#4A7150;   --p2-bg:#DEE9DC;  --p2-line:#A7C1A9;
+  --ok:#3C7A52;
+  --shadow:0 1px 2px rgba(25,33,29,.05), 0 8px 24px -16px rgba(25,33,29,.28);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --ground:#101410;
+    --surface:#171C18;
+    --surface-2:#1F2621;
+    --ink:#E5EAE4;
+    --ink-2:#9FADA4;
+    --ink-3:#6D7A72;
+    --line:#2A322C;
+    --line-strong:#3C463F;
+    --accent:#5EB8AE;
+    --accent-deep:#9DD9D1;
+    --accent-soft:#1D3B37;
+    --p0:#E38B7B;   --p0-bg:#38201B;  --p0-line:#6B3B31;
+    --p1:#D6B15F;   --p1-bg:#312915;  --p1-line:#5E4E24;
+    --p2:#8DBE91;   --p2-bg:#1C2B1E;  --p2-line:#385039;
+    --ok:#7EC08E;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.7);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#101410;
+  --surface:#171C18;
+  --surface-2:#1F2621;
+  --ink:#E5EAE4;
+  --ink-2:#9FADA4;
+  --ink-3:#6D7A72;
+  --line:#2A322C;
+  --line-strong:#3C463F;
+  --accent:#5EB8AE;
+  --accent-deep:#9DD9D1;
+  --accent-soft:#1D3B37;
+  --p0:#E38B7B;   --p0-bg:#38201B;  --p0-line:#6B3B31;
+  --p1:#D6B15F;   --p1-bg:#312915;  --p1-line:#5E4E24;
+  --p2:#8DBE91;   --p2-bg:#1C2B1E;  --p2-line:#385039;
+  --ok:#7EC08E;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 24px -16px rgba(0,0,0,.7);
+}
+
+*{box-sizing:border-box;}
+body{
+  margin:0;
+  background:var(--ground);
+  color:var(--ink);
+  font-family:"Newsreader","Iowan Old Style",Georgia,serif;
+  font-size:17px;
+  line-height:1.66;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4,.ui,th,.chip,.eyebrow,button,nav{
+  font-family:"Archivo","Helvetica Neue",Arial,sans-serif;
+}
+code,kbd,pre,.mono,.num{
+  font-family:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+
+/* ── shell ────────────────────────────────────────────── */
+.shell{
+  max-width:1240px;
+  margin:0 auto;
+  padding:0 24px 96px;
+  display:grid;
+  grid-template-columns:1fr;
+  gap:0;
+}
+@media (min-width:1040px){
+  .shell{
+    grid-template-columns:216px minmax(0,1fr);
+    gap:56px;
+    padding-right:40px;
+  }
+}
+
+/* ── rail ─────────────────────────────────────────────── */
+.rail{display:none;}
+@media (min-width:1040px){
+  .rail{
+    display:block;
+    position:sticky;
+    top:0;
+    align-self:start;
+    height:100vh;
+    overflow-y:auto;
+    padding:36px 0 40px;
+    border-right:1px solid var(--line);
+    margin-right:-28px;
+    padding-right:28px;
+  }
+}
+.rail .mark{
+  font-size:11px;letter-spacing:.14em;text-transform:uppercase;
+  font-weight:600;color:var(--accent);
+  font-family:"IBM Plex Mono",monospace;
+  margin-bottom:22px;
+}
+.rail a{
+  display:flex;gap:10px;align-items:baseline;
+  text-decoration:none;color:var(--ink-2);
+  font-size:13.5px;line-height:1.4;
+  padding:6px 0 6px 10px;
+  border-left:2px solid transparent;
+  transition:color .15s, border-color .15s;
+}
+.rail a .n{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;color:var(--ink-3);
+  min-width:20px;
+}
+.rail a:hover{color:var(--ink);}
+.rail a.on{color:var(--ink);border-left-color:var(--accent);font-weight:600;}
+.rail a.on .n{color:var(--accent);}
+.railgap{height:18px;}
+
+.railprog{
+  margin-top:26px;padding-top:20px;border-top:1px solid var(--line);
+}
+.railprog .lbl{
+  font-size:10.5px;letter-spacing:.13em;text-transform:uppercase;
+  color:var(--ink-3);font-family:"IBM Plex Mono",monospace;
+  display:flex;justify-content:space-between;margin-bottom:9px;
+}
+.railprog .lbl b{color:var(--ink);font-variant-numeric:tabular-nums;}
+
+/* ── mobile progress bar ──────────────────────────────── */
+.mobar{
+  position:sticky;top:0;z-index:30;
+  background:color-mix(in srgb, var(--ground) 92%, transparent);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);
+  padding:8px 24px;
+  display:flex;align-items:center;gap:12px;
+  font-family:"IBM Plex Mono",monospace;font-size:11px;
+  color:var(--ink-2);letter-spacing:.06em;
+}
+@media (min-width:1040px){.mobar{display:none;}}
+
+/* ── meter ────────────────────────────────────────────── */
+.meter{
+  height:5px;border-radius:99px;background:var(--surface-2);
+  overflow:hidden;flex:1;
+}
+.meter > i{
+  display:block;height:100%;width:0%;
+  background:var(--accent);
+  border-radius:99px;
+  transition:width .35s cubic-bezier(.4,0,.2,1);
+}
+
+/* ── main ─────────────────────────────────────────────── */
+main{min-width:0;padding-top:8px;}
+.wrap{max-width:70ch;}
+
+header.masthead{
+  padding:56px 0 34px;
+  border-bottom:1px solid var(--line-strong);
+  margin-bottom:44px;
+}
+.eyebrow{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;letter-spacing:.16em;text-transform:uppercase;
+  color:var(--accent);font-weight:500;
+  display:flex;gap:14px;flex-wrap:wrap;align-items:center;
+}
+.eyebrow span:not(:first-child){color:var(--ink-3);}
+h1{
+  font-size:clamp(32px,5.2vw,50px);
+  line-height:1.06;
+  letter-spacing:-.025em;
+  font-weight:700;
+  margin:20px 0 0;
+  text-wrap:balance;
+  max-width:16ch;
+}
+h1 .x{color:var(--accent);font-weight:500;}
+.dek{
+  margin:18px 0 0;max-width:60ch;
+  font-size:19px;color:var(--ink-2);line-height:1.55;
+}
+.byline{
+  margin-top:26px;font-family:"IBM Plex Mono",monospace;
+  font-size:11.5px;color:var(--ink-3);letter-spacing:.04em;
+}
+
+/* ── verdict ──────────────────────────────────────────── */
+.verdict{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-left:3px solid var(--accent);
+  border-radius:3px;
+  padding:26px 28px;
+  margin-bottom:52px;
+  box-shadow:var(--shadow);
+}
+.verdict p{margin:0;font-size:19.5px;line-height:1.55;}
+.verdict p + p{margin-top:14px;font-size:17px;color:var(--ink-2);}
+.verdict strong{font-weight:600;color:var(--ink);
+  box-shadow:inset 0 -.42em 0 var(--accent-soft);}
+
+/* ── sections ─────────────────────────────────────────── */
+section{scroll-margin-top:70px;padding-bottom:8px;}
+section + section{margin-top:64px;}
+.sechead{
+  display:flex;gap:16px;align-items:baseline;
+  border-top:1px solid var(--line);
+  padding-top:16px;margin-bottom:22px;
+}
+.sechead .q{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:11px;font-weight:600;letter-spacing:.1em;
+  color:var(--accent);
+  padding-top:7px;white-space:nowrap;
+}
+h2{
+  font-size:clamp(23px,3vw,29px);
+  line-height:1.2;letter-spacing:-.018em;font-weight:700;
+  margin:0;text-wrap:balance;
+}
+h3{
+  font-size:18px;font-weight:600;letter-spacing:-.008em;
+  margin:38px 0 12px;line-height:1.3;
+  display:flex;gap:10px;align-items:center;flex-wrap:wrap;
+}
+h4{
+  font-size:13px;font-weight:600;letter-spacing:.08em;
+  text-transform:uppercase;color:var(--ink-3);
+  margin:30px 0 10px;
+}
+p{margin:0 0 15px;}
+.wrap > p:last-child{margin-bottom:0;}
+a{color:var(--accent);text-decoration-thickness:1px;text-underline-offset:2.5px;}
+a:hover{color:var(--accent-deep);}
+strong{font-weight:600;}
+em{font-style:italic;color:var(--ink-2);}
+
+ul,ol{margin:0 0 16px;padding-left:22px;}
+li{margin-bottom:7px;}
+li::marker{color:var(--ink-3);}
+
+/* ── priority chips ───────────────────────────────────── */
+.chip{
+  display:inline-flex;align-items:center;gap:5px;
+  font-family:"IBM Plex Mono",monospace;
+  font-size:10.5px;font-weight:600;letter-spacing:.09em;
+  padding:2.5px 7px 2.5px 6px;border-radius:2px;
+  border:1px solid;border-left-width:3px;
+  white-space:nowrap;vertical-align:2px;
+}
+.chip.p0{color:var(--p0);background:var(--p0-bg);border-color:var(--p0-line);border-left-color:var(--p0);}
+.chip.p1{color:var(--p1);background:var(--p1-bg);border-color:var(--p1-line);border-left-color:var(--p1);}
+.chip.p2{color:var(--p2);background:var(--p2-bg);border-color:var(--p2-line);border-left-color:var(--p2);}
+
+/* ── callouts ─────────────────────────────────────────── */
+.note{
+  border:1px solid var(--line);
+  border-left:3px solid var(--line-strong);
+  background:var(--surface);
+  border-radius:3px;
+  padding:16px 20px;margin:22px 0;
+  font-size:16px;
+}
+.note.crit{border-left-color:var(--p0);background:var(--p0-bg);border-color:var(--p0-line);}
+.note.warn{border-left-color:var(--p1);background:var(--p1-bg);border-color:var(--p1-line);}
+.note .nh{
+  font-family:"Archivo",sans-serif;font-size:12px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;
+  margin-bottom:7px;display:block;
+}
+.note.crit .nh{color:var(--p0);}
+.note.warn .nh{color:var(--p1);}
+.note p:last-child{margin-bottom:0;}
+
+/* ── tables ───────────────────────────────────────────── */
+.tw{
+  overflow-x:auto;margin:22px 0;
+  border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);
+}
+table{border-collapse:collapse;width:100%;font-size:15px;min-width:520px;}
+th{
+  text-align:left;font-size:11px;font-weight:600;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--ink-3);
+  padding:11px 14px;border-bottom:1px solid var(--line-strong);
+  background:var(--surface-2);white-space:nowrap;
+}
+td{
+  padding:12px 14px;border-bottom:1px solid var(--line);
+  vertical-align:top;line-height:1.5;
+}
+tr:last-child td{border-bottom:none;}
+td.num,.num{font-variant-numeric:tabular-nums;}
+td.tight{white-space:nowrap;}
+
+/* ── code ─────────────────────────────────────────────── */
+code{
+  font-size:.86em;background:var(--surface-2);
+  padding:1.5px 5px;border-radius:2px;
+  border:1px solid var(--line);
+  color:var(--ink);
+}
+pre{
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-radius:3px;
+  padding:16px 18px;margin:20px 0;
+  overflow-x:auto;
+  font-size:13px;line-height:1.65;
+  color:var(--ink);
+}
+pre code{background:none;border:none;padding:0;font-size:inherit;}
+
+/* ── checklist ────────────────────────────────────────── */
+.ck-intro{
+  display:flex;gap:20px;align-items:center;flex-wrap:wrap;
+  margin-bottom:26px;
+}
+.ck-intro .big{
+  font-family:"IBM Plex Mono",monospace;
+  font-size:30px;font-weight:600;color:var(--accent);
+  font-variant-numeric:tabular-nums;line-height:1;
+}
+.resetbtn{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.07em;color:var(--ink-3);
+  background:none;border:1px solid var(--line-strong);
+  border-radius:2px;padding:5px 10px;cursor:pointer;
+  transition:color .15s,border-color .15s;
+}
+.resetbtn:hover{color:var(--p0);border-color:var(--p0);}
+
+.week{
+  border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);
+  margin-bottom:18px;overflow:hidden;
+  box-shadow:var(--shadow);
+}
+.week > .wh{
+  display:flex;align-items:center;gap:14px;flex-wrap:wrap;
+  padding:14px 20px;
+  background:var(--surface-2);
+  border-bottom:1px solid var(--line);
+}
+.week .wt{
+  font-family:"Archivo",sans-serif;font-weight:700;font-size:15px;
+  letter-spacing:-.01em;
+}
+.week .ws{
+  font-family:"IBM Plex Mono",monospace;font-size:11px;
+  color:var(--ink-3);letter-spacing:.05em;
+  margin-left:auto;font-variant-numeric:tabular-nums;
+}
+.week .wm{width:78px;flex:0 0 78px;}
+.week ul{list-style:none;margin:0;padding:8px 0;}
+.week li{margin:0;}
+
+.chk{
+  display:flex;gap:12px;align-items:flex-start;
+  padding:8px 20px;cursor:pointer;
+  font-size:15.5px;line-height:1.5;
+  transition:background .12s;
+}
+.chk:hover{background:var(--surface-2);}
+.chk input{
+  appearance:none;-webkit-appearance:none;
+  width:16px;height:16px;flex:0 0 16px;margin:5px 0 0;
+  border:1.5px solid var(--line-strong);border-radius:2px;
+  background:var(--ground);cursor:pointer;
+  position:relative;transition:background .15s,border-color .15s;
+}
+.chk input:checked{background:var(--accent);border-color:var(--accent);}
+.chk input:checked::after{
+  content:"";position:absolute;left:4.5px;top:1px;
+  width:4px;height:9px;border:solid var(--surface);
+  border-width:0 2px 2px 0;transform:rotate(42deg);
+}
+:root[data-theme="dark"] .chk input:checked::after,
+.chk input:checked::after{border-color:var(--ground);}
+.chk input:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.chk input:checked ~ .lab{color:var(--ink-3);text-decoration:line-through;
+  text-decoration-color:var(--line-strong);}
+.lab{transition:color .15s;}
+.lab code{font-size:.82em;}
+.gate{
+  margin:0;padding:12px 20px 14px;
+  border-top:1px dashed var(--line-strong);
+  font-size:14.5px;color:var(--ink-2);
+}
+.gate b{
+  font-family:"Archivo",sans-serif;font-size:11px;font-weight:700;
+  letter-spacing:.09em;text-transform:uppercase;color:var(--accent);
+  display:block;margin-bottom:4px;
+}
+
+/* ── readme block ─────────────────────────────────────── */
+.rm{
+  border:1px solid var(--line);border-radius:3px;
+  background:var(--surface);overflow:hidden;margin:22px 0;
+  box-shadow:var(--shadow);
+}
+.rm .rmh{
+  display:flex;align-items:center;gap:12px;
+  padding:10px 16px;background:var(--surface-2);
+  border-bottom:1px solid var(--line);
+  font-family:"IBM Plex Mono",monospace;font-size:11.5px;
+  color:var(--ink-2);letter-spacing:.05em;
+}
+.rm .rmh .dot{
+  width:7px;height:7px;border-radius:99px;background:var(--accent);
+  flex:0 0 7px;
+}
+.copybtn{
+  margin-left:auto;font-family:"IBM Plex Mono",monospace;font-size:11px;
+  letter-spacing:.06em;color:var(--ink-2);
+  background:var(--surface);border:1px solid var(--line-strong);
+  border-radius:2px;padding:4px 10px;cursor:pointer;
+  transition:color .15s,border-color .15s;
+}
+.copybtn:hover{color:var(--accent);border-color:var(--accent);}
+.copybtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px;}
+.rm pre{margin:0;border:none;border-radius:0;background:none;
+  max-height:none;padding:18px 20px;}
+
+/* ── sources ──────────────────────────────────────────── */
+.src{
+  margin-top:64px;padding-top:22px;border-top:1px solid var(--line-strong);
+  font-size:14px;color:var(--ink-2);
+}
+.src h4{margin-top:0;}
+.src ul{columns:2;column-gap:36px;padding-left:18px;}
+@media (max-width:640px){.src ul{columns:1;}}
+.src li{font-size:13.5px;break-inside:avoid;}
+
+.foot{
+  margin-top:44px;font-family:"IBM Plex Mono",monospace;
+  font-size:11px;color:var(--ink-3);letter-spacing:.05em;
+  line-height:1.7;
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important;animation:none !important;scroll-behavior:auto !important;}
+}
+html{scroll-behavior:smooth;}
+</style>
+
+<div class="mobar">
+  <span>进度</span>
+  <span class="meter"><i id="mo-meter"></i></span>
+  <span class="num" id="mo-count">0/0</span>
+</div>
+
+<div class="shell">
+
+<nav class="rail" aria-label="章节导航">
+  <div class="mark">REVIEW · 2026-08-29</div>
+  <a href="#verdict"><span class="n">00</span><span>总评</span></a>
+  <div class="railgap"></div>
+  <a href="#q1"><span class="n">Q1</span><span>整体缺陷与工期</span></a>
+  <a href="#q2"><span class="n">Q2</span><span>数据源与许可</span></a>
+  <a href="#q3"><span class="n">Q3</span><span>「自动更新」定位</span></a>
+  <a href="#q4"><span class="n">Q4</span><span>静态站 → Streamlit</span></a>
+  <a href="#q5"><span class="n">Q5</span><span>DA 岗还缺什么</span></a>
+  <a href="#q6"><span class="n">Q6</span><span>MVP 取舍</span></a>
+  <a href="#q7"><span class="n">Q7</span><span>遗漏的风险</span></a>
+  <div class="railgap"></div>
+  <a href="#plan"><span class="n">▣</span><span>三周执行清单</span></a>
+  <a href="#readme"><span class="n">▣</span><span>README 骨架</span></a>
+  <div class="railprog">
+    <div class="lbl"><span>清单进度</span><b id="rail-count">0/0</b></div>
+    <span class="meter"><i id="rail-meter"></i></span>
+  </div>
+</nav>
+
+<main>
+<div class="wrap">
+
+<header class="masthead">
+  <div class="eyebrow">
+    <span>Portfolio Project Review</span>
+    <span>Data Analyst · Aotearoa NZ</span>
+  </div>
+  <h1>NZ Water <span class="x">×</span> Population 方案评审</h1>
+  <p class="dek">一份针对「人口 × 水资源」作品集项目的结构化评审：命题风险、数据源修正、工程取舍，以及一份可以对照打勾的三周执行计划。</p>
+  <p class="byline">审阅视角：资深数据工程师 / 数据分析产品架构师 &nbsp;·&nbsp; 事实核查日期 2026-08-29</p>
+</header>
+
+<div class="verdict" id="verdict">
+  <p>这个方案在<strong>数据工程上偏过度设计</strong>，在<strong>「数据分析」本身上偏不足设计</strong> —— 而你投的是 Data Analyst 岗。</p>
+  <p>你造了一台很漂亮的机器，但还没想清楚它要回答谁的什么决定。招聘方看你 GitHub 的中位时间是 60–90 秒 —— 他们不会点你的筛选器，会读你的 README 和结论。另外核心命题有一个会被 NZ 本地面试官当场质疑的因果漏洞。</p>
+</div>
+
+<h4>如果只改三处</h4>
+<div class="tw">
+<table>
+  <thead><tr><th style="width:36px">#</th><th>改动</th><th>为什么</th></tr></thead>
+  <tbody>
+    <tr><td class="num">1</td><td><strong>命题</strong>从「人口塑造水质」改成「人口增长下的供水压力」</td><td>原命题的因果链在 NZ 语境下站不住，会被当场问住</td></tr>
+    <tr><td class="num">2</td><td>加 <strong>DuckDB + <code>sql/</code> 目录</strong></td><td>半天成本，补上 DA 岗最大的证据空白</td></tr>
+    <tr><td class="num">3</td><td><strong>砍掉 Streamlit</strong>，把那一周投给三条书面发现 + Data Health 面板</td><td>你已有 Streamlit 作品；重复证明同一件事的边际回报为零</td></tr>
+  </tbody>
+</table>
+</div>
+
+<!-- ══ Q1 ══════════════════════════════════════════════ -->
+<section id="q1">
+  <div class="sechead"><span class="q">Q1</span><h2>整体缺陷与工期</h2></div>
+
+  <h3><span class="chip p0">P0</span> 核心命题的因果性站不住</h3>
+  <p>「How is population growth shaping water resources across Aotearoa's regions?」这句话在 NZ 语境里有个硬伤：<strong>NZ 河流水质的主导驱动是土地利用</strong>（乳业强度、氮沥滤、河岸带），不是城市人口。你用 16 个 region 做人口增速 vs 硝酸盐/浊度的散点图 + 趋势线，会踩三个坑：</p>
+  <ul>
+    <li><strong>生态谬误</strong> —— region 层面的相关 ≠ 个体/流域层面的机制</li>
+    <li><strong>n = 16</strong> —— 任何相关系数都不稳健，一个 Auckland 或 Canterbury 就能翻转结论</li>
+    <li><strong>混杂</strong> —— Canterbury 人口增长快<em>且</em>灌溉农业密集；Auckland 人口增长快但供水来自水库。同一个 x 对应完全不同的机制</li>
+  </ul>
+  <p>在 ECan、Waikato RC、Taumata Arowai 这类最可能招你的地方，这会被当场问住。</p>
+
+  <h4>三个可辩护的重构（推荐 A + B 组合）</h4>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:112px">方案</th><th>命题</th><th>为什么站得住</th></tr></thead>
+    <tbody>
+      <tr>
+        <td class="tight"><strong>A</strong><br><span class="mono" style="font-size:11px;color:var(--accent)">主线 · 推荐</span></td>
+        <td>人口增长下，各 council 供水系统的<strong>人均用水、漏损与计量覆盖</strong>差异，意味着哪里最先出现供需缺口？</td>
+        <td>这是<strong>真实的人口—水耦合</strong>（供水本就按人算），council 层面，有明确决策用户</td>
+      </tr>
+      <tr>
+        <td class="tight"><strong>B</strong><br><span class="mono" style="font-size:11px;color:var(--accent)">深度章节</span></td>
+        <td>人口增长能解释区域水质差异吗？—— <strong>控制土地利用后并不能</strong></td>
+        <td>把混杂本身做成发现。展示 partial correlation / 分层，<strong>统计成熟度信号极强</strong></td>
+      </tr>
+      <tr>
+        <td class="tight">C<br><span class="mono" style="font-size:11px;color:var(--ink-3)">保底</span></td>
+        <td>纯描述性 + 显式声明非因果</td>
+        <td>安全，但没有区分度</td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+  <p>A 做主线（有 so-what），B 做一节 “Why I don't claim causation”（有 rigor）。这两条加起来，比原方案多出的说服力远超多做三张图。</p>
+
+  <div class="note warn">
+    <span class="nh">合规提醒</span>
+    <p>你 PHF 实习的洪水—水质—AMR 分析，<strong>不要把数据或未发表结论搬进公开 repo</strong>。但「我在 PHF 做过同类分析，这里是基于开放数据的公开版本」是很强的叙事 —— 方法可以复用，数据必须换。</p>
+  </div>
+
+  <h3>工期评估</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th>版本</th><th style="width:220px">现实工期（15–20 h/周）</th></tr></thead>
+    <tbody>
+      <tr><td>你现在写的完整方案（双前端 + 全国 16 区 + 全套门禁 + 通知）</td><td class="num"><strong>5–6 周</strong></td></tr>
+      <tr><td>下方 Q6 的裁剪版</td><td class="num"><strong>2.5–3 周</strong> ✅</td></tr>
+      <tr><td>全职投入的裁剪版</td><td class="num">10–12 天</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p>数据清洗永远吃掉 50–60% 的时间，你的估计里大概率没给够。三个隐藏时间黑洞：</p>
+  <ol>
+    <li><strong>区域边界几何简化</strong> —— 全精度 regional council boundaries 有几十 MB，直接扔给 Leaflet 手机端会卡死，必须 mapshaper / topojson 压到 &lt;500 KB</li>
+    <li><strong>区域名归一化</strong> —— Manawatū-Whanganui 的 macron、Stats NZ 的 REGC 编码 vs council 自己的命名 vs LAWA 的分区，三套对不上</li>
+    <li><strong>时区</strong> —— 见 Q7</li>
+  </ol>
+</section>
+
+<!-- ══ Q2 ══════════════════════════════════════════════ -->
+<section id="q2">
+  <div class="sechead"><span class="q">Q2</span><h2>数据源：三处需要修正</h2></div>
+
+  <h3><span class="chip p0">P0</span> 修正 1 · LAWA 没有公开 API</h3>
+  <p>LAWA 是 16 个 regional council + MfE + Cawthron + Massey 的门户，它提供的是<a href="https://www.lawa.org.nz/download-data" target="_blank" rel="noopener"><strong>批量下载页</strong></a>（CSV/XLSX），<strong>不是 API</strong>。你方案里「经 data.govt.nz 的 ArcGIS GeoService 拿 LAWA 数据」是靠不住的假设。</p>
+  <p><strong>改法</strong>：把 LAWA 的 river quality state &amp; trend 数据当作<strong>手动下载的年度快照</strong>放进 <code>data/raw/</code>（README 注明下载日期与来源），不进自动管道。它本来就是年度更新，自动化没有意义。</p>
+
+  <h3><span class="chip p0">P0</span> 修正 2 · 河流流量直接打 council 的 Hilltop，不要走 NIWA</h3>
+  <p>多数 regional council 跑 <strong>Hilltop Server</strong>，公开、免 key、REST 风格：</p>
+  <pre><code>curl "http://gisdata.orc.govt.nz/hilltop/Global.hts?Service=Hilltop&amp;Request=SiteList"</code></pre>
+  <p>支持 <code>Service=Hilltop|WFS|SOS</code>，<code>Request=SiteList / MeasurementList / GetData</code>，WFS 还能带 bbox。ORC、HBRC 都有公开端点。<strong>这是整个项目里最容易实现「真的会动」的部分。</strong></p>
+  <div class="note crit">
+    <span class="nh">NIWA 方向有机构风险</span>
+    <p>NIWA 已于 <strong>2025-07-01 与 GNS 合并为 Earth Sciences New Zealand</strong>，MetService 并入的新 PRO 约 2025-10-01 生效。品牌、URL、门户都在变动期。更关键的是 <strong>NIWA 的水文/气候数据许可通常不是 CC BY，多数带再分发限制</strong> —— 把它存进公开 GitHub repo 有许可风险。<strong>MVP 避开 NIWA。</strong></p>
+  </div>
+
+  <h3><span class="chip p1">P1</span> 修正 3 · 区域人口是<em>年度</em>的，不是季度</h3>
+  <p>Stats NZ 的 subnational population estimates 是 <strong>as at 30 June，每年 10 月发布 provisional</strong>。季度只有全国口径。所以「人口每日检查去重」—— 每天去查一个一年动一次的数字 —— 在懂行的人眼里是<strong>表演性自动化</strong>，减分。</p>
+  <p>改成每月检查，页面显示 <code>checked 2h ago · unchanged since Oct 2025</code>，诚实反而加分。</p>
+
+  <h3>推荐数据源分层</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:88px">层</th><th>数据源</th><th>接入</th><th style="width:64px">频率</th><th>许可</th></tr></thead>
+    <tbody>
+      <tr><td class="tight"><span class="chip p0">A 必用</span></td><td>Stats NZ ADE API（subnational pop）</td><td>免费订阅 key，OData</td><td>年</td><td>CC BY 4.0 ✅</td></tr>
+      <tr><td class="tight"><span class="chip p0">A 必用</span></td><td>Stats NZ GDS / LINZ（region 边界）</td><td>koordinates API + key</td><td>静态</td><td>CC BY 4.0 ✅</td></tr>
+      <tr><td class="tight"><span class="chip p0">A 必用</span></td><td>Water NZ National Performance Review<br><span style="color:var(--ink-3);font-size:14px">人均 L/日、漏损率、计量率</span></td><td>PDF + 附件，手动提取</td><td>年</td><td>⚠️ 行业协会非政府，<strong>需逐项确认可用</strong>并署名</td></tr>
+      <tr><td class="tight"><span class="chip p1">B 主力</span></td><td>Regional council Hilltop（流量/水位）</td><td>公开 HTTP，无 key</td><td>15min–1h</td><td>多为 CC BY，逐 council 核对</td></tr>
+      <tr><td class="tight"><span class="chip p1">B</span></td><td>LAWA 批量下载（水质 state &amp; trend）</td><td>手动快照</td><td>年</td><td>多为 CC BY 4.0；<strong>部分数据集无明确许可</strong> ⚠️</td></tr>
+      <tr><td class="tight"><span class="chip p2">C 可选</span></td><td>Taumata Arowai 饮用水质量、MfE 环境指标</td><td>下载</td><td>年</td><td>CC BY</td></tr>
+      <tr><td class="tight" style="color:var(--p0)"><strong>✕ 避开</strong></td><td>NIWA / CliFlo</td><td>需注册</td><td>—</td><td>再分发受限</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <div class="note">
+    <span class="nh" style="color:var(--accent)">许可执行动作 · 半小时</span>
+    <p>页面底部和 README 各放一个 <strong>Attribution 区块</strong>，逐源写 “Source: Stats NZ, licensed under CC BY 4.0” / “Data: LAWA and NZ regional councils”。在 NZ 政府 / council 的面试里，<strong>缺署名是实打实的减分项</strong> —— 这是 NZGOAL 框架下的基本职业素养。</p>
+  </div>
+</section>
+
+<!-- ══ Q3 ══════════════════════════════════════════════ -->
+<section id="q3">
+  <div class="sechead"><span class="q">Q3</span><h2>「自动更新」定位：站得住，但话术和做法都要改</h2></div>
+  <p>定位没问题，<strong>措辞要精确</strong>。不要写 “live” / “real-time”。写：</p>
+  <pre><code>An automated data pipeline with per-source freshness SLAs and schema validation.</code></pre>
+
+  <h4>频率必须匹配源的真实频率</h4>
+  <div class="tw">
+  <table>
+    <thead><tr><th>源</th><th style="width:120px">你的计划</th><th>建议</th></tr></thead>
+    <tbody>
+      <tr><td>河流流量</td><td class="num">6h</td><td>✅ 6h（源是 15min–1h，可辩护）</td></tr>
+      <tr><td>水质</td><td class="num">—</td><td>月度检查</td></tr>
+      <tr><td>人口</td><td class="num">每日</td><td style="color:var(--p0)"><strong>✕ 改月度</strong></td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h3>让页面「活」的 4 个做法（按性价比排序）</h3>
+
+  <h4><span class="chip p0">P0</span> ① Data Health 面板 —— 最高性价比，几乎无人做</h4>
+  <p>页面上单独一块，展示每个源的：last successful run · 行数 · 空值率 · schema version · 最近 20 次运行的成功/失败色条。数据来自 pipeline 自己写的 <code>data/processed/_runs.jsonl</code>。</p>
+  <p>这一块的价值：它<strong>直接证明你懂生产数据管道</strong>，而且是招聘方在 portfolio 里几乎没见过的东西。成本约半天，比「加预测模型」的回报高一个量级。</p>
+
+  <h4><span class="chip p1">P1</span> ② 有意义的动态数字</h4>
+  <p>几个命名站点近 30 天流量 sparkline + 「当前流量在历史同期的百分位」（Low / Normal / High badge）。这是真的每 6 小时会变的东西。</p>
+
+  <h4><span class="chip p0">P0</span> ③ 诚实的时间戳</h4>
+  <p><code>Population: checked 2h ago · unchanged since Oct 2025</code> 比假装每天更新强得多。</p>
+
+  <h4><span class="chip p2">P2</span> ④ Actions status badge + 自动生成的 data changelog</h4>
+
+  <div class="note">
+    <span class="nh" style="color:var(--p0)">不要做</span>
+    <p>失败邮件通知（招聘方看不到，纯自娱）、复杂 alerting。</p>
+  </div>
+</section>
+
+<!-- ══ Q4 ══════════════════════════════════════════════ -->
+<section id="q4">
+  <div class="sechead"><span class="q">Q4</span><h2>静态站 → Streamlit「零改动」：不成立</h2></div>
+  <p>管道确实零改动。<strong>但前端才是大头，而前端要 100% 重写。</strong></p>
+
+  <h4>三个隐藏成本</h4>
+  <ol>
+    <li><strong>图表逻辑无法复用</strong> —— ECharts(JS) 和 Plotly/Altair(Python) 之间没有共享代码。你等于把整个可视化层再做一遍，然后维护两套会漂移的 UI。</li>
+    <li><strong>Streamlit Community Cloud 会休眠</strong>（约 7 天无访问）。招聘方点开你简历上的链接，看到 “app is waking up…” 转圈 30 秒 —— 这在求职场景是实质性负面。</li>
+    <li><strong>数据契约实际上还好</strong> —— 如果你坚持「<code>processed/</code> 是唯一真相 + JSON + schema 版本号」，这部分确实低成本。<em>这个架构决定是对的，保留。</em></li>
+  </ol>
+
+  <div class="note crit">
+    <span class="nh">P0 · 一个你还没发现的硬冲突</span>
+    <p><strong>GitHub Free 个人账号，Pages 只能从「公开」repo 发布。私有 repo 要用 Pages 需要 GitHub Pro（付费）。</strong></p>
+    <p>你写的「repo 先私有，做完再公开」+「第一版用 GitHub Pages」是矛盾的 —— 私有期间你根本开不了 Pages。</p>
+  </div>
+
+  <h4>解法（选 a）</h4>
+  <ul>
+    <li><strong>(a) ✅ 私有开发，完成后转公开再开 Pages。</strong> 反正没做完也不该给人看，本地 <code>python -m http.server</code> 预览足够。</li>
+    <li>(b) 私有开发 repo + 公开一个只放构建产物的 site repo（两个仓，麻烦）</li>
+    <li>(c) 用 <strong>Cloudflare Pages 或 Netlify</strong> —— 免费、支持私有 repo、且不会休眠。如果你想全程私有，这是最干净的路</li>
+  </ul>
+
+  <h3>建议：砍掉双前端，只做静态站</h3>
+  <p>理由：秒开、永不休眠、可被引用、零冷启动。而且<strong>你简历上已经有 Streamlit 工资计算器 MVP 了，不需要再证明一次同一件事</strong>。省下的一周全部投到分析深度上，边际回报高得多。</p>
+</section>
+
+<!-- ══ Q5 ══════════════════════════════════════════════ -->
+<section id="q5">
+  <div class="sechead"><span class="q">Q5</span><h2>对 DA 岗还缺什么</h2></div>
+  <p>你这个项目现在是一个 <strong>Data Engineering 作品</strong>，但你投的是 <strong>Data Analyst</strong>。差距清单：</p>
+
+  <h3><span class="chip p0">P0</span> SQL 完全缺席</h3>
+  <p>DA 的 JD 里 SQL 是第一关键词，你这个项目<strong>一行 SQL 都没有</strong>。</p>
+  <p><strong>修法（成本半天，回报最高的单项）</strong>：管道里用 <strong>DuckDB</strong>，把所有聚合写成独立的 <code>sql/*.sql</code> 文件 —— 区域汇总、CAGR 计算、pop × water join、窗口函数算同比/滚动均值、<code>QUALIFY</code> 去重。README 里直接链到这些文件。</p>
+  <pre><code>sql/
+  01_region_population_growth.sql   -- window fn: YoY, 5yr CAGR
+  02_supply_per_capita.sql          -- join pop × Water NZ NPR
+  03_flow_percentile.sql            -- 历史同期百分位</code></pre>
+  <p>Python 只做 IO 和编排，<strong>所有业务逻辑在 SQL 里</strong>。这一改，你的 repo 从「没有 SQL 证据」变成「有可读的、带窗口函数的 SQL 作品」。</p>
+
+  <h3><span class="chip p0">P0</span> 书面结论 &gt; 交互仪表盘</h3>
+  <p>招聘方不会点你的筛选器。需要 <code>ANALYSIS.md</code>（或页面顶部 Key Findings 区块）：</p>
+  <p><strong>3 条发现，每条 = 一个数字 + 一张图 + 一句 “so what”</strong>，末尾加 Limitations 段落。</p>
+  <div class="note">
+    <span class="nh" style="color:var(--accent)">示例</span>
+    <p>Southland 人均日用水量约为 Auckland 的 4.5 倍（~700 L vs ~146 L），差异主要由<strong>计量覆盖率</strong>而非人口规模解释 → 对未计量 council，需求侧管理的边际收益高于新增供水投资。</p>
+  </div>
+
+  <h3><span class="chip p0">P0</span> 明确决策用户与决策</h3>
+  <p>README 第一段就写死：</p>
+  <pre><code>Audience: regional council asset planners.
+Decision: which supply zones are most likely to face a demand-supply gap
+          under projected population growth in the next 5 years.</code></pre>
+  <p>然后每张图都对应这个决策的一个子问题。</p>
+
+  <h3><span class="chip p1">P1</span> 统计严谨性显式化</h3>
+  <p>写一节 “Limitations &amp; why I don't claim causation”：生态谬误、n=16、监测站选择偏差（LAWA 站点非随机布设）、土地利用混杂。<strong>这一段比多做三张图值钱</strong>，因为它是初级和中级分析师的分水岭。</p>
+
+  <h3><span class="chip p0">P0</span> README 骨架</h3>
+  <p>完整可复制版本见<a href="#readme">下方 README 骨架</a>。</p>
+
+  <h3>其他</h3>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:64px">优先级</th><th style="width:180px">项</th><th>说明</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip p0">P0</span></td><td>顶部 15 秒 GIF / 截图</td><td>没有它，一半的人不会往下看</td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>可复现</td><td><code>make all</code> 一条命令；pinned deps（uv 最好）；<code>data/raw/</code> 放小样本让测试离线可跑</td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>测试 5–8 个</td><td>schema 校验、单位换算、区域名归一化、时区/DST、缺失值传播。<strong>不要覆盖率表演</strong></td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>NZ 本地信号</td><td>macron 正确（Manawatū-Whanganui、Whanganui）、NZST/NZDT 处理正确、讨论里提到 <strong>Te Mana o te Wai / NPS-FM</strong> 政策背景。在 NZ 面试里这是文化能力信号，比多一个模型有用</td></tr>
+      <tr><td><span class="chip p2">P2</span></td><td>LinkedIn 短文 + 一张图</td><td>曝光量通常比 repo 本身高一个量级</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ══ Q6 ══════════════════════════════════════════════ -->
+<section id="q6">
+  <div class="sechead"><span class="q">Q6</span><h2>如果我来定 MVP</h2></div>
+
+  <h4>砍掉</h4>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:230px">砍</th><th>理由</th></tr></thead>
+    <tbody>
+      <tr><td>Streamlit / 双前端</td><td>前端要重写，且会休眠；你已有 Streamlit 作品</td></tr>
+      <tr><td>预测模型</td><td>没有决策价值的模型 = 减分</td></tr>
+      <tr><td>6h 刷新（改 24h 起步）</td><td>先跑通再提频</td></tr>
+      <tr><td>失败邮件通知</td><td>招聘方看不到</td></tr>
+      <tr><td>缺失率门禁（保留 schema 校验）</td><td>过早优化</td></tr>
+      <tr><td>全国 16 区域全覆盖</td><td><strong>改成 4–6 个 council 深做</strong> —— 深度 &gt; 广度</td></tr>
+    </tbody>
+  </table>
+  </div>
+
+  <h4>优先做（顺序即执行顺序）</h4>
+  <ol>
+    <li><span class="chip p0">P0</span> 命题重构成 A（供水压力）+ B（非因果章节）</li>
+    <li><span class="chip p0">P0</span> DuckDB + <code>sql/</code> 目录</li>
+    <li><span class="chip p0">P0</span> 一张地图 + 两张图 + <strong>三条书面发现</strong></li>
+    <li><span class="chip p0">P0</span> Data Health 面板</li>
+    <li><span class="chip p0">P0</span> README + GIF + 许可署名</li>
+    <li><span class="chip p1">P1</span> Hilltop 6h 刷新 + 流量百分位 badge</li>
+  </ol>
+
+  <div class="note">
+    <span class="nh" style="color:var(--accent)">唯一的检查点</span>
+    <p><strong>W2 结束时能不能对着屏幕讲 3 分钟故事</strong>，是这个项目成败的唯一检查点。讲不出来，说明该回去改命题，而不是继续加功能。</p>
+  </div>
+</section>
+
+<!-- ══ Q7 ══════════════════════════════════════════════ -->
+<section id="q7">
+  <div class="sechead"><span class="q">Q7</span><h2>你遗漏的风险</h2></div>
+  <div class="tw">
+  <table>
+    <thead><tr><th style="width:64px">等级</th><th style="width:190px">风险</th><th>说明与对策</th></tr></thead>
+    <tbody>
+      <tr><td><span class="chip p0">P0</span></td><td>GH Pages 需公开 repo</td><td>见 Q4。Free 计划私有仓开不了 Pages</td></tr>
+      <tr><td><span class="chip p0">P0</span></td><td>Actions 定时任务 <strong>60 天自动禁用</strong></td><td>公开 repo 若 60 天无 <strong>commit</strong>（issue / star 不算），定时 workflow 会被自动关停。你找到工作后停止提交，半年后招聘方看到的是 stale 站点 + 红叉。<br><strong>对策</strong>：keepalive workflow 定期空提交，<strong>或</strong>接受并在页面上诚实标注 “pipeline paused — last run YYYY-MM-DD”</td></tr>
+      <tr><td><span class="chip p0">P0</span></td><td>API key 进 git 历史</td><td>Stats NZ key 一旦 commit，转公开时历史仍在。<strong>从第一天就用 <code>.env</code>（gitignore）+ GH Secrets</strong>，别等转公开才想起</td></tr>
+      <tr><td><span class="chip p0">P0</span></td><td>PHF 数据混入</td><td>不要把实习期的数据或未发表结论放进公开 repo</td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>Council 端点无 SLA</td><td>Hilltop 无版本控制、会改站点编号、有维护窗口、部分是 http 非 https、CI runner IP 可能被限流。<strong>必须</strong>：retry + 指数退避 + 缓存上次成功结果 + 优雅降级（页面显示 stale 而非空白/报错）</td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>仓库膨胀</td><td>每 6h commit JSON，90 天 = 360 次数据提交，git 历史几百 MB，clone 变慢。<strong>对策</strong>：CI 构建产物直接 <code>actions/deploy-pages</code>，数据不进 git；或只 append 一个精简 tidy CSV</td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>时区 / DST</td><td>各 council Hilltop 返回的时间戳时区标注不一致；NZDT↔NZST 切换会造成重复或缺失的小时。<strong>统一存 UTC，展示时转 Pacific/Auckland</strong>，并写一个 DST 边界的测试</td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>地理数据体积</td><td>全精度边界手机端会崩。mapshaper 简化 + topojson</td></tr>
+      <tr><td><span class="chip p1">P1</span></td><td>数据许可署名缺失</td><td>见 Q2。NZ council 面试的减分项</td></tr>
+      <tr><td><span class="chip p2">P2</span></td><td>费用</td><td>全免费路径存在：公开 repo 的 Actions + Pages 免费。私有 repo Actions 有 2000 min/月配额（你的用量约 240 min/月，够用）</td></tr>
+    </tbody>
+  </table>
+  </div>
+</section>
+
+<!-- ══ PLAN ════════════════════════════════════════════ -->
+<section id="plan">
+  <div class="sechead"><span class="q">▣</span><h2>三周执行清单</h2></div>
+  <p>勾选状态保存在这台设备的浏览器里，刷新和重新打开都还在。每周末尾有一个<strong>验收条件</strong> —— 达不到就不要进入下一周。</p>
+
+  <div class="ck-intro">
+    <span class="big num" id="pct">0%</span>
+    <span class="meter" style="max-width:260px"><i id="main-meter"></i></span>
+    <span class="mono" style="font-size:12px;color:var(--ink-3)" id="main-count">0 / 0 完成</span>
+    <button class="resetbtn" id="reset" type="button">重置全部</button>
+  </div>
+
+  <div class="week" data-week="w0">
+    <div class="wh">
+      <span class="wt">W0 · 动手前先定的五件事</span>
+      <span class="meter wm"><i></i></span>
+      <span class="ws">0/5</span>
+    </div>
+    <ul>
+      <li><label class="chk"><input type="checkbox" data-id="w0-1"><span class="lab">命题改为 <strong>A（供水压力）</strong>为主线，写成一句话贴在 repo 顶部</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w0-2"><span class="lab">加一节 <strong>B</strong>（「人口不能解释水质」）作为深度章节</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w0-3"><span class="lab">砍掉 Streamlit / 双前端，只做静态站</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w0-4"><span class="lab">选定 4–6 个 council（建议 Auckland · Canterbury · Otago · Hawke's Bay · Southland · Waikato）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w0-5"><span class="lab">定托管路径：私有开发 → 完成后转公开开 Pages（或 Cloudflare Pages）</span></label></li>
+    </ul>
+    <p class="gate"><b>验收</b>能用一句话说清「谁、为了什么决定、看这个页面」。</p>
+  </div>
+
+  <div class="week" data-week="w1">
+    <div class="wh">
+      <span class="wt">W1 · 数据落地</span>
+      <span class="meter wm"><i></i></span>
+      <span class="ws">0/9</span>
+    </div>
+    <ul>
+      <li><label class="chk"><input type="checkbox" data-id="w1-1"><span class="lab"><code>.gitignore</code> + <code>.env</code> + GH Secrets <strong>在第一次 commit 之前</strong>就位</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-2"><span class="lab">申请 Stats NZ ADE API 订阅 key，跑通一次 OData 查询</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-3"><span class="lab">拉 subnational population estimates（选定 council，近 10 年）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-4"><span class="lab">Water NZ NPR 提取：人均 L/日、漏损率、计量覆盖率</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-5"><span class="lab">边界几何：Stats NZ GDS / LINZ 下载 → mapshaper 简化 → topojson <strong>&lt;500 KB</strong></span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-6"><span class="lab">区域名归一化映射表（macron · REGC 码 ↔ council 名 ↔ LAWA 分区）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-7"><span class="lab">Hilltop：确认 3–5 个 council 端点可用，<code>Request=SiteList</code> 跑通</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-8"><span class="lab">LAWA 水质快照手动下载，记录下载日期与来源 URL</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w1-9"><span class="lab">一条命令产出 <code>data/processed/*.json</code> + schema + 时间戳</span></label></li>
+    </ul>
+    <p class="gate"><b>验收</b><code>make data</code> 从零跑通，产物可被前端直接读取。</p>
+  </div>
+
+  <div class="week" data-week="w2">
+    <div class="wh">
+      <span class="wt">W2 · 分析 + 静态站</span>
+      <span class="meter wm"><i></i></span>
+      <span class="ws">0/9</span>
+    </div>
+    <ul>
+      <li><label class="chk"><input type="checkbox" data-id="w2-1"><span class="lab">DuckDB 接入，Python 只做 IO / 编排</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-2"><span class="lab"><code>sql/01_region_population_growth.sql</code> —— 窗口函数 YoY + 5yr CAGR</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-3"><span class="lab"><code>sql/02_supply_per_capita.sql</code> —— pop × NPR join</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-4"><span class="lab"><code>sql/03_flow_percentile.sql</code> —— 历史同期百分位</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-5"><span class="lab">地图：Leaflet + 简化边界 choropleth</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-6"><span class="lab">图 1：人口增速 vs 人均用水（气泡，按计量率着色）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-7"><span class="lab">图 2：council 漏损率排名 / 供需缺口</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-8"><span class="lab"><strong>三条书面发现定稿</strong>（数字 + 图 + so what）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w2-9"><span class="lab">“Why I don't claim causation” 写完（生态谬误 · n=16 · 混杂 · 站点选择偏差）</span></label></li>
+    </ul>
+    <p class="gate"><b>验收 · 关键闸门</b>能对着屏幕<strong>讲 3 分钟故事</strong>。讲不出来就回去改命题，不要继续加功能。</p>
+  </div>
+
+  <div class="week" data-week="w3">
+    <div class="wh">
+      <span class="wt">W3 · 工程 + 包装</span>
+      <span class="meter wm"><i></i></span>
+      <span class="ws">0/10</span>
+    </div>
+    <ul>
+      <li><label class="chk"><input type="checkbox" data-id="w3-1"><span class="lab">GH Actions 定时：flow 6h · 水质月 · 人口月</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-2"><span class="lab">retry + 指数退避 + 缓存上次成功结果 + 优雅降级</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-3"><span class="lab"><code>_runs.jsonl</code> + <strong>Data Health 面板</strong>（last run · 行数 · 空值率 · schema ver · 最近 20 次色条）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-4"><span class="lab">时间统一 UTC 存、Pacific/Auckland 展示</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-5"><span class="lab">6 个测试：schema · 单位换算 · 区域名归一化 · DST 边界 · 缺失值传播 · 百分位</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-6"><span class="lab">README（用下方骨架）+ <strong>15 秒 GIF</strong></span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-7"><span class="lab">Attribution 区块（页面底部 + README）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-8"><span class="lab">keepalive workflow 防 60 天禁用，或写明 “pipeline paused”</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-9"><span class="lab">数据不进 git —— CI 构建产物直接 <code>deploy-pages</code></span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w3-10"><span class="lab">转公开 + 开 Pages + <strong>确认 key 不在 git 历史里</strong></span></label></li>
+    </ul>
+    <p class="gate"><b>验收</b>手机端打开 &lt;3s，无横向滚动，所有链接可点。</p>
+  </div>
+
+  <div class="week" data-week="w4">
+    <div class="wh">
+      <span class="wt">发布后 · 让它被看见</span>
+      <span class="meter wm"><i></i></span>
+      <span class="ws">0/3</span>
+    </div>
+    <ul>
+      <li><label class="chk"><input type="checkbox" data-id="w4-1"><span class="lab">LinkedIn 短文 + 一张图（曝光量通常高于 repo 本身）</span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w4-2"><span class="lab">CV 加一行：链接 + <strong>一句量化结果</strong></span></label></li>
+      <li><label class="chk"><input type="checkbox" data-id="w4-3"><span class="lab">准备好被问的 3 个问题：为什么不做因果 / 数据源怎么选 / 管道挂了怎么办</span></label></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ══ README ══════════════════════════════════════════ -->
+<section id="readme">
+  <div class="sechead"><span class="q">▣</span><h2>README 骨架</h2></div>
+  <p>直接复制到 <code>README.md</code>。方括号占位符替换成你自己的内容 —— 但<strong>结构不要动</strong>：这个顺序是按招聘方的阅读顺序排的（先 TL;DR，后方法，最后才是运行说明）。</p>
+
+  <div class="rm">
+    <div class="rmh">
+      <span class="dot"></span>
+      <span>README.md</span>
+      <button class="copybtn" id="copy" type="button">复制</button>
+    </div>
+    <pre id="readme-src"><code># NZ Water × Population
+
+[![pipeline](https://github.com/USER/REPO/actions/workflows/refresh.yml/badge.svg)](https://github.com/USER/REPO/actions)
+[![data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-1c6b67)](#data-sources--licences)
+
+**Where will population growth put NZ council water supplies under pressure first?**
+
+[**Live site →**](https://USER.github.io/REPO/) &nbsp;·&nbsp; [The SQL →](sql/) &nbsp;·&nbsp; [Findings →](ANALYSIS.md)
+
+![demo](docs/demo.gif)
+
+---
+
+## TL;DR — three findings
+
+1. **[Number].** [One sentence of evidence.]
+   *So what:* [what a council planner should do differently.]
+   ![](docs/fig1.png)
+
+2. **[Number].** [Evidence.]
+   *So what:* [decision implication.]
+
+3. **[Number].** [Evidence.]
+   *So what:* [decision implication.]
+
+&gt; Full write-up, method and caveats: [ANALYSIS.md](ANALYSIS.md)
+
+## Who this is for
+
+**Audience:** regional council asset planners and three-waters analysts.
+**Decision it supports:** which supply zones are most likely to face a
+demand–supply gap under projected population growth over the next 5 years.
+
+Every chart on the site answers one sub-question of that decision.
+Scope: [N] councils — [list]. Depth over national coverage, deliberately.
+
+## How it works
+
+```
+Stats NZ ADE API ─┐
+Water NZ NPR ─────┼─→ scripts/  ─→ DuckDB ─→ data/processed/*.json ─→ static site
+Council Hilltop ──┤     (extract)   (sql/)     + schema + _runs.jsonl    (ECharts
+LAWA snapshot ────┘                                                     + Leaflet)
+```
+
+- `data/processed/` is the **single source of truth** for the front end:
+  versioned JSON + JSON Schema + a UTC timestamp per source.
+- Refresh cadence matches each source's real cadence — see the table below.
+  This is an **automated pipeline with freshness SLAs**, not a real-time feed.
+- The site's **Data Health** panel reads `_runs.jsonl`: last successful run,
+  row counts, null rates, schema version, last 20 runs.
+
+## The SQL
+
+All business logic lives in `sql/`; Python only does IO and orchestration.
+
+| File | What it does |
+|---|---|
+| [`01_region_population_growth.sql`](sql/01_region_population_growth.sql) | YoY + 5-year CAGR per council (window functions) |
+| [`02_supply_per_capita.sql`](sql/02_supply_per_capita.sql) | Joins population to Water NZ NPR; litres/person/day, leakage, metering |
+| [`03_flow_percentile.sql`](sql/03_flow_percentile.sql) | Current river flow vs same-week historical percentile |
+
+## Limitations &amp; why I don't claim causation
+
+- **Ecological fallacy** — council-level correlation says nothing about
+  catchment-level mechanism.
+- **n = [N]** — no correlation across this few units is robust; one large
+  council can flip the sign.
+- **Confounding** — land use (dairy intensity, irrigation) drives NZ river
+  water quality far more than urban population. Section [B] shows the
+  population signal weakens once land use is accounted for.
+- **Site selection bias** — LAWA monitoring sites are not randomly located.
+- Water NZ NPR is self-reported by councils; metering coverage varies.
+
+## Data sources &amp; licences
+
+| Source | Used for | Cadence | Licence |
+|---|---|---|---|
+| [Stats NZ — Aotearoa Data Explorer](https://portal.apis.stats.govt.nz/) | Subnational population estimates | Annual (30 Jun, released Oct) | CC BY 4.0 |
+| [Stats NZ Geographic Data Service](https://datafinder.stats.govt.nz/) | Regional council boundaries | Static | CC BY 4.0 |
+| [Water New Zealand NPR](https://www.waternz.org.nz/NationalPerformanceReview) | Litres/person/day, leakage, metering | Annual | See publisher terms |
+| [council] Hilltop server | River flow / level | 15 min – 1 h | [per-council] |
+| [LAWA](https://www.lawa.org.nz/download-data) | River water quality state &amp; trend | Annual snapshot, downloaded [DATE] | CC BY 4.0 |
+
+Contains data sourced from Stats NZ and licensed for reuse under **CC BY 4.0**.
+Water quality data courtesy of **LAWA** and New Zealand's regional councils.
+Boundary data © **Stats NZ / LINZ**, CC BY 4.0. Changes were made.
+
+## Run it yourself
+
+```bash
+git clone https://github.com/USER/REPO && cd REPO
+cp .env.example .env        # add your Stats NZ API key
+make all                    # fetch → transform → validate → build site
+make test                   # pytest: schema, units, region names, DST, nulls
+python -m http.server -d site 8000
+```
+
+`data/raw/sample/` holds a trimmed fixture set so `make test` runs offline.
+
+## Repo layout
+
+```
+scripts/    extract + orchestrate (Python)
+sql/        all business logic (DuckDB)
+schemas/    JSON Schema per processed dataset
+site/       static front end (ECharts + Leaflet), no build step
+tests/      pytest
+data/
+  raw/      source snapshots + sample fixtures
+  processed/ single source of truth: *.json, *.schema.json, _runs.jsonl
+```
+
+## Status
+
+Pipeline runs on GitHub Actions: flow every 6 h, water quality and population
+monthly. If the badge above is red or the site header says *pipeline paused*,
+the data shown is the last good snapshot — the site degrades to stale rather
+than blank, by design.
+
+---
+
+Built by [Feng Jiang](https://github.com/USER) · MADS (Distinction),
+University of Canterbury · [LinkedIn](#)
+</code></pre>
+  </div>
+
+  <div class="note">
+    <span class="nh" style="color:var(--accent)">三个不要动的地方</span>
+    <p><strong>① TL;DR 在 How it works 之前</strong> —— 招聘方先看结论。<strong>② Limitations 单独成节且靠前</strong> —— 这是初级/中级分析师的分水岭。<strong>③ SQL 表格里点名窗口函数</strong> —— 让关键词能被搜到，也让人一眼知道你写的不是 <code>SELECT *</code>。</p>
+  </div>
+</section>
+
+<div class="src">
+  <h4>核查来源</h4>
+  <ul>
+    <li><a href="https://docs.github.com/get-started/learning-about-github/githubs-products" target="_blank" rel="noopener">GitHub's plans</a></li>
+    <li><a href="https://docs.github.com/actions/managing-workflow-runs/disabling-and-enabling-a-workflow" target="_blank" rel="noopener">GitHub Actions — disabling and enabling a workflow</a></li>
+    <li><a href="https://portal.apis.stats.govt.nz/how-to-subscribe" target="_blank" rel="noopener">Stats NZ API Portal — how to subscribe</a></li>
+    <li><a href="https://www.stats.govt.nz/tools/aotearoa-data-explorer/ade-api-user-guide/" target="_blank" rel="noopener">Aotearoa Data Explorer — API user guide</a></li>
+    <li><a href="https://www.stats.govt.nz/information-releases/subnational-population-estimates-at-30-june-2025/" target="_blank" rel="noopener">Subnational population estimates: at 30 June 2025</a></li>
+    <li><a href="https://www.lawa.org.nz/download-data" target="_blank" rel="noopener">LAWA — download data</a></li>
+    <li><a href="https://niwa.co.nz/news/new-era-new-zealand-science" target="_blank" rel="noopener">Earth Sciences New Zealand — NIWA / GNS merger</a></li>
+    <li><a href="https://niwa.co.nz/niwa-hydro-web-portal" target="_blank" rel="noopener">NIWA Hydro Web Portal</a></li>
+    <li><a href="https://www.hbrc.govt.nz/assets/Document-Library/Council-Data/20170426-HilltopServerTrimmed.pdf" target="_blank" rel="noopener">Hilltop Server web service spec (HBRC)</a></li>
+    <li><a href="https://www.waternz.org.nz/NationalPerformanceReview" target="_blank" rel="noopener">Water NZ — National Performance Review</a></li>
+  </ul>
+</div>
+
+<p class="foot">
+  勾选进度保存在本机浏览器（localStorage），不上传、不共享。<br>
+  评审基于 2026-08-29 的公开信息；数据源的接入方式与许可条款请在实施前复核。
+</p>
+
+</div>
+</main>
+</div>
+
+<script>
+(function () {
+  var KEY = 'nzwater-review-checklist-v1';
+  var boxes = Array.prototype.slice.call(document.querySelectorAll('.chk input'));
+
+  function load() {
+    try {
+      var raw = localStorage.getItem(KEY);
+      return raw ? JSON.parse(raw) : {};
+    } catch (e) { return {}; }
+  }
+  function save(state) {
+    try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
+  }
+
+  var state = load();
+  boxes.forEach(function (b) {
+    if (state[b.dataset.id]) b.checked = true;
+    b.addEventListener('change', function () {
+      state[b.dataset.id] = b.checked;
+      save(state);
+      render();
+    });
+  });
+
+  function setMeter(el, pct) { if (el) el.style.width = pct + '%'; }
+
+  function render() {
+    var done = 0;
+    document.querySelectorAll('.week').forEach(function (w) {
+      var bs = Array.prototype.slice.call(w.querySelectorAll('input'));
+      var d = bs.filter(function (b) { return b.checked; }).length;
+      done += d;
+      w.querySelector('.ws').textContent = d + '/' + bs.length;
+      setMeter(w.querySelector('.wm > i'), bs.length ? (d / bs.length) * 100 : 0);
+    });
+    var total = boxes.length;
+    var pct = total ? Math.round((done / total) * 100) : 0;
+    setMeter(document.getElementById('main-meter'), pct);
+    setMeter(document.getElementById('rail-meter'), pct);
+    setMeter(document.getElementById('mo-meter'), pct);
+    document.getElementById('pct').textContent = pct + '%';
+    document.getElementById('main-count').textContent = done + ' / ' + total + ' 完成';
+    document.getElementById('rail-count').textContent = done + '/' + total;
+    document.getElementById('mo-count').textContent = done + '/' + total;
+  }
+  render();
+
+  document.getElementById('reset').addEventListener('click', function () {
+    if (!window.confirm('清空所有勾选？')) return;
+    boxes.forEach(function (b) { b.checked = false; });
+    state = {};
+    save(state);
+    render();
+  });
+
+  // copy README
+  var btn = document.getElementById('copy');
+  btn.addEventListener('click', function () {
+    var text = document.getElementById('readme-src').innerText;
+    var ok = function () { btn.textContent = '已复制'; setTimeout(function(){ btn.textContent='复制'; }, 1600); };
+    var fail = function () { btn.textContent = '请手动选取'; setTimeout(function(){ btn.textContent='复制'; }, 2200); };
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(ok, fail);
+    } else { fail(); }
+  });
+
+  // scroll spy
+  var links = Array.prototype.slice.call(document.querySelectorAll('.rail a'));
+  var map = {};
+  links.forEach(function (a) { map[a.getAttribute('href').slice(1)] = a; });
+  var targets = Object.keys(map).map(function (id) { return document.getElementById(id); }).filter(Boolean);
+  if ('IntersectionObserver' in window && targets.length) {
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (en) {
+        if (en.isIntersecting) {
+          links.forEach(function (a) { a.classList.remove('on'); });
+          var a = map[en.target.id];
+          if (a) a.classList.add('on');
+        }
+      });
+    }, { rootMargin: '-12% 0px -72% 0px', threshold: 0 });
+    targets.forEach(function (t) { io.observe(t); });
+  }
+})();
+</script>

@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "note": "Region-name normalisation map: Stats NZ REGC code/name ↔ LAWA zone (code/name/agency) ↔ display names + macron aliases. LAWA zone names are lowercase (e.g. \"hawke's bay\"); Stats NZ names use title case. REGC codes follow Stats NZ's regional council classification (02 Auckland, 03 Waikato, 06 Hawke's Bay, 14 Canterbury, 15 Otago, 16 Southland — corroborated by the 2006 census data dictionary's 04xx Bay of Plenty pattern); mark 'verified' true once confirmed against the Stats NZ ADE API response (currently 502).",
+  "fetched_utc": "2026-08-30",
+  "regions": [
+    {
+      "region": "auckland",
+      "stats_nz": {"regec": "02", "name": "Auckland Region", "verified": false},
+      "display": {"en": "Auckland", "mi": "Tāmaki Makaurau"},
+      "lawa": {"zone_code": "AUCKLAND", "zone_name": "auckland", "agency": "Auckland Council"},
+      "aliases": ["auckland", "tamaki makaurau", "tāmaki makaurau"]
+    },
+    {
+      "region": "waikato",
+      "stats_nz": {"regec": "03", "name": "Waikato Region", "verified": false},
+      "display": {"en": "Waikato", "mi": "Waikato"},
+      "lawa": {"zone_code": "WAIKATO", "zone_name": "waikato", "agency": "Waikato Regional Council"},
+      "aliases": ["waikato"]
+    },
+    {
+      "region": "hawkes_bay",
+      "stats_nz": {"regec": "06", "name": "Hawke's Bay Region", "verified": false},
+      "display": {"en": "Hawke's Bay", "mi": "Te Matau-a-Māui"},
+      "lawa": {"zone_code": "HAWKESBAY", "zone_name": "hawke's bay", "agency": "Hawke's Bay Regional Council"},
+      "aliases": ["hawke's bay", "hawkes bay", "hawke's bay region", "te matau-a-māui"]
+    },
+    {
+      "region": "canterbury",
+      "stats_nz": {"regec": "14", "name": "Canterbury Region", "verified": false},
+      "display": {"en": "Canterbury", "mi": "Waitaha"},
+      "lawa": {"zone_code": "CANTERBURY", "zone_name": "canterbury", "agency": "Environment Canterbury"},
+      "aliases": ["canterbury", "waitaha", "ecan"]
+    },
+    {
+      "region": "otago",
+      "stats_nz": {"regec": "15", "name": "Otago Region", "verified": false},
+      "display": {"en": "Otago", "mi": "Ōtākou"},
+      "lawa": {"zone_code": "OTAGO", "zone_name": "otago", "agency": "Otago Regional Council"},
+      "aliases": ["otago", "ōtākou", "otakou"]
+    },
+    {
+      "region": "southland",
+      "stats_nz": {"regec": "16", "name": "Southland Region", "verified": false},
+      "display": {"en": "Southland", "mi": "Murihiku"},
+      "lawa": {"zone_code": "SOUTHLAND", "zone_name": "southland", "agency": "Environment Southland"},
+      "aliases": ["southland", "murihiku"]
+    }
+  ]
+}

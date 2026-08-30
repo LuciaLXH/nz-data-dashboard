@@ -1,0 +1,3 @@
+-- 02_supply_per_capita.sql
+-- Join population to Water NZ NPR: litres/person/day, leakage, metering.
+-- TODO(W2): implement against DuckDB.

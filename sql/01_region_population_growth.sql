@@ -1,0 +1,4 @@
+-- 01_region_population_growth.sql
+-- Population growth per council: YoY + 5-year CAGR via window functions.
+-- Source: Stats NZ subnational population estimates (as at 30 June).
+-- TODO(W2): implement against DuckDB.

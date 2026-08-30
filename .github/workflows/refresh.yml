@@ -1,0 +1,27 @@
+name: refresh
+
+on:
+  schedule:
+    # cron times are UTC. Flow: start at 24 h during bring-up, switch to
+    # `0 */6 * * *` once stable. Population & water quality are monthly —
+    # sources are annual, a daily check would be performative.
+    - cron: "0 */24 * * *"     # flow / level
+    - cron: "0 3 1 * *"        # population + water quality (1st of month)
+  workflow_dispatch:
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install -r requirements.txt    # TODO(W1): pin deps (uv preferred)
+      - run: make data
+        env:
+          STATS_NZ_API_KEY: ${{ secrets.STATS_NZ_API_KEY }}
+      - name: Run tests
+        run: make test
+      # TODO(W3): build the static site and deploy via actions/deploy-pages.
+      # Data must NOT be committed to git history.
