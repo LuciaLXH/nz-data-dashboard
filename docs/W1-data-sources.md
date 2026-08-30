@@ -28,6 +28,9 @@ ECan/Southland/Auckland/Waikato 待 W1.5 补（候选：LAWA 内部 Umbraco API�
 - `/umbraco/api/waterquantityservice/wateravailable|waterusage` — 可用/用水量（供需分析直接可用）
 - `/umbraco/api/mapservice/boundaryforNZ` — **全部区域边界（WKT）** ✅ 已用于边界简化
 若 W1.5 打通 flowstats，可统一覆盖 6 council（CC BY 4.0）。
+- 另发现 `waterquantityservice/wateravailable?pageId=<region>` 返回**区域尺度降雨/径流**（如 HB：降雨 19.7 Bm³/年、径流 11 Bm³/年，源自 NIWA）——W2 供应侧可作补充信号；`waterusage?pageId=<region>` 返回 null（需 zone 页 id）。
+
+**region_map 实测验证（2026-08-30）**：`data/ref/region_map.json` 的 aliases 与 LAWA 河流水质 State Quartile 表（11,004 行）逐一比对 —— 6 council 5,954 行**全部精确匹配**（auckland 401 / canterbury 1616 / hawkes_bay 928 / otago 1017 / southland 761 / waikato 1231），其余 11 区域正确未匹配（含 macron 变体 manawatū-whanganui），无错配无遗漏。
 
 ## 人口（年度）
 
