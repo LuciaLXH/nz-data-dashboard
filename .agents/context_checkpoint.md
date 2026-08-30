@@ -95,7 +95,7 @@
 - ✅ **部署产物瘦身**：site-data 只复制站点实际消费的文件（原误带 1.3MB flow.json + population.json）→ site/data **44KB**（移动端 <3s 目标）
 - ✅ **端到端验证**：完整 `make data`（真实 key）通过 —— Stats NZ 6×48 区域年、HBRC 3 站 5332 点、ORC 8 站 20201 点、transform 11 站百分位、validate 14/14 == CI 行为
 - ✅ **key 验证：完整 API key 值（32 位）从未进 git 历史**（git log -p 精确比对；旧历史仅 4 字符 redact 前缀）
-- ⏳ **剩余（用户步骤）**：① 转公开 + 开 Pages（需 GH token：`gh repo edit LuciaLXH/nz-data-dashboard --visibility public` + Settings→Pages→Source: GitHub Actions）② push（需 token）③ 补发现卡图片 site/img/figN.png
+- ⏳ **剩余（用户步骤）**：① 转公开 + 开 Pages（需 GH token：`gh repo edit LuciaLXH/nz-data-dashboard --visibility public` + Settings→Pages→Source: GitHub Actions）② push（需 token）③ （已完成 2026-08-30）发现卡图片 fig1-3.png 已就位（fig1/fig2 由 jpeg 转 png，headless 验证 naturalWidth>0 全显示）
 - ✅ **移动端验收已程序化通过**（`scripts/smoke_mobile.py`，390×844）：首屏 513ms（<3s）、无横向滚动、6 导航切换全通、0 控制台错误（排除 fig 图 404 预期项）== 验收标准
 - ✅ README 占位符 USER/REPO → LuciaLXH/nz-data-dashboard（badges/live 链接/clone 命令）；workflow YAML 解析验证（6h+月度 cron、deploy perms）
 - 本地提交：… → c507422 → a138e54 → 7066540 → 7f2004b → **629c5ec**（移动验收+README）；仍未推送
