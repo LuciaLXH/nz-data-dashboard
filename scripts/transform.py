@@ -20,6 +20,7 @@ import duckdb
 SQL_OUTPUTS = [
     # (sql file, output json name, expected top-level key of the result rows)
     ("sql/01_region_population_growth.sql", "population_growth.json", "rows"),
+    ("sql/02_supply_per_capita.sql", "supply_per_capita.json", "rows"),
 ]
 
 REGION_ORDER = ["auckland", "waikato", "hawkes_bay", "canterbury", "otago", "southland"]
@@ -73,6 +74,10 @@ def _run_sql_analyses(population_raw: dict) -> list[dict]:
     rows = _population_records(population_raw)
     if rows:
         con.register("population", pd.DataFrame(rows))
+    # water demand (NEPR 2024/25 primary, per supplier) — see data/ref/water_demand.json
+    demand = _load("data/ref/water_demand.json", {}).get("primary", {}).get("suppliers", [])
+    if demand:
+        con.register("water_demand", pd.DataFrame(demand))
     results = []
     for sql_file, out_name, key in SQL_OUTPUTS:
         sql = open(sql_file, encoding="utf-8").read()

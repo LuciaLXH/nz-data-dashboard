@@ -23,6 +23,7 @@ SCHEMAS = {
     "regions": "schemas/regions.schema.json",
     "population": "schemas/population.schema.json",
     "population_growth": "schemas/population_growth.schema.json",
+    "supply_per_capita": "schemas/supply_per_capita.schema.json",
 }
 
 
@@ -49,6 +50,10 @@ def main() -> int:
         growth = json.load(open("data/processed/population_growth.json", encoding="utf-8"))
     except FileNotFoundError:
         growth = {}
+    try:
+        supply = json.load(open("data/processed/supply_per_capita.json", encoding="utf-8"))
+    except FileNotFoundError:
+        supply = {}
 
     n_sites = sum(len(v.get("sites", [])) for v in flow.get("councils", {}).values())
     n_points = sum(s.get("n_points", 0) for s in flow.get("status", {}).values())
@@ -58,6 +63,8 @@ def main() -> int:
     pop_ok, pop_msg = _schema_check("population", population)
     growth_ok = bool(growth) and _schema_check("population_growth", growth)[0]
     growth_rows = len(growth.get("rows", [])) if growth else 0
+    supply_ok = bool(supply) and _schema_check("supply_per_capita", supply)[0]
+    supply_rows = len(supply.get("rows", [])) if supply else 0
 
     checks = [
         ("flow: JSON Schema", flow_ok),
@@ -70,6 +77,8 @@ def main() -> int:
         ("population: status recorded (may be degraded)", "status" in population),
         ("growth: JSON Schema", growth_ok),
         ("growth: rows for all 6 regions × 7 years", growth_rows >= 6 * 7),
+        ("supply: JSON Schema", supply_ok),
+        ("supply: rows for all 6 regions", supply_rows >= 6),
     ]
     passed, total = 0, len(checks)
     for name, ok in checks:
