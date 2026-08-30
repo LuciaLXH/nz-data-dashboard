@@ -8,6 +8,9 @@ on:
     - cron: "0 */6 * * *"     # flow / level
     - cron: "0 3 1 * *"       # population + water quality (1st of month)
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths: ["site/**", ".github/workflows/**"]
 
 # deploy-pages needs write permissions on pages + a short-lived id token
 permissions:
