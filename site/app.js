@@ -197,7 +197,7 @@ function renderMap(d) {
       if (!r) return;
       regionLayers.push({ layer, region: f.properties.region, supply: r, bounds: layer.getBounds() });
       layer.bindPopup(regionPopup(r, regions));
-      layer.on("mouseover", () => layer.setStyle({ weight: 2.5, color: "#16302b" }));
+      layer.on("mouseover", () => layer.setStyle({ weight: 2.5, color: "#14303e" }));
       layer.on("mouseout", () => layer.setStyle(styleRegion(r)));
     },
   }).addTo(map);
@@ -251,7 +251,7 @@ function renderMap(d) {
     const radius = Math.max(5, Math.min(14, 4 * Math.sqrt(Math.max(row.latest_flow_m3s, 0.1))));
     const key = row.council + "|" + row.site;
     const marker = L.circleMarker([coord.lat, coord.lon], {
-      radius, color: "#16302b", weight: 1.2,
+      radius, color: "#14303e", weight: 1.2,
       fillColor: BAND[row.band] ? BAND[row.band].color : "#999",
       fillOpacity: 0.85,
     }).addTo(map);
@@ -418,7 +418,7 @@ function renderBubbleChart(supply, regions) {
     ],
     series: [{
       type: "scatter", data,
-      label: { show: true, formatter: (p) => p.data.name, position: "top", fontSize: 10, color: "#16302b" },
+      label: { show: true, formatter: (p) => p.data.name, position: "top", fontSize: 10, color: "#14303e" },
       emphasis: { focus: "series" },
     }],
   });
