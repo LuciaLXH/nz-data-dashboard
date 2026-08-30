@@ -1,0 +1,237 @@
+{
+ "schema_version": 1,
+ "compiled_utc": "2026-08-30T05:32:36.409397+00:00",
+ "source": "LAWA water-quantity explorer — 'Water consents: How is water used?' (waterquantityservice/waterusage, type=region)",
+ "licence": "CC BY 4.0",
+ "note": "Share of CONSENTED water volume by use (breakdownPercentage), per region. A consent authorises a take — it is not actual use. Otago publishes no consent-use data on LAWA (all hasConsents=false). Hydro is 0% in all 6 regions. The consent data year is not published in the LAWA API response.",
+ "regions": [
+  {
+   "region": "auckland",
+   "display": "Auckland",
+   "lawa_url": "https://www.lawa.org.nz/explore-data/auckland-region/water-quantity/",
+   "activities": {
+    "Irrigation": {
+     "share_pct": 16.2,
+     "consents": "718",
+     "volume": "0.02 billion m³"
+    },
+    "Industrial": {
+     "share_pct": 19.29,
+     "consents": "150",
+     "volume": "0.02 billion m³"
+    },
+    "Stock": {
+     "share_pct": 0.79,
+     "consents": "49",
+     "volume": "0.81 million m³"
+    },
+    "Hydro": {
+     "share_pct": 0.0,
+     "consents": "0",
+     "volume": "0 million m³"
+    },
+    "Drinking": {
+     "share_pct": 62.71,
+     "consents": "123",
+     "volume": "0.06 billion m³"
+    },
+    "Other": {
+     "share_pct": 1.0,
+     "consents": "97",
+     "volume": "1.02 million m³"
+    }
+   },
+   "total_consents": 1137
+  },
+  {
+   "region": "waikato",
+   "display": "Waikato",
+   "lawa_url": "https://www.lawa.org.nz/explore-data/waikato-region/water-quantity/",
+   "activities": {
+    "Irrigation": {
+     "share_pct": 15.7,
+     "consents": "463",
+     "volume": "0.09 billion m³"
+    },
+    "Industrial": {
+     "share_pct": 19.16,
+     "consents": "284",
+     "volume": "0.12 billion m³"
+    },
+    "Stock": {
+     "share_pct": 7.29,
+     "consents": "2,575",
+     "volume": "0.04 billion m³"
+    },
+    "Hydro": {
+     "share_pct": 0.0,
+     "consents": "21",
+     "volume": "0.01 million m³"
+    },
+    "Drinking": {
+     "share_pct": 57.37,
+     "consents": "188",
+     "volume": "0.35 billion m³"
+    },
+    "Other": {
+     "share_pct": 0.49,
+     "consents": "34",
+     "volume": "2.94 million m³"
+    }
+   },
+   "total_consents": 3565
+  },
+  {
+   "region": "hawkes-bay",
+   "display": "Hawke's Bay",
+   "lawa_url": "https://www.lawa.org.nz/explore-data/hawkes-bay-region/water-quantity/",
+   "activities": {
+    "Irrigation": {
+     "share_pct": 36.34,
+     "consents": "1,230",
+     "volume": "0.1 billion m³"
+    },
+    "Industrial": {
+     "share_pct": 14.91,
+     "consents": "77",
+     "volume": "0.04 billion m³"
+    },
+    "Stock": {
+     "share_pct": 0.01,
+     "consents": "34",
+     "volume": "0.02 million m³"
+    },
+    "Hydro": {
+     "share_pct": 0.0,
+     "consents": "25",
+     "volume": "0 million m³"
+    },
+    "Drinking": {
+     "share_pct": 16.52,
+     "consents": "44",
+     "volume": "0.05 billion m³"
+    },
+    "Other": {
+     "share_pct": 32.21,
+     "consents": "836",
+     "volume": "0.09 billion m³"
+    }
+   },
+   "total_consents": 2246
+  },
+  {
+   "region": "canterbury",
+   "display": "Canterbury",
+   "lawa_url": "https://www.lawa.org.nz/explore-data/canterbury-region/water-quantity/",
+   "activities": {
+    "Irrigation": {
+     "share_pct": 82.48,
+     "consents": "4,799",
+     "volume": "4.77 billion m³"
+    },
+    "Industrial": {
+     "share_pct": 0.26,
+     "consents": "1,912",
+     "volume": "0.01 billion m³"
+    },
+    "Stock": {
+     "share_pct": 4.65,
+     "consents": "206",
+     "volume": "0.27 billion m³"
+    },
+    "Hydro": {
+     "share_pct": 0.0,
+     "consents": "15",
+     "volume": "55.66 billion m³"
+    },
+    "Drinking": {
+     "share_pct": 3.83,
+     "consents": "280",
+     "volume": "0.22 billion m³"
+    },
+    "Other": {
+     "share_pct": 8.78,
+     "consents": "425",
+     "volume": "0.51 billion m³"
+    }
+   },
+   "total_consents": 7637
+  },
+  {
+   "region": "otago",
+   "display": "Otago",
+   "lawa_url": "https://www.lawa.org.nz/explore-data/otago-region/water-quantity/",
+   "activities": {
+    "Irrigation": {
+     "share_pct": 0.0,
+     "consents": "0",
+     "volume": "0 million m³"
+    },
+    "Industrial": {
+     "share_pct": 0.0,
+     "consents": "0",
+     "volume": "0 million m³"
+    },
+    "Stock": {
+     "share_pct": 0.0,
+     "consents": "0",
+     "volume": "0 million m³"
+    },
+    "Hydro": {
+     "share_pct": 0.0,
+     "consents": "0",
+     "volume": "0 million m³"
+    },
+    "Drinking": {
+     "share_pct": 0.0,
+     "consents": "0",
+     "volume": "0 million m³"
+    },
+    "Other": {
+     "share_pct": 0.0,
+     "consents": "0",
+     "volume": "0 million m³"
+    }
+   },
+   "total_consents": 0
+  },
+  {
+   "region": "southland",
+   "display": "Southland",
+   "lawa_url": "https://www.lawa.org.nz/explore-data/southland-region/water-quantity/",
+   "activities": {
+    "Irrigation": {
+     "share_pct": 17.86,
+     "consents": "116",
+     "volume": "0.06 billion m³"
+    },
+    "Industrial": {
+     "share_pct": 13.5,
+     "consents": "71",
+     "volume": "0.04 billion m³"
+    },
+    "Stock": {
+     "share_pct": 38.91,
+     "consents": "848",
+     "volume": "0.12 billion m³"
+    },
+    "Hydro": {
+     "share_pct": 0.0,
+     "consents": "8",
+     "volume": "16.1 billion m³"
+    },
+    "Drinking": {
+     "share_pct": 6.62,
+     "consents": "45",
+     "volume": "0.02 billion m³"
+    },
+    "Other": {
+     "share_pct": 23.12,
+     "consents": "13",
+     "volume": "0.07 billion m³"
+    }
+   },
+   "total_consents": 1101
+  }
+ ]
+}

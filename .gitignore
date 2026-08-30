@@ -22,3 +22,6 @@ data/processed/*
 
 # os
 .DS_Store
+
+# site build artifacts (data copied in by `make site`; static code stays in git)
+site/data/

@@ -31,15 +31,15 @@ at 15–20 h/week; ~10–12 days full-time.
 ## W2 · Analysis + static site
 - [x] DuckDB wired in; Python does IO/orchestration only ✅（transform.py 经 DuckDB 跑 sql/；Makefile 用 .venv python）
 - [x] sql/01_region_population_growth.sql — window fns YoY + 5yr CAGR ✅（→ data/processed/population_growth.json，10/10 校验）
-- [ ] sql/02_supply_per_capita.sql — pop × NPR join
-- [ ] sql/03_flow_percentile.sql — same-week historical percentile
-- [ ] Map: Leaflet + simplified boundary choropleth
-- [ ] Chart 1: pop growth vs per-capita use (bubbles, coloured by metering)
-- [ ] Chart 2: leakage ranking / demand-supply gap by council
-- [ ] **Three written findings finalised** (number + chart + so what)
-- [ ] "Why I don't claim causation" written
-- 验收（关键闸门）: can tell a 3-minute story in front of the screen.
-  If not — fix the thesis, don't add features.
+- [x] sql/02_supply_per_capita.sql — pop × NEPR 全量 269 系统 ✅（→ supply_per_capita.json，6/6 校验）
+- [x] sql/03_flow_percentile.sql — same-week historical percentile ✅（→ flow_percentile.json，11 站；同期窗口跨年按月-日对齐，独立 pandas 交叉验证一致）
+- [x] Map: Leaflet + simplified boundary choropleth（供需压力着色 6/6 + 流量站标记 8 个有坐标）✅
+- [x] Chart 1: pop growth vs per-capita use (bubbles, colour = leakage; metering 见 water_demand.json 9 供应商) ✅
+- [x] Chart 2: leakage / demand–supply gap by council（现 vs 2030 投影 + 漏损叠加线）✅
+- [x] **Three written findings finalised** (number + chart + so what) ✅ → ANALYSIS.md + README TL;DR + site Key Findings
+- [x] "Why I don't claim causation" written ✅（README + ANALYSIS.md + site，含 flow 覆盖与自报数据限制）
+- [ ] 验收（关键闸门）: can tell a 3-minute story in front of the screen.
+  If not — fix the thesis, don't add features.（故事脚本见 docs/STORY-3MIN.md）
 
 ## W3 · Engineering + packaging
 - [ ] GH Actions schedule: flow 6 h (from 24 h) · water quality monthly ·
