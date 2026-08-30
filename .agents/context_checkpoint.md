@@ -2,6 +2,7 @@
 
 *生成于 2026-08-30（夜更新：**W3 完成，站点已上线；明日继续：视觉微调 + W4**）。本文件供「以项目目录为工作区」的会话恢复上下文（直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」）。*
 *求职（career-ops）相关内容在 CV 工作区：`/Users/liuxiaohan/NZ-Jobseeking/2026 JOB/CV/.agents/context_checkpoint.md`（绝对路径，需要时跨区读取，无需写权限）。*
+*2026-08-31 更新：**河蓝主题已上线**（标题栏 Okabe-Ito 蓝渐变 + 导航蓝字，`75d2082` 已推送）；剩余：W4（LinkedIn + CV 联动）。*
 
 ## 项目定位（已定稿，勿改）
 - **主线 A**：人口增长下的供水压力 —— 哪些 council 供水区最先出现供需缺口
@@ -101,10 +102,9 @@
 - ✅ **GitHub Pages 已上线**：`https://lucialxh.github.io/nz-data-dashboard/`（HTTP 200；页面/数据/app.js/badge 全部验证；线上 _runs.jsonl = 14/14、11 站）；repo 已公开（LuciaLXH）；`gh` CLI 2.98.0 装在 `tools/gh/gh_2.98.0_macOS_arm64/bin/`（gitignored；用户终端用 `export PATH=...` 会话级可用，`~/.zshrc` 不可写所以没持久化）
 - ✅ **移动端验收程序化通过**（`scripts/smoke_mobile.py`，390×844）：首屏 513ms（<3s）、无横向滚动、6 导航切换全通、0 控制台错误（排除 fig 图 404 预期项）== 验收标准
 - ✅ README 占位符 USER/REPO → LuciaLXH/nz-data-dashboard（badges/live 链接/clone 命令）；workflow YAML 解析验证（6h+月度 cron、deploy perms）
-- 本地提交：… → c507422 → a138e54 → 7066540 → 7f2004b → 629c5ec → d960c28 → c299bfe → 11bc32f → **ab3b4df** → **1efeff0**（**已推送 GitHub main**，线上运行 33305916729 成功）
+- 本地提交：… → c507422 → a138e54 → 7066540 → 7f2004b → 629c5ec → d960c28 → c299bfe → 11bc32f → **ab3b4df** → **1efeff0**（**已推送 GitHub main**，线上运行 33305916729 成功）→ **477f75c**（checkpoint）→ **e016aec**（checkpoint）→ **75d2082**（河蓝主题，2026-08-31 已推送）
 
 ## 明日待办（次日会话从此处继续）
-- **视觉微调收尾**（用户会带来具体意见）：发现卡效果已上线的当前形态 = 484px 正方形 auto-fit 3/2/1 列、悬停 1.2 倍+邻卡变淡、文字 1.1 倍居中、≤10 词总结句、背景图 fig1-3.png 已就位（fig1/fig2 由 jpeg 转 png，headless 验证显示正常）；标题亮银 #e8eef4；左侧导航透明绿字
+- **视觉微调收尾（2026-08-31 已做一部分 ✅）**：主色系已改**河蓝主题**（提交 `75d2082`，已推送；本地 HEAD=`75d2082`）——标题栏渐变 `#003f5f → #0072B2 → #56B4E9`（Okabe-Ito 蓝 = 色盲安全蓝；无公认「蓝洞色」标准值，以 Okabe-Ito 蓝 #0072B2 为锚点）；标题字 #eaf3fb；**左侧导航字体同色**（普通 #0072B2 / active #005a8d）；正文 ink 蓝黑 #14303e；code/表格/列表/health-strip 底色同步淡蓝 tint；语义色红/琥珀/绿未动。headless 像素采样 + 移动端 smoke 全绿（243ms/无横滚/6 导航/0 错误）。demo.gif 重录中。用户若还有其它微调意见随时回来改
 - **W4**：LinkedIn 曝光（帖子 + 1 张图）+ **CV 联动**（更新 career-ops 规则 10：去「无 GitHub 链接」，加 GitHub `github.com/LuciaLXH/nz-data-dashboard` + 本项目条目 + 一句量化结果，如「22.5% of 6-region supply leaks; HB 610 vs Akl 270 L/p/d」；master_cv.md 在 CV 工作区绝对路径见上）
-- **可选小项**：本地 doc 提交（477f75c 检查点等）随下次 push 一起；NEPR CSV 年度更新备忘（data/raw/taumata_nepr/*.csv 入库，PDF 忽略）
 - 会话恢复：直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」
