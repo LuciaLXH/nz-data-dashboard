@@ -1,0 +1,67 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/flow.schema.json",
+  "title": "River flow processed dataset (W1)",
+  "description": "Daily-mean river flow snapshots per council from Hilltop servers. Produced by scripts/transform.py (W1-minimal; full DuckDB version in W2).",
+  "type": "object",
+  "required": ["schema_version", "source", "fetched_utc", "councils", "status"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source": {"type": "string"},
+    "fetched_utc": {"type": "string", "format": "date-time"},
+    "councils": {
+      "type": "object",
+      "propertyNames": {"enum": ["hbrc", "orc"]},
+      "additionalProperties": {
+        "type": "object",
+        "required": ["council", "fetched_utc", "source", "sites"],
+        "properties": {
+          "council": {"type": "string"},
+          "fetched_utc": {"type": "string", "format": "date-time"},
+          "source": {"type": "string"},
+          "sites": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": ["site", "measurement", "units", "window", "series"],
+              "properties": {
+                "site": {"type": "string"},
+                "measurement": {"type": "string"},
+                "units": {"type": "string"},
+                "window": {
+                  "type": "array",
+                  "items": {"type": "string"},
+                  "minItems": 2,
+                  "maxItems": 2
+                },
+                "series": {
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": [{"type": "string"}, {"type": "number"}],
+                    "minItems": 2,
+                    "maxItems": 2
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "status": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["council", "ok", "sites_fetched", "n_points"],
+        "properties": {
+          "council": {"type": "string"},
+          "ok": {"type": "boolean"},
+          "sites_fetched": {"type": "integer", "minimum": 0},
+          "n_points": {"type": "integer", "minimum": 0},
+          "errors": {"type": "object"}
+        }
+      }
+    }
+  }
+}

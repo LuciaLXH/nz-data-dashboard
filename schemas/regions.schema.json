@@ -1,0 +1,48 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/regions.schema.json",
+  "title": "Region map processed dataset (W1)",
+  "description": "Normalised region mapping (REGC <-> council <-> LAWA zone) from data/ref/region_map.json.",
+  "type": "object",
+  "required": ["schema_version", "source", "regions"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "source": {"type": "string"},
+    "regions": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 6,
+      "items": {
+        "type": "object",
+        "required": ["region", "stats_nz", "display", "lawa", "aliases"],
+        "properties": {
+          "region": {"type": "string", "enum": ["auckland", "waikato", "hawkes_bay", "canterbury", "otago", "southland"]},
+          "stats_nz": {
+            "type": "object",
+            "required": ["regec", "name", "verified"],
+            "properties": {
+              "regec": {"type": "string", "pattern": "^\\d{2}$"},
+              "name": {"type": "string"},
+              "verified": {"type": "boolean"}
+            }
+          },
+          "display": {
+            "type": "object",
+            "required": ["en", "mi"],
+            "properties": {"en": {"type": "string"}, "mi": {"type": "string"}}
+          },
+          "lawa": {
+            "type": "object",
+            "required": ["zone_code", "zone_name", "agency"],
+            "properties": {
+              "zone_code": {"type": "string"},
+              "zone_name": {"type": "string"},
+              "agency": {"type": "string"}
+            }
+          },
+          "aliases": {"type": "array", "items": {"type": "string"}}
+        }
+      }
+    }
+  }
+}

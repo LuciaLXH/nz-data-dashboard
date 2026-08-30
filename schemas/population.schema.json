@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/population.schema.json",
+  "title": "Population processed dataset (W1)",
+  "description": "Subnational population fetch status from Stats NZ ADE. While the ADE backend is down the status is ok=false (graceful degradation, recorded for Data Health).",
+  "type": "object",
+  "required": ["schema_version", "status", "processed_utc"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "processed_utc": {"type": "string", "format": "date-time"},
+    "status": {
+      "type": "object",
+      "required": ["ok"],
+      "properties": {
+        "ok": {"type": "boolean"},
+        "note": {"type": "string"},
+        "attempted_utc": {"type": "string", "format": "date-time"},
+        "attempts": {"type": "integer", "minimum": 0},
+        "last_status": {"type": ["integer", "null"]},
+        "last_error": {"type": ["string", "null"]}
+      }
+    }
+  }
+}
