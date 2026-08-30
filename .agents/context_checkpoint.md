@@ -36,8 +36,8 @@
   - ✅ **人口数据落地**：`fetch_population.py` 切到新 SDMX API（`api.data.stats.govt.nz/rest`），6 council × 2018–2025 完整（Auckland 165.5万→181.6万等）；REGC 代码**官方验证**：02/03/06/**13/14/15**（Canterbury=13 非 14！）
   - ✅ **NPR/NEPR 提取完成**：`data/ref/water_demand.json`（NEPR 2024/25 主表 9 供应商 + NPR 2021/22 表 + 全国背景）；原始数据 `data/raw/waternz_npr/` + `data/raw/taumata_nepr/`（gitignored）；报告 `docs/NPR-research.md` + `docs/W1-water-demand-dunedin-invercargill.md`
   - ✅ **`make data` 全绿**（8/8 含 schema；流量 11 站 + 人口 6 区域 + 区域 6）
-  - ✅ **GitHub repo 已建**：`github.com/LuciaLXH/nz-data-dashboard`（private）+ `STATS_NZ_API_KEY` secret 已验证配置
-  - ⏳ **推送被拒**：用户首个 token 缺 `workflow` scope（推 workflow 文件被 GitHub 拒）；已请用户生成 `repo`+`workflow` 双 scope 新 token。**repo/secret 就绪，只差 push**
+  - ✅ **GitHub repo 已建并推送**：`github.com/LuciaLXH/nz-data-dashboard`（private）+ `STATS_NZ_API_KEY` secret 已配置；**8 个提交已推送**（HEAD=49de94d）；已扫描确认 key/token 从未进入 git 历史
+  - ✅ **W1 全部完成**（2026-08-30）：流量（HBRC+ORC）、人口（6 council×2018–2025）、NPR/NEPR（water_demand.json）、区域映射（官方 REGC 验证）、边界 4.9KB、`make data` 8/8
   - ⏳ W1.5：LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量（SurfacewaterZones?pageId=25991 返回 zone Id=29298 等，但 FlowSites/flowstats?pageId=<zone> 仍返回 []）
 - **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**（人口 2018–2025 与 NPR/NEPR 需求数据已齐，W2 可直接开工）
 - **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**
@@ -57,8 +57,8 @@
 - Python 3.12.2；openpyxl 3.1.5；pandas 2.2.3；requests 2.32.3；jsonschema 4.23.0；**duckdb 未安装**（W2 需要时 `pip install duckdb`）
 - **`.venv` 项目虚拟环境**（--system-site-packages，gitignored）：pynacl 已装（建仓脚本用）；pip 直接装包会写 ~/.local 被沙箱拦，**以后装包用 `.venv/bin/pip`**
 - mapshaper 0.7.55 装在 `tools/`（npm --prefix，gitignored）
-- git：user.name=xli246，email=xli246@uclive.ac.nz；本地分支 main（提交至 2457c64）；**GitHub 用户 = LuciaLXH**，repo 已建（private）+ secret 已配；**推送等用户提供 `repo`+`workflow` 双 scope token**（首个 token 缺 workflow scope 被拒；token 用过即 revoke）
-- `.env`：`STATS_NZ_API_KEY=3c67...`（gitignored，勿外传勿提交；建 repo 后存 GH Secret）
+- git：user.name=xli246，email=xli246@uclive.ac.nz；本地分支 main（HEAD=49de94d，8 提交已推送）；**GitHub 用户 = LuciaLXH**，repo 私有 + secret 已配 + 推送完成（2026-08-30）；token 用完即 revoke
+- `.env`：`STATS_NZ_API_KEY`（gitignored，勿外传勿提交；已存 GH Secret，**key 值从未出现在 git 历史**）
 - 沙箱注意：本目录为会话工作区时，**项目内写入免审批**；项目外（如 CV 工作区）写入需 danger-full-access 审批
 
 ## W4 CV 联动备忘
