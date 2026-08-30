@@ -1,0 +1,1127 @@
+Field,Page,Description
+Account ID,DW Organisations,Unique identifier for the reporting organisation account submitting NEPR data.
+Org Name,DW Organisations,Registered name of the reporting organisation.
+D-A1 Number of drinking water networks,DW Organisations,Total number of drinking water networks operated by the organisation.
+D-A1 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-A1 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-A2 Number of drinking water treatment plants,DW Organisations,Total number of drinking water treatment plants operated by the organisation.
+D-A2 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-A2 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-A3 Number of reservoirs,DW Organisations,Total number of reservoirs operated by the organisation.
+D-A3 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-A3 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-A4 Number of pump stations,DW Organisations,Total number of drinking water pump stations operated by the organisation.
+D-A4 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-A4 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-A1 to D-A4 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-EH5 Water imported from other suppliers (m3/year),DW Organisations,Annual volume of drinking water imported from other suppliers.
+D-EH5 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-EH5 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-EH6 Water exported to other suppliers (m3/year),DW Organisations,Annual volume of drinking water exported to other suppliers.
+D-EH6 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-EH6 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-EH5 to D-EH6 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-R1 Median time to attend urgent fault (hours),DW Organisations,Median time taken to attend urgent drinking water faults.
+D-R1 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R1 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R2 Median time to attend non-urgent fault (hours),DW Organisations,Median time taken to attend non-urgent drinking water faults.
+D-R2 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R2 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R3 Median time to resolve urgent fault (hours),DW Organisations,Median time taken to resolve urgent drinking water faults.
+D-R3 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R3 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R4 Median time to resolve non-urgent fault (hours),DW Organisations,Median time taken to resolve non-urgent drinking water faults.
+D-R4 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R4 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R1 to D-R4 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-R5 Number of planned interruptions,DW Organisations,Number of planned drinking water supply interruptions.
+D-R5 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R5 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R6 Number of third-party incidents,DW Organisations,Number of third-party incidents affecting drinking water supply.
+D-R6 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R6 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R7 Number of unplanned interruptions,DW Organisations,Number of unplanned drinking water supply interruptions.
+D-R7 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R7 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R8 Urban connections with unplanned interruption >8hrs,DW Organisations,Number of urban connections affected by unplanned interruptions longer than 8 hours.
+D-R8 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R8 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R5 to D-R8 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-R9.1 % of pipes with condition grading,DW Organisations,Percentage of drinking water pipes with condition grading.
+D-R9.1 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R9.1 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-R9.2 Pipe condition grading methodology,DW Organisations,Methodology used to grade drinking water pipe condition.
+D-R9.2 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R9.2 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-R10 % pipes in poor or very poor condition,DW Organisations,Percentage of drinking water pipes in poor or very poor condition.
+D-R10 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R10 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R10 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-R12 Average age of water pipes (years),DW Organisations,Average age of drinking water pipes in years.
+D-R12 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R12 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R12 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-R13.1 % above-ground assets with condition grading,DW Organisations,Percentage of above-ground drinking water assets with condition grading.
+D-R13.1 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R13.1 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-R13.2 Above-ground asset grading methodology,DW Organisations,Methodology used to grade above-ground drinking water assets.
+D-R13.2 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R13.2 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-R14 % above-ground assets in poor or very poor condition,DW Organisations,Percentage of above-ground drinking water assets in poor or very poor condition.
+D-R14 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R14 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R14 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-R19 Days when water restrictions applied (days),DW Organisations,Number of days when water restrictions were applied.
+D-R19 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R19 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R20 % of connections affected by water restrictions,DW Organisations,Percentage of connections affected by water restrictions.
+D-R20 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R20 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R19 to D-R20 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-R21 Adopted FENZ Code of Practice (SNZ PAS 4509:2008)?,DW Organisations,Indicates whether the FENZ Code of Practice has been adopted.
+D-R21 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R21 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R22 % of fire hydrants tested in previous 5 years,DW Organisations,Percentage of fire hydrants tested in the previous five years.
+D-R22 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-R22 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-R21 to D-R22 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-RE5 Water conservation education programme in place?,DW Organisations,Indicates whether a water conservation education programme is in place.
+D-RE5 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE5 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE6 Number of residential connections with water meters,DW Organisations,Number of residential connections with water meters.
+D-RE6 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE6 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE7 Number of non-residential connections with water meters,DW Organisations,Number of non-residential connections with water meters.
+D-RE7 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE7 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE8 Number of abstraction points with water meters,DW Organisations,Number of abstraction points with water meters.
+D-RE8 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE8 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE9 Abstraction meter calibration frequency (years),DW Organisations,Frequency of abstraction meter calibration in years.
+D-RE9 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE9 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE10 Number of abstraction meters on telemetry,DW Organisations,Number of abstraction meters connected to telemetry.
+D-RE10 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE10 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE11 Days with complete telemetry dataset (days),DW Organisations,Number of days with a complete abstraction telemetry dataset.
+D-RE11 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE11 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE5 to D-RE11 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-RE12 Electricity use (kWh/year),DW Organisations,Annual electricity use for drinking water services.
+D-RE12 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE12 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE13 Energy use from other fuels (GJ/year),DW Organisations,Annual energy use from non-electric fuels.
+D-RE13 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE13 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE14 Energy generated (kWh/year),DW Organisations,Annual energy generated from drinking water assets.
+D-RE14 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE14 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE12 to D-RE14 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-RE15 Recycled water to residential customers (m3/year),DW Organisations,Annual volume of recycled water supplied to residential customers.
+D-RE15 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE15 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE16 Recycled water to non-residential customers (m3/year),DW Organisations,Annual volume of recycled water supplied to non-residential customers.
+D-RE16 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE16 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE17 Recycled water to managed aquifer recharge (m3/year),DW Organisations,Annual volume of recycled water supplied to managed aquifer recharge.
+D-RE17 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE17 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE18 Urban stormwater reused in network (m3/year),DW Organisations,Annual volume of urban stormwater reused in the network.
+D-RE18 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RE18 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RE15 to D-RE18 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-RL1 Critical assets assessment undertaken?,DW Organisations,Indicates whether a critical assets assessment has been undertaken.
+D-RL1 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL1 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL1a Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-RL1b Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-RL2 Emergency response plan developed?,DW Organisations,Indicates whether an emergency response plan has been developed.
+D-RL2 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL2 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL3 Business continuity plan developed?,DW Organisations,Indicates whether a business continuity plan has been developed.
+D-RL3 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL3 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL4 Date emergency response plan last reviewed (dd/mm/yyyy),DW Organisations,Date the emergency response plan was last reviewed.
+D-RL4 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL4 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL5 Date business continuity plan last reviewed (dd/mm/yyyy),DW Organisations,Date the business continuity plan was last reviewed.
+D-RL5 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL5 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL6 Date emergency response exercise last conducted (dd/mm/yyyy),DW Organisations,Date the last emergency response exercise was conducted.
+D-RL6 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL6 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL7 Date BCP exercise last conducted (dd/mm/yyyy),DW Organisations,Date the last business continuity plan exercise was conducted.
+D-RL7 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL7 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL2 to D-RL7 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-RL8 Strategic plan for future water supply demand?,DW Organisations,Indicates whether a strategic plan for future water supply demand exists.
+D-RL8 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL8 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL8 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+D-RL9 Days outdoor water use restricted (days),DW Organisations,Number of days outdoor water use was restricted.
+D-RL9 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL9 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL10 Days outdoor water use banned (days),DW Organisations,Number of days outdoor water use was banned.
+D-RL10 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL10 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL11 Were other water restrictions imposed?,DW Organisations,Indicates whether other water restrictions were imposed.
+D-RL11 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-RL11 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-RL9 to D-RL11 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-ES1.1 Capex to meet additional demand ($),DW Organisations,Capital expenditure to meet additional demand.
+D-ES1.1 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-ES1.2 Capex to replace or improve existing assets ($),DW Organisations,Capital expenditure to replace or improve existing assets.
+D-ES1.2 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-ES2 Total operating expenditure ($),DW Organisations,Total operating expenditure for drinking water services.
+D-ES2 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-ES2 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-ES1.1 to D-ES2 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-ES3 Forecast capex next year ($),DW Organisations,Forecast capital expenditure for the next year.
+D-ES3 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-ES3 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-ES4 Forecast opex next year ($),DW Organisations,Forecast operating expenditure for the next year.
+D-ES4 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-ES4 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-ES3 to D-ES4 Data confidence,DW Organisations,Provider-assessed confidence level for these data points.
+D-ES5 Total revenue received ($),DW Organisations,Total revenue received for drinking water services.
+D-ES5 Reason not available,DW Organisations,Shows any reasons why this data point is not available.
+D-ES5 Comments,DW Organisations,Additional explanatory comments provided by the organisation.
+D-ES5 Data confidence,DW Organisations,Provider-assessed confidence level for this data point.
+Account ID,DW Networks,Unique identifier for the reporting organisation account submitting NEPR data.
+Org Name,DW Networks,Registered name of the reporting organisation.
+Supply ID,DW Networks,Unique identifier for a drinking water supply.
+Supply name,DW Networks,Name of the drinking water supply.
+D-A5 Length of pipe in network (km),DW Networks,Total length of drinking water distribution pipes.
+D-A5 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-A6 Number of drinking water abstraction points,DW Networks,Number of abstraction points supplying drinking water.
+D-A6 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-A7 Main drinking water network source type,DW Networks,Primary source type supplying the drinking water network.
+D-A7 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH1.1 Number of residential connections,DW Networks,Number of residential drinking water connections.
+D-EH1.1 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH1.1 Method of determining connections,DW Networks,Method used to determine residential connection counts.
+D-EH1.1 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH1.2 Number of residential units,DW Networks,Number of residential dwelling units served.
+D-EH1.2 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH1.2 Method of determining units,DW Networks,Method used to determine residential unit counts.
+D-EH1.2 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH2.1 Number of non-residential connections,DW Networks,Number of non-residential drinking water connections.
+D-EH2.1 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH2.1 Method of determining connections,DW Networks,Method used to determine non-residential connection counts.
+D-EH2.1 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH2.2 Number of non-residential units,DW Networks,Number of non-residential units served.
+D-EH2.2 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH2.2 Method of determining units,DW Networks,Method used to determine non-residential unit counts.
+D-EH2.2 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH3 Total population served,DW Networks,Estimated total population served.
+D-EH3 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-A5 to D-EH3 Data confidence,DW Networks,Provider-assessed confidence level for these data points.
+D-EH4 Total volume of water supplied to network (m3/year),DW Networks,Total annual volume of water supplied.
+D-EH4 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH7 Volume of non-residential water use (m3/year),DW Networks,Annual volume supplied to non-residential users.
+D-EH7 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH4 and D-EH7 Data confidence,DW Networks,Provider-assessed confidence level for these data points.
+D-EH8 Number of resource consents held,DW Networks,Number of resource consents associated with the network.
+D-EH8 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH8 Data confidence,DW Networks,Provider-assessed confidence level for this data point.
+D-EH17 Amount of sludge produced (tonnes/year),DW Networks,Annual quantity of drinking water treatment sludge.
+D-EH17 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH20.1 Disposal route for sludge,DW Networks,Primary disposal method for sludge.
+D-EH20.1 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH20.1 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH18 Amount of backwash water used (m3/year),DW Networks,Annual volume of backwash water generated.
+D-EH18 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH20.2 Disposal route for backwash water,DW Networks,Primary disposal method for backwash water.
+D-EH20.2 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH20.2 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH19 Amount of screenings removed (tonnes/year),DW Networks,Annual quantity of screenings removed.
+D-EH19 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH20.3 Disposal route for screenings,DW Networks,Primary disposal method for screenings.
+D-EH20.3 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH20.3 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-EH17 to D-EH20.3 Data confidence,DW Networks,Provider-assessed confidence level for these data points.
+D-EH21 Fish passage impeded assessment,DW Networks,Assessment of whether infrastructure impedes fish passage.
+D-EH21 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH22 Processes to prevent fish ingress,DW Networks,Measures in place to prevent fish ingress.
+D-EH22 Comments,DW Networks,Additional explanatory comments provided by the organisation.
+D-EH21 to D-EH22 Data confidence,DW Networks,Provider-assessed confidence level for these data points.
+D-R15 Average system pressure (kPa),DW Networks,Average operating pressure of the network.
+D-R15 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-R16 Reference level for water pressure set?,DW Networks,Indicates whether a reference pressure level is defined.
+D-R17 Reference level for water pressure (kPa),DW Networks,Defined reference pressure level.
+D-R17 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-R18 Number of properties below reference pressure level,DW Networks,Number of properties below reference pressure.
+D-R18 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-R15 to D-R18 Data confidence,DW Networks,Provider-assessed confidence level for these data points.
+D-RE1 Total drinking water loss across network (m3/year),DW Networks,Estimated annual drinking water loss.
+D-RE1 Includes private water loss?,DW Networks,Indicates whether private-side losses are included.
+D-RE1 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-RE2.1 Current annual real loss - CARL (m3/year),DW Networks,Estimated current annual real losses.
+D-RE2.1 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-RE2.2 Unavoidable annual real losses - UARL (m3/year),DW Networks,Estimated unavoidable annual real losses.
+D-RE2.2 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-RE3 Infrastructure leakage index - ILI,DW Networks,Ratio of CARL to UARL.
+D-RE1 to D-RE3 Data confidence,DW Networks,Provider-assessed confidence level for these data points.
+D-RE4 Median residential water consumption (L/connection/day),DW Networks,Median daily residential water consumption per connection (litres per connection per day).
+D-RE4 Reason not available,DW Networks,Shows any reasons why this data point is not available.
+D-RE4 Data confidence,DW Networks,Provider-assessed confidence level for this data point.
+Account ID,DW Consents,Unique identifier for the reporting organisation account submitting NEPR data.
+Org Name,DW Consents,Registered name of the reporting organisation.
+Supply ID,DW Consents,Unique identifier for a drinking water supply.
+D-EH9 Type of resource consent,DW Consents,Type of drinking water-related resource consent.
+D-EH9 Comments,DW Consents,Additional explanatory comments provided by the organisation.
+D-EH10 Resource consent reference number,DW Consents,Official resource consent reference identifier.
+D-EH11 Expiry date for resource consent,DW Consents,Expiry date of the resource consent.
+D-EH11 Comments,DW Consents,Additional explanatory comments provided by the organisation.
+D-EH11 Currently operating under this consent?,DW Consents,Indicates whether operations are currently under this consent.
+D-EH11 Consent status,DW Consents,Current status of the resource consent.
+D-EH16 Reason consent conditions not met,DW Consents,Reason consent conditions were not met.
+D-EH16 Reason detail,DW Consents,Additional detail explaining why consent conditions were not met.
+D-EH9 to D-EH16 Data confidence,DW Consents,Provider-assessed confidence level for these data points.
+Account ID,DW Abstraction,Unique identifier for the reporting organisation account submitting NEPR data.
+Org Name,DW Abstraction,Registered name of the reporting organisation.
+Supply ID,DW Abstraction,Unique identifier for a drinking water supply.
+Abstraction point reference,DW Abstraction,Identifier for an individual drinking water abstraction point.
+D-EH10 Resource consent reference number,DW Abstraction,Official resource consent reference identifier.
+D-EH10 Reason not available,DW Abstraction,Shows any reasons why this data point is not available.
+D-EH12 Consent conditions met for rate of take and volume?,DW Abstraction,Indicates compliance with consented limits.
+D-EH12 Total volume of exceedance if conditions not met (m3/yr),DW Abstraction,Total volume exceeded above consented limits.
+D-EH13 Consented instantaneous rate of take (L/s),DW Abstraction,Maximum permitted instantaneous abstraction rate.
+D-EH13 Reason not available,DW Abstraction,Shows any reasons why this data point is not available.
+D-EH14 Maximum daily consented volume (m3/day),DW Abstraction,Maximum permitted daily abstraction volume.
+D-EH14 Maximum weekly consented volume (m3/7 days),DW Abstraction,Maximum permitted weekly abstraction volume.
+D-EH14 Reason not available,DW Abstraction,Shows any reasons why this data point is not available.
+D-EH15 Maximum annual consented volume (m3/year),DW Abstraction,Maximum permitted annual abstraction volume.
+D-EH15 Reason not available,DW Abstraction,Shows any reasons why this data point is not available.
+D-EH10 to D-EH15 Data confidence,DW Abstraction,Provider-assessed confidence level for these data points.
+Account ID,WW Organisations,Unique identifier for the reporting organisation account submitting NEPR data.
+Org Name,WW Organisations,Registered name of the reporting organisation.
+W-A1 Number of wastewater pump stations,WW Organisations,Total number of wastewater pump stations.
+W-A1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A2.1 Total length of gravity wastewater pipes (km),WW Organisations,Total length of gravity wastewater pipes.
+W-A2.1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A2.2 Total length of pressured wastewater pipes (km),WW Organisations,Total length of pressure wastewater pipes.
+W-A2.2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A2.3 Total length of vacuum wastewater pipes (km),WW Organisations,Total length of vacuum wastewater pipes.
+W-A2.3 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A3 Total length of combined WW and SW pipes (km),WW Organisations,Total length of combined wastewater and stormwater pipes.
+W-A3 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A4 Wastewater imported for treatment (m3/year),WW Organisations,Annual wastewater volume imported for treatment.
+W-A4 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A5 Wastewater exported for treatment (m3/year),WW Organisations,Annual wastewater volume exported for treatment.
+W-A5 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A1 to W-A5 Data confidence,WW Organisations,Provider-assessed confidence level for these data points.
+W-A6 Number of wastewater treatment plants,WW Organisations,Total number of wastewater treatment plants.
+W-A6 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-A6 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-EH1.1 Residential connections to gravity sewers,WW Organisations,Number of residential connections to gravity sewers.
+W-EH1.1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH1.2 Residential connections to pressure sewers,WW Organisations,Number of residential connections to pressure sewers.
+W-EH1.2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH1.3 Residential connections to vacuum sewers,WW Organisations,Number of residential connections to vacuum sewers.
+W-EH1.3 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH2.1 Non-residential connections to gravity sewers,WW Organisations,Number of non-residential connections to gravity sewers.
+W-EH2.1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH2.2 Non-residential connections to pressure sewers,WW Organisations,Number of non-residential connections to pressure sewers.
+W-EH2.2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH2.3 Non-residential connections to vacuum sewers,WW Organisations,Number of non-residential connections to vacuum sewers.
+W-EH2.3 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH1.1 to W-EH2.3 Data confidence,WW Organisations,Provider-assessed confidence level for these data points.
+W-EH10 Number of overflows caused by blockages,WW Organisations,Count of wastewater overflows caused by blockages.
+W-EH10 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH11 Number of overflows caused by plant failure or equipment damage,WW Organisations,Overflows caused by plant or equipment failure.
+W-EH11 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH12 Number of overflows caused by capacity exceeded (WW network),WW Organisations,Overflows due to network capacity exceedance.
+W-EH12 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH13 Number of overflows caused by capacity exceeded (combined WW/SW),WW Organisations,Overflows due to combined system capacity exceedance.
+W-EH13 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH14 Number of overflows from other causes,WW Organisations,Overflows attributed to other causes.
+W-EH14 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH15 Number of overflows on private properties attributable to provider,WW Organisations,Overflows on private property attributable to the provider.
+W-EH15 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH16 How are overflows reported to the network operator?,WW Organisations,Method used to report wastewater overflows.
+W-EH16 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH17 Are overflows recorded through SCADA?,WW Organisations,Whether SCADA is used to record overflows.
+W-EH17 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH18 What methodology is used for calculating overflows?,WW Organisations,Methodology used to calculate wastewater overflows.
+W-EH18 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH19 Number of hours WWTP processes fully bypassed (hours),WW Organisations,Hours wastewater treatment was fully bypassed.
+W-EH19 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH10 to W-EH19 Data confidence,WW Organisations,Provider-assessed confidence level for these data points.
+W-EH23 Number of trade waste consents,WW Organisations,Number of trade waste consents.
+W-EH23 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH24 Number of times trade waste consents breached,WW Organisations,Number of times trade waste consents were breached.
+W-EH24 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH25 Actions taken due to trade waste consent breaches,WW Organisations,Actions taken due to trade waste consent breaches.
+W-EH25 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-EH23 to W-EH25 Data confidence,WW Organisations,Provider-assessed confidence level for these data points.
+W-R1 Median time to attend to a fault (hours),WW Organisations,Median response time to attend wastewater faults.
+W-R1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R2 Median time to resolve a fault (hours),WW Organisations,Median time to resolve wastewater faults.
+W-R2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R1 to W-R2 Data confidence,WW Organisations,Provider-assessed confidence level for these data points.
+W-R7 Number of planned maintenance activities,WW Organisations,Number of planned maintenance activities.
+W-R7 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R8 Number of third-party incidents,WW Organisations,Number of third-party incidents.
+W-R8 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R7 to W-R8 Data confidence,WW Organisations,Provider-assessed confidence level for these data points.
+W-R9.1 % of WW pipes with condition grading,WW Organisations,Percentage of wastewater pipes with condition grading.
+W-R9.1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R9.1 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-R9.2 WW pipe condition grading methodology,WW Organisations,Methodology used to grade wastewater pipe condition.
+W-R9.2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R9.2 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-R10 % WW pipes in poor or very poor condition,WW Organisations,Percentage of pipes in poor or very poor condition.
+W-R10 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R10 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-R11 Average age of wastewater pipes (years),WW Organisations,Average age of wastewater pipes.
+W-R11 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R11 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-R12 % WW pipes with CCTV inspections in last 5 years,WW Organisations,Percentage of pipes inspected by CCTV in last five years.
+W-R12 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R12 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-R13.1 % above-ground assets with condition grading,WW Organisations,Percentage of above-ground assets with condition grading.
+W-R13.1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R13.1 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-R13.2 Above-ground asset grading methodology,WW Organisations,Methodology used for above-ground asset grading.
+W-R13.2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R13.2 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-R14 % above-ground assets in poor or very poor condition,WW Organisations,Percentage of above-ground assets in poor or very poor condition.
+W-R14 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-R14 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-RE1 Grid electricity use (kWh),WW Organisations,Annual grid electricity consumption.
+W-RE1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-RE2 Energy use from other fuels (GJ),WW Organisations,Annual energy use from non-electric fuels.
+W-RE2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-RE1 to W-RE2 Data confidence,WW Organisations,Provider-assessed confidence level for these data points.
+W-RL1.1 Critical wastewater assets assessment undertaken?,WW Organisations,Whether a critical asset assessment has been undertaken.
+W-RL1.1 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-RL1.1 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+W-RL1.2 Criticality methodology,WW Organisations,Methodology used to assess criticality.
+W-RL1.2 Reason not available,WW Organisations,Shows any reasons why this data point is not available.
+W-RL1.2 Data confidence,WW Organisations,Provider-assessed confidence level for this data point.
+Account ID,WW Networks,Unique identifier for the reporting organisation account submitting NEPR data.
+Org Name,WW Networks,Registered name of the reporting organisation.
+Wastewater network ID,WW Networks,Unique identifier for a wastewater network or treatment system.
+Wastewater network/plant name,WW Networks,Name of the wastewater network or treatment plant.
+W-A2 Total length of wastewater pipes (km),WW Networks,Total length of wastewater pipes.
+W-A2 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-A2 Data confidence,WW Networks,Provider-assessed confidence level for this data point.
+W-A7 Wastewater treatment processes - highest level,WW Networks,Highest-level wastewater treatment processes applied.
+W-A8 Receiving environment for treated wastewater,WW Networks,Environment receiving treated wastewater.
+W-A9 Volume of wastewater treated at treatment plant (m3/year),WW Networks,Annual volume of wastewater treated.
+W-A9 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-A9.1 Average nominal flows (L/s),WW Networks,Average nominal wastewater flows.
+W-A9.1 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-A9.2 Average peak flows (L/s),WW Networks,Average peak wastewater flows.
+W-A9.2 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-A9.3 Reason for peak flow,WW Networks,Reason provided for peak flow conditions.
+W-A10 Volume of trade waste treated (m3/year),WW Networks,Annual volume of trade waste treated.
+W-A10 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-A11 Volume of septage imported for treatment (m3/year),WW Networks,Annual volume of septage imported for treatment.
+W-A11 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-A12 Volume of treated wastewater applied to land (m3/year),WW Networks,Annual volume of treated wastewater applied to land.
+W-A12 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-A7 to W-A12 Data confidence,WW Networks,Provider-assessed confidence level for these data points.
+W-EH1 Number of residential connections,WW Networks,Number of residential connections to the wastewater network.
+W-EH1 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-EH1 Method of determining connections,WW Networks,Method used to determine residential connection counts.
+W-EH2 Number of non-residential connections,WW Networks,Number of non-residential connections to the wastewater network.
+W-EH2 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-EH2 Method of determining connections,WW Networks,Method used to determine non-residential connection counts.
+W-EH3 Total population served by the wastewater network,WW Networks,Estimated population served by the wastewater network.
+W-EH3 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-EH1 to W-EH3 Data confidence,WW Networks,Provider-assessed confidence level for these data points.
+W-EH4 Number of resource consents held for WW network,WW Networks,Number of resource consents held for the wastewater network.
+W-EH4 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-EH9 WW overflow regulation approach under local regional plan,WW Networks,Regulatory approach for wastewater overflows.
+W-EH9 Comments,WW Networks,Additional explanatory comments provided by the organisation.
+W-EH4 to W-EH9 Data confidence,WW Networks,Provider-assessed confidence level for these data points.
+W-EH20 WWTP peak flow to nominal flow ratio,WW Networks,Ratio of peak to nominal flow at the treatment plant.
+W-EH20 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-EH21 Design standards for calculating WW overflow capacity,WW Networks,Design standards used for overflow capacity calculations.
+W-EH21 Comments,WW Networks,Additional explanatory comments provided by the organisation.
+W-EH22 Levels of service for preventing WW overflows due to stormwater (%),WW Networks,Levels of service applied to prevent stormwater-driven overflows.
+W-EH22 Comments,WW Networks,Additional explanatory comments provided by the organisation.
+W-EH21 to W-EH23 Data confidence,WW Networks,Provider-assessed confidence level for these data points.
+W-RE3 Wastewater treatment wetland emissions (tCO2e/year),WW Networks,Emissions from wastewater treatment wetlands.
+W-RE3 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE4 Wastewater effluent disposal emissions (tCO2e/year),WW Networks,Emissions from wastewater effluent disposal.
+W-RE4 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE5 Wastewater sludge treatment emissions (tCO2e/year),WW Networks,Emissions from wastewater sludge treatment.
+W-RE5 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE6 Wastewater sludge disposal emissions (tCO2e/year),WW Networks,Emissions from wastewater sludge disposal.
+W-RE6 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE3 to W-RE6 Data confidence,WW Networks,Provider-assessed confidence level for these data points.
+W-RE7 Production of biosolids (m3),WW Networks,"Total volume of biosolids produced each year by wastewater treatment, in cubic metres, as specified in the Measures and Guide 2025. Note that some suppliers appear to have reported on a mass basis, so values may not be directly comparable."
+W-RE7 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE8 % of dry solids in biosolids,WW Networks,Percentage of dry solids in biosolids.
+W-RE8 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE9 % disposal of biosolids to onsite stockpile,WW Networks,Percentage of biosolids disposed to onsite stockpile.
+W-RE9 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE10 Disposal of biosolids to landfill (tonnes),WW Networks,Quantity of biosolids disposed to landfill.
+W-RE10 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE11 Disposal of biosolids composting and reuse (tonnes),WW Networks,Quantity of biosolids composted or reused.
+W-RE11 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE11 Biosolids reuse - how and where,WW Networks,Description of how and where biosolids are reused.
+W-RE12 Disposal of biosolids to other routes (tonnes),WW Networks,Quantity of biosolids disposed through other routes.
+W-RE12 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE13 Last year plant or pond was desludged (yyyy),WW Networks,Most recent year the plant or pond was desludged.
+W-RE13 Reason not available,WW Networks,Shows any reasons why this data point is not available.
+W-RE7 to W-RE13 Data confidence,WW Networks,Provider-assessed confidence level for these data points.
+Account ID,WW Consents,Unique identifier for the reporting organisation account submitting NEPR data.
+Org Name,WW Consents,Registered name of the reporting organisation.
+Network ID,WW Consents,Identifier linking wastewater consents to a network.
+W-EH5 Type of resource consent,WW Consents,Type of wastewater-related resource consent held.
+W-EH5 Comments,WW Consents,Additional explanatory comments provided by the organisation.
+W-EH6 Resource consent reference number,WW Consents,Official reference number for the resource consent.
+W-EH7 Resource consent expiry date,WW Consents,Expiry date of the resource consent.
+W-EH7 Comments,WW Consents,Additional explanatory comments provided by the organisation.
+W-EH7 Currently operating under this consent?,WW Consents,Indicates whether operations are currently under this consent.
+W-EH8 Consent status,WW Consents,Current status of the resource consent.
+W-EH8 Comments,WW Consents,Additional explanatory comments provided by the organisation.
+W-EH5 to W-EH8 Data confidence,WW Consents,Provider-assessed confidence level for these data points.
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,
+,,

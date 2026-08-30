@@ -1,0 +1,1127 @@
+Account ID,Org Name,Supply ID,Abstraction point reference,D-EH10 Resource consent reference number,D-EH10 Reason not available,D-EH12 Consent conditions met for rate of take and volume?,D-EH12 Total volume of exceedance if conditions not met (m3/yr),D-EH13 Consented instantaneous rate of take (L/s),D-EH13 Reason not available,D-EH14 Maximum daily consented volume (m3/day),D-EH14 Maximum weekly consented volume (m3/7 days),D-EH14 Reason not available,D-EH15 Maximum annual consented volume (m3/year),D-EH15 Reason not available,D-EH10 to D-EH15 Data confidence
+ACC-00008585,Ashburton District Council,ASH003,G01545 Domain Bore No.5 Well,CRC050225.1,,Yes,,70,,,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,G01546 Argyle Park No. 1 Well,CRC050225.1,,Yes,,105,,,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,G01547 Argyle Park No. 2 Well,CRC050225.1,,Yes,,105,,,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,G01682 Bridge Street No.1,CRC050225.1,,Yes,,105,,,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,G01683 Bridge Street No.2,CRC050225.1,,Yes,,105,,,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,G01917 Domain Bore No.6 Well,CRC050225.1,,Yes,,70,,,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,G01963 Domain Bore No.7 Well,CRC050225.1,,Yes,,70,,,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,G02002 Tinwald Bore,CRC051262.1,,No,,90,,,24192,,788400,,4 - Reliable
+ACC-00008585,Ashburton District Council,CHE002,G00228 Chertsey Well,CRC991612,,Yes,,5,,300,,,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,DRO001,G00227 Dromore Well,CRC170019,,No,10646,3.8,,240,,,57000,,4 - Reliable
+ACC-00008585,Ashburton District Council,HAK001,G00231 Hakatere Upper Well,CRC991485,,No,,5,,200,,,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,HIN001,G00230 Hinds Well,CRC041517,,No,,18,,648,,,,Measure Not Applicable,4 - Reliable
+ACC-00008585,Ashburton District Council,MAY001,G01968 Mayfield Deep Well,CRC120547,,Yes,,3.5,,300,,,50000,,4 - Reliable
+ACC-00008585,Ashburton District Council,MET001,"S00223 Methven Gallery, Ashburton Riv",CRC011923,,No,258374,36,,,,Measure Not Applicable,470000,,4 - Reliable
+ACC-00008585,Ashburton District Council,MET001,S00224 Methven/Springfield Gallery,CRC002108,,No,,20,,1328,,,484720,,4 - Reliable
+ACC-00008585,Ashburton District Council,MON001,S00221 Hinds River Gorge,CRC052628,,Yes,,29,,1195,,,401500,,4 - Reliable
+ACC-00008585,Ashburton District Council,MTS001,S00219 Woolshed Creek,CRC022026,,Yes,,4.9,,,,Measure Not Applicable,65000,,4 - Reliable
+ACC-00008585,Ashburton District Council,RAK001,G01873 Rakaia Deep Bore 1,CRC244450,,Yes,,30,,2562,,,374000,,4 - Reliable
+ACC-00008585,Ashburton District Council,RAK001,G11218 Rakaia Deep Bore 2,CRC244450,,Yes,,30,,2562,,,374000,,4 - Reliable
+ACC-00008580,Auckland Council,AWH300,Awhitu,40923,,Yes,,,Measure Not Applicable,50,,,10000,,5 - Highly Reliable
+ACC-00008580,Auckland Council,MAH003,Mahurangi,REG-6464,,Yes,,,Measure Not Applicable,90,,,12000,,5 - Highly Reliable
+ACC-00008580,Auckland Council,MAR007,Martin's bay,35768,,Yes,,,Measure Not Applicable,140,,,15000,,5 - Highly Reliable
+ACC-00008580,Auckland Council,PIH300,Piha Bore,WAT60353048,,Yes,,,Measure Not Applicable,28,,,7780,,5 - Highly Reliable
+ACC-00008580,Auckland Council,SHA002,Shakespear,32754,,Yes,,,Measure Not Applicable,100,,,15000,,5 - Highly Reliable
+ACC-00008580,Auckland Council,TAP007,Tapapakanga,WAT60409617,,Yes,,,Measure Not Applicable,50,,,10000,,5 - Highly Reliable
+ACC-00008580,Auckland Council,TAW001,Tawharanui,WAT60414077,,Yes,,,Measure Not Applicable,50,,,13000,,5 - Highly Reliable
+ACC-00008580,Auckland Council,WAI222,Waitawa,WAT60382059,,Yes,,,Measure Not Applicable,70,,,12000,,5 - Highly Reliable
+ACC-00008580,Auckland Council,WHA018,Waharau,136167.01.01,,Yes,,,Measure Not Applicable,40,,,7000,,5 - Highly Reliable
+ACC-00008498,Buller District Council,INA002,G00957,RC-2019-0021,,Yes,,2,,173,1211,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,LIT003,S00884,RC96064,,,,,Measure Not Applicable,57,399,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,MOK001,S00010,RC01283,,,,50,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,MOK001,S10096,RC01283,,,,2.5,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,PUN001,S00013,RC06183,,Yes,,,Measure Not Applicable,345,2415,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,REE001,G00023,RC01283,,Yes,,20,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,S00011,RC01281,,,,40,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,S10095,RC-2022-0010,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,S00016,RC-2023-0148,,No,56063,190,,10000,70000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001075,Carterton District Council,G00870,Bores - S26/0705,WAR140259,,Yes,,75,,6480,,,1296000,,5 - Highly Reliable
+ACC-00001075,Carterton District Council,G03009,Bores - S26/0918,WAR140259,,Yes,,75,,6480,,,1296000,,5 - Highly Reliable
+ACC-00001075,Carterton District Council,G03105,Bores - BP34/0216,WAR140259,,Yes,,75,,6480,,,1296000,,5 - Highly Reliable
+ACC-00001075,Carterton District Council,S00591,Kaipaitangata Stream,WAR020050,,Yes,,80,,5000,,,,Data Not Available,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,KAI012,Spring,AUTH-118076-01,,Yes,,0.7,,,420,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001635,Central Hawke's Bay District Council,KAI012,Well 3130,AUTH-106552-01,,Yes,,1,,,605,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001635,Central Hawke's Bay District Council,POR003,Well 4993,AUTH-118048-01,,Yes,,10.2,,,6169,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001635,Central Hawke's Bay District Council,TAK001,Well 1762,AUTH-121511-01,,Yes,,19,,,,Measure Not Applicable,410800,,4 - Reliable
+ACC-00001635,Central Hawke's Bay District Council,WAI004,"Well 5617, 5676, 15107, 16892, 16893",AUTH-113708-03,,Yes,,100,,,60480,Measure Not Applicable,3144960,,4 - Reliable
+ACC-00001635,Central Hawke's Bay District Council,WAI005,Well 2402,AUTH-113776-01,,Yes,,35,,,21168,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001635,Central Hawke's Bay District Council,WAI005,"Well 5618, 5619, 17130",AUTH-127023-01,,Yes,,155,,,52872,Measure Not Applicable,2401700,,4 - Reliable
+ACC-00008538,Central Otago District Council,CRO001,Cromwell Bore 2 and Bore 4,RM22.319.01,,Yes,,210,,18000,,,,Measure Not Applicable,4 - Reliable
+ACC-00008538,Central Otago District Council,LAK028,"Lake Dunstan Bore 1, Bore 2 and Bore 3",RM22.317.01.V1,,No,0,187.5,,16200,,,2430000,,3 - Less Reliable
+ACC-00008538,Central Otago District Council,OMA005,Manuherikia River,99169,,Yes,,35,,1000,,,,Measure Not Applicable,4 - Reliable
+ACC-00008538,Central Otago District Council,PAT003,Sowburn Stream,RM16.277.01.V1,,No,0,9.7,,,,Measure Not Applicable,312480,,4 - Reliable
+ACC-00008538,Central Otago District Council,PIS002,Pisa Village Bore 1 and 2,RM17.138.01,,No,0,40,,810,5670,,199290,,4 - Reliable
+ACC-00008538,Central Otago District Council,RAN002,East Eweburn Spring-concrete weir,RM21.224.02,,No,,28,,,,Measure Not Applicable,72576,,3 - Less Reliable
+ACC-00008538,Central Otago District Council,RAN002,Eweburn Creek-Infiltration Gallery,RM21.224.03,,No,,28,,,,Measure Not Applicable,870912,,3 - Less Reliable
+ACC-00008538,Central Otago District Council,ROX001,Roxburgh Bore 1 and Bore 3,2005.764.V1,,Yes,,58,,3000,,,,Measure Not Applicable,4 - Reliable
+ACC-00001252,Chatham Islands Council,G01394,Tikitiki Hill Bore,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001252,Chatham Islands Council,S00858,Lake Rangitai,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,AYLMERS WELL,N37/0007,,Yes,,,Measure Not Applicable,1200,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,SETTLERS HILL WELL,N36/0056,,Yes,,4,,350,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,BIR001,JONES RD WELL,M36/20733,,Yes,,20,,432,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,BRO013,BROOKLANDS WELL-01,M35/7180,,Yes,,,Measure Not Applicable,,13860,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ADDINGTON WELL-01,M35/2270,,Yes,,,Measure Not Applicable,,42350,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ADDINGTON WELL-02,M35/2787,,Yes,,,Measure Not Applicable,,42350,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ALDWINS WELL-01,M35/2587,,Yes,,,Measure Not Applicable,,70000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ALDWINS WELL-02,M35/3813,,Yes,,,Measure Not Applicable,,70000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ASTON WELL-01,M35/7216,,Yes,,,Measure Not Applicable,,39312,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ASTON WELL-02,M35/7215,,Yes,,,Measure Not Applicable,,39312,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,AUBURN WELL-05,M35/7600,,Yes,,,Measure Not Applicable,,45500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,AVONHEAD WELL-05,BX23/0428,,Yes,,,Measure Not Applicable,,33250,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,AVONHEAD WELL-07,BX23/0430,,Yes,,,Measure Not Applicable,,33250,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BELFAST WELL-02,M35/10632,,Yes,,,Measure Not Applicable,,35000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BELFAST WELL-03,BX42/2762,,Yes,,,Measure Not Applicable,,44150,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BEN RARERE WELL-01,BX24/1710,,Yes,,,Measure Not Applicable,,42336,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BEN RARERE WELL-02,BX24/1711,,Yes,,,Measure Not Applicable,,42336,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BLIGHS WELL-04,BX24/0965,,Yes,,,Measure Not Applicable,,39000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BLIGHS WELL-05,BX24/0966,,Yes,,,Measure Not Applicable,,39000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BURNSIDE WELL-05,M35/9439,,Yes,,,Measure Not Applicable,,62000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BURNSIDE WELL-06,BX24/0187,,Yes,,,Measure Not Applicable,,44000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BURNSIDE WELL-07,BX24/0188,,Yes,,,Measure Not Applicable,,62000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BURNSIDE WELL-08,BX24/0189,,Yes,,,Measure Not Applicable,,44000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BURNSIDE WELL-09,BX24/0190,,Yes,,,Measure Not Applicable,,44000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,BURNSIDE WELL-10,BX24/0191,,Yes,,,Measure Not Applicable,,62000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,CARTERS WELL-01,M35/2789,,Yes,,,Measure Not Applicable,,76020,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,CARTERS WELL-02,M35/2790,,Yes,,,Measure Not Applicable,,17500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,CARTERS WELL-03,M35/2555,,Yes,,,Measure Not Applicable,,76020,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,CARTERS WELL-05,M35/10928,,Yes,,,Measure Not Applicable,,76020,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,CROSBIE WELL-02,M35/6040,,Yes,,,Measure Not Applicable,,25200,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,CROSBIE WELL-04,M35/18384,,Yes,,,Measure Not Applicable,,49980,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,CROSBIE WELL-06,BX23/0228,,Yes,,,Measure Not Applicable,,49980,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DENTON WELL-01,M35/3547,,Yes,,,Measure Not Applicable,,105000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DENTON WELL-02,M35/1866,,Yes,,,Measure Not Applicable,,105000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DENTON WELL-03,M35/1865,,Yes,,,Measure Not Applicable,,105000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DENTON WELL-04,M35/3546,,Yes,,,Measure Not Applicable,,105000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DENTON WELL-05,M35/1864,,Yes,,,Measure Not Applicable,,13104,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DUNBARS WELL-01,M36/4053,,Yes,,,Measure Not Applicable,,133000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DUNBARS WELL-02,M36/4052,,Yes,,,Measure Not Applicable,,133000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DUNBARS WELL-03,M36/4333,,Yes,,,Measure Not Applicable,,133000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,DUNBARS WELL-05,M36/8019,,Yes,,,Measure Not Applicable,,37800,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,EFFINGHAM WELL-01,M35/1554,,Yes,,,Measure Not Applicable,,24500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,EFFINGHAM WELL-02,M35/1606,,Yes,,,Measure Not Applicable,,53466,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,EFFINGHAM WELL-03,M35/2609,,Yes,,,Measure Not Applicable,,53466,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ESTUARY WELL-05,BX24/1210,,Yes,,,Measure Not Applicable,,40000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,FARRINGTON WELL-04,M35/9440,,Yes,,,Measure Not Applicable,,30200,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,FARRINGTON WELL-05,BX24/0192,,Yes,,,Measure Not Applicable,,51400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,FARRINGTON WELL-06,BX24/0193,,Yes,,,Measure Not Applicable,,51400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,FARRINGTON WELL-07,BX24/0194,,Yes,,,Measure Not Applicable,,51400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,FARRINGTON WELL-08,BX24/0195,,Yes,,,Measure Not Applicable,,24400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GARDINERS WELL-01,BX24/1311,,Yes,,,Measure Not Applicable,,27000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GARDINERS WELL-02,BX24/1312,,Yes,,,Measure Not Applicable,,23000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GRAMPIAN WELL-05,M35/8660,,Yes,,,Measure Not Applicable,,21168,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GRAMPIAN WELL-06,BX24/1327,,Yes,,,Measure Not Applicable,,48000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GRAMPIAN WELL-07,BX24/1328,,Yes,,,Measure Not Applicable,,48000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GRASSMERE WELL-02,M35/1475,,Yes,,,Measure Not Applicable,,30548,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GRASSMERE WELL-03,M35/8087,,Yes,,,Measure Not Applicable,,45360,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,GRASSMERE WELL-04,BX24/2761,,Yes,,,Measure Not Applicable,,2800,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,HILLMORTON WELL-02,M36/1058,,Yes,,,Measure Not Applicable,,71365,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,HILLMORTON WELL-04,M36/4073,,Yes,,,Measure Not Applicable,,71365,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,HILLS WELL-05,M35/10325,,Yes,,,Measure Not Applicable,,28000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,HILLS WELL-06,BX24/0457,,Yes,,,Measure Not Applicable,,28000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,HILLS WELL-07,BX24/0350,,Yes,,,Measure Not Applicable,,21000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,JEFFREYS WELL-06,M35/6667,,Yes,,,Measure Not Applicable,,39312,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,JEFFREYS WELL-07,BX24/0533,,Yes,,,Measure Not Applicable,,18000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,JEFFREYS WELL-08,BX24/0532,,Yes,,,Measure Not Applicable,,23000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,JEFFREYS WELL-09,BX24/0534,,Yes,,,Measure Not Applicable,,18718,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,KAINGA WELL-01,M35/6213,,Yes,,,Measure Not Applicable,,9100,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,KEYES WELL-01,M35/18732,,Yes,,,Measure Not Applicable,,50120,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,KEYES WELL-02,M35/18733,,Yes,,,Measure Not Applicable,,31500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,KEYES WELL-03,M35/18734,,Yes,,,Measure Not Applicable,,50120,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,KEYES WELL-03,M35/18734,,Yes,,,Measure Not Applicable,,50120,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,LAKE TERRACE WELL-03,M35/2260,,Yes,,,Measure Not Applicable,,66752,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,LAKE TERRACE WELL-03,M35/2260,,Yes,,,Measure Not Applicable,,66752,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,LAKE TERRACE WELL-04,M35/18398,,Yes,,,Measure Not Applicable,,39690,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,LAKE TERRACE WELL-04,M35/18398,,Yes,,,Measure Not Applicable,,39690,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,LAKE TERRACE WELL-05,BX24/0993,,Yes,,,Measure Not Applicable,,21000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,LAKE TERRACE WELL-05,BX24/0993,,Yes,,,Measure Not Applicable,,21000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAIN PUMPS WELL-01,M36/4591,,Yes,,,Measure Not Applicable,,212688,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAIN PUMPS WELL-02,M36/2828,,Yes,,,Measure Not Applicable,,212688,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAIN PUMPS WELL-03,M36/1356,,Yes,,,Measure Not Applicable,,212688,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAIN PUMPS WELL-04,M36/1363,,Yes,,,Measure Not Applicable,,212688,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAIN PUMPS WELL-05,M36/1195,,Yes,,,Measure Not Applicable,,212688,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAIN PUMPS WELL-06,M36/0985,,Yes,,,Measure Not Applicable,,212688,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MARSHLANDS WELL-01,M35/7813,,Yes,,,Measure Not Applicable,,90720,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MARSHLANDS WELL-02,M35/7814,,Yes,,,Measure Not Applicable,,90720,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAYS WELL-04,M35/1945,,Yes,,,Measure Not Applicable,,76202,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAYS WELL-05,M35/7319,,Yes,,,Measure Not Applicable,,36288,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MAYS WELL-06,BX24/2814,,Yes,,,Measure Not Applicable,,45360,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,MONTREAL WELL-01,M35/2243,,Yes,,,Measure Not Applicable,,76202,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PARKLANDS WELL-01,M35/3446,,Yes,,,Measure Not Applicable,,43400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PARKLANDS WELL-02,M35/3128,,Yes,,,Measure Not Applicable,,67060,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PARKLANDS WELL-03,M35/7746,,Yes,,,Measure Not Applicable,,67060,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PICTON WELL-01,M35/8897,,Yes,,,Measure Not Applicable,,28224,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PICTON WELL-02,M35/8896,,Yes,,,Measure Not Applicable,,28224,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PICTON WELL-03,M35/8898,,Yes,,,Measure Not Applicable,,10080,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PRESTONS  WELL-01,BX24/0624,,Yes,,,Measure Not Applicable,,30000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PRESTONS  WELL-02,BX24/0625,,Yes,,,Measure Not Applicable,,23000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PRESTONS  WELL-03,BX24/0626,,Yes,,,Measure Not Applicable,,48000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,PRESTONS  WELL-04,BX24/0627,,Yes,,,Measure Not Applicable,,36288,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,REDWOOD WELL-03,BX24/2888,,Yes,,,Measure Not Applicable,,42000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,REDWOOD WELL-04,BX24/2889,,Yes,,,Measure Not Applicable,,42000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SOCKBURN WELL-01,M35/1859,,Yes,,,Measure Not Applicable,,182000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SOCKBURN WELL-02,M35/1860,,Yes,,,Measure Not Applicable,,182000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SOCKBURN WELL-03,M35/2272,,Yes,,,Measure Not Applicable,,182000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SOCKBURN WELL-04,M35/2273,,Yes,,,Measure Not Applicable,,182000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SOCKBURN WELL-05,M35/2274,,Yes,,,Measure Not Applicable,,182000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SOCKBURN WELL-06,M35/2275,,Yes,,,Measure Not Applicable,,182000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SPREYDON WELL-04,M36/1055,,Yes,,,Measure Not Applicable,,46900,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SPREYDON WELL-05,M36/1619,,Yes,,,Measure Not Applicable,,46900,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SPREYDON WELL-06,M36/8288,,Yes,,,Measure Not Applicable,,31500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SPREYDON WELL-07,BX24/2875,,Yes,,,Measure Not Applicable,,46900,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ST JOHNS WELL-01,M35/2554,,Yes,,,Measure Not Applicable,,112000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ST JOHNS WELL-02,M35/2805,,Yes,,,Measure Not Applicable,,112000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,ST JOHNS WELL-03,M35/18432,,Yes,,,Measure Not Applicable,,112000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SYDENHAM WELL-05,M36/0967,,Yes,,,Measure Not Applicable,,27800,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SYDENHAM WELL-06,M36/4565,,Yes,,,Measure Not Applicable,,84672,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SYDENHAM WELL-07,M36/20670,,Yes,,,Measure Not Applicable,,27216,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,SYDENHAM WELL-08,M36/20671,,Yes,,,Measure Not Applicable,,84672,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,TANNER WELL-02,M36/1915,,Yes,,,Measure Not Applicable,,26610,,362912,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,TANNER WELL-03,M36/20729,,Yes,,,Measure Not Applicable,,26610,,362912,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,TARA WELL-04,M35/6945,,Yes,,,Measure Not Applicable,,29484,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,THOMPSONS WELL-02,M35/8972,,Yes,,,Measure Not Applicable,,78400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,THOMPSONS WELL-03,BX24/0153,,Yes,,,Measure Not Applicable,,78400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,TRAFALGAR WELL-05,M35/2556,,Yes,,,Measure Not Applicable,,36316,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,TRAFALGAR WELL-06,M35/8452,,Yes,,,Measure Not Applicable,,36316,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,TRAFALGAR WELL-07,BX24/0348,,Yes,,,Measure Not Applicable,,27384,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WILMERS WELL-01,M36/20556,,Yes,,,Measure Not Applicable,,113400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WILMERS WELL-02,M36/20557,,Yes,,,Measure Not Applicable,,113400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WOOLSTON WELL-04,M36/1030,,Yes,,,Measure Not Applicable,,26460,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WOOLSTON WELL-05,M36/5838,,Yes,,,Measure Not Applicable,,30240,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WORCESTER WELL-01,M35/9289,,Yes,,,Measure Not Applicable,,98000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WORCESTER WELL-02,M35/9290,,Yes,,,Measure Not Applicable,,98000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WRIGHTS WELL-05,BX24/1678,,Yes,,,Measure Not Applicable,,29064,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,WRIGHTS WELL-06,BX24/1679,,Yes,,,Measure Not Applicable,,30744,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,DUV001,Pipers Stream S00354,S00354,,Yes,,,Measure Not Applicable,,157680,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,DUV001,Pipers Stream S00354,S00354,,Yes,,,Measure Not Applicable,,157680,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,LIT001,LITTLE RIVER WELL,BY24/0001,,Yes,,6,,260,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,WAI138,WAINUI VALLEY WELL,N36/0048,,Yes,,,Measure Not Applicable,,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,BAL001,NZMS 260: H46:580-363,2002.238,,Yes,,64,,5500,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,CLY005,NZMS 260 G45:417-507,2006.22,,Yes,,60,,4387,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,GLE001,E1300475 N4913582 G44: 103-754; E1300425 N4913596,2005.283.V2,,Yes,,36,,3110,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008586,Clutha District Council,KAI005,NZMS 260: H46:667308,96676,,No,3113,25,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,LAW001,NZTM 2000:E1347420 N4915563,RM12.137.01,,Yes,,20.8,,1800,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,MIL001,NZMS 260: H45:747527,2000.417.V1,,No,,39,,3360,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,MOA001,NZTM 2000: E1307473 N4941868,RM18.196.01,,Yes,,46.3,,4000,,Measure Not Applicable,1460000,,4 - Reliable
+ACC-00008586,Clutha District Council,NOR003,NZTM 2000: E1364669 N4907605,RM18.385.01,,Yes,,27.8,,2300,,Measure Not Applicable,839500,,3 - Less Reliable
+ACC-00008586,Clutha District Council,OWA001,NZTM 2000 E1343525 N4850698,RM17.177.01,,Yes,,4.4,,380,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,RIC009,NZMS260-H46:512257,98544,,Yes,,26,,2250,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,RIC009,NZTM 2000 - E1341291 N4863527,12.1.2.2,Measure Not Applicable,Yes,,100,,1000,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008586,Clutha District Council,RIC009,NZTM 2000 E1341841 N4864019,RM17.146.01,,Yes,,15,,1028,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,STI002,Point 1: NZTM 2000: E1352119 N4872638; Point 2: NZTM 2000: E1352104 N4872618,RM18.071.01,,Yes,,42,,3600,,Measure Not Applicable,912500,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,TAP001,NZMS 260: G45:223660,2000.418.V1,,Yes,,17,,1440,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008586,Clutha District Council,TUA004,NZTM 2000: E1339282 N4911247,RM17.089.01,,No,106.2,19,,1640,,Measure Not Applicable,600000,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,WAI016,NZMS 260 H45:523-564,2000.964,,No,445,38,,3283,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00006268,Department of Conservation,MTC001,Blackbirch stream,CRC054838,,Yes,,50,,4320,,,286978,,5 - Highly Reliable
+ACC-00006268,Department of Conservation,MTC001,Glencoe Stream,CRC054838,,Yes,,13,,1123,,,113530,,5 - Highly Reliable
+ACC-00006268,Department of Conservation,WHA015,Unnamed tributary of the Waipuna Stream,Water Permit - 106938,,Yes,,4,,345,2415,,125580,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,CHR008,M35/10794,CRC070263.1,,Yes,,30,,2160,,,328500,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,CHR008,M35/10795,CRC064272.1,,Yes,,30,,2160,,,328500,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,KAI002,Bore 790101,ATH-2005011070.01,,Yes,,13.8,,1000,,,286000,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,KAI002,Bore 790184,ATH-2005011069.02,,Yes,,13.8,,1000,,,286000,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,WAI013,72_10028,AUTH141931.01.01,,No,156.75,,Measure Not Applicable,1592,,,581080,,4 - Reliable
+ACC-00006269,Department of Corrections,WAI013,72_4597,AUTH141931.01.01,,No,156.75,,Measure Not Applicable,1000,,,304775,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,,,,,,,,,,,,,
+ACC-00008513,Dunedin City Council,,Burns Creek,2001.349,,No,,60,,3500,,,1277500,,2 - Uncertain
+ACC-00008513,Dunedin City Council,,Jeffersons Creek,2001.348,,No,,23,,1400,,,511000,,2 - Uncertain
+ACC-00008513,Dunedin City Council,,Morrisons Burn 1,2001.353,,Yes,,64,,3800,,,1387000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Morrisons Burn 2,2001.354,,Yes,,51,,3000,,,1095000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Nichols Creek,2001.355,,Yes,,24,,1400,,,511000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Ross Creek,2001.356,,Yes,,41,,3500,,,1277500,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Unamed Tributaries of Sullivans Dam,2001.351,,No,,100,,5000,,,1825000,,2 - Uncertain
+ACC-00008513,Dunedin City Council,,West Branch Creek,2001.352,,Yes,,24,,1500,,,547500,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Williams Creek,2001.347,,No,,30,,2000,,,730000,,2 - Uncertain
+ACC-00008513,Dunedin City Council,S00141,Deep Stream,2001.362.V1,,Yes,,460,,39744,,,14506560,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S00142,Deep Creek,2001.364.V1,,No,0,100,,8500,,,3102500,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S00143,Silverstream,2001.341.V1,,Yes,,127,,11000,,,4015000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S00145,Cedar Farm Creek,2006.042.V1,,No,0,60,,5000,,,1825000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S00156,Waikouaiti River,2006.002.V1,,Yes,,60,,1100,,,401500,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S00156,Waikouaiti River,2006.075.V1,,Yes,,60,,2400,,,876000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S00867,Waipori River,2002.323,,Yes,,35,,3024,,,1103760,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S01067,Taieri Wells (infiltration gallery),RM18.351.02,,Yes,,375,,32280,,,11782200,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S01068,Outram Well (infiltration gallery),RM18.351.01,,No,301,7,,720,,,262800,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S10159,McQuilkans,2001.337.V1,,Yes,,90,,5000,,,1825000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S10160,Sligos Creek,2001.338.V1,,Yes,,150,,9000,,,3285000,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,S10161,Whare Creek,2001.339.V1,,Yes,,150,,9000,,,3285000,,5 - Highly Reliable
+ACC-00008510,Far North District Council,KAI006,Kaikohe,AUT.001862.01.05,,Yes,,,Measure Not Applicable,1500,25000,,149000,,5 - Highly Reliable
+ACC-00008510,Far North District Council,KAI008,Kaitaia,AUT.005112,,Yes,,63,,5000,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008510,Far North District Council,KAW002,Kawakawa,AUT.002478.01.05,,Yes,,90,,4000,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008510,Far North District Council,KER001,Kerikeri,AUT.002044.01.04,,Yes,,,Measure Not Applicable,960,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008510,Far North District Council,OKA003,Okaihau,AUT.002031.01.04,,Yes,,,Measure Not Applicable,960,1685,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008510,Far North District Council,OMA002,Omapere,AUT.004369.01.03,,Yes,,8.7,,750,,Measure Not Applicable,60000,,5 - Highly Reliable
+ACC-00008510,Far North District Council,OMA003,Omanaia Rawene,AUT.02577,,Yes,,2,,462,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008510,Far North District Council,PAI001,Paihia,AUT.002010,,Yes,,49,,4233,,Measure Not Applicable,1460000,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Clapcott Dam,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Sang Dam,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Te Arai River,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Waipaoa River,WS-2021-110327-00,,Yes,,200,,17280,120960,,6307200,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Williams Dam,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,TEK002,Bore at Te Karaka,WG-2019-108877-00,,Yes,,3.5,,300,2100,,109500,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,WHA004,Mangatu River via Bore,WG-2019-108878-00,,Yes,,1.2,,104,728,,37960,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,WHA004,Mangatu River via Bore,WG-2019-109634-00,,Yes,,0.9,,33,231,,12045,,5 - Highly Reliable
+ACC-00008531,Gore District Council,G00051,Jacobstown Well 3,99197,,Yes,,34.7,,3000,21000,,1095000,,5 - Highly Reliable
+ACC-00008531,Gore District Council,G00052,Coopers Well 4,204330,,Yes,,57.9,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008531,Gore District Council,G11153,Jacobstown Well 1,99197,,Yes,,34.7,,3000,21000,,1095000,,5 - Highly Reliable
+ACC-00008531,Gore District Council,G11154,Coopers Well 3,204330,,Yes,,57.9,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008531,Gore District Council,S00056,Pleura Stream,AUTH-20191736-01,,Yes,,24,,1500,10500,,547500,,5 - Highly Reliable
+ACC-00008531,Gore District Council,S01064,Mataura River,99223,,Yes,,23.1,,2000,14000,,730000,,5 - Highly Reliable
+ACC-00001018,Greater Wellington Regional Council,BAT001,Battle Hill Bore,WGN230214 [38831],,Yes,,0.7,,5,35,,1825,,5 - Highly Reliable
+ACC-00001018,Greater Wellington Regional Council,Kai140,Kaitoke Top Terrace Bore,BP33/0045,,Yes,,1,,87,435,,14919,,5 - Highly Reliable
+ACC-00001015,Grey District Council,BLA001,Blackball Infiltration,RC01180/3,,Yes,,10,,85,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001015,Grey District Council,GRE001,Coal Creek bores,RC01092/3,,Yes,,177,,15300,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001015,Grey District Council,GRE001,Sids Rd Bores,RC01180/2,,Yes,,18,,1034,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001003,Hamilton City Council,HAM001,Hamilton City Water Treatment Plant,AUTH113941.01.03,,Yes,,2470,,125315,,,45739975,,5 - Highly Reliable
+ACC-00001003,Hamilton City Council,HAM001,Hamilton City Water Treatment Plant,AUTH123743.01.01,,Yes,,,Measure Not Applicable,250,,,45000,,5 - Highly Reliable
+ACC-00001003,Hamilton City Council,HAM001,Hamilton City Water Treatment Plant,AUTH125287.01.01,,Yes,,,Measure Not Applicable,1200,,,438000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,CLI001,1658,AUTH-114790-03,,Yes,,50,,,3810,,198501,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,CLI001,17075,AUTH-114779-04,,Yes,,50,,,13500,,703350,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,1171,AUTH-120019-05,,Yes,,560,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,1302,AUTH-120019-05,,Yes,,560,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,16664,AUTH-120019-05,,Yes,,80,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,17026,AUTH-120019-05,,Yes,,560,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,17027,AUTH-120019-05,,Yes,,480,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,17028,AUTH-120019-05,,Yes,,480,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,17030,AUTH-120019-05,,Yes,,480,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,3253,AUTH-120019-05,,Yes,,120,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,4151,AUTH-116302-03,,Yes,,100,,,101281,,5276740,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,766,AUTH-120019-05,,Yes,,560,,,,Measure Not Applicable,16892000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAU002,1187,AUTH-124374-01,,Yes,,50,,,20000,,550000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAU002,15176,AUTH-124374-01,,Yes,,50,,,20000,,550000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAU002,16889,AUTH-124374-01,,Yes,,50,,,20000,,550000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAU002,5830,AUTH-124374-01,,Yes,,8,,,20000,,550000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,OMA008,10334,AUTH-111979-01,,No,3998,14,,,1000,,25000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,OMA008,8531,AUTH-111979-01,,No,3998,14,,,1000,,25000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,TEP009,Te Pohue Spring,AUTH-122615-01,,Yes,,0.5,,,280,,14560,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI007,15419,AUTH-119996-02,,Yes,,15,,,5180,,270100,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI007,Spring 1,AUTH-119996-02,,Yes,,5,,,5180,,270100,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI007,Spring 2,AUTH-119996-02,,Yes,,5,,,5180,,270100,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI087,3516,AUTH-125382-01,,Yes,,2.5,,,750,,30000,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI135,15713,AUTH-117639-04,,Yes,,10,,,176,,9152,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHA029,16673,AUTH-114782-04,,Yes,,50,,,3810,,198664,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,15707,AUTH-119526-01,,Yes,,49,,,23794,,1239667,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,15707,AUTH-119527-01,,Yes,,49,,,1544,,21770,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,4015,AUTH-119526-01,,Yes,,49,,,23794,,1239667,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,4015,AUTH-119527-01,,Yes,,49,,,1544,,21770,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,5033,AUTH-119526-01,,Yes,,49,,,23794,,1239667,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,5033,AUTH-119527-01,,Yes,,49,,,1544,,21770,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,S00045,Waihou River (Kerepehi),AUTH111659.01.01,,No,302435,400,,15000,105000,,3545000,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,S00046,Mangatarata Stream (Waitakaruru),AUTH119762.01.01,,No,0,73,,6300,44100,,2764645,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,S00049,Walmsley Stream (Waihi),AUTH130392.01.01,,Yes,0,50,,3500,24500,,1056000,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,S00064,Waitawheta Stream (Paeroa),AUTH140228.01.01,,Yes,0,79,,6867,48069,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,S00370,Waitakaruru River (Waitakaruru),AUTH119764.01.01,,No,0,75,,6480,45360,,2764645,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,S01025,Ohinemuri River (Waihi),AUTH130392.03.01,,Yes,0,60,,4300,30100,,1056000,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Clyde st Bore,ATH-2010013405.00,,Yes,,46.3,,4000,571,,1460000,,4 - Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Edinburgh Bore,ATH-2001009425.01,,Yes,,9.7,,691,4837,,252215,,4 - Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Flagstaff Bore,ATH-2003010237.01,,Yes,,22,,1383,9681,,504795,,4 - Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Ladies Mile Bore,ATH-2010013405.00,,Yes,,46.3,,4000,571,,1460000,,4 - Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Local Bore (Harbour st),ATH-2010013407.00,,Yes,,46.3,,4000,571,,1460000,,4 - Reliable
+ACC-00001034,Horowhenua District Council,LEV001,Ōhau at Rongomātāne - intake gallery,ATH-1991006011.03 (MWC901962),,Yes,,211,,15750,110250,,5748750,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,SHA001,Shannon Intake Gallery,ATH-2005010241.03,,Yes,,13.9,,1200,8400,,438000,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,TOK002,Tokomaru Intake Gallery,ATH-1994001627.01,,Yes,,10,,430,3010,,156950,,5 - Highly Reliable
+ACC-00001012,Hurunui District Council,,"N32:0057, N32:0056, N32:0108",CRC002021,,Yes,,22,,1545,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,,CRC980468,,Yes,,7.5,,650,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,BW24/0051,CRC164844,,Yes,,35,,3024,0,Measure Not Applicable,540930,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,M34/5707,CRC192903,,Yes,,25,,2160,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,M34/5864,CRC234173,,Yes,,20,,1728,0,Measure Not Applicable,662902,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMU001,BU25/5063,CRC18118,,Yes,,6,,1500,0,Measure Not Applicable,547501,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMU001,N32/0052 and N32/0055,CRC18118,,Yes,,21,,1500,0,Measure Not Applicable,547500,,4 - Reliable
+ACC-00001012,Hurunui District Council,ASH002,"M34/0674,M34/0673,M34/5772,M34/5773,M34/5774,M35/11523,M35/11524,",CRC194404,,Yes,,70,,6000,0,Measure Not Applicable,1300000,,4 - Reliable
+ACC-00001012,Hurunui District Council,BAL003,M33:831-299,CRC981241,,Yes,,9,,700,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,BAL003,SWAP BU24/0012,CRC154223,,Yes,,11,,950,0,Measure Not Applicable,329413,,4 - Reliable
+ACC-00001012,Hurunui District Council,BLY001,N33/0094,CRC156556,,Yes,,2,,200,0,Measure Not Applicable,73000,,4 - Reliable
+ACC-00001012,Hurunui District Council,CHE001,"N32/0108,BU26/0044",CRC240404,,Yes,,40,,3171,0,Measure Not Applicable,987946,,4 - Reliable
+ACC-00001012,Hurunui District Council,CUL001,N33/0103,CRC062919,,Yes,,28,,900,0,Measure Not Applicable,438000,,4 - Reliable
+ACC-00001012,Hurunui District Council,CUL001,N33/0349,CRC062919,,Yes,,34,,1200,0,Measure Not Applicable,438000,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAN001,BU24/0009,CRC191743,,Yes,,50,,5900,0,Measure Not Applicable,1739355,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAN001,"N32/0358, BU24/0046",CRC191743,,Yes,,68,,5900,0,Measure Not Applicable,1739355,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,BV24/0116,CRC223418,,Yes,,50,,4190,0,Measure Not Applicable,1050000,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,M33/0227,CRC223418,,Yes,,24,,4190,0,Measure Not Applicable,1050000,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,M33/0227,CRC042081,,Yes,,23.5,,0,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,M33:713-167,CRC002026,,Yes,,16,,900,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,KAI039,N33/0095,CRC002016,,Yes,,10,,500,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,LOW010,M33/0234,CRC002025,,Yes,,9,,,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,MOT016,N33:185-119,CRC002014,,Yes,,26,,2100,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,PAR009,O32/0018,CRC002023,,Yes,,10,,490,0,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00001012,Hurunui District Council,WAI026,N32/0115,CRC156528,,Yes,,10,,500,0,Measure Not Applicable,145000,,4 - Reliable
+ACC-00001012,Hurunui District Council,WAI068,N34/0125,CRC136767,,Yes,,8,,691,0,Measure Not Applicable,98000,,4 - Reliable
+ACC-00008502,Invercargill City Council,INV001,Ōreti River at Branxholme,ES AUTH 99139-V1,,Yes,0,546,,47200,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,FER003,S00519,CRC 042702.1,,No,6000,18.5,,400,2800,,146000,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KAI004,G01751,CRC 054849,,Yes,,100,,8640,60480,,3153600,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KAI021,S00519,CRC970568.1,,Yes,,4.5,,389,2723,,141985,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KAI038,GO1293,,Data Not Available,Yes,,1,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KIN003,S00518,CRC 011818,,Yes,,86,,7430,51380,,2711950,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,OAR001,S00517,CRC 951060.2,,Yes,,4.5,,200,1400,,73000,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,OCE002,G11035,CRC 194257,,Yes,,20,,1580,11060,,576700,Measure Not Applicable,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,PEK002,G00609,CRC 991951,,Yes,,4.5,,97,679,,35405,Measure Not Applicable,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,DAR002,Rotu,8134.01,,Yes,,83,,7200,50400,,2628000,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,DAR002,Waiparataniwha,030845.01.01,,Yes,,,Measure Not Applicable,4465,31255,,1629725,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,GLI001,Glinks Gully,7944.02,,Yes,,,Measure Not Applicable,100,700,,36500,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,MAN003,Mangawhai Bore,20010803201,,Yes,,,Measure Not Applicable,55,385,,20055,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,MAU001,Cattlemount and Boarhill,9888.01,,No,4789,,Measure Not Applicable,2650,18550,,967250,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,MAU001,Piroa,7582.01,,Yes,,12,,1000,7000,,365000,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,RUA001,Ruawai Bores,20010218701,,Yes,,,Measure Not Applicable,450,3150,,73000,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,HAU003,S00081 - Bores next to Otaki River,WGN160082 [38112],,Yes,Includes Water Take from Bores adjacent River,25,,1382,,Measure Not Applicable,504576,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,OTA003,G00302 - Tasman Road North; G00303 - Rangiuru Road Bores; G10071 - Tasman Road Bore South,WGN080379 [32187-88],,Yes,Includes Water Take for Tasman WTP and Rangiuru WTP Bores,115,,11233,,Measure Not Applicable,4100045,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,PAE002,G01595 - Paekakariki Bore; G02086 - Paekakariki Bore 2; S00122 - Wainui Stream,WGN130331 [32355],,Yes,Includes Water Take from Bores and River,16.75,,2160,,Measure Not Applicable,788400,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010,G01701 - K6 - Wooden Bridge; G01702 - K5 - Nga Manu; G01703 - K4 - Cooper 1; G01704 - Kb4 - Landfill; G01705 - K10 - Market Garden; G10064 - Kb7; G10065 - N2; G10067 - K12,WGN130103 [35973-76],,Yes,Combined Take from Borefield,463,,30700,,Measure Not Applicable,11174800,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010,S00123 - Waikanae River,WGN130103 [35973-76],,Yes,,463,,30700,,Measure Not Applicable,11174800,,5 - Highly Reliable
+ACC-00008542,Kawerau District Council,G00210,BN-220066,20329,,Yes,,152,,12000,0,Measure Not Applicable,0,Measure Not Applicable,
+ACC-00008542,Kawerau District Council,G00211,BN-220067,20329,,Yes,,152,,12000,0,Measure Not Applicable,0,Measure Not Applicable,
+ACC-00008542,Kawerau District Council,G00212,BN-220068,20329,,Yes,,152,,12000,0,Measure Not Applicable,0,Measure Not Applicable,
+ACC-00008572,Mackenzie District Council,,Albury,,,,,,,,,,,,
+ACC-00008572,Mackenzie District Council,,Allandale,,,,,,,,,,,,
+ACC-00008572,Mackenzie District Council,,Burkes Pass,,,,,,,,,,,,
+ACC-00008572,Mackenzie District Council,,Fairlie,,,,,,,,,,,,
+ACC-00008572,Mackenzie District Council,,Tekapo,,,,,,,,,,,,
+ACC-00008572,Mackenzie District Council,,Twizel,,,,,,,,,,,,
+ACC-00007492,Manawatu District Council,G00103 - Himatangi Bore,Bore 332018,Horizons -100537,,Yes,,25,,2160,15120,,788400,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,G01411 - Newbury Line Bore,Bore 326113,ATH-2001008223.01,,Yes,,78,,6000,42000,,2190000,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,G01417 - Campbell Road Bore,Bore 326117,Horizons - 102442,,Yes,,111,,9600,67200,,3504000,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,G01965 - Waituna West Bore,Bore 306009,Horizons -105969,,Yes,,16,,1400,9800,,511000,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,G02118 - Rongotea Bore,Bore 324125,Horizons - 107252,,Yes,,10,,800,5600,,157680,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,G11011 - Ohakea Bore,Bore 324131,Horizons-ATH-2022203819.01,,Yes,,35,,2774,19418,,1015284,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,S00088 - Oroua River,,Horizons - 103269,,Yes,,104,,9000,63000,,3285000,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,S00250 - Rangitikei River at Halcombe,Bore 314009,Horizons - 106311,,Yes,,70,,2000,14000,,730000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,AWA300,Black Birch Stream,U940669,,Yes,,92.6,,8000,56000,,2920000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Bomford St No. 1 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Central No. 1 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Grove Rd No. 1 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Grove Rd No. 2 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Grove Rd No. 3 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Grove Rd No. 4 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Middle Renwick Rd No. 1 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Middle Renwick Rd No. 2 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Middle Renwick Rd No. 3 Well,U960523,,Yes,,486,,42000,294000,,15330000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,HAV002,Kaituna Well No.1,U080226,,Yes,,28.7,,2000,14000,,730000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,HAV002,Kaituna Well No.2,U080226,,Yes,,28.7,,2000,14000,,730000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,PIC001,Barnes Dam,U071405,,Yes,,34,,2938,20566,,1072372,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,PIC001,Speeds Rd No. 1 Well,U190995,,Yes,,57.8,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,PIC001,Speeds Rd No. 2 Well,U190995,,Yes,,57.8,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,PIC001,Speeds Rd No. 3 Well,U190995,,Yes,,57.8,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,REN001,Condors Bend Rd No. 1 Well,U180374,,Yes,,57.8,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,REN001,Condors Bend Rd No. 2 Well,U180374,,Yes,,57.8,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,REN001,Gee St No. 4 Well,U180374,,Yes,,57.8,,5000,35000,,1825000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,RIV002,Hardings Rd North Well,U210821,,Yes,,39.2,,3388,23716,,1236625,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,RIV002,Hardings Rd South Well,U210821,,Yes,,39.2,,3388,23716,,1236625,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,RIV002,Malthouse Rd No. 1 Well,U190130,,Yes,,26,,2254.79452054794,15783.5616438356,,823000,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,WAI034,Wairau Valley No. 1 Well,U171044,,Yes,,5.5,,480,3360,,175200,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,WAI034,Wairau Valley No. 2 Well,U171044,,Yes,,5.5,,480,3360,,175200,,5 - Highly Reliable
+ACC-00001026,Masterton District Council,MAS002,Kaituna,WAR170176,,Yes,,460,,40000,,,14600000,,5 - Highly Reliable
+ACC-00001026,Masterton District Council,TIN002,Tinui Spring,WAR010244,,Yes,,,Measure Not Applicable,90,,,32850,,5 - Highly Reliable
+ACC-00001026,Masterton District Council,WAI058,Wainuioru Bore,WAR210056,,Yes,,10,,720,,,262080,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,HIN002,64_871,AUTH143383.01.01,,Yes,0,,Measure Not Applicable,200,1400,,40000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,HIN002,72_10641,AUTH143383.01.01,,Yes,0,,Measure Not Applicable,200,1400,,40000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,64_511,119179,,Yes,0,,Measure Not Applicable,2500,17500,,600000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,72_4434,119179,,Yes,0,,Measure Not Applicable,2500,17500,,600000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,72_448,AUTH121950.01.01,,Yes,0,,Measure Not Applicable,1500,10500,,300000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,"Waiteariki Stream, Tills Road - Matamata",AUTH119917.01.02,,Yes,0,55,,4400,30800,,1200000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,64_673,AUTH126657.01.02,,Yes,0,,Measure Not Applicable,10000,70000,,120000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,72_10485,AUTH142378.01.02,,Yes,0,60,,4000,28000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,72_11133,AUTH126657.01.02,,Yes,0,,Measure Not Applicable,10000,70000,,120000,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Topehaehae Stream. NZTM1827742 5814276,AUTH120720.02.01,,Yes,0,140,,10000,70000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Pohomihi Stream NZMS T13 553-006,104581,,Yes,0,40,,4500,31500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Rolleston Street - Te Aroha NZMS 260 T13:499-026,AUTH109740.01.02,,Yes,0,116,,10000,70000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Tunakohoia Stream NZMS 260 T13:508-409,104578,,Yes,0,,Measure Not Applicable,3500,24500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Tutumangao Stream NZMS 260 T13:508-034,104580,,Yes,0,40,,3500,24500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEP003,"Tepapa-Te Poi South Rd, NZMS 260 T15:609-657",AUTH118256.01.02,,Yes,0,10,,120,840,,25000,,5 - Highly Reliable
+ACC-00008588,Ministry of Education,,,,Measure Not Applicable,,,,,,,,,,
+ACC-00001141,Napier City Council,NAP001NA,A2,AUTH-116128-04,,Yes,,130,,11232,70000,,3650000,,5 - Highly Reliable
+ACC-00001141,Napier City Council,NAP001NA,A3,AUTH-116128-04,,Yes,,130,,11232,70000,,3650000,,
+ACC-00001141,Napier City Council,NAP001NA,T2,AUTH-116128-04,,Yes,,100,,8640,58060,,3027414,,5 - Highly Reliable
+ACC-00001141,Napier City Council,NAP001NA,T3,AUTH-116128-04,,Yes,,70,,6048,36288,,1892160,,5 - Highly Reliable
+ACC-00001141,Napier City Council,NAP001NA,T5,AUTH-116128-04,,Yes,,120,,10368,69552,,3626640,,5 - Highly Reliable
+ACC-00001141,Napier City Council,NAP001NA,T6,AUTH-116128-04,,Yes,,130,,11232,69552,,3626640,,5 - Highly Reliable
+ACC-00001141,Napier City Council,NAP001NA,T7,AUTH-116128-04,,Yes,,130,,11232,75600,,3942000,,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Maitai Dam,RM165192,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Maitai South River,RM165192,,Yes,,300,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Roding,RM165239,,Yes,,254,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,ING001,Ngatoro Contingency,"3934-3.0, 5188-1.0",,Yes,,75,,5000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,ING001,Ngatoro Infiltration gallery,"4509-2.0, 4510-2.0, 5869-2.0",,Yes,,70,,4850,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Lake,"0672-3.0, 0673-3.0, 2055-3.1, 6643-2.0, 7122-1.0, 11248-1.0, 11284-1.0, 7146-1",,Yes,,740,,60480,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,River,,Measure Not Applicable,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OAK001,Bore 100,"1278-4.0, 5713-2.0, 6114-2.0",,Yes,,35,,3715,,,1000000,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OAK001,Bore 250,10770-1.0,,Yes,,35,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OAK001,Wairau Stream,1278-4,,Yes,,15,,1300,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OKA002,Mangatete Stream,"00026-4, 4805-3.0, 9959-1",,Yes,,13.8,,1000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001000,New Zealand Defence Force,,Bore M35/0914 (West Melton),CRC972759.1,,Yes,,9,,329.142857142857,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,BAL005,"I37/0015 (Tekapo, Fork Stream)",CRC195159,,Yes,,3.8,,200,,,30000,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,BUR001,GO3072 (Burnham Bore),CRC213896,,Yes,,30,,2592,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,DIP002,"S00771 (Dip Flat, Unnamed Stream)",U000906,,Yes,,0.5,,170,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Bore-345041 (Linton Bore 11),101974 / ATH-2002009502.01,,Yes,,5,,390,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Bore-345077 (Linton Bore 15),ATH-2007011654.01,,Yes,,35.4,,1500,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Bore-345181 (Linton Bore 13),101976 / ATH-2002009504.01,,Yes,,13,,1080,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Bore-345191 (Linton Bore 14),ATH-2002009505.03,,Yes,,16.3,,1410,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Bore-345210 (Linton Bore 3),101973 / ATH-2002009501.01,,Yes,,4,,290,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WAI002,Waiouru Stream (Waiouru),7317,,No,,63,,5455,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WAI002,Waitangi Stream (Waiouru),7342,,Yes,,63,,5455,,,,Measure Not Applicable,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WOO004,"P28w/1106, P28w/1115, P28w/4573",210323.02,,Yes,,,Measure Not Applicable,15000,,,,Measure Not Applicable,4 - Reliable
+ACC-00008500,Opotiki District Council,OPO001,Headley Bores 1 and 2,BOPRC RC 66501 - Taking water from two bores for public supply,,Yes,,57,,4925,34475,,1802550,,5 - Highly Reliable
+ACC-00008500,Opotiki District Council,OPO001,"Woodlands bore, since expired and no longer used.",RC 68042 - Taking of water from a bore for public supply,,Yes,,9,,778,5446,,283970,,5 - Highly Reliable
+ACC-00008500,Opotiki District Council,TEK004,Puremutahuri Stream,RC 61174 - Taking of water from shallow filter bed,,Yes,,15,,972,6804,,354780,,5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,HUI007,S00410 Huirimu,136074.01.01,Measure Not Applicable,No,"24/11/24 -17.7- Dugout repair works carried out. The dugout was in bypass mode and the water to the reticulation was pumped out manually. 09/01/25 Scada Error. 03/02/2025-261-A leak was identified in the reticulation system, leading to increased production and intake levels that exceeded the consent limit to maintain water supply to the farms. 12/03/25,16/03/25,30/03/25- Flow meter reading Error",10.7,,925,6475,,337625,,4 - Reliable
+ACC-00008562,Otorohanga District Council,KAH005,S00411 Kahorekau,136074.01.01,Measure Not Applicable,No,"05/09/24 -07/09/24- Scada Error, 01/10/24, 11,12,13,14,15/10/24, 19,20,21,22/10/24 - Exceedances throughout October occurred as the setpoint was set at 985m3/day as per the consent and the plant stopped producing water once this setpoint was reached. However, a small volume of water in the treated water pipeline continued to flow even after the plant was turned off.  This caused small exceedences. The set point has been reduced to  983 m3 to accomodate the excess volume in the pipeline.",11.4,,985,6895,,359525,,4 - Reliable
+ACC-00008562,Otorohanga District Council,KAW001,G00117 Kawhia,120401,,Yes,,0,,600,4200,,176068,,4 - Reliable
+ACC-00008562,Otorohanga District Council,OTO001,S00103 Otorohanga,130076.01.01,,Yes,,61,,5000,35000,,1825000,,4 - Reliable
+ACC-00008562,Otorohanga District Council,TAU301,S00412 Taupaki,136074.01.01,,Yes,0,2,,450,3150,,164250,,4 - Reliable
+ACC-00008562,Otorohanga District Council,TIH001,S00407 Tihiroa,114845,,No,"15/04/25 ,16/04/25- Scada Error",24,,1500,10500,,547500,,4 - Reliable
+ACC-00008549,Palmerston North City Council,ASH001,Bore 337015 & 337013,105191 & 105192,,Yes,0,,Measure Not Applicable,5300,,,706000,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,BUN001,Bore 326103,105644,,Yes,0,,Measure Not Applicable,600,,,219000,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,LON001,Bore 335351,106233,,No,12562,,Measure Not Applicable,250,,,45000,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,335121 (Tākaro Bore),ATH-2018201933.02,,Yes,0,139,,10800,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336101 (Pap Bore 1),ATH-2018201933.02,,Yes,0,70,,6000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,"336101 (Pap Bore 1), 336245 (Pap Bore 2), 336299 (Pap Bore 3)",ATH-2018201933.02,,Yes,0,230,,17980,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,"336101 (Pap Bore 1), 336299 (Pap Bore 3)",ATH-2018201933.02,,Yes,0,120,,8380,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336223 (Keith St 1),ATH-2018201933.02,,Yes,0,84,,7200,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,"336223 (Keith St 1), 336317 (Keith St 2)",ATH-2018201933.02,,Yes,0,111,,8640,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336245 (Pap Bore 2),ATH-2018201933.02,,Yes,0,112,,9600,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336253 (Roberts Line Bore 1),ATH-2018201933.02,,Yes,0,70,,6000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336253 (Roberts Line Bore 1) & 336257 (Roberts Line Bore 2),ATH-2018201933.02,,Yes,0,139,,12000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,"336253 (Roberts Line Bore 1), 336257 (Roberts Line Bore 2), 335121 (Tākaro Bore), 336101 (Pap Bore 1), 336245 (Pap Bore 2), 336299 (Pap Bore 3), 336223 (Keith St 1), 336317 (Keith St 2), 336307 (Railway Road)",ATH-2018201933.02,,Yes,0,,Measure Not Applicable,,,Measure Not Applicable,13274500,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336257 (Roberts Line Bore 2),ATH-2018201933.02,,Yes,0,139,,12000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336299 (Pap Bore 3),ATH-2018201933.02,,Yes,0,120,,8380,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336307 (Railway Road),ATH-2018201933.02,,No,0,73,,6250,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,336317 (Keith St 2),ATH-2018201933.02,,Yes,0,111,,8640,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,Turitea Stream,105146/3,,Yes,0,428,,37000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001187,Papakura,,,,Measure Not Applicable,,,,,,,,,,
+ACC-00008584,Queenstown Lakes District Council,ARR001,G01342,RM19.410.01,,No,11267,108,,7800,,,1274200,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,ARR001,G03086,RM19.410.01,,No,,108,,7800,,,1274200,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,ARR001,G03087,RM19.410.01,,No,,108,,780,,,1274200,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,ART001,G01974,2005.762,,Yes,,49,,3385,,,823200,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,ART001,G02103,2005.762,,Yes,,49,,3385,,,823200,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,CAR014,S10142,RM21.628.03,,Yes,,15,,1296,,,382920,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,CAR014,S10142,RM22.466.01,,Yes,,30,,1452,,,315000,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,CAR014,S10145,RM21.628.03,,Yes,,15,,1296,,,382920,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,GLE003,G00313,2009.158,,Yes,,62,,5400,,,599184,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,GLE003,G01975,2009.158,,Yes,,62,,5400,,,599184,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,HAW002,,2008.235,,Yes,,180,,,,Measure Not Applicable,1202100,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,HAW002,G02143,RM14.278.01,,Yes,,180,,13500,,,1202100,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,HAW002,G03064,RM14.278.01,,Yes,,180,,13500,,,1202100,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,HAW002,G03065,RM14.278.01,,Yes,,180,,13500,,,1202100,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,HAW002,G03066,RM14.278.01,,Yes,,180,,13500,,,1202100,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LAK003,G00312,2001.822,,No,1226.34,40,,2200,,,15400,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LAK003,G01976,2001.822,,No,,40,,2200,,,15400,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LAK003,G02144,RM14.313.01,,Yes,,65,,3219,,,419494,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LUG001,G01343,RM19.413.01,,Yes,,40,,1550,,,187307,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LUG001,G03088,RM19.413.01,,Yes,,40,,1550,,,187307,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,G11224,RM16.142.01,,Yes,,395,,28250,,,6223165,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,G11225,RM16.142.01,,Yes,,395,,28250,,,6223165,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,G11226,RM16.142.01,,Yes,,395,,28250,,,6223165,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,G11227,RM16.142.01,,Yes,,395,,28250,,,622365,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,S00061,2007.665,,Yes,,365,,30000,,,,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,S00062,2004.552,,Yes,,350,,15000,,,,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,WAN002,S00986,2008.459,,Yes,,200,,12960,,,324000,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,WAN002,S00987,2008.46,,Yes,,400,,27216,,,680400,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,WAN007,G01941,RM19.097.01,,Yes,,2.8,,220,,,26491,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,G00041,Bulls - Bore 5,ATH-2007011544.00,,Yes,,13,,1125,,,,Data Not Available,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,G00041,"Bulls - Bores 1,2,3 & Well",ATH-1997004447.00,,Yes,,33,,1700,,,,Data Not Available,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,G02153,Marton - Tutaenui Bore,ATH-2012014285.00,,Yes,,,Data Not Available,3500,,,,Data Not Available,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,G03052,Ratana Well 301033,ATH-2014200014.00,,Yes,,14,,613,,,,Data Not Available,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,GO1144,Marton - Calico Line Bore,ATH-1997002995.01,,Yes,,33,,2200,,,216000,,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,S00037,Taihape - Hautapu River,ATH-2005009214.00,,Yes,,35,,2900,,,,Data Not Available,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,S00038,Mangaweka,ATH-2005010697.01,,Yes,,12.1,,250,,,,Data Not Available,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,S00039,Marton- Tutaenui Reservoir,ATH-1997004476.00,,Yes,,,Data Not Available,6500,,,,Data Not Available,3 - Less Reliable
+ACC-00007503,Rangitikei District Council,S00040,Hunterville - Rangitikei River,ATH-2007011694.00,,Yes,,28.9,,2500,,,,Data Not Available,3 - Less Reliable
+ACC-00008544,Rotorua Lakes Council,HAM003,Rewarewa Spring - G00187,202312,,Yes,,45,,3200,22400,,1168000,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,MAM001,Bore #4 - G0-0188,66541,,Yes,,7,,605,4235,,220825,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,MAM001,Bore #6 - G0-1993,66541,,Yes,,16,,690,4830,,251850,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,NGO001,Te waro Uri/Taniwha Springs,RM18-0294,,Yes,,115,,7000,49000,,2555000,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,REP001,Deep Creek Spring - G01695,123262,,Yes,,178.6,,12872,90104,,4698280,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,REP001,Wharepapa Spring - G10771,102430,,Yes,,90,,6800,47600,,2482000,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT001,Hemo Springs - G00183,65465,,Yes,,110,,9504,66528,,3468960,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT002,Lake Rotoma - S00191,20800,,Yes,,6.67,,384,2688,,140160,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT003,Karamu-Takina Springs (Matipo) - G01918,20057,,Yes,,420.9,,36360,254520,,13271400,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT003,Karamu-Takina Springs - G01124,20057,,Yes,,420.9,,36360,254520,,13271400,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT004,Wai-iti Spring - G00255,20243,,Yes,,6.5,,545,3815,,198925,,5 - Highly Reliable
+ACC-00008524,Ruapehu District Council,,,ATH-2005009602.01,,No,1662,12,,1038,7266,,377832,,4 - Reliable
+ACC-00008524,Ruapehu District Council,NAT001NA,Mangahuia Stream,6888/1,,Yes,,12,,500,3500,,182000,,5 - Highly Reliable
+ACC-00008524,Ruapehu District Council,OHA001OH,"Serpentine Stream,Ohakune",101266,,Yes,,,,2500,17500,,910000,,5 - Highly Reliable
+ACC-00008524,Ruapehu District Council,OHU001OH,"Mangaparare, Ohura",1101866,,Yes,,4,,360,2520,,131040,,5 - Highly Reliable
+ACC-00008524,Ruapehu District Council,OWH001OW,"Deep Creek, Owhango",101514/1,,Yes,,17,,1500,10500,,546000,,5 - Highly Reliable
+ACC-00008524,Ruapehu District Council,RAE001RA,Makotuku River,ATH-2005009602.01,,Yes,,20,,1685,11795,,613340,,5 - Highly Reliable
+ACC-00008524,Ruapehu District Council,TAU003TA,Whanganui River for Matapuna,7196,,Yes,,83,,7000,49000,,2548000,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00165,M36/4795 - Tosswill Rd (Prebbleton),CRC202353,,Yes,,25,,,7560,,1576800,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00165,M36/4795 - Tosswill Rd (Prebbleton),CRC010900,,Yes,,25,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00167,M36/3922 - Moore St (Rolleston),CRC204076,,Yes,,55.6,,,,,720000,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00167,M36/3922 - Moore St (Rolleston),CRC962217,,Yes,,55.6,,4800,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00463,M36/0870 - Tosswill Rd (Prebbleton),CRC202353,,Yes,,25,,,7560,,1576800,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00463,M36/0870 - Tosswill Rd (Prebbleton),CRC010900,,Yes,,25,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00501,M36/4700 - Leeston,CRC252622,,Yes,,54,,2992,,,623400,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00501,M36/4700 - Leeston,CRC950937.1,,Yes,,40,,2016,,,623400,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00668,L37/0545 - Rakaia Huts,CRC991055.1,,Yes,,12,,,,Measure Not Applicable,77786,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00671,M35/2873 - Jowers Rd,CRC169801,,Yes,,7.6,,,2562,,54900,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00675,M36/0872 - Tai Tapu,CRC134786,,Yes,,25,,,6559,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00680,M37/0106 - Taumutu,CRC010894.1,,Yes,,1,,76,,,11400,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00725,L35/0191 - Kirwee,CRC254666,,Yes,,45,,,21770,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00726,L36/0725 - Dunsandel,CRC010891.1,,Yes,,25,,1944,,,291600,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00820,L35/0334 - Sheffield,CRC173786,,Yes,,11.7,,1010,,,245430,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G00822,L35/0215 - Hororata,CRC233860,,Yes,,20,,1728,,,501070,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01113,M36/2298 - Overbury Cr (Rolleston),CRC193859,,Yes,,52.8,,4562,,,739500,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01169,L36/1313 - Te Pirita,CRC251023,,Yes,,10,,,3150,,144500,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01315,M36/0529 - Upper Selwyn Huts,CRC146688,,Yes,,,Measure Not Applicable,,420,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01672,M36/7533 - Izone (Rolleston),CRC175045,,Yes,,75,,,,Measure Not Applicable,4445700,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01673,M36/7575 - Claremont,CRC250293,,Yes,,12,,,,Measure Not Applicable,124000,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01775,M35/10751 - Royston Common (Greater West Melton),CRC164009,,Yes,,13.5,,,17941,,567576,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01794,M36/8178 - Springston,CRC010895.1,,Yes,,15,,900,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01874,M36/7833 - Westland Pl (Rolleston),CRC175045,,Yes,,75,,,,Measure Not Applicable,4445700,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01957,M35/17758 - Elizabeth Allen Dr (Greater West Melton),CRC164009,,Yes,,18,,,17941,,567576,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01958,M35/17757 - Jacqueline Dr (Greater West Melton),CRC164009,,Yes,,18,,,17941,,567576,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01961,BX22/0006 - Darfield,CRC254098,,Yes,,83,,6000,,,1045352,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G01961-2,L35/0980 - Darfield,CRC254098,,Yes,,83,,6000,,,1045352,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G02009,M36/7835 - Illinois Dr (Rolleston),CRC175045,,Yes,,75,,,,Measure Not Applicable,4445700,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G02128,BX23/0421 - Tosswill Rd (Prebbleton),CRC202353,,Yes,,75,,,45360,,1576800,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G02129,BX23/0300 - Eastfield Dr (Lincoln),CRC223745,,Yes,,100,,,,Measure Not Applicable,892944,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G02166,BX23/0590 - Edendale (Greater West Melton),CRC260594,,Yes,,65,,,13910,,357600,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G02191,BX23/0312 - Moore St (Rolleston),CRC160628,,Yes,,100,,,,Measure Not Applicable,246240,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G02192,BX23/0508 - Helpet (Rolleston),CRC193859,,Yes,,70,,,,Measure Not Applicable,739500,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03020,BX23/0507 - Baltimore (Rolleston),CRC175045,,Yes,,75,,,,Measure Not Applicable,4445700,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03053,BY22/0057 - St John St,CRC223742,,Yes,,55,,,19051,,360000,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03061,BX23/0829 - Ridgeland Way (Greater West Melton),CRC260552,,Yes,,70,,,15071,,322950,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03084,BX23/0827 - Helpet (Rolleston),CRC193859,,Yes,,70,,,,Measure Not Applicable,739500,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03114,BX23/0874 - Shands Rd (Prebbleton),CRC202353,,Yes,,100,,,,Measure Not Applicable,1576800,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03115,BX23/0862 - Veuve Dr (Lincoln),CRC223745,,Yes,,140,,8640,,,892944,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03119,BX23/0917 - Leeston,CRC252622,,Yes,,65,,,,Measure Not Applicable,623400,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G03127,BX23/0510 - Kakahi St (Lincoln),CRC240400,,Yes,,70,,,,Measure Not Applicable,453600,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G11196,BX23/1259 - Helpet (Rolleston),CRC251577,,Yes,,80,,,,Measure Not Applicable,293268,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G11197,BX23/1258- Helpet (Rolleston),CRC251577,,Yes,,80,,,,Measure Not Applicable,293268,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G11199,BX23/1260 - Marion Pl (Lincoln),CRC240400,,Yes,,70,,,,Measure Not Applicable,453600,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G11239,BX22/0212 - Darfield,CRC254098,,Yes,,80,,,,Measure Not Applicable,1045352,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G11240,BX22/0199 - Kirwee,CRC254666,,Yes,,80,,,,Measure Not Applicable,49650,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,G11246,L35/0329 - Sheffield,CRC173786,,Yes,,11.7,,1010,,,245430,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S00577,K33/0001 - Arthurs Pass,CRC991057,,No,919,11,,200,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S00578,Trust Power intake - Lake Coleridge,,Measure Not Applicable,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S00579,K34/0027 - Castle Hill,CRC991053,,Yes,,13.8,,1192,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S00580,K35/0032 - Dry Acheron Stream,CRC991054,,No,325,8.5,,734,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S00580,K35/0032 - Dry Acheron Stream,CRC010173,,,,3,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S00827,L35/0977 - Dalethorpe,CRC173785,,Yes,,7.2,,624,,,140000,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S00828,L35/0256 - Hartleys,CRC010904,,Yes,,18.9,,1625,,,390000,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S10058,L35/0933 - Springfield,CRC155932,,Yes,,10,,864,,,210000,,5 - Highly Reliable
+ACC-00001006,Selwyn District Council,S10058,L35/0933 - Springfield,CRC991058,,Yes,,10.5,,907,,,210000,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,ELT001,"Waingongoro River, Finnerty Road - Eltham",R2/0213-4.0,,Yes,,64,,5200,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,"Bore field, 1054 Skeet Road - Kapuni",R2/7002-1,,Yes,,50,,4320,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,"Kapuni Stream, Palmer Road - Kapuni",R2/0146-2,,Yes,,140,,12100,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,"Mangatoki Stream, 1551 Upper Palmer Road - Inaha",R2/1185-3.1,,Yes,,29,,2504,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,"Waingongoro River, Upper Palmer Road - Inaha",R2/1186-3,,Yes,,30,,2592,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,OPU001,"Waiaua River, Ihaia Road - Opunake",R2/0232-4,,Yes,,26,,2200,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,PAT001,4 Bores at Egmont St & Taranaki Rd - Patea,R2/3388-3.2,,Yes,,,Measure Not Applicable,1125,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,PAT001,Bore #1 (GND0073),R2/3388-3.2,,Yes,,4,,346,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,PAT001,Bore #4 (GND2197),R2/3388-3.2,,No,0,9,,786,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,PAT001,Bore #5 (GND2361),R2/3388-3.2,,No,0,5,,432,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,PAT001,Bore #6 (GND3104),R2/3388-3.2,,No,0,6,,475,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,RAH001,"Pungaereere Stream, State Highway 45 - Rahotu",R2/3696-3,,Yes,,3,,180,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,"Bore, 791 Rowan Road - Waimate West",R2/10370-1.0,,Yes,,,Measure Not Applicable,432,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,"Mangawhero Stream, Mangawhero Road - Waimate West",R2/0635-3,,Yes,,70,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,"Mangawheroiti Stream, Rowan Road - Waimate West",R2/0634-3,,Yes,,121,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,"Otakeho Stream, 1055 Mangawhero Rd - Waimate West",R2/3911-3.0,,Yes,,85,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI020,"Bore 2, Waipipi Rd - Waverley Beach",R2/9563-1,,Yes,,2,,80,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI021,"Bore, Nukumaru Domain Reserve - Waiinu",R2/3770-3,,Yes,,4,,346,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAV001,"3 Bores at Fookes St, Chester St & Swinbourne St - Waverley",R2/3313-3,,Yes,,14,,900,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAV001,Chester Street (GND0059),R2/3313-3,,Yes,,7,,400,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAV001,Fookes Street (GND0244),R2/3313-3,,Yes,,7,,500,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAV001,Swinbourne Street (GND2242),R2/3313-3,,Yes,,10,,890,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008568,South Waikato District Council,ARA003,Arapuni Bore A101,AUTH125251.01.02,,Yes,0,0,,355,2485,,129575,,5 - Highly Reliable
+ACC-00008568,South Waikato District Council,LIC001,Lichfield Bore,AUTH940284,,Yes,0,0,,40,280,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008568,South Waikato District Council,PUT001,Blue Spring,AUTH131427.01.01,,No,0,46,,4000,28000,,1460000,,5 - Highly Reliable
+ACC-00008568,South Waikato District Council,PUT001,Glenshea Bores,AUTH122363.01.01,,Yes,0,0,,3800,26600,,1390000,,5 - Highly Reliable
+ACC-00008568,South Waikato District Council,TIR001,Oraka Spring,AUTH144316.01.01,,No,0,26,,2000,14000,,500000,,5 - Highly Reliable
+ACC-00008568,South Waikato District Council,TOK001,Bores 1 and 3,AUTH130334.01.01,,Yes,0,0,,7500,52500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001109,South Wairarapa District Council,,,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,
+ACC-00001119,Southland District Council,EAS0021,River-S00301,20222442-01,,Yes,0,14,,900,6300,,328500,,5 - Highly Reliable
+ACC-00001119,Southland District Council,EDE001,Bore-G10058,206951,,Yes,0,30,,2000,7671,,400000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,EDE001,Bore-G10059,206951,,Yes,0,30,,2000,7671,,400000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,LUM001,Bore-G01927  E44/0408,205657,,Yes,0,66,,5350,25641,,1337000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,LUM001,Bore-G01929  E44/0409,205657,,Yes,0,66,,5350,25641,,1337000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,MAN006,Lake-S00300,20233078,,Yes,0,10,,865,3643,,189954,,5 - Highly Reliable
+ACC-00001119,Southland District Council,MOS002,Bore-G02140,200181,,Yes,0,,Measure Not Applicable,600,4200,,219000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,MOS002,Bore-G02141,200181,,Yes,0,,Measure Not Applicable,600,4200,,219000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,OHA009,River-S00060,20171350,,Yes,0,21,,1200,5216,,272000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,ORA003,Spring-G00309,20181295-02,,Yes,0,3,,34,238,,12410,,5 - Highly Reliable
+ACC-00001119,Southland District Council,OTA001,Bore-G00050,20233021,,Yes,0,15,,1056,7392,,385440,,5 - Highly Reliable
+ACC-00001119,Southland District Council,RIV001,Bore-D46/0202,20158384,,Yes,0,36,,3135,12565,,655175,,5 - Highly Reliable
+ACC-00001119,Southland District Council,RIV001,Bore-D46/0203,20158384,,Yes,0,36,,3135,12565,,655175,,5 - Highly Reliable
+ACC-00001119,Southland District Council,RIV001,River-S00059,204375,,Yes,0,27,,2400,16800,,876000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,TEA002,Bore-G10781,20233665,,Yes,0,170,,7749,49392,,2575420,,5 - Highly Reliable
+ACC-00001119,Southland District Council,TEA002,Bore-G10781,20233665,,Yes,0,170,,7749,49392,,2575420,,5 - Highly Reliable
+ACC-00001119,Southland District Council,TEA002,Bore-G10781,20233665,,Yes,0,170,,7749,49392,,2575420,,5 - Highly Reliable
+ACC-00001119,Southland District Council,TEA002,Bore-G10781,20233665,,Yes,0,170,,7749,49392,,2575420,,5 - Highly Reliable
+ACC-00001119,Southland District Council,TUA001,Bore-G01513,20233444,,Yes,0,21,,1200,7000,,365000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,TUA001,Bore-G02032,20233444,,Yes,0,21,,1200,7000,,365000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,TUA001,Bore-G02033,20233444,,Yes,0,21,,1200,7000,,365000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,WIN001,Bore-G00053,205797-V1,,Yes,0,30,,3000,12658,,660000,,5 - Highly Reliable
+ACC-00001119,Southland District Council,WIN001,Bore-G10072,205797-V1,,Yes,0,30,,3000,12658,,660000,,5 - Highly Reliable
+ACC-00008528,Stratford District Council,MID001,Te Popo intake,TRC-1276-4,,Yes,,5,,432,3024,,157680,,4 - Reliable
+ACC-00008528,Stratford District Council,STR001,Konini Intake,TRC-0195-3,,Yes,,20,,1728,12096,,630720,,4 - Reliable
+ACC-00008528,Stratford District Council,STR001,Patea Intake,TRC-0195-3,,Yes,,61,,5270,36892,,1923550,,4 - Reliable
+ACC-00008528,Stratford District Council,TOK004,Toko Bore,TRC-1337-4,,Yes,,5.6,,80,560,,29200,,4 - Reliable
+ACC-00008574,Tararua District Council,DAN001,Surface Water-104947,ATH-2010012905.00,,Yes,,110,,9500,66500,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008574,Tararua District Council,EKE001,Surface Water- 101169/2,ATH-2004008582.02,,Yes,,20.3,,1260,8820,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008574,Tararua District Council,PAH001,Bore-104794,ATH-2009012723.00,,Yes,,30,,2000,14000,Measure Not Applicable,730000,,4 - Reliable
+ACC-00008574,Tararua District Council,PAH001,Surface Water-102781,ATH-2006010354.01,,Yes,,1.8,,2400,16800,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008574,Tararua District Council,WOO001,Surface Water-102773,ATH-2006010345.02,,No,946.7,20,,1700,11900,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00008530,Tasman District Council,COL007,G01559,RM190412,,Yes,,7,,,2800,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,COL007,G10774,RM190413,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,DOV001,S00462,RM210135,,No,128,13,,1080,7560,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,EIG001,S00463,RM160098,,Yes,,5,,470,3290,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,HOP001,G02024,RM161216,,Yes,,56,,,19600,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,HOP001,G02025,RM161216,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,HOP001,G02026,RM161216,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,KAI015,G03121,RM150189V1,,Yes,,32,,1840,12880,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,KAI015,G03122,RM150189V1,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,MOT001,G00321,RM150188,,Yes,,45,,3500,24500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,MOT001,G11019,RM070187,,Yes,,247,,10109,112000,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,MOT001,G11020,RM070187,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,MOT001,G11021,RM070187,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,MUR001,G00271,RM191328,,Yes,,12,,,4500,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,MUR001,G11079,RM191328,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,POH001,S00466,NN720010,,Yes,,8,,550,3850,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RED001,G00274,RM161220,,Yes,,3,,,1400,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RED001,G00929,RM161218V2,,No,623,8,,,4200,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RED003,G00275,RM161219V2,,Yes,,8,,,2450,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RIC002,G00276,RM160099,,Yes,,126,,,50900,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RIC002,G00277,RM160099,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RIC002,G00278,RM160099,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RIC002,G00279,RM160099,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,TAP003,G00497,RM180940,,Yes,,25,,,3185,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,TAP003,G11073,RM180940,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAI023,G00265,RM161217V2,,Yes,,228,,,96250,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAI023,G00266,RM161217V2,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAI023,G00267,RM161217V2,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAI023,G00268,RM161217V2,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAI023,G00269,RM161217V2,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAI023,G11235-2,RM161217V2,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAI023,G11236-2,RM161217V2,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008530,Tasman District Council,WAK001,G00270,RM210695,,Yes,,28,,,12600,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001011,Taupo District Council,ATI001,Bore 68_711,126712,,Yes,,2.775,,112,,Measure Not Applicable,41062,,4 - Reliable
+ACC-00001011,Taupo District Council,ATI001,Bore 68_911,126712,,Yes,,2.775,,113,,Measure Not Applicable,41063,,4 - Reliable
+ACC-00001011,Taupo District Council,BON001,Bore 72_2008,120056,,Yes,,2.15,,122,,Measure Not Applicable,44712,,4 - Reliable
+ACC-00001011,Taupo District Council,BON001,Bore 72_4595,120056,,Yes,,2.15,,123,,Measure Not Applicable,44713,,4 - Reliable
+ACC-00001011,Taupo District Council,CEN001,NZTM 1868614 E 5716712 N,AUTH137026.01.01,,Yes,,160,,10000,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001011,Taupo District Council,HAT001,NZTM 1861618 E 5708200 N,AUTH143489.01.01,,Yes,,625,,45000,,Measure Not Applicable,12320000,,4 - Reliable
+ACC-00001011,Taupo District Council,KIN001,NZTM 1863302 E 5711130 N,AUTH143489.01.01,,Yes,,625,,45000,,Measure Not Applicable,12320000,,4 - Reliable
+ACC-00001011,Taupo District Council,MAN002,NZTM 1839658 E 5751601 N,AUTH140647.01.01,,Yes,,61,,2000,,Measure Not Applicable,590000,,4 - Reliable
+ACC-00001011,Taupo District Council,MOT002,NZTM 1867517 E 5712708 N,AUTH143489.01.01,,Yes,,625,,45000,,Measure Not Applicable,12320000,,4 - Reliable
+ACC-00001011,Taupo District Council,MOT010,NZTM 1861163 E 5695179 N,AUTH143489.01.01,,Yes,,625,,45000,,Measure Not Applicable,12320000,,4 - Reliable
+ACC-00001011,Taupo District Council,OMO001,NZTM 1840247 E 5691098 N,AUTH121770.01.01,,Yes,,39,,2500,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001011,Taupo District Council,RIV003,NZTM 1888774 E 5720494 N,AUTH145046.01.01,,Yes,,10,,600,,Measure Not Applicable,219000,,4 - Reliable
+ACC-00001011,Taupo District Council,TAU001,NZTM 1854406 E 5715997 N,AUTH143489.01.01,,Yes,,625,,45000,,Measure Not Applicable,12320000,,4 - Reliable
+ACC-00001011,Taupo District Council,TIR002,NZMS 260 R17:591-023,105576,,Yes,,,Measure Not Applicable,37000,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001011,Taupo District Council,TUR001,NZMS 260 T19:509-420,104296,,Yes,,122,,6300,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001011,Taupo District Council,WAI042,E1830967 N5719963,AUTH132689.01.01,,Yes,,14.5,,800,,Measure Not Applicable,,Measure Not Applicable,4 - Reliable
+ACC-00001011,Taupo District Council,WHA009,NZTM 1856662 E 5691654,AUTH143489.01.01,,Yes,,625,,45000,,Measure Not Applicable,12320000,,4 - Reliable
+ACC-00001011,Taupo District Council,WHA010,Bore 72_237,121300,,Yes,,,Measure Not Applicable,341,,Measure Not Applicable,124465,,4 - Reliable
+ACC-00001011,Taupo District Council,WHA010,Bore 72_399,121300,,Yes,,,Measure Not Applicable,341,,Measure Not Applicable,124465,,4 - Reliable
+ACC-00001011,Taupo District Council,WHA011,NZTM 1844731 E 5743309 N,126710,,Yes,,,Measure Not Applicable,100,,Measure Not Applicable,36500,,4 - Reliable
+ACC-00001011,Taupo District Council,WHA011,NZTM 1844745 E 5743311 N,126710,,Yes,,,Measure Not Applicable,100,,Measure Not Applicable,36500,,4 - Reliable
+ACC-00008507,Tauranga City Council,TAU004,Tautau Stream Intake,RC20173.0.02-WT+,,Yes,,432 L/s,,"37,273 m3/day",,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Waiari Stream,65637,,Yes,,694 L/s,,"60,000 m3/day",,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Waiorohi Stream,20202.2.02-WT+,,Yes,,630 L/s,,"54,553 m3/day",,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001125,Thames Coromandel District Council,,"Whangamata Domain Bore Aickin Road, Whangamata",AUTH120675.01.01,,No,,2,,9000,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,G00047 & G03022,Beverley Hills Bore 1 & 3,AUTH106170.01.01,,Yes,,,Measure Not Applicable,4500,,,,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,G00432,Bore PA1,AUTH136380.01.01,,No,1894.49,,Measure Not Applicable,220,,,20500,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,"G01000, G01001, G01002","Bore 1,2 & 3",AUTH131003.03.01,,Yes,,,Measure Not Applicable,1200,,,60000,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,G03011 & G03012,Two active bores Grove Bore 2,AUTH143372.01.01,,No,,,Measure Not Applicable,550,,,75000,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,G03023,Moana Point Bore 1 (SH25),AUTH106168.01.01,,Yes,,,Measure Not Applicable,1100,,,,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,G03024,Moana Point Bore 2,AUTH102932.01.01,,Yes,,3,,250,,,17500,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,G03026,Manuka Bore,AUTH137782.01.01,,Yes,,,Measure Not Applicable,300,,,109800,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,G03027,Wentworth Valley WV7,AUTH132367.01.01,,No,,17,,1250,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,G03028,Wentworth Valley WV4,AUTH132367.01.01,,Yes,,18,,1300,,,,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,G03029,Wentworth Valley WV3,AUTH132367.01.01,,Yes,,4,,250,,,,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,S00048,Pepe Stream,AUTH130992.01.01,,No,,16,,1200,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00051,Kauaeranga River,AUTH119921.01.01,,Yes,,70,,6000,,,,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,S00052,Mangarehu River,AUTHW2549.01.01,,No,,60,,,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00418,Matatoki Stream,AUTH130574.02.02,,No,,3,,259,,,94688,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00419,Opitonui River,AUTH105914.01.01,Data Not Available,Yes,0,35,,3000,,,,Data Not Available,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00419,Opitonui River,AUTH146434.01.01,,Yes,0,35,,3000,,,,Data Not Available,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00420,Omahu Stream,AUTH139860.01.01,,No,,22,,1779,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00429,Apakura Stream,AUTH142017.01.01,,No,,23,,2000,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00820,Karaka Stream,AUTH137683.02.01,,No,,10,,800,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00821,Waiau River,AUTH137683.03.01,,Yes,,25,,1800,,,,,4 - Reliable
+ACC-00001125,Thames Coromandel District Council,S00975,Whangamaroro River,AUTH112958.01.02,Data Not Available,No,,93,,8000,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00975,Whangamaroro River,AUTH147415.01.01,,No,,93,,8000,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S00981,Tairua Harbour Tributary (Old Dam),AUTH130992.02.01,,,,2,,130,,,,,
+ACC-00001125,Thames Coromandel District Council,S01074,Oturu Stream,AUTH131003.01.01,,No,,27,,2160,,,,,3 - Less Reliable
+ACC-00001125,Thames Coromandel District Council,S10131,Infiltration Gallery,AUTH130992.04.01,,No,,14,,1200,,,,,3 - Less Reliable
+ACC-00008504,Timaru District Council,DOW001,J38/0774,CRC012184,,Yes,,79,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,J38/577-640,CRC012183,,Yes,,22,,1300,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,GER001,K38/0375,CRC064043,,Yes,,30,,,49408,,1885401,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,GER001,K38/0857,CRC064043,,Yes,,30,,,49408,,1885401,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,GER001,K38/0858,CRC064043,,Yes,,30,,,49408,,1885401,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,GER001,K38/0973,CRC064043,,Yes,,30,,,49408,,1885401,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PEE001,J37/0324,CRC120219,,Yes,,1.5,,,,Measure Not Applicable,47304,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PLE001,"J38/0261, J38/0251, J38/0917",CRC981008.2,,Yes,,50,,1850,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PRA002,J39/0135,CRC010392,,Yes,,4,,,2100,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,RAN003,K38/0107,CRC171997,,Yes,,4.9,,216,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,SEA001,J38/0190,CRC010349,,Yes,,21,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,STA004,J39/0765,CRC010393.1,,Yes,,9.4,,,2660,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,BZ19/0145,CRC252857,,Yes,,9.5,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,K38/0010,CRC252857,,Yes,,30,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,"K38/0010, K38/0011, K38/1273, BZ19/0145 & K38/0298",CRC252857,,Yes,,123,,,59293,,2100000,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,"K38/0010, K38/0011, K38/1273, and BZ19/0145",CRC252857,,Yes,,,Measure Not Applicable,6350,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,K38/0011,CRC252857,,Yes,,30,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,K38/0298,CRC252857,,Yes,,25,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,K38/1273,CRC252857,,Yes,,30,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM002,"BZ19/0188, BZ19/0163",CRC192123,,Yes,,20,,,49048,,1885401,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,J38/0192,CRC093305,,Yes,,329,,,198864,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,J39/0654,CRC011399,,Yes,,215,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008504,Timaru District Council,"TIM001, DOW001, SEA001","J38/0192,  J38/0190 &  J38/0775",CRC101875,,Yes,,100,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001016,Waikato District Council,HUN002,Surface take - Huntly,136806.01.01,,Yes,0,215,,11950,83650,,2843000,,5 - Highly Reliable
+ACC-00001016,Waikato District Council,HUN002,Surface take - Ngaaruawaahia,136806.01.01,,Yes,0,215,,11950,83650,,2843000,,5 - Highly Reliable
+ACC-00001016,Waikato District Council,POR005,Surface take - Port Waikato,136297.01.01,,Yes,0,2.6,,80,560,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001016,Waikato District Council,RAG001,Surface take - Raglan Spring,118341.01.01,,Yes,0,42.22,,3100,21700,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,CUS001,Sprinbank Well 1 and well 2,CRC990930.1,,Yes,,22,,1900,,,338000,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,GAR001,Garrymere Well,CRC971822,,Yes,,4.5,,389,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Ashley Pl,CRC021737,,Yes,,60,,,,Measure Not Applicable,1886976,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Davie St Well,CRC970305,,No,4447,76,,3010,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Peraki Well,CRC990929,,Yes,,100,,8640,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Porter Pl Well,CRC970304,,Yes,,76,,3010,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Rugby Park Well,CRC970306,,Yes,,100,,5760,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Sewel St Bore 1,CRC253378,,Yes,,60,,,60480,,1896976,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,MAN009,Two Chain Rd Bores 2&1,CRC255334,,Yes,,35,,,30845,,618310,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OHO001,Ohoka Well1 & Well2,CRC990932,,Yes,,18,,,,Measure Not Applicable,248030,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OXF101,McPhedrons Rd Well,CRC183143,,Yes,,30,,2592,,,800000,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OXF103,Domain Rd Well 1,CRC063540.1,,Yes,,55,,4760,,,714000,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,PEG001,EQ and PW wells,CRC167262,,Yes,,142,,12288,,,1756015,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,PEG001,Gladstone/Chinnerys,CRC074057,,Yes,,80,,6912,,,1200000,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,PEG001,"PW1, PW2",CRC167260,,Yes,,50,,4320,,,576000,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,RAN001,Smith St Wells,CRC252680,,Yes,,425,,36720,,,6328400,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,WAI011,"Kings Ave Well 1 and 2, Campground",CRC190900,,Yes,,52,,3456,,,518400,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,WES004,West Eyreton Well 1,CRC186214,,Yes,,25,,445000,15120,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001017,Waimate District Council,HOO001,S00308 Hook River,CRC980386,,No,,20,,1728,,,630720,,5 - Highly Reliable
+ACC-00001017,Waimate District Council,LOW002,G00317 LW Bore,CRC940846,,No,,19,,1633,,,596045,,5 - Highly Reliable
+ACC-00001017,Waimate District Council,LOW002,S10152 Waitaki River,,Measure Not Applicable,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001017,Waimate District Council,OTA005,G02023 Tavistock bore,CRC122551,,Yes,,15,,,6500,,351500,,5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI032,S00311 Trib of Waitaki River,CRC962154.1,,Yes,,17,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI033,G01525 TIM RD bore,CRC202845,,Yes,,32,,2160,,,683250,,5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI033,G03055 MAN bore,CRC202845,,Yes,,33,,2160,,,683250,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,G00031,Church St Bore,AUTH135532.01.01,,Yes,,,Measure Not Applicable,1800,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008578,Waipa District Council,G00032,Hall St Bore,AUTH135532.01.01,,Yes,,,Measure Not Applicable,2200,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008578,Waipa District Council,G02142,Frontier Road Bore,AUTH142092.01.01,,Yes,,,Measure Not Applicable,1200,,,487200,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00008,Alpha Street WTP Raw Inlet,AUTH139861.01.01,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00009,Lake Karapiro Raw Inlet,AUTH139861.01.01,,Yes,,,Measure Not Applicable,20500,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00029,Membrane Plant Raw Inlet,AUTH139861.01.01,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Te Tahi Lower Take,AUTH124968.01.01,,Yes,,43,,3700,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Te Tahi Upper Take,AUTH124967.01.01,,Yes,,220,,19000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008575,Wairoa District Council,MAH005,Mahanga,AUTH-130834-01,,Yes,,2,,172,1210,,62780,,4 - Reliable
+ACC-00008575,Wairoa District Council,TUA005,Tuai,AUTH-130833-01,,Yes,,8,,400,11200,,146000,,4 - Reliable
+ACC-00008575,Wairoa District Council,WAI006,Wairoa,WP110405T,,Yes,,200,,16000,112000,,5840000,,4 - Reliable
+ACC-00008499,Waitaki District Council,AWA013,SWAP-I40:019-072,ECAN-CRC940476,,,,2.6,,0,1575,Measure Not Applicable,81900,,
+ACC-00008499,Waitaki District Council,BUS001,SWAP-I41/0047,ECAN-CRC084382,,Yes,,2.5,,0,1512,Measure Not Applicable,78840,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,DUN004,Bore-I40/0020,ECAN-CRC982133,,Yes,,5,,306,0,Measure Not Applicable,0,Measure Not Applicable,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,KUR001,Bores-I40/0006 and I40/0007,ECAN-CRC940477,,Yes,,28,,0,16935,Measure Not Applicable,0,Measure Not Applicable,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,LOW004,Bores-J41/0370a and J41/0370b,ORC-RM11.0191.01,,Yes,,20,,1728,0,Measure Not Applicable,469175,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,OHA005,SWAP-NZMS 260 H38:5627-5500,ECAN-CRC001915,,Yes,,2.2,,0,0,Measure Not Applicable,69379,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,OMA001,"Bores-H39/0021, CA15/5019, CA15/5020, CA15/5021",ECAN-CRC213794,,No,1054,60,,3240,0,Measure Not Applicable,1182600,,4 - Reliable
+ACC-00008499,Waitaki District Council,OTE001,Bore-CA/0002,ECAN-CRC185065,,Yes,,0,Measure Not Applicable,4380,30660,,570000,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,STO001,SWAP-Easting1406008 Northing 4964352,ORC-RM17.121.01,,Yes,,4.2,,360,0,Measure Not Applicable,0,Measure Not Applicable,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,STO001,SWAP-Easting1406008 Northing 4964352,ORC-RM17.121.02,,Yes,,0.5,,40,0,Measure Not Applicable,0,Measure Not Applicable,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,WAI215,SWAP-WM1022,ORC-RM11.025.01,,No,1256,31.6,,0,11427,Measure Not Applicable,0,Measure Not Applicable,4 - Reliable
+ACC-00008576,Waitomo District Council,BEN002,Benneydale Bore,AUTH143938.01.01,,No,18,0,,180,1260,,44000,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,BEN002,Unnamed tributary of the Mangapehi Stream,AUTH116844.01.01,,Yes,,2,,180,1260,,0,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,MOK002,unnamed dam,AUTH113544.01.01,,Yes,,0,,1000,7000,,0,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,PIO001,Kurathi Stream,AUTH107477.01.02,,Yes,,0,,450,3150,,165929,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,TEK003,Mangaokewa Stream,AUTH133317.01.01,,Yes,,0,,4800,33600,,0,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00090-2,35755 / WAT60273897,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00092-2,36639 / WAT60275209,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00094-2,35755 / WAT60273897,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00096-2,36639 / WAT60275209,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00099,36527 / WAT60274684 / ARC_25301,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00505,35755 / WAT60273897,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00733,39472 / WAT80316960,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00734,39469 / WAT80316875,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00735,AUTH122099.01.02,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00736,123496,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S00865,AUTH960089.01.05,,Yes,,2450,,150000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S01017,36639 / WAT60275209,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,S01087,AUTH131259.01.02,,Yes,,3200,,150000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,BOM003,G00454,14706 / WAT60276460,,Yes,,10,,500,,,125000,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,S00100,25161 / WAT60274646,,,,,Measure Not Applicable,2100,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,S00440,20785 / WAT60275452,,Yes,,25,,2100,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,MUR011,G00115,WAT60358714,,Yes,,,Measure Not Applicable,310,,,75000,,5 - Highly Reliable
+ACC-00001216,Watercare,MUR011,G02136,WAT60358714,,Yes,,,Measure Not Applicable,310,,,75000,,5 - Highly Reliable
+ACC-00001216,Watercare,SNE002,G00005,WAT60275761,,,,,Measure Not Applicable,1800,,,420000,,5 - Highly Reliable
+ACC-00001216,Watercare,SNE002,G02135,WAT60275761,,,,,Measure Not Applicable,1800,,,420000,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Pukekohe Ground Water,WAT60386923,,Yes,,125,,10800,,,2400000,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Pukekohe Ground Water,WAT60386923,,Yes,,125,,10800,,,2400000,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,S10149,WAT80316391 / 37316,,,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001216,Watercare,WAI214,G00080,WAT60071034,,Yes,,,,1500,,,1065080,,5 - Highly Reliable
+ACC-00001216,Watercare,WAI214,G00081,WAT60071034,,Yes,,,,2500,,,1065080,,5 - Highly Reliable
+ACC-00001216,Watercare,WAI214,G01471,AUTH135970.01.01,,Yes,,,,1680,,,614880,,5 - Highly Reliable
+ACC-00001216,Watercare,WAI214,G03021,WAT60071034,,Yes,,,,2500,,,1065080,,5 - Highly Reliable
+ACC-00001216,Watercare,WAR006,G03057,WAT60274987,,,,,Measure Not Applicable,3025,,,750000,,5 - Highly Reliable
+ACC-00001216,Watercare,WAR006,G03058,WAT60274987,,,,,Measure Not Applicable,3025,,,750000,,5 - Highly Reliable
+ACC-00001216,Watercare,WEL004,S00004,WAT60396928,,No,14194.05,20,,1500,,,330000,,5 - Highly Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Gear Island,WGN970036 [33821],,Yes,,,Measure Not Applicable,40000,,,14600000,,5 - Highly Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Kaitoke Intake,WGN000199 [36617],,Yes,,1850,,150000,,,54750000,,5 - Highly Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Lower Georges Creek,WGN000201 [20558],,Yes,,175,,15000,,,5475000,,5 - Highly Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Orongorongo River,WGN000200 [20540],,Yes,,800,,40000,,,14600000,,5 - Highly Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Wainuiomata River,WGN000201 [20552],,Yes,,800,,40000,,,14600000,,5 - Highly Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Waterloo,WGN970036 [33820],,Yes,,,Measure Not Applicable,115000,,,41975000,,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,BN-10218 Tahawai,62428,,Yes,,48,,4147,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,BN-10511  Athenree,66439,,Yes,,60,,5180,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,BN-2833  Athenree,66439,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,BN-4722  Waihi Beach,62045,,No,0,28,,2000,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,KAT003,BN-10922 - WSZ7,62621,,Yes,,140,,9504,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,KAT003,BN-10923 - WSZ9,62621,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,KAT003,BN-10924 - WSZ10,62621,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,OMO003,BN-1000016 - CSZ1,61431,,Yes,,165,,14256,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,OMO003,BN-10213 - CSZ4,61431,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,OMO003,BN-10214 - CSZ3,61431,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,OMO003,BN-3709 - CSZ2 Ohouere,62527,,Yes,,150,,12960,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,OMO003,CSZ7,61431,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,PON003,BN-10919 - ESZ8,62957,,Yes,,50,,4320,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,TEP002,BN-1000088 - ESZ3,RM21-0054-WT.03,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,TEP002,BN-1000089 - ESZ6,RM21-0054-WT.04,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,TEP002,BN-1000103 - ESZ11,RM21-0054-WT.06,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,TEP002,BN-10921 - ESZ9,RM21-0054-WT.05,,Yes,,,Measure Not Applicable,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,TEP002,BN-3702 - ESZ2,RM21-0054-WT.02,,Yes,,145,,12528,,,5034000,,5 - Highly Reliable
+ACC-00008497,Westland District Council,ARA001,Arahura Bore,RC-2019-0046,,,,3,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,FOX001,Carter Creek,RC-2019-0045,,,,9,,750,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,FRA001,"Unnamed Ck, Franz Josef",RC00390/1,,,,2,,200,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,HAA001,Haast Bore,RC01164/1,,,,2.5,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,HAR001,Harihari Bore,RC06273/1,,,,25,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Hokitika River,RC2015-0077-03,,,,140,,12100,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Lake Kaniere,RC11033,,,,140,,12100,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,KUM001,Kumara Spring,RC10159/1,,,,,Measure Not Applicable,130,,,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,ROS001,Jones Creek,RC00359/1,,,,6,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008497,Westland District Council,WHA002,Whataroa Bore,RC03068/1,,,,15,,,,Measure Not Applicable,,Measure Not Applicable,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,MAT005,G00217 Jennings Spring at Awakaponga,20280,,Yes,,15.5,,495,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,MUR002,G00437 Murupara South Bore - Bore 2 accessing an underground stream adjacent to the Rangitaiki River situated in State Forest No 1.,20114,,Yes,,76,,4100,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,MUR002,G03032 Murupara North Bore - Bore 1 accessing an underground stream adjacent to the Rangitaiki River situated in State Forest No 1.,20114,,Yes,,76,,4100,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,OTU010,"G00208 Te Teko Spring Well/bore number BN-3305 at 485A Tahuna Road, Te Teko",RM18-0540-WT.01,,No,80,22.22,,1920,,,702720,,4 - Reliable
+ACC-00008495,Whakatane District Council,OTU010,"G03030 Bore BN-11692 at 124 Paul Road, Te Teko",66359.0.02-WT+,,Yes,,61,,5280,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,OTU010,"G11193 Bore BN21-0079 at 124 Paul Road, Te Teko",66359.0.03-WT,,Yes,,61,,5280,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,RAN007,G00220 Braemar Spring,20094,,Yes,,227,,9730,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,RAN007,"G00221 Johnson Road Bore (North) 274 metre deep bore (well no. 2510) at 58A Johnson Road, Otakiri",RM15-0017-WT.01 / RM15-0017-WU.01,,Yes,,60,,5200,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,RAN007,"G00548 Johnson Road Bore (South) 235 metre deep bore (well no. 2511) at 58A Johnson Road, Otakiri",RM15-0017-WT.02 / RM15-0017-WU.01,,Yes,,60,,5200,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,RUA003,G02088 Ruatoki Bore (Main) in Rūātoki,62627,,Yes,,15,,1000,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,RUA003,G10765 Ruatoki Well (Emergency backup),62627,,Yes,,15,,1000,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,TAN001,G00218 Taneatua Bore (west) adjacent to the Waimana River,21044,,Yes,,12,,805,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,TAN001,G10766 Taneatua Bore (east) adjacent to the Waimana River,21044,,Yes,,12,,805,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,TEM004,"G01838 Te Mahoe Bore in Te Mahoe Village, Matahina",RM22-0032-WT.01,,Yes,,4,,,,Measure Not Applicable,18250,,4 - Reliable
+ACC-00008495,Whakatane District Council,WAI017,"G00223 Waimana Bore on Hodges Road, Waimana",20283,,Yes,,3.9,,200,,,,Measure Not Applicable,4 - Reliable
+ACC-00008495,Whakatane District Council,WHA005,S00217 Whakatane River adjacent to Whakatane water treatment plant,20198,,Yes,,227,,20000,,,,Measure Not Applicable,4 - Reliable
+ACC-00001151,Whanganui District Council,FOR001,Reids Hill Bore,ATH2009012584.01,,Yes,,,Measure Not Applicable,1017,0,Measure Not Applicable,371205,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,MAX001,Maxwell Bore (Pakaraka),ATH2004010430,,Yes,,15,,1296,0,Measure Not Applicable,473040,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Aramoho,ATH2001009362.01,,Yes,,85,,7500,0,Measure Not Applicable,2047800,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Heloise,ATH2011013969,,Yes,,150,,13000,0,Measure Not Applicable,4745000,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Kai iwi Bore No 1,ATH2009012582,,Yes,,117,,10080,0,Measure Not Applicable,3679200,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Kai iwi Bore No 2,ATH2009012581,,Yes,,158,,13680,0,Measure Not Applicable,4993200,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Kai iwi Bore No 3,ATH2009012583,,Yes,,133,,11520,0,Measure Not Applicable,4204800,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,New Development Bore (Kai iwi Bore No 4),ATH2018202280,,Yes,,104,,9000,0,Measure Not Applicable,3285000,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Ahuroa River,AUT.007405.01.03,,Yes,,81,,7000,,,2555000,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Ruakaka River,AUT.007404.01.02,,Yes,,42.8,,3700,,,1350500,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Wilson Dam,AUT.007406.02.03,,Yes,,,,21000,,,7665000,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,MAU002,MGK Bore 1,AUT.001881.01.03,,Yes,,,,86,,,31390,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,MAU002,MGK Bore 2,AUT.008642.01.02,,Yes,,,,108,,,39420,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Hatea River,AUT.007398.01.02,,Yes,,115,,9000,,,3285000,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Maunu Springs (combined take),AUT.000964.01.04,,Yes,,,,8156,,,2976940,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Waipao Stream,AUT.002960.01.03,,Yes,,,,15500,,,5637060,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Whau Valley Dam,AUT.001725.02.02,,Yes,,,,16000,,,5840000,,5 - Highly Reliable
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,
+,,,,,,,,,,,,,,,

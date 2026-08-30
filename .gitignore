@@ -17,6 +17,14 @@ tools/
 data/raw/*
 !data/raw/sample/
 !data/raw/sample/**
+# EXCEPTION: the NEPR 2024/25 unit-level CSV extract (1.7 MB total) is the one
+# static input the SQL pipeline (sql/02 via transform.py) needs — CI cannot
+# re-fetch it, so the CSVs ship in git (CC BY 3.0 NZ; refresh yearly). The
+# large NEPR PDFs stay ignored.
+!data/raw/taumata_nepr/
+data/raw/taumata_nepr/*
+!data/raw/taumata_nepr/*.csv
+!data/raw/taumata_nepr/MANIFEST.md
 data/processed/*
 !data/processed/.gitkeep
 

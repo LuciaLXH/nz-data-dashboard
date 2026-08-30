@@ -1,0 +1,1151 @@
+Account ID,Org Name,Supply ID,D-EH9 Type of resource consent,D-EH9 Comments,D-EH10 Resource consent reference number,D-EH11 Expiry date for resource consent,D-EH11 Comments,D-EH11 Currently operating under this consent?,D-EH11 Consent status,D-EH16 Reason consent conditions not met,D-EH16 Reason detail,D-EH9 to D-EH16 Data confidence
+ACC-00008585,Ashburton District Council,ASH003,Water take,,CRC050225.1,2039-11-23 00:00:00,,Yes,Active,,Exceeded volume,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,Land use,,CRC050615,2039-11-23 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,Water take,,CRC051262.1,2039-11-26 00:00:00,,Yes,Active,,Exceeded volume,4 - Reliable
+ACC-00008585,Ashburton District Council,ASH003,Water take,,CRC980747.1,2032-12-03 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,CHE002,Water take,,CRC991612,2034-04-04 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,DRO001,Water take,,CRC170019,2051-07-29 00:00:00,,Yes,Active,,Exceeded volume,4 - Reliable
+ACC-00008585,Ashburton District Council,HAK001,Water take,,CRC991485,2034-04-07 00:00:00,,Yes,Active,,Exceeded flow rate,4 - Reliable
+ACC-00008585,Ashburton District Council,HIN001,Water take,,CRC041517,2039-02-18 00:00:00,,Yes,Active,,Exceeded flow rate,4 - Reliable
+ACC-00008585,Ashburton District Council,MAY001,Water take,,CRC120547,2045-05-17 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,MET001,Water take,,CRC002108,2041-01-30 00:00:00,,Yes,Active,,Exceeded flow rate,4 - Reliable
+ACC-00008585,Ashburton District Council,MET001,Water take,,CRC011923,2037-08-08 00:00:00,,Yes,Active,,Exceeded flow rate,4 - Reliable
+ACC-00008585,Ashburton District Council,MET001,Land use,,CRC231922,2058-03-15 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,MET001,Discharge to land,,CRC231924,2058-03-15 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,MON001,Water take,,CRC052628,2045-08-04 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,MON001,Land use,,CRC951154,2030-08-16 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,MTS001,Water take,,CRC022026,2037-07-15 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,MTS001,Discharge to land,,CRC231934,2058-03-20 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,MTS001,Land use,,CRC231936,2028-03-13 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008585,Ashburton District Council,RAK001,Water take,,CRC244450,2044-04-29 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008580,Auckland Council,AWH300,Water take,,46116,2045-12-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,MAH003,Water take,,43408,2029-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,MAR007,Water take,,REG-6464,2030-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,PIH300,Water take,,35768,2029-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,SHA002,Water take,,WAT60353048,2026-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,TAP007,Water take,,40923,2027-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,TAW001,Water take,,WAT60382059,1943-06-30 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,WAI222,Water take,,136167.01.01,1946-11-04 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008580,Auckland Council,WHA018,Water take,,WAT60409617,1943-06-30 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,INA002,Water take,Inangahua,RC-2019-0021,2044-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,LIT003,Water take,Little Wanganui,RC96064/1,2038-09-03 00:00:00,,Yes,Active,Flow meter to be installed with the landowner’s consent.,Flow not recorded,5 - Highly Reliable
+ACC-00008498,Buller District Council,LIT003,Land use,Little Wanganui,RC96064/2,2038-09-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,MOK001,Water take,Dam Un-Named Creek,RC01283/1,2037-06-26 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,MOK001,Water take,Mokihinui,RC01283/2,2037-06-26 00:00:00,,Yes,Active,Flow meter to be installed with land owner's consent.,Flow not recorded,5 - Highly Reliable
+ACC-00008498,Buller District Council,MOK001,Land use,Mokihinui,RC01283/4,2037-06-26 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,MOK001,Water take,Mokihinui,RC01283/5,2037-06-26 00:00:00,,Yes,Active,"Flow meter installed, telemetry to be set up.",Flow not recorded,5 - Highly Reliable
+ACC-00008498,Buller District Council,PUN001,Water take,Punakaiki,RC06183/1,2045-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,REE001,Water take,Reefton,RC01282/1,2036-12-06 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Land use,Waimangaroa,RC-2022-0010-01,2027-04-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Land use,Waimangaroa,RC-2022-0010-02,2057-04-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Water take,Waimangaroa,RC-2022-0010-03,2057-04-21 00:00:00,,Yes,Active,Flowmeter installed further downstream,Flow not recorded,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Discharge to water,Waimangaroa,RC-2022-0010-04,2027-04-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Water take,Waimangaroa,RC01281/1,2037-06-26 00:00:00,,Yes,Active,Flowmeter installed further downstream,Flow not recorded,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Discharge to water,Waimangaroa,RC01281/2,2037-06-26 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Land use,Waimangaroa,RC01281/3,2037-06-26 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WAI001,Water take,Waimangaroa,RC01281/4,2037-06-26 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,Land use,Giles' Creek North and South branches,RC-2023-0148-01,2040-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,Land use,Giles' Creek North and South branches,RC-2023-0148-02,2040-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,Water take,Giles' Creek North and South branches,RC-2023-0148-03,2040-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,Water take,Giles' Creek North and South branches,RC-2023-0148-04,2040-06-30 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,Land use,Orowaiti tributary at Keoghans,RC05233/1,2041-04-26 00:00:00,,No,,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,Water take,Orowaiti tributary at Keoghans,RC05233/3,2041-04-26 00:00:00,,No,,,,5 - Highly Reliable
+ACC-00008498,Buller District Council,WES001,Water take,Orowaiti tributary at Keoghans,RC05233/4,2041-04-26 00:00:00,,No,,,,5 - Highly Reliable
+ACC-00001075,Carterton District Council,CAR001,Water take,,WAR020050,2013-03-25 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001075,Carterton District Council,CAR001,Discharge to water,,WAR020050,2013-03-25 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001075,Carterton District Council,CAR001,Other (Please identify in the comments section),,WAR020050,2013-03-25 00:00:00,Structure in stream - dam and weirs,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001075,Carterton District Council,CAR001,Water take,,WAR140259,2034-04-23 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,KAI012,Water take,,AUTH-106552-01,2029-05-31 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,KAI012,Water take,,AUTH-118076-01,2029-05-31 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,POR003,Water take,,AUTH-118048-01,2034-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,TAK001,Water take,,AUTH-121511-01,2035-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,WAI004,Water take,,AUTH-113708-03,2028-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,WAI005,Water take,,AUTH-113776-01,2050-05-31 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00001635,Central Hawke's Bay District Council,WAI005,Water take,,AUTH-127023-01,2028-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008538,Central Otago District Council,CRO001,Land use,To construct a bore for a community water supply for Cromwell township,2001.92,,No expiry date,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,CRO001,Land use,,2010.084,,No expiry date,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,CRO001,Water take,,RM22.319.01,2028-08-30 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,LAK028,Land use,To construct two bores,2001.772,,No expiry date,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,LAK028,Land use,,RM14.131.01,,No expiry date,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,LAK028,Land use,,RM16.063.01,,No expiry date,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,LAK028,Water take,,RM22.317.01.V1,2028-11-08 00:00:00,,Yes,Active,L/sec exceeded,Exceeded flow rate,3 - Less Reliable
+ACC-00008538,Central Otago District Council,OMA005,Water take,,99169,2035-07-01 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,OMA005,Land use,,99201,2035-07-01 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,PAT003,Water take,,RM16.277.01.V1,2050-11-01 00:00:00,,Yes,Active,Annual and monthly take under limit. L/sec was exceeded at times across the year,Exceeded flow rate,4 - Reliable
+ACC-00008538,Central Otago District Council,PAT003,Other (Please identify on the comments section),To dam the Sow Burn for the purpose of operating an intake weir,RM22.227.01,2050-11-01 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,PAT003,Discharge to water,,RM22.227.02,2050-11-01 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,PIS002,Water take,,RM17.138.01,2052-07-01 00:00:00,,Yes,Active,Annual take under limit. 167 minutes over the year where the L/sec was exceeded and 7 days over the year where the daily limit was exceeded,Exceeded flow rate,4 - Reliable
+ACC-00008538,Central Otago District Council,RAN002,Other (Please identify on the comments section),To dam water within a water storage reservoir,RM21.224.01,2043-05-30 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,RAN002,Water take,,RM21.224.02,2029-05-30 00:00:00,,Yes,Active,"Flow meter currently unable to be verified, data logger failure, data not being sent to the Consent Authority",Volume not recorded,4 - Reliable
+ACC-00008538,Central Otago District Council,RAN002,Water take,,RM21.224.03,2029-05-30 00:00:00,,Yes,Active,"Flow meter currently unable to be verified, data logger failure, data not being sent to the Consent Authority",Volume not recorded,4 - Reliable
+ACC-00008538,Central Otago District Council,RAN002,Discharge to water,,RM21.224.04,2043-05-30 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,RAN002,Discharge to water,,RM21.224.05,2043-05-30 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,RAN002,Discharge to water,,RM21.224.06,2043-05-30 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,ROX001,Water take,,2005.764.V1,2041-09-15 00:00:00,,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00008538,Central Otago District Council,ROX001,Land use,To construct a bore for the purpose of accessing groundwater,RM16.163.01,,No expiry date,Yes,Active,No breaches of conditions,,4 - Reliable
+ACC-00001252,Chatham Islands Council,KAI041,Measure Not Applicable,,NA,,NA,,Measure Not Applicable,,,5 - Highly Reliable
+ACC-00001252,Chatham Islands Council,WAI158,Measure Not Applicable,,NA,,NA,,Measure Not Applicable,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,Grehan Valley Stream,CRC011997,2040-11-02 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,Aylmers Stream,CRC011998,2040-11-02 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,Balguerie Stream,CRC011999,2040-11-02 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,Settlers Hill bore,CRC020639,2036-11-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,Aylmers Valley bore,CRC073807,2042-08-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,"Takamatua Weir, dam",CRC940913,2029-03-23 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,Takamatua Stream,CRC940914,2029-04-27 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,AKA001,Water take,"Balguerie Stream, divert",CRC981673,2033-04-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,BIR001,Discharge to land,Birdlings flat TP backwash,CRC101370,2044-12-24 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,BIR001,Water take,Bayleys Rd bore,CRC146757,2035-05-11 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,BRO013,Water take,City global water take,CRC243183,2033-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,BUR005,Water take,City global water take,CRC243183,2033-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,CHR009,Water take,City global water take,CRC243183,2033-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,DUV001,Discharge to water,SW discharge and backwash from Okains Bay TP,CRC103627,2046-01-24 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,DUV001,Water take,Pipers stream,CRC920829B,2028-07-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,KEY001,Water take,City global water take,CRC243183,2033-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,LIT001,Water take,Western Valley Rd bore,CRC142901,2046-10-27 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,LIT001,Discharge to land,Backwash water from Little River TP,CRC154876,2047-12-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,LIT001,Water take,Police Creek abstraction,CRC920831A,2028-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,WAI138,Discharge to water,Wainui TP discharge backwash,CRC920830C,2028-07-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008533,Christchurch City Council,WAI138,Water take,Wainui bore take,CRC972116,2032-04-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,,,,,,,,,,,
+ACC-00008586,Clutha District Council,,,,,,,,,,,
+ACC-00008586,Clutha District Council,BAL001,Water take,,2002.238,2037-11-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,CLY005,Water take,,2006.22,2041-01-12 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,GLE001,Water take,,2005.283.V2,2040-12-07 00:00:00,,Yes,Active,Some missing data at start of 2024,Missing values from data,4 - Reliable
+ACC-00008586,Clutha District Council,GLE001,Discharge to water,,RM15.314.01,2051-01-01 00:00:00,,Yes,Active,Discharge monitoring parameters exceeded for dissolved aluminium.,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008586,Clutha District Council,GLE001,Other (Please identify in the comments section),Supplementary water take (not exercised),RM23.548.02,2040-12-07 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,KAI005,Water take,,96676,2024-01-11 00:00:00,,Yes,Operating under s124 RMA,,Exceeded flow rate,5 - Highly Reliable
+ACC-00008586,Clutha District Council,KAI005,Discharge to water,,RM15.315.01,2051-01-01 00:00:00,,Yes,Active,Weekly flow rate exceeded on 5 occasions.,Exceeded flow rate,5 - Highly Reliable
+ACC-00008586,Clutha District Council,LAW001,Water take,,RM12.137.01,2050-01-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,LAW001,Discharge to land,,RM23.718.01,2026-03-13 00:00:00,,Yes,Active,Annual rolling average exceeded on 31 days.,Exceeded volume,5 - Highly Reliable
+ACC-00008586,Clutha District Council,MIL001,Water take,,2000.417.V1,2031-01-02 00:00:00,,Yes,Active,,Exceeded flow rate,5 - Highly Reliable
+ACC-00008586,Clutha District Council,MIL001,Other (Please identify in the comments section),Permit to dam Tokomairiro River for weater intake structure,2005.637,2041-03-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,MOA001,Discharge to water,,RM15.115.01,2050-01-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,MOA001,Water take,,RM18.196.01,2028-12-16 00:00:00,,Yes,Active,"Flow meter is measuring from raw storage reservoir, not from intake, therefore data accuracy is lower.",Other (Please identify in the comments section),3 - Less Reliable
+ACC-00008586,Clutha District Council,MOA001,Other (Please identify in the comments section),Water permit to dam water in Timber Creek,RM18.196.02,2028-12-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,MOA001,Other (Please identify in the comments section),Water permit to dam water in storage reservoir,RM18.196.03,2028-12-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,NOR003,Discharge to water,,RM15.116.01,2050-01-09 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008586,Clutha District Council,NOR003,Water take,,RM18.385.01,2028-12-15 00:00:00,,Yes,Active,"Flow meter is measuring from raw storage reservoir, not from intake, therefore data accuracy is lower.",Other (Please identify in the comments section),3 - Less Reliable
+ACC-00008586,Clutha District Council,OWA001,Water take,,RM17.177.01,2052-01-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,RIC009,Other (Please identify in the comments section),Permitted activity,12.1.2.2,1999-01-03 00:00:00,,Yes,Expired,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,RIC009,Water take,,98544,2019-01-03 00:00:00,,Yes,Expired,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,RIC009,Discharge to water,,RM13.134.01,2048-09-25 00:00:00,,Yes,Active,Flow rate exceeded on 16/06/2024,Exceeded flow rate,5 - Highly Reliable
+ACC-00008586,Clutha District Council,RIC009,Discharge to water,,RM13.135.01,2048-11-27 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,RIC009,Water take,,RM17.146.01,2050-01-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,STI002,Discharge to water,,RM12.112.01,2032-07-25 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,STI002,Water take,,RM18.071.01,2044-08-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,TAP001,Water take,,2000.418.V1,2030-01-11 00:00:00,,Yes,Active,,,
+ACC-00008586,Clutha District Council,TAP001,Discharge to water,,RM17.035.01,2025-10-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008586,Clutha District Council,TUA004,Water take,,RM17.089.01,2028-05-18 00:00:00,,Yes,Active,Instantaneous flow rate exceeded on 4 occasions.,Exceeded flow rate,5 - Highly Reliable
+ACC-00008586,Clutha District Council,WAI016,Water take,,2000.964,2039-08-12 00:00:00,,Yes,Active,Daily limit exceeded on 14/02/2024,Exceeded volume,5 - Highly Reliable
+ACC-00008586,Clutha District Council,WAI016,Discharge to water,,RM11.036.01,2046-04-27 00:00:00,,Yes,Active,Instantaneous outflow exceeded on 37 occasions.,Exceeded flow rate,5 - Highly Reliable
+ACC-00006268,Department of Conservation,MTC001,Discharge to water,,CRC054830,2044-02-27 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00006268,Department of Conservation,MTC001,Water take,,CRC054838,2044-02-27 00:00:00,,Yes,Active,Long term meter unnavailable due to lightning strike,Equipment failure,3 - Less Reliable
+ACC-00006268,Department of Conservation,MTC001,Land use,,CRC054839,2044-02-27 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00006268,Department of Conservation,WHA015,Water take,,Water Permit - 106938,2035-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,CHR008,Water take,,CRC064272.1,2032-07-01 00:00:00,,Yes,Active,Met all conditions,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,CHR008,Water take,,CRC070263.1,2032-07-01 00:00:00,,Yes,Active,Met all conditions,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,KAI002,Water take,,ATH-2005011069.02,2044-07-01 00:00:00,,Yes,Active,Met all conditions,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,KAI002,Water take,,ATH-2005011070.01,2044-07-01 00:00:00,,Yes,Active,Met all conditions,,5 - Highly Reliable
+ACC-00006269,Department of Corrections,WAI013,Water take,,AUTH141931.01.01,2056-05-31 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Other,Diversion,2001.361,2039-03-19 00:00:00,Not in use for a registered drinking water supply.,No,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Dam,,2002.313,2039-03-19 00:00:00,Not in use for a registered drinking water supply.,No,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Dam,,2002.314,2039-03-19 00:00:00,Not in use for a registered drinking water supply.,No,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,,Dam,,2002.315,2039-03-19 00:00:00,Not in use for a registered drinking water supply.,No,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Dam,,2000.009,2037-09-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Other,Diversion,2000.013,2037-09-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to water,,2000.016,2037-09-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to water,,2000.032.V1,2037-09-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Water take,,2001.337.V1,2039-03-19 00:00:00,,Yes,Active,Data issue,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Water take,,2001.338.V1,2039-03-19 00:00:00,,Yes,Active,Data issue,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Water take,,2001.339.V1,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Water take,,2001.341.V1,2039-03-19 00:00:00,,Yes,Active,Data issue,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Water take,,2001.362.V1,2039-03-19 00:00:00,,Yes,Active,Data issue,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Water take,,2001.364.V1,2039-03-19 00:00:00,,Yes,Active,,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Dam,,2002.309,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Dam,,2002.31,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Dam,,2002.311,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Dam,,2002.312,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to land,,2004.754,2039-10-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to land,,2004.756,2039-10-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Other,Diversion,2005.414,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Other,Diversion,2005.416,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Water take,,2006.042,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to water,,2009.423,2045-01-22 00:00:00,,Yes,Active,One exceedance.,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to water,,2010.22,2045-09-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to water,,RM13.052.01,2028-05-13 00:00:00,,Yes,Active,Exceedances in the discharged volume and discharge water quality limit.,Other,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001,Discharge to water,,RM16.315.01,2053-03-06 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,DUN001 & OUT001,Water take,,RM18.351.02,2039-03-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,OUT001,Water take,,RM18.351.01,2039-03-19 00:00:00,,Yes,Active,"Water is extracted from Taieri well due to high demand.Due to the configuration of the pipework when the Taieri Well is used to supply the Outram WTP, the abstraction flow is recorded against the Outram Well.",Exceeded volume,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,WAI015,Water take,,2006.002.V1,2041-11-01 00:00:00,,Yes,Active,Data issue,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,WAI015,Water take,,2006.075.V1,2041-11-01 00:00:00,,Yes,Active,Data issue,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,WAI015,Discharge to water,,RM24.083.01,2041-11-01 00:00:00,,Yes,Active,"Exceedances in the discharged flow rate, volume and discharge water quality limit.",Other,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,WES002,Water take,,2002.323,2036-12-01 00:00:00,,Yes,Active,,Exceeded flow rate,5 - Highly Reliable
+ACC-00008513,Dunedin City Council,WES002,Discharge to water,,2002.677,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,Several exceedances in the discharged volume and exceedances of the water quality of the wetland.,Other,5 - Highly Reliable
+ACC-00008510,Far North District Council,Ahipara,Other (Please identify in the comments section),,AUT.009559,2036-11-30 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAI006,Water take,,AUT.001862.01.05,2037-02-28 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAI006,Water take,,AUT.004046.03.02,2053-06-30 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAI006,Water take,,AUT.004109.01.03,2026-05-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAI006,Discharge to water,,AUT.015992,2026-11-30 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAI006,Water take,,AUT.025683.01.04,2030-11-30 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAI008,Discharge to water,,AUT.019121,2021-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAW002,Water take,,AUT.002478.01.04,2053-05-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KAW002,Water take,,AUT.004847.02.02,2053-05-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KER001,Water take,,AUT.002044.01.04,2056-11-30 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,KER001,Discharge to water,,AUT.007409,2034-03-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Water take,,AUT.004369.01.03,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Other (Please identify in the comments section),,AUT.004369.02.03,2026-08-31 00:00:00,Use repair of a weir intake structure,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Other (Please identify in the comments section),,AUT.004369.03.03,2026-08-31 00:00:00,"To dam, divert and discharge water",Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Water take,,AUT.005112.01.03,2032-11-30 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Water take,,AUT.007356.01,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Land use,,AUT.007356.02,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Water Take,,AUT.007356.03,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Water take,,AUT.007356.04,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Land use,,AUT.007356.05,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Discharge to water,,AUT.007356.06,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Land use,,AUT.007356.07,2026-08-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA002,Water take,,AUT.040878.01.01,2055-12-31 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA003,Water take,,AUT.002041.01.03,2051-10-01 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,OMA003,Discharge to water,,AUT.002041.06.01,2051-10-01 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,PAI001,Discharge to water,,AUT.000880.01.06,2031-02-26 00:00:00,,Yes,Active,,,
+ACC-00008510,Far North District Council,PAI001,Water take,,AUT.002010,2024-04-30 00:00:00,,Yes,Active,,,
+ACC-00001008,Gisborne District Council,GIS001,Discharge to land,Sludge pond discharge to land,DL-2024-112338-00,2024-06-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Discharge to water,Discharge up to 720 cubic metres of potable town supply water per day at a maximum rate of 200 litres per second resulting from scouring of the Gisborne City water pipeline,DW-2015-106712-00,2025-06-30 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Discharge to water,for the discharge of supernatant from the city’s water supply treatment process into the Te Arai River.,DW-2019-108834-00,2029-07-31 00:00:00,,Yes,Active,Total Aluminium Exceedances in sampling,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Discharge to water,Discharge up to 1440 cubic metres of sludge and re-slurry water per day at a maximum rate of 50 litres per second from the post-treatment (backwash) pond into the Waipaoa River,DW-2024-112339-00,2034-10-11 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Discharge to water,Discharge up to 1440 cubic metres of sludge and re-slurrying water per day at a maximum rate of 50 litres per second from the pre-treatment ponds into the Waipaoa River,DW-2024-112340-00,2034-10-11 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Land use,Install a discharge pipe in the true left hand side (TLHS) bank of the Mangapoike River to discharge overflow from the Clapcott Dam,LR-2019-109029-00,2034-08-06 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Water take,Clapcott Dam No.1 catchment for the purpose of water supply to Gisborne City.Includes charges from RC-106025,WI-2013-106026-00,2048-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,GIS001,Water take,"Take up to 17,280 cubic metres of water per day at a rate of 200 litres per second from the Waipaoa River for urban supply",WS-2021-110327-00,2034-07-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,TEK002,Water take,"To take groundwater from the Waipaoa Gravel Aquifer (A-block) at a maximum daily volume of 300 cubic metres of water, up to a maximum of 109,500 cubic metres per annum.",WG-2019-108877-00,2029-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,WHA004,Water take,Waipaoa River 'A' Block water take 1.2 l/sec = 4.32 m3/hr,WG-2019-108878-00,2021-02-04 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001008,Gisborne District Council,WHA004,Water take,Waipaoa River 'B' block wtar take 0.9 l/sec = 3.24 m3/hr,WG-2019-109634-00,2021-02-04 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,GOR001,Other (Please identify in the comments section),Water and discharge permit,202555,2039-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,GOR001,Land use,,202556,2039-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,GOR001,Water take,,204330,2033-08-27 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008531,Gore District Council,GOR001,Water take,,205720,2020-03-15 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,GOR001,Water take,,99197,2025-03-07 00:00:00,,Yes,Operating under s124 RMA,,Missing values from data,5 - Highly Reliable
+ACC-00008531,Gore District Council,MAT002,Water take,,99223,2025-06-13 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,MAT002,Water take,,AUTH-20191588,2027-04-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,MAT002,Water take,,AUTH-20191736-01,2045-04-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,MAT002,Land use,,AUTH-20191736-02,2045-04-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,MAT002,Discharge to water,,AUTH-20191736-03,2045-04-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,MAT002,Water take,,AUTH-20211088-01,2045-04-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008531,Gore District Council,MAT002,Discharge to land,,AUTH-20211088-02,2045-04-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001018,Greater Wellington Regional Council,BAT001,Water take,,WGN230214 [38831],1999-12-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001018,Greater Wellington Regional Council,kai040,Water take,,BP33/0045,2099-12-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001015,Grey District Council,BLA001,Water take,,RC01180/3,2037-01-08 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001015,Grey District Council,GE0001,Water take,,RC01180/2,2037-01-08 00:00:00,Emergency supply,Yes,Active,,,5 - Highly Reliable
+ACC-00001015,Grey District Council,GRE001,Water take,,RC01092/3,2036-08-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001003,Hamilton City Council,HAM001,Discharge to water,,AUTH105261.01.02,2026-10-01 00:00:00,,Yes,Active,Low Risk Non-Compliance for filter backwash discharge quality.,Other (Please identify in the comments section),4 - Reliable
+ACC-00001003,Hamilton City Council,HAM001,Discharge to water,,AUTH107903.01.02,2026-12-01 00:00:00,,Yes,Active,Consent conditions met,,4 - Reliable
+ACC-00001003,Hamilton City Council,HAM001,Water take,,AUTH113941.01.03,2044-03-02 00:00:00,,Yes,Active,Consent conditions met,,4 - Reliable
+ACC-00001003,Hamilton City Council,HAM001,Water take,,AUTH123743.01.01,2027-01-31 00:00:00,,Yes,Active,Consent conditions met,,4 - Reliable
+ACC-00001003,Hamilton City Council,HAM001,Other (Please identify in the comments section),Surface Water Use,AUTH123744.01.01,2027-01-31 00:00:00,,Yes,Active,Consent conditions met,,4 - Reliable
+ACC-00001003,Hamilton City Council,HAM001,Water take,,AUTH125287.01.01,2028-02-01 00:00:00,,Yes,Active,Consent conditions met,,4 - Reliable
+ACC-00001003,Hamilton City Council,HAM001,Other (Please identify in the comments section),Surface Water Use,AUTH125290.01.01,2028-02-01 00:00:00,,Yes,Active,Consent conditions met,,4 - Reliable
+ACC-00008532,Hastings District Council,CLI001,Water take,Clive - Tucker,AUTH-114779-04,2025-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,CLI001,Water take,Clive - Ferry,AUTH-114790-03,2025-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,Water take,Hast - Brookvale,AUTH-116302-03,2018-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAS001,Water take,Hastings Urban,AUTH-120019-05,2047-05-31 00:00:00,,Yes,Active,No automated data transfer for emergency supplies until SCADA upgrade completed 25/26.  No Flow rig verification until Treatment upgrade completed in 25/26.  Old Frimley borefield to be decommissioned.,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008532,Hastings District Council,HAU002,Water take,Haumoana,AUTH-124374-01,2047-05-31 00:00:00,,Yes,Active,No automated data transfer for emergency supplies until SCADA upgrade completed 25/26,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008532,Hastings District Council,OMA008,Water take,Omahu,AUTH-111979-01,2026-05-31 00:00:00,,Yes,Active,Exceeded Annual volume and 7 day volume for 1 week.  Exceedance due to customer side leakage.  Issues have been identified and rectified.,Exceeded volume,5 - Highly Reliable
+ACC-00008532,Hastings District Council,TEP009,Water take,Te Pohue,AUTH-122615-01,2028-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI007,Water take,Waimarama,AUTH-119996-02,2033-05-31 00:00:00,,Yes,Active,No automated data transfer until SCADA upgrade completed 25/26,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI087,Water take,Waipatiki,AUTH-125382-01,2055-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WAI135,Water take,Waipatu,AUTH-117639-04,2023-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHA029,Water take,Whakatu,AUTH-114782-04,2025-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,Water take,Whirinaki,AUTH-119526-01,2040-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008532,Hastings District Council,WHI007,Water take,Whiri - Vineyard,AUTH-119527-01,2040-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Water take,,AUTH111659.01.01,2027-07-01 00:00:00,,Yes,Active,Exceeded Total Annual Volume but not daily volume or rate of take,Exceeded volume,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Water take,,AUTH119762.01.02,2029-07-01 00:00:00,,Yes,Active,Exceeded Average Rate of Take,Exceeded flow rate,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Land use,,AUTH119763.01.01,2029-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Water take,,AUTH119764.01.02,2029-07-01 00:00:00,,Yes,Active,Daily Volume and Rate of Take exceeded,Exceeded volume,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Land use,,AUTH119765.01.01,2029-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Discharge to water,,AUTH119766.01.01,2029-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Water take,,AUTH120602.01.01,2027-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Water take,,AUTH121236.01.01,2029-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Discharge to water,,AUTH124630.01.01,2047-06-30 00:00:00,,Yes,Active,"11 days over discharge volume limit.
+Al and SS breach",Exceeded volume,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Other (Please identify in the comments section),Dam,AUTH135741.01.01,2020-10-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,KER005,Discharge to water,,AUTH137795.01.01,2052-06-12 00:00:00,,Yes,Active,"Exceeded rate of discharge
+Exceeded Al and TSS limits",Exceeded flow rate,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,PAE001,Discharge to water,,AUTH132558.01.01,2039-06-30 00:00:00,,Yes,Active,"Exceeded rate of discharge
+Exceeded Al and TSS limits",Exceeded volume,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,PAE001,Water take,,AUTH140228.01.01,2048-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,PAE001,Land use,,AUTH140228.02.01,2048-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,WAI003,Water take,,AUTH130392.01.01,2034-05-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,WAI003,Land use,,AUTH130392.02.01,2034-05-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,WAI003,Water take,,AUTH130392.03.01,2034-05-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008587,Hauraki District Council,WAI003,Land use,,AUTH130392.04.01,2034-05-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Water take,,ATH-2001009425.01,2048-07-01 00:00:00,Foxton Beach - EDINBURGH BORE,Yes,Active,"peak flow exceedance, differnces between actual scada read and soft sensor set up eg 1am -1am compared to 12am-12am",Exceeded flow rate,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Discharge to land,,ATH-2002009586.01,2038-09-23 00:00:00,Foxton - LADYS MILE DISCHARGE TO LAND,Yes,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Water take,,ATH-2003010237.01,2048-07-01 00:00:00,Foxton Beach - FLAGSTAFF BORE,Yes,Active,"peak flow exceedance, differnces between actual scada read and soft sensor set up eg 1am -1am compared to 12am-12am",Exceeded flow rate,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Discharge to land,,ATH-2009012520.00,2028-07-01 00:00:00,Foxton - Discharge groundwater to land from Harbour Street road bore,Yes,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Water take,,ATH-2010013405.00,2028-07-01 00:00:00,"Foxton - Clyde St Bore, Ladys Mile Bore and Harbour St Bore",Yes,Active,"slightly different measurement based on time start and end compared to scada, eg daylight savings time differences from soft sensor set up, still compliant as per scada actual reads",Exceeded flow rate,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,FOX003,Discharge to land,,ATH-2010013407.00,2028-07-01 00:00:00,FOXTON DISCHARGE TO LAND CLYDE ST.,Yes,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,LEV001,Water take,,ATH-1991006011.03 (MWC901962),2042-07-01 00:00:00,INTAKE OHAU,Yes,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,LEV001,Discharge to water,,ATH-1995003230.01,2042-07-01 00:00:00,OHAU BACKWASH DISCHARGE TO RIVER,Yes,Active,"peak flow exceedance, differnces between actual scada read and soft sensor set up eg 1am -1am compared to 12am-12am",Exceeded volume,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,LEV001,Land use,,ATH-2008010962.02,2043-05-06 00:00:00,SCARIFICATION OHAU,Yes,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,LEV001,Water take,,ATH-2022205111.00,2042-07-01 00:00:00,POADS ROAD RES - NOT BUILT YET,No,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,SHA001,Discharge to water,,ATH-1996004132.01,2019-12-10 00:00:00,"SHANNON DISCHARGE TO DRAIN -  expired and currently operating under s124, reconsenting is under progress.",Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,SHA001,Water take,,ATH-2005010241.03,2019-12-10 00:00:00,SHANNON INTAKE - EXPIRED AND NOW PROCESSING NEW CONSENT - USING OLD CONSENT CONDIDITONS ATM,No,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,SHA001,Water take,,ATH-2005010241.03,2019-12-10 00:00:00,"SHANNON INTAKE - expired and currently operating under s124, reconsenting is under progress.",Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,SHA001,Water take,,ATH-2011013681.01,2013-02-11 00:00:00,Shannon emergency intake - not used old consent - emergency intake galley pipe remains due to the high rates of slips in this area taking out the main intake from time to time.,No,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,TOK002,Water take,,ATH-1994001627.01,2038-07-01 00:00:00,Tokomaru - TOKO INTAKE HORSESHOE,Yes,Active,,,5 - Highly Reliable
+ACC-00001034,Horowhenua District Council,TOK002,Discharge to water,,ATH-2019202692.00,2038-07-01 00:00:00,Tokomaru - DISCHARGE TO WATER TOKO HORSESHOE,Yes,Active,,,5 - Highly Reliable
+ACC-00001012,Hurunui District Council,AMB001,Water take,,CRC164844,2051-02-18 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,Water take,,CRC192903,2048-11-06 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,Water take,,CRC192903,2048-08-06 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,Water take,,CRC234173,2030-04-12 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,Water take,,CRC241054,2049-08-02 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMB001,Water take,,CRC980468,2032-10-23 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,AMU001,Water take,,CRC181118,2044-09-17 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,ASH002,Water take,,CRC194404,2050-11-06 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,BAL003,Water take,,CRC154223,2050-03-06 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,BAL003,Water take,,CRC981241,2033-02-18 00:00:00,,Yes,Active,,Exceeded volume,4 - Reliable
+ACC-00001012,Hurunui District Council,BLY001,Water take,,CRC156556,2051-01-12 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,CHE001,Water take,,CRC240404,2048-11-24 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,CUL001,Water take,,CRC062919,2041-07-14 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAN001,Land use,"to disturb, and reconstruct structures (a weir and two pipes), in the beds of Dillons Stream and the Rogerson River, at or about map reference NZMS 260 N32:923-551.",CRC000283,2034-09-08 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAN001,Water take,,CRC191743,2054-05-17 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAN001,Water take,,CRC191744,2054-05-17 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAN001,Discharge to water,,CRC981515,2033-04-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,Water take,,CRC002026,2036-05-29 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,Other (Please identify on the comments section),To disturb the bed of the Waitohi River.,CRC002027,2036-05-29 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,Water take,,CRC042081,2039-05-21 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,HAW001,Water take,,CRC223418,2039-05-21 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,KAI039,Water take,"Periodically breaching consent conditions, plan in place to resolve this in year 1 of the 2024/2034 LTP(this year)",CRC002016,2035-08-04 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,LOW010,Water take,,CRC002025,2035-08-04 00:00:00,,Yes,Active,,Exceeded flow rate,4 - Reliable
+ACC-00001012,Hurunui District Council,MOT016,Water take,,CRC002014,2036-05-29 00:00:00,,Yes,Active,New consent application in progress,Exceeded flow rate,4 - Reliable
+ACC-00001012,Hurunui District Council,MOT016,Land use,To disturb the bed of the Hurunui River,CRC002015,2036-05-29 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,PAR009,Water take,,CRC002023,2035-08-04 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,WAI026,Water take,,CRC156528,2050-11-26 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,WAI026,Discharge to land,,CRC174404,2052-02-27 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,WAI067,Water take,,CRC002024,2035-08-04 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001012,Hurunui District Council,WAI068,Water take,,CRC136767,2035-08-14 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008502,Invercargill City Council,INV001,Discharge to water,,ES AUTH 94556 V1,2038-05-09 00:00:00,,Yes,Active,Conditions met,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008502,Invercargill City Council,INV001,Water take,,ES AUTH 99159 V1,2038-06-10 00:00:00,,Yes,Active,Conditions met,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,FER003,Water take,,CRC 042702.1,2039-11-29 00:00:00,,Yes,Active,Leaks repaired,Exceeded volume,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KAI004,Water take,,CRC 054849,2041-09-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KAI004,Water take,,CRC 981641.1,2033-08-12 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KAI004,Water take,,CRC163587,2038-02-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KAI021,Water take,,CRC970568.1,2031-10-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,KIN003,Water take,,CRC 011818,2038-02-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,OAR001,Water take,,CRC 951060.2,2030-04-08 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,OCE002,Water take,,CRC 194257,2037-10-02 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001004,Kaikoura District Council,PEK002,Water take,,CRC 991951,2034-05-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,DAR002,Water take,,008134.01 Rotu,2033-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,DAR002,Water take,,030845.01.01 (Waiparataniwha),2048-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,DAR002,Discharge to water,,036520.01.01 Dargaville Backwash,2048-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,DAR002,Water take,,98 8369 (01-05) Waiatua Dam,2033-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,GLI001,Water take,,7944.02 Glinks,2032-04-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,MAN003,Water take,,20010803201- Mangawhai Bore,2025-11-30 00:00:00,Consent renewal app submitted,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,MAU001,Water take,,7582.01 Piroa,2039-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,MAU001,Water take,,9888.01 (Cattlemount & Boarhill),2039-06-06 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,RUA001,Water take,,20010218701 Ruawai Bores,2030-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001094,Kaipara District Council,RUA001,Discharge to water,,20010510701 Ruawai  Backwash,2046-06-30 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,HAU003HA,Water take,,WGN160082 [39118],2031-06-14 00:00:00,,Yes,Active,Hautere WTP Groundwater Take,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,HAU003HA,Discharge,,WGN240018 [38117],2031-06-14 00:00:00,,Yes,Active,Hautere WTP Discharge to Land,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,OTA003OT,Groundwater take,,WGN080379  [32188],2018-05-21 00:00:00,Otaki WTP Groundwater Take - Operating under s124 RMA,Yes,Operating under s124 RMA,Otaki WTP Groundwater Take - Operating under s124 RMA,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,OTA003OT,Groundwater take,,WGN080379 [32187],2018-05-21 00:00:00,Otaki WTP Groundwater Take - Operating under s124 RMA,Yes,Operating under s124 RMA,Otaki WTP Groundwater Take - Operating under s124 RMA,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,PAE002PA,Water take,,WGN130331 [32355],2038-10-25 00:00:00,,Yes,Active,Paekakariki Groundwater and surface take,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010KA,Discharge to River,,WGN050024 [31776],2025-07-01 00:00:00,Looking to let expire,Yes,Expired,Waikanae WTP Maintenance Discharges,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010KA,Other (Please identify on the comments section),Waikanae WTP Related to Gravel Extraction at the River Intake,WGN100252 [30450],2025-07-01 00:00:00,In process of reconsenting,Yes,Operating under s124 RMA,Waikanae WTP Related to Gravel Extraction at the River Intake,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010KA,Water take,,WGN130103  [35975],2048-09-13 00:00:00,,Yes,Active,Waikanae WTP Groundwater take from Borefield,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010KA,Water take,,WGN130103 [35974],2048-09-13 00:00:00,,Yes,Active,Waikanae WTP Surface Water Take,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010KA,Discharge to water,,WGN130103 [35975],2048-09-13 00:00:00,,Yes,Active,Waikanae WTP Discharge to River Recharge from Bores,,5 - Highly Reliable
+ACC-00008506,Kapiti Coast District Council,WAI010KA,Other (Please identify in the comments section),Waikanae WTP Related to Upgrade Works,"WGN220150  [37997, 37999, 38085, 38001]",2027-05-24 00:00:00,,Yes,Active,Waikanae WTP Related to Upgrade Works,,5 - Highly Reliable
+ACC-00008542,Kawerau District Council,KAW003,Water take,,20329,2026-10-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008572,Mackenzie District Council,ALL001,Water take,,CRC020124.1,2030-10-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008572,Mackenzie District Council,Albury,Water take,,"CRC990685, 86",2034-01-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008572,Mackenzie District Council,FAI002,Water take,,CRC040921,2044-08-19 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008572,Mackenzie District Council,TEK005,Water take,,CRC971414,2033-08-12 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008572,Mackenzie District Council,TWI001,Water take,,CRC042741,2047-08-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,FEI001,Water take,,Horizons - 102442,2023-10-28 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,FEI001,Water take,,Horizons - 103269,2021-08-10 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,FEI001,Discharge to water,,Horizons - 104418,2029-08-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,FEI001,Water take,,Horizons - ATH-2001008223.01,2023-10-28 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,HAL001,Water take,,Horizons - 106311,2027-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,HIM001,Discharge to water,,Horizons - 100260,2033-09-17 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,HIM001,Water take,,Horizons - 100537,2024-04-14 00:00:00,,Yes,Expired,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,OHA020,Water take,,Horizons - ATH-2022203819.01,2057-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,RON002,Water take,,Horizons - 107252,2029-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,RON002,Discharge to water,,Horizons - 107361,2034-11-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,RON002,Discharge to water,,Horizons - 107362,2034-11-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007492,Manawatu District Council,WAI022,Water take,,Horizons - 105969,2027-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,,Water take,,U071405,2032-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,,Water take,,U210821,2032-01-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,,Water take,,U240243,2027-08-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,AWA300,Water take,,U940669,2029-06-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,BLE001,Water take,,U960523,2030-12-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,HAV002,Water take,,U080226,2037-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,PIC001,Water take,,U190995,2050-10-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,REN001,Water take,,U180374,2028-11-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,RIV002,Water take,,U190130,2029-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008520,Marlborough District Council,WAI034,Water take,,U171044,2048-03-02 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001026,Masterton District Council,MAS002,Water take,,WAR170176,2023-04-16 00:00:00,Currently renewing,Yes,Operating under s124 RMA,High level of compliance,,5 - Highly Reliable
+ACC-00001026,Masterton District Council,TIN002,Water take,,WAR010244,2036-09-21 00:00:00,,Yes,Active,High level of compliance,,5 - Highly Reliable
+ACC-00001026,Masterton District Council,WAI058,Water take,,WAR210056,2030-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,HIN002,Water take,,AUTH143383.01.01,1957-08-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Land use,,104409,2035-11-17 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Water take,,119179,2031-12-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Discharge to water,,119918,2047-03-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Land use,,119919,2047-03-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Land use,,119920,2047-03-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Water take,,121950,2031-12-01 00:00:00,,Yes,Active,"Consent requires us to undertake monthly water level readings from 2 nearby bores, for three years. We have only been able to do 1 or the 2 so far.",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Other (Please identify in the comments section),Use Water,121951.01.02,2031-12-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Water take,,AUTH119917.01.02,2047-03-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MAT004,Water take,,AUTH123349.01.02,2031-12-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Other (Please identify in the comments section),Dam and Divert Water,AUTH120718.01.01,1953-08-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Water take,,AUTH120720.02.02,1953-08-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Land use,,AUTH120722.04.01,1953-08-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Discharge to water,,AUTH120724.05.01,1953-08-14 00:00:00,,Yes,Active,This is a backwash discharge which due to piping arrangements cannot provide an instaneous rate value (only daily volume is possible),Flow not recorded,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Water take,,AUTH126657.01.02,2033-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Water take,,AUTH142378.01.02,1953-08-14 00:00:00,,Yes,Active,Need to complete a partial surrender of another resource consent to meet the conditions to exercise this resource consent. However we have been exercising this resource consent prior to completing the required partial surrender.,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,MOR001,Discharge to land,,AUTH142551.01.01,1956-03-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TAH001,Water take,,AUTH111998.01.01,2020-02-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Water take,,104578,2026-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Water take,,104580,2026-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Water take,,104581,2026-04-20 00:00:00,,Yes,Active,The mesh size of our intake screens is too large.,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Discharge to water,,104583,2026-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Discharge to water,,107391,2026-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Land use,,107395,2041-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Land use,,107398,2041-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEA003,Water take,,AUTH109740.01.02,2026-04-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008512,Matamata Piako District Council,TEP003,Water take,,AUTH118256.01.02,2027-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008588,Ministry of Education,,Measure Not Applicable,,,,,,,,,
+ACC-00001141,Napier City Council,NAP001NA,Water take,,AUTH-116128-04,2027-05-31 00:00:00,,Yes,Active,"The flow exceeded just for 3-4 seconds, It’s important to note that we don’t have any control over how the bore pump operates—it
+simply turns on or off based on system pressure. These brief spikes happen so quickly making them very difficult to manage in practice.",Exceeded flow rate,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Other (Please identify in the comments section),WTP Chlorine Discharge,RM045100,2039-03-30 00:00:00,,Yes,Active,,Flow not recorded,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Land use,RM165122 Maitai - Land Use Permit,RM165122,2054-03-11 00:00:00,,Yes,Active,,Flow not recorded,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Water take,RM165192 Maitai - Water Permit,RM165192,2054-03-11 00:00:00,,Yes,Active,,Flow not recorded,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Discharge to water,RM165193 Maitai - Discharge Permit,RM165193,2054-03-11 00:00:00,,Yes,Active,,Flow not recorded,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Water take,RM165239 Roding - Water Permit,RM165239,2052-05-31 00:00:00,,Yes,Active,,Flow not recorded,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Land use,RM165317 Roding - Land Use Permit,RM165317,2052-05-31 00:00:00,,Yes,Active,,Flow not recorded,5 - Highly Reliable
+ACC-00008541,Nelson City Council,NEL001,Discharge to water,RM165318 Roding - Discharge Permit,RM165318,2052-05-31 00:00:00,,Yes,Active,,Flow not recorded,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,ING001,Water take,Contingency take,3934-3.0,2021-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,ING001,Land use,,4509-2.0,2027-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,ING001,Water take,Primary take Inglewood,4510-2.0,2021-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,ING001,Land use,,5188-1.0,2015-06-01 00:00:00,,No,Expired,"Regional Council did not require renewal at time of 2015 expiry, have since decided a new consent is required. Application has been submitted",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,ING001,Discharge to water,Backwash discharge,5869-2.0,2021-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Discharge to water,Filter backwash,0672-3.0,2026-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Discharge to water,Stormwater discharge,0673-3.0,2026-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Land use,Removal of current middle intake,11248-1.0,2027-06-01 00:00:00,Will not require renewal,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Land use,Install of new middle intake,11284-1.0,2050-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Water take,Primary take NP,2055-3.1,2021-06-01 00:00:00,,Yes,Operating under s124 RMA,Under abatement for fish passage; fish screen installation project underway,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Land use,Mangorei weir,6643-2.0,2032-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Discharge to land,Treated water discharge,7122-1.0,2026-06-01 00:00:00,Will not require renewal,No,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Land use,"2 Production water bores, 4 monitoring bores",7146-1,,No expiry,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,NEW002,Land use,,7509-1.0,2026-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OAK001,Land use,1 production water bore,10770-1.0,,No expiry,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OAK001,Water take,Surface water take,1278-4.0,2031-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OAK001,Land use,Wairau Stream dam,5713-2.0,2031-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OAK001,Water take,Groundwater take,6114-2.0,2049-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OKA002,Water take,Surface water take,00026-4.0,2037-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OKA002,Land use,Weir and infiltration gallery,4805-3.0,2037-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008525,New Plymouth District Council,OKA002,Land use,1 production water bore,9959-1,,No expiry,Yes,Active,,,5 - Highly Reliable
+ACC-00001000,New Zealand Defence Force,,Water take,West Melton,CRC972759.1,2032-11-19 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,BAL005,Land use,Tekapo,CRC001606,2035-04-11 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,BAL005,Water take,Tekapo - no longer taking water. This consent will be surrendered,CRC195159,2054-10-25 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,BUR001,Water take,Burnham,CRC213896,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,DIP002,Water take,Dip Flat,U000906,2030-10-30 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Water take,Linton Bore 3,ATH-2002009501.01,2033-07-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Water take,Linton Bore 11,ATH-2002009502.01,2033-07-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Water take,Linton Bore 13,ATH-2002009504.01,2033-07-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Water take,Linton Bore 14,ATH-2004009505.03,2033-07-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,LIN001,Water take,Linton New Bore 15,ATH-2007011654.01,2043-07-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WAI002,Water take,Waiouru,7317,2020-05-08 00:00:00,,Yes,Operating under S124 RMA,,Exceeded flow rate,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WAI002,Other (Please identify in the comments section),"Waiouru
+This consent is for the damming of Waiouru Stream (to enable abstraction - 7317)",7318,2020-05-08 00:00:00,,Yes,Operating under S124 RMA,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WAI002,Water take,Waiouru,7342,2020-05-08 00:00:00,,Yes,Operating under S124 RMA,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WAI002,Other (Please identify in the comments section),"Waiouru
+This consent is for the damming of Waitangi Stream (to enable abstraction - 7342)",7343,2020-05-08 00:00:00,,Yes,Operating under S124 RMA,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WOO004,Water take,Woodbourne,210323.01,2041-06-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001000,New Zealand Defence Force,WOO004,Water take,Woodbourne - water use,210323.02,2041-06-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008500,Opotiki District Council,OPO001,Water take,,BOPRC RC 66501 - Taking water from two bores for public supply,2045-10-31 00:00:00,Current consent held. No action required within next 10 years.,Yes,Active,,,5 - Highly Reliable
+ACC-00008500,Opotiki District Council,OPO001,Discharge to water,,BOPRC RM 20-0857 - Discharge of wash water from treatment plant,2057-06-01 00:00:00,No action required within next 10 years.,Yes,Active,,,5 - Highly Reliable
+ACC-00008500,Opotiki District Council,OPO001,Water take,,RC 68042 - Taking of water from a bore for public supply,2024-11-30 00:00:00,"Consent no longer required, water supply replaced with consent RC 66501",No,Expired,,,5 - Highly Reliable
+ACC-00008500,Opotiki District Council,TEK004,Water take,,RC 61174 - Taking of water from shallow filter bed,2021-09-30 00:00:00,"Existing consent expired, however activity currently exercised under s124. Application placed on hold and active plans and budget in place to relocate WTP within 10 year period.",Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,HUI007,Water take,,RC136074.01,2051-08-31 00:00:00,,Yes,Active,"Investigate alternative methods to maintain intake screen velocity and provide a findings report with a timeline to Council by 31 October 2025, along with evidence that screen mesh aperture does not exceed 5mm x 5mm. Ensure compliance at all times with the maximum rate of take and daily volume limits, reduce usage during low flows to within water shortage consent limits, and submit an updated Water Demand Management Plan to Council by 30 October 2025.",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,HUI007,Discharge to water,,RC136074.02,2051-08-31 00:00:00,,Yes,Active,Backwash samples,Missing values from data,5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,KAH005,Water take,,RC136074.01,2051-08-31 00:00:00,,Yes,Active,"Investigate alternative methods to maintain intake screen velocity and provide a findings report with a timeline to Council by 31 October 2025, along with evidence that screen mesh aperture does not exceed 5mm x 5mm. Ensure compliance at all times with the maximum rate of take and daily volume limits, reduce usage during low flows to within water shortage consent limits, and submit an updated Water Demand Management Plan to Council by 30 October 2025.",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,KAH005,Discharge to water,,RC136074.02,2051-08-31 00:00:00,,Yes,Active,Backwash samples,Missing values from data,5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,KAH005,Other (Please identify in the comments section),Weir,RC142375,2051-04-01 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,KAW001,Other (Please identify in the comments section),Water Use,RC120393,2030-09-30 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,KAW001,Water take,,RC120401,2030-09-30 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,OTO001,Land use,,RC102232,2034-08-31 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,OTO001,Land use,,RC125381,2047-11-30 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,OTO001,Water take,,RC130076.01,2028-10-30 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,OTO001,Discharge to water,,RC130076.02,2028-10-30 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,OTO001,Land use,,RC130076.03,2048-10-30 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,TAU301,Water take,,RC136074.01,2051-08-31 00:00:00,,Yes,Active,"Investigate alternative methods to maintain intake screen velocity and provide a findings report with a timeline to Council by 31 October 2025, along with evidence that screen mesh aperture does not exceed 5mm x 5mm. Ensure compliance at all times with the maximum rate of take and daily volume limits, reduce usage during low flows to within water shortage consent limits, and submit an updated Water Demand Management Plan to Council by 30 October 2025.",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,TAU301,Discharge to water,,RC136074.02,2051-08-31 00:00:00,,Yes,Active,Backwash samples,Missing values from data,5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,TIH001,Water take,,RC114845,2026-06-01 00:00:00,,Yes,Active,"During the low flow conditions, ensure all water usage is reduced to within the water shortage consent limits.",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,TIH001,Discharge to water,,RC114846,2026-06-01 00:00:00,,Yes,Active,"Provide commentary on any non-compliance (cause and corrective actions), and ensure consent limits are always met",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008562,Otorohanga District Council,TIH001,Other (Please identify in the comments section),Water Use,RC121172,2026-06-01 00:00:00,,Yes,Active,Non,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,ASH001,Water take,,105191 & 105192,2010-09-28 00:00:00,New consent application APP-2010013875.01,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,BUN001,Water take,,105644,2043-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,LON001,Water take,,106233,2033-07-01 00:00:00,Variation to consent sought under APP-2012015416.01,Yes,Active,,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,Other (Please identify in the comments section),,101734,2036-06-12 00:00:00,Consent to dam Turitea Stream with the upper Turitea dam for the purpose of supplying water to PNth City,Yes,Active,,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,Water take,,105146/3,2036-06-12 00:00:00,Turitea Stream Take,Yes,Active,Residual flow in Turitea Stream,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,Other (Please identify in the comments section),,106577,2033-07-01 00:00:00,Discharge for cleaning mains,Yes,Active,,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,Discharge to water,,ATH-2011010156.04,2036-06-12 00:00:00,Waste plant discharge,Yes,Active,,,5 - Highly Reliable
+ACC-00008549,Palmerston North City Council,PAL001,Water take,,ATH-2018201933.02,2036-07-01 00:00:00,Global consent for bores,Yes,Active,,,5 - Highly Reliable
+ACC-00001187,Papakura,,,,,,,,Measure Not Applicable,,,
+ACC-00008584,Queenstown Lakes District Council,ARR001,Water take,,RM19.410.01,2035-10-30 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,ART001,Water take,,2005.762,2042-12-01 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,CAR014,Water take,,RM21.628.03,2030-03-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,CAR014,Water take,,RM22.466.01,2029-11-02 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,GLE003,Water take,,2009.158,2044-12-20 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,HAW002,Water take,,2008.235,2043-11-01 00:00:00,No infrasturcture currently,No,Active,,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,HAW002,Water take,,RM14.278.01,2050-01-19 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LAK003,Water take,,2001.822,2027-05-20 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LAK003,Water take,,RM14.313.01,2045-02-01 00:00:00,Consent RM16.142.01 replaced RM14.313.01August 2024,No,Expired,,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,LUG001,Water take,,RM19.413.01,2044-12-20 00:00:00,,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,Water take,,2004.552,2040-04-01 00:00:00,Kelvin Heights,No,Active,,,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,Water take,,2007.665,2042-02-01 00:00:00,Two Mile,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,QUE001,Water take,,RM16.142.01,2048-10-01 00:00:00,Shotover,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,WAN002,Water take,,2008.459,2043-11-05 00:00:00,Western,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,WAN002,Water take,,2008.46,2043-11-05 00:00:00,Beacon Point,Yes,Active,,Missing values from data,5 - Highly Reliable
+ACC-00008584,Queenstown Lakes District Council,WAN007,Water take,,RM19.097.01,2041-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,BUL001,Water take,"Bulls - Bores 1,2,3 & Well",ATH-1997004447.00,2022-01-16 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,BUL001,Water take,Bulls - Bore 5,ATH-2007011544.00,2022-01-16 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,HUN001,Water take,Hunterville - Rangitikei River,ATH-2007011694.00,2042-10-02 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,HUN001,Land use,Hunterville - Rangitikei River,ATH-2014015168.00 ATH-2014015169.00,2037-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,MAN001,Water take,Mangaweka,ATH-2005010697.01,2037-07-01 00:00:00,,Yes,Active,,Exceeded flow rate,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,MAR001,Water take,Marton - Calico Line Bore,ATH-1997002995.01,2027-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,MAR001,Water take,Marton- Tutaenui Reservoir,ATH-1997004476.00,2032-07-11 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,MAR001,Discharge to water,Marton - Tutaenui Bore,ATH-2012014285.00,2047-02-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,RAT001,Water take,Ratana Well 301033,ATH-2014200014.00,2034-07-01 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00007503,Rangitikei District Council,TAI001,Water take,Taihape - Hautapu River,ATH-2005009214.00,2020-05-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,HAM003,Water take,,20231,2026-07-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,MAM001,Water take,,66541,2031-01-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,NGO001,Water take,,RM18-0294,2043-08-25 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,REP001,Water take,,102430,2020-08-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,REP001,Water take,,123262,2048-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT001,Water take,,65465,2024-01-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT001,Water take,,65756,2024-12-31 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT002,Water take,,20800,2026-10-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT003,Water take,,20057,2026-10-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008544,Rotorua Lakes Council,ROT004,Water take,,20243,2026-10-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008524,Ruapehu District Council,NAT001NA,Land use,,6887,2031-12-12 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,NAT001NA,Water take,,6888,2026-12-12 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,NAT001NA,Discharge to water,,6889,2026-12-12 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OHA001OH,Water take,,101266,2025-09-11 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OHA001OH,Land use,,101267,2025-09-12 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OHU001OH,Land use,,101865,2036-11-14 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OHU001OH,Water take,,101866,2021-11-14 00:00:00,,Yes,Expired,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OHU001OH,Discharge to water,,105948,2025-07-01 00:00:00,,Yes,Expired,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OHU001OH,Discharge to land,,106131,2025-07-01 00:00:00,,Yes,Expired,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OWH001OW,Discharge to water,,,2031-01-18 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OWH001OW,Water take,,101514/1,2016-03-20 00:00:00,Under s124 Continuation,Yes,Operating under s124 RMA,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,OWH001OW,Land use,,101565,2036-03-20 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,RAE001RA,Water take,,APP-2001009610.01,2039-07-01 00:00:00,,Yes,Active,High summer demand,Exceeded volume,4 - Reliable
+ACC-00008524,Ruapehu District Council,TAU003TA,Discharge to water,,100523,2017-06-20 00:00:00,"No longer in use, discharge is to sewer",Yes,Expired,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,TAU003TA,Land use,,7095,2017-06-20 00:00:00,Under s124 Continuation,Yes,Operating under s124 RMA,,,4 - Reliable
+ACC-00008524,Ruapehu District Council,TAU003TA,Water take,,7196,2017-06-20 00:00:00,Under s124 Continuation,Yes,Operating under s124 RMA,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ACH001,Water take,,CRC010173,2035-11-30 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ACH001,Water take,,CRC991054,2034-02-09 00:00:00,,Yes,Active,Daily volume exceeded,Exceeded volume,4 - Reliable
+ACC-00001006,Selwyn District Council,ART002,Water take,,CRC991057,2034-02-09 00:00:00,,Yes,Active,Instant take exceed 1 day,Exceeded flow rate,4 - Reliable
+ACC-00001006,Selwyn District Council,CAS003,Land use,,CRC940800,2029-02-09 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,CAS003,Water take,,CRC991053,2033-12-23 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,CLA005,Water take,,CRC250293,2034-11-15 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DAL004,Water take,,CRC173785,2036-05-04 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DAR001,Discharge to land,,CRC231234,2046-06-24 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DAR001,Discharge to land,,CRC231235,2026-06-24 00:00:00,,No,,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DAR001,Water take,,CRC254098,2045-11-16 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DAR001,Water take,,CRC960148.1,2030-09-29 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DAR001,Water take,,CRC991423,2039-09-08 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DAR001,Other (Please identify in the comments section),To divert water,CRC991604,2039-09-08 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,DUN008,Water take,,CRC010891.1,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,HAR006,Water take,,CRC010904,2044-11-19 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,HOR007,Water take,,CRC233860,2028-11-05 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,KIR001,Water take,,CRC254666,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LAK007,Water take,,CRC991051,2034-01-13 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LEE001,Land use,,CRC224063,2027-05-04 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LEE001,Discharge to water,,CRC224064,2027-05-04 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LEE001,Water take,,CRC224065,2027-05-04 00:00:00,,No,,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LEE001,Water take,,CRC252622,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LEE001,Water take,,CRC950937.1,2030-02-22 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LIN002,Water take,,CRC223745,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,LIN002,Water take,,CRC240400,2033-05-20 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,PRE001,Water take,,CRC010900,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,PRE001,Water take,,CRC202353,2040-08-02 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,RAK003,Water take,,CRC991055.1,2034-01-27 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC010889,2035-01-31 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC010905,2035-01-31 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Land use,,CRC051259,2039-11-16 00:00:00,,No,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC160628,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC175045,2040-08-02 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC193859,2029-01-19 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC204076,2031-08-28 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC251577,2039-01-08 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,ROL001,Water take,,CRC962217,2031-08-28 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,SHE004,Water take,,CRC173786,2036-05-04 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,SOU001,Water take,,CRC223742,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,SPR002,Water take,,CRC155932,2028-11-05 00:00:00,,Yes,Active,Flow meter fault in November,Equipment failure,4 - Reliable
+ACC-00001006,Selwyn District Council,SPR002,Water take,,CRC991058,2035-08-28 00:00:00,,Yes,Active,Flow meter fault in November,Equipment failure,4 - Reliable
+ACC-00001006,Selwyn District Council,SPR003,Water take,,CRC010895.1,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,TAI009,Water take,,CRC134786,2035-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,WES010,Water take,,CRC164009,2047-03-13 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,WES010,Water take,,CRC260552,2035-08-18 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001006,Selwyn District Council,WES010,Water take,,CRC260594,2038-06-14 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008521,South Taranaki District Council,ELT001,Water take,,R2/0213-4.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,ELT001,Discharge to land,,R2/0989-3,2029-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,ELT001,Discharge to water,,R2/1811-4.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Water take,,R2/0146-2,2020-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Water take,,R2/7002-1,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Land use,,R2/7150-2.0,2041-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Land use,,R2/7172-2.0,2053-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Land use,,R2/7413-1,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Discharge to water,,R2/7446-1,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Land use,,R2/7447-1,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,HAW003,Land use,,R2/9821-1.0,2029-01-06 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,Water take,,R2/1185-3.1,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,Water take,,R2/1186-3,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,Discharge to water,,R2/3927-3.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,Discharge to water,,R2/3928-3.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,Land use,,R2/4102-3.0,2041-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,INA001,Land use,,R2/5365-2.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,OPU001,Water take,,R2/0232-4,2030-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,OPU001,Discharge to water,,R2/5574-2,2030-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,OPU001,Land use,,R2/9473-1,2030-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,PAT001,Water take,,R2/3388-3.2,2028-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,RAH001,Water take,,R2/3696-3,2031-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,RAH001,Discharge to water,,R2/6038-2.0,2037-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Discharge to water,,R2/0129-3.2,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Water take,,R2/0634-3,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Water take,,R2/0635-3,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Water take,,R2/10370-1.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Water take,,R2/3911-3.0,2023-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Land use,,R2/4826-3.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Land use,,R2/5451-2.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI018,Land use,,R2/5452-2.0,2035-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI020,Water take,,R2/9563-1,2028-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAI021,Water take,,R2/3770-3,2028-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008521,South Taranaki District Council,WAV001,Water take,,R2/3313-3,2022-06-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008568,South Waikato District Council,ARA003,Water take,,AUTH125251,2031-12-31 00:00:00,bore,Yes,Active,complies,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008568,South Waikato District Council,ARA003,Discharge to land,,AUTH125252,2031-03-31 00:00:00,bore,Yes,Active,complies,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008568,South Waikato District Council,LIC001,Water take,,AUTH940284,2029-08-01 00:00:00,bore,Yes,Active,complies,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008568,South Waikato District Council,PUT001,Water take,,AUTH122363,2031-12-31 00:00:00,bore,Yes,Active,complies,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008568,South Waikato District Council,PUT001,Water take,,AUTH131427.01.01,2048-03-31 00:00:00,surface water/spring,Yes,Active,"15 minute data requirement not meet, daily supplied",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008568,South Waikato District Council,TIR001,Water take,,AUTH144316.01.01,2031-12-31 00:00:00,spring,Yes,Active,complies,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008568,South Waikato District Council,TOK001,Water take,,AUTH130334.01.01,2031-12-01 00:00:00,bore,Yes,Active,complies,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001109,South Wairarapa District Council,FEA001,Water take,,WAR200062 [36429],2037-09-28 00:00:00,,Yes,Active,,Other (Please identify in the comments section),4 - Reliable
+ACC-00001109,South Wairarapa District Council,GRE002,Water take,,WAR120244 [31689],2037-09-30 00:00:00,,Yes,Active,,Other (Please identify in the comments section),4 - Reliable
+ACC-00001109,South Wairarapa District Council,MAR003,Water take,,WAR120245 [31690],2037-11-27 00:00:00,,Yes,Active,,Other (Please identify in the comments section),4 - Reliable
+ACC-00001109,South Wairarapa District Council,PIR004,Water take,,WAR050099,2025-09-30 00:00:00,,Yes,Active,,Other (Please identify in the comments section),4 - Reliable
+ACC-00001119,Southland District Council,EAS002,Water take,,20222442-01,2028-09-25 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,EDE001,Water take,,206951,2034-12-14 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,LUM001,Water take,,205657,2029-02-25 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,MAN006,Water take,,20233078,2048-10-31 00:00:00,,Yes,Active,"The fish screen installed at
+the surface water intake was non-compliant due to the approach velocity exceeds the consent limit of 0.12 m/s.",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,MOS002,Water take,,200181,2026-10-03 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,OHA009,Water take,,20171350,2042-08-22 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,OHA009,Discharge to land,,20222175,2042-08-22 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,ORA003,Water take,,20181295-02,2029-08-01 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,ORA003,Discharge to land,,201812995-01,2029-08-01 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,OTA001,Water take,,20233021,2048-08-01 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,RIV001,Water take,,20158384,2051-04-04 00:00:00,,No,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,RIV001,Discharge to land,,20232831,2048-03-31 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,RIV001,Water take,,204375,2042-06-05 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,RIV001,Discharge to water,,204376,2042-06-05 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,TEA002,Water take,,20233665,2049-06-30 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001119,Southland District Council,TUA001,Water take,,20233444,2044-12-17 00:00:00,,Yes,Active,"Non-compliance
+due to the meter/datalogger issue was not resolved within five working days.",Missing values from data,5 - Highly Reliable
+ACC-00001119,Southland District Council,WIN001,Water take,,205797-V1,2039-09-23 00:00:00,,Yes,Active,"Fully compliant for the
+year 2024/2025",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008528,Stratford District Council,MID001,Water take,,TRC-1276-4,2045-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008528,Stratford District Council,MID001,Discharge to land,,TRC-1331-3,2033-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008528,Stratford District Council,STR001,Discharge to water,,TRC-0068-4,2034-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008528,Stratford District Council,STR001,Water take,,TRC-0195-3,2034-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008528,Stratford District Council,STR001,Land use,,TRC-2452-3,2034-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008528,Stratford District Council,TOK004,Water take,,TRC-1337-4,2040-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008528,Stratford District Council,TOK004,Discharge to land,,TRC6605.2,2040-06-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008574,Tararua District Council,DAN001,Water take,,104947 ATH-2010012905.00,2026-07-01 00:00:00,,Yes,Active,Late Flowmeter verification,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008574,Tararua District Council,EKE001,Water take,,101169/2 ATH-2004008582.02,2019-11-19 00:00:00,,Yes,Operating under s124 RMA,Late Flowmeter Verification,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008574,Tararua District Council,PAH001,Water take,,102781 ATH-2006010354.01,2022-01-24 00:00:00,,Yes,Operating under s124 RMA,Late Flowmeter Verification,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008574,Tararua District Council,PAH001,Water take,,104794 ATH-2009012723.00,2029-07-01 00:00:00,,Yes,Active,Missing data set from 2020 to May 2023,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008574,Tararua District Council,WOO001,Water take,,102773 ATH-2006010345.02,2021-05-31 00:00:00,,Yes,Operating under s124 RMA,,Exceeded flow rate,5 - Highly Reliable
+ACC-00008530,Tasman District Council,,Other (Please identify in the comments section),Use riverbed,RM061023,2044-11-30 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Water take,,RM100114V1,2033-05-31 00:00:00,,Yes,Active,Minor and brief,Exceeded volume,5 - Highly Reliable
+ACC-00008530,Tasman District Council,,Other (Please identify in the comments section),Use riverbed,RM100117V1,2033-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Water take,,RM110311V4,2031-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to water,,RM130752V1,2048-11-14 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to water,,RM140576,2049-08-05 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Water take,,RM150188,2033-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Water take,,RM160099,2039-11-30 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Water take,,RM161219V2,2039-11-30 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Water take,,RM161220,2039-11-30 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Other (Please identify in the comments section),Haz Subs storage,RM170509V1,2052-06-28 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to land,,RM170511V1,2052-06-28 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to water,,RM170512,2052-06-28 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to land,,RM200232,2055-05-01 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to land,,RM200234,2055-05-01 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to land,,RM200572,2055-10-05 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,,Discharge to water,,RM210135,2056-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,COL007,Water take,,RM190412,2034-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,DOV001,Other (Please identify in the comments section),Dam,RM100116V1,2033-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,EIG001,Water take,,RM160098,2031-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,HOP001,Water take,,RM161216,2039-11-30 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,KAI015,Water take,,RM150189V1,2033-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,MOT001,Water take,,RM070187,2033-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,MUR001,Water take,,RM191328,2035-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,POH001,Water take,,NN720010,2026-10-01 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,RED001,Water take,,RM161218V2,2039-11-30 00:00:00,,Yes,Active,Minor and brief,Exceeded volume,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RED003,Water take,,RM161218V2,2039-11-30 00:00:00,,Yes,Active,Minor and brief,Exceeded volume,5 - Highly Reliable
+ACC-00008530,Tasman District Council,RIC002,Water take,,RM161217V2,2039-11-30 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,TAP003,Water take,,RM180940,2034-05-31 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,WAI023,Water take,,RM161217V2,2039-11-30 00:00:00,,Yes,Active,,,
+ACC-00008530,Tasman District Council,WAK001,Water take,,RM210695,2040-05-31 00:00:00,,Yes,Active,,,
+ACC-00001011,Taupo District Council,ATI001,Water take,,126712,2033-07-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,BON001,Land use,,102925,2034-11-02 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,BON001,Water take,,120056,2045-03-29 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,BON001,Water take,,121069,2045-03-29 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,CEN001,Water take,,AUTH137026.01.01,2047-04-21 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,MAN002,Water take,,AUTH140647.01.01,2049-11-30 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,MOT002,Discharge to land,,AUTH137983.01.01,2031-11-02 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,OMO001,Water take,,AUTH121770.01.01,2051-07-07 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,RIV003,Water take,,AUTH145046.01.01,2042-11-24 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TAU001,Land use,,102924,2034-11-02 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TAU001,Land use,,125016,2047-10-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TAU001,Discharge to water,,125017,2047-10-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TAU001,Land use,,950556,2030-08-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TAU001,Land use,,950565,2030-07-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TAU001; HAT001; KIN001; MOT002; MOT010; WHA009,Water take,,AUTH143489.01.01,2047-10-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TIR002,Water take,,105572,2036-09-01 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,TIR002,Water take,,105576,2021-09-01 00:00:00,,Yes,Expired,Consent Expired.  Application has been lodged with WRC such that we are legally allowed to continue operating under old consent conditions until new consent is approved.,,4 - Reliable
+ACC-00001011,Taupo District Council,TIR002,Discharge to water,,105580,2021-09-01 00:00:00,,Yes,Expired,Consent Expired.  Application has been lodged with WRC such that we are legally allowed to continue operating under old consent conditions until new consent is approved.,,4 - Reliable
+ACC-00001011,Taupo District Council,TUR001,Water take,,104296,2017-02-28 00:00:00,,Yes,Expired,Consent Expired.  Application has been lodged with WRC such that we are legally allowed to continue operating under old consent conditions until new consent is approved.,,4 - Reliable
+ACC-00001011,Taupo District Council,WAI042,Land use,,119950,2029-08-30 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,WAI042,Discharge to water,,124398,2027-04-30 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,WAI042,Water take,,AUTH132689.01.01,2036-11-07 00:00:00,,Yes,Active,data error,Exceeded flow rate,4 - Reliable
+ACC-00001011,Taupo District Council,WAI042,Water take,,AUTH132689.02.01,2036-11-07 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,WHA010,Water take,,121300,2033-01-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00001011,Taupo District Council,WHA011,Water take,,126710,2033-07-31 00:00:00,,Yes,Active,,,4 - Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land use,,50514.0.01-BC,2030-02-23 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to Land,,65640.0.02-DC,2044-07-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC13520,,Unlimited - No expiry stated,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land use,,RC1354,,Unlimited - No expiry stated,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Other (Please identify in the comments section),Notice of Requirement,RC15302*01,,Unlimited - No expiry stated,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to Water,,RC20002,2026-01-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land use,,RC24079,,Unlimited - No expiry stated,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Other (Please identify in the comments section),Notice of Requirement,RC3242,,Unlimited - No expiry stated,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Coastal,,RC40070,2028-03-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC50217,2028-04-08 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC50784,2030-11-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC50863,2031-11-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC50864,2031-11-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC60039,2034-02-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to water,,RC61555,2037-08-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC62129,2040-01-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RC63680,2041-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to Water,,RC64862,2027-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to land,,RC65640.0.03-DC,2044-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to Land,,RM16-0259-DC.01,2051-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to Water,,RM17-0674-DC.01,2054-05-29 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land Use,,RM18-0210-BC.01,2053-10-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to Land,,RM18-0210-DC.01,2053-10-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Discharge to Water,,RM20-0381-DC.01,2057-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Water take,,RM21-0694-LC.01,2025-12-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008507,Tauranga City Council,TAU004,Land use,,RM24-0501,2029-11-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001125,Thames Coromandel District Council,102598,,,,,,,,,,
+ACC-00001125,Thames Coromandel District Council,AUTH102549.01.01,Land use,,,2034-08-01 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH102903.01.01,Land use,,,2034-10-28 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH102932.01.01,Water take,,,2029-12-31 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH105914.01.01,Water take,,,2024-08-18 00:00:00,,No,Expired,Replaced with AUTH146434.01.01,,
+ACC-00001125,Thames Coromandel District Council,AUTH106168.01.01,Water take,,,2030-03-01 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH106170.01.01,Water take,,,2030-03-01 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH112958.01.02,Water take,,,2025-07-01 00:00:00,,No,Expired,Replaced with AUTH147415.01.01 01/05/2025,,
+ACC-00001125,Thames Coromandel District Council,AUTH114103.01.01,Land use,,,2041-07-01 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH119921.01.01,Water take,,,2049-12-01 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH130574.01.01,Other (Please identify in the comments section),Dam,,2049-05-12 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH130574.02.02,Water take,,,2049-05-01 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH130992.01.01,Water take,,,2050-12-08 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH130992.02.01,Water take,,,2050-12-08 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH130992.03.01,Other (Please identify in the comments section),Dam,,2050-12-08 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH130992.04.01,Water take,,,2050-12-08 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH131003.01.01,Water take,,,2051-06-16 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH131003.03.01,Water take,,,2051-06-16 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH132367.01.01,Water take,,,2030-12-22 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH134974.02.01,Other (Please identify in the comments section),Dam,,2050-04-30 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH136052.01.01,Land use,,,2050-11-30 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH136380.01.01,Water take,,,2027-04-30 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH137683.01.01,Other (Please identify in the comments section),Dam,,2047-05-07 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH137683.02.01,Water take,,,2047-05-07 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH137683.03.01,Water take,,,2047-05-07 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH137782.01.01,Water take,,,2030-03-01 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH139860.01.01,Water take,,,2050-12-08 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH139860.02.01,Other (Please identify in the comments section),Dam,,2057-05-25 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH142017.01.01,Water take,,,2057-05-22 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH143372.01.01,Discharge to water,,,2059-01-26 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH144468.01.01,Land use,,,Unlimited,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH145656.01.01,Discharge to water,,,2030-08-16 00:00:00,,Yes,Active,,,
+ACC-00001125,Thames Coromandel District Council,AUTH146434.01.01,Water take,,,2055-04-30 00:00:00,,Yes,Active,Replaces 105914.01.01,,
+ACC-00001125,Thames Coromandel District Council,AUTH147415.01.01,Water take,,,2055-04-30 00:00:00,,Yes,Active,Replaces 112958.01.02 Expired 01/07/2025,,
+ACC-00001125,Thames Coromandel District Council,AUTHW2549.01.01,Water take,,,2001-01-31 00:00:00,,Yes,Active,,,
+ACC-00008504,Timaru District Council,DOW001,Other (Please identify in the comments section),"to disturb the bed of the Opihi River, by reinstating, repairing and maintaining two galleries in the bed of the river, removing gravel, sand and other natural material, removing plants from the bed and carrying out works to facilitate the diversion of water.",CRC012182,2030-10-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Water take,,CRC012183,2030-10-09 00:00:00,,No,Active,Currently water source is not in use.,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Water take,,CRC012184,2030-10-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Discharge to land,to discharge water containing contaminants to land.,CRC012185,2030-10-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Other (Please identify in the comments section),to disturb the bed of the Tengawai River,CRC980317,2032-09-24 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Other (Please identify in the comments section),divert water around a water supply gallery in the Tengawai River,CRC980318,2054-06-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Discharge to water,to discharge contaminants in stormwater and cleaning water onto land,CRC992823,2034-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Discharge to water,to discharge contaminants in stormwater and cleaning water onto land,CRC992824,2034-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Discharge to water,to discharge contaminants in stormwater and cleaning water onto land,CRC992825,2034-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Discharge to water,to discharge contaminants in stormwater and cleaning water onto land,CRC992826,2034-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,DOW001,Discharge to water,to discharge contaminants in stormwater and cleaning water onto land,CRC992827,2034-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,GER001,Water take,,CRC064043,2027-10-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PAR002,Water take,,CRC010392,2035-10-27 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PEE001,Water take,To take and use surface water,CRC120219,2046-08-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PLE001,Discharge to water,The scour valve discharge structure within riverbed.,CRC233711,2048-03-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PLE001,Discharge to water,To discharge of community water supply.,CRC233714,2048-03-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,PLE001,Water take,To take and use water,CRC981008.2,2034-03-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,RAN003,Water take,to take groundwater at or about map reference K38:899-675 for public water supply at Rangitata Huts,CRC171997,2031-09-25 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,RAN003,Discharge to water,To discharge surplus water from the water race.,CRC173642,2044-03-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,RAN003,Other (Please identify in the comments section),To disturb the bed of the Orari River.,CRC173643,2044-03-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,RAN003,Water take,To take surface water.,CRC173644,2044-03-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,SEA001,Water take,to take and use groundwater for Timaru Supply.,CRC010349,2030-10-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,STA004,Water take,,CRC010393.1,2035-10-27 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM001,Water take,To take and use groundwater.,CRC252857,2048-08-23 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM002,Water take,to take & use water for community water supply,CRC192123,2054-06-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TEM002,Discharge to water,to discharge water and contaminants into the Hae Hae Te Moana Rive,CRC992619.1,2034-08-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Water take,,CRC011399,2024-11-05 00:00:00,Applied for consent renewal but  the application is on hold.,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Water take,,CRC093305,2030-10-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,change condition 1 of CRC990476; to discharge water,CRC147262,2034-01-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,To discharge water to water.,CRC173948,2030-10-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,To discharge pipeline water.,CRC210571,2056-09-17 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,to discharge water from a watermain scour valve as required for network maintenance,CRC213416,2046-03-26 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,To discharge pipeline water,CRC222340,2056-09-17 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,To discharge pipeline water,CRC222463,2056-09-17 00:00:00,,No,Active,in the process of activation.,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,To discharge from a dam in the Pareora River.,CRC244315,2059-10-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Other (Please identify in the comments section),To disturb the bed of a river.,CRC250506,2056-09-17 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to water,To discharge water into surface water.,CRC250507,2056-09-17 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,TIM001,Discharge to land,to discharge chlorinated water onto land,CRC940974,2029-05-12 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008504,Timaru District Council,"TIM001, DOW001, SEA001",Water take,,CRC101875,2030-10-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001016,Waikato District Council,HUN002,Water take,,136806.01.01,2046-01-12 00:00:00,,Yes,Active,,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001016,Waikato District Council,HUN002,Discharge to water,,146239.01.01,2044-03-11 00:00:00,,Yes,Active,,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001016,Waikato District Council,POR005,Water take,,136297.01.01,2051-04-30 00:00:00,,Yes,Active,,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001016,Waikato District Council,POR005,Other (Please identify in the comments section),Dam the Maraetai Stream (Port Waikato).,136297.02.01,2051-04-30 00:00:00,,Yes,Active,,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001016,Waikato District Council,POR005,Discharge to water,,136297.03.01,2051-04-30 00:00:00,,Yes,Active,,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001016,Waikato District Council,RAG001,Water take,,118341.01.01,2034-01-15 00:00:00,,Yes,Active,,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,CUS001,Water take,,CRC990930.1,2034-08-27 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,GAR001,Water take,,CRC971822,2032-04-02 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Water take,,CRC021737,2037-05-10 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Water take,,CRC253378,2037-05-10 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Water take,,CRC970304,2031-09-04 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Water take,,CRC970305,2031-09-04 00:00:00,,Yes,Active,Active and used,Exceeded volume,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Water take,,CRC970306,2031-09-04 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Water take,,CRC990929,2033-12-23 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,KAI003,Water take,,CRC990933,2034-01-13 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,MAN009,Water take,,CRC111974,2039-12-22 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,MAN009,Water take,,CRC255334,2039-12-22 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,MAN009,Water take,,CRC990925,2034-04-22 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OHO001,Water take,,CRC990932,2041-03-31 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OXF101,Water take,,CRC144773,2050-12-14 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OXF101,Water take,,CRC183143,2053-07-06 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OXF101,Water take,,CRC990926.1,2034-08-04 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OXF103,Water take,,CRC063540.1,2041-06-13 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,OXF103,Water take,,CRC166592,2036-05-18 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,PEG001,Water take,,CRC074057,2043-02-28 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,PEG001,Water take,,CRC167260,2042-12-12 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,PEG001,Water take,,CRC167262,2043-11-21 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,RAN001,Water take,,CRC160704,2032-12-11 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,RAN001,Water take,,CRC252680,2044-10-02 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,WAI011,Water take,,CRC190900,2032-04-16 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,WES004,Water take,,CRC186214,2044-12-10 00:00:00,,Yes,Active,Active and used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,WES004,Water take,,CRC990927,2041-03-31 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00008589,Waimakariri District Council,WES004,Water take,,CRC990953,2034-06-11 00:00:00,,No,Active,Active but not used,,5 - Highly Reliable
+ACC-00001017,Waimate District Council,HOO001,Land use,,CRC980385,2034-05-21 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,HOO001,Water take,,CRC980386,2034-05-21 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,LOW002,Water take,,CRC940846,2029-02-23 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,OTA005,Water take,,CRC122551,2047-07-06 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,OTA005,Land use,,CRC981066,2033-01-28 00:00:00,,No,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,OTA005,Water take,,CRC981876.1,2034-04-22 00:00:00,,No,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI032,Water take,,CRC962154.1,2031-05-29 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI032,Land use,,CRC970320,2031-05-29 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI032,Other (Please identify in the comments section),Water Permit - to dam,CRC970321,2031-05-29 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI033,Discharge to land,,CRC020225,2036-09-11 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001017,Waimate District Council,WAI033,Water take,,CRC202845,2034-06-14 00:00:00,,Yes,Active,"Consent conditions met, see comments below",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008578,Waipa District Council,G00031,Water take,,AUTH135532.01.01,2050-12-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,G00032,Water take,,AUTH135532.01.01,2050-12-20 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,G02142,Water take,,AUTH142092.01.01,2049-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00008,Discharge to water,,AUTH131788.01.01,2034-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00008,Water take,,AUTH139861.01.01,2049-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00009,Water take,,AUTH139861.01.01,2049-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00009,Discharge to water,,AUTH142306.01.02,2049-04-28 00:00:00,,Yes,Active,,Exceeded flow rate,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00029,Water take,,AUTH139861.01.01,2049-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S00029,Discharge to land,,AUTH145976.01.01,2049-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Land use,,AUTH117350.01.01,2042-10-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Land use,,AUTH119049.01.01,2043-12-08 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Other (Please identify in the comments section),Dam,AUTH121942.01.01,2046-08-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Discharge to water,,AUTH121945.01.01,2046-04-28 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Discharge to land,,AUTH121946.01.01,2046-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Other (Please identify in the comments section),Dam,AUTH121947.01.01,2046-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Water take,,AUTH124967.01.01,2049-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Water take,,AUTH124968.01.01,2049-04-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008578,Waipa District Council,S10105,Other (Please identify in the comments section),Earthworks,AUTH146747.01.01,2044-06-18 00:00:00,,Yes,Active,Inspection and log not carried out. (Training and equipment required),Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008575,Wairoa District Council,MAH005,Water take,,AUTH-130834-01,2026-05-31 00:00:00,"Consent initially expired in 2024, interim consent granted for 2 years",Yes,Active,,,5 - Highly Reliable
+ACC-00008575,Wairoa District Council,TUA005,Water take,,AUTH-130833-01,2026-05-31 00:00:00,"Consent initially expired in 2024, interim consent granted for 2 years",Yes,Active,,,5 - Highly Reliable
+ACC-00008575,Wairoa District Council,WAI006,Water take,,WP110405T,2032-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,AWA013,Water take,,ECAN-CRC940476,2028-11-10 00:00:00,Awahokomo,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,BUS001,Water take,,ECAN-CRC084382,2046-04-18 00:00:00,Bushy Creek,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,DUN004,Water take,,ECAN-CRC982133,2033-09-11 00:00:00,Duntroon,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,KUR001,Water take,,ECAN-CRC940477,2028-11-10 00:00:00,Kurow,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,LOW004,Water take,,ORC-RM11.019.01,2046-02-01 00:00:00,Lower Waitaki,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,OHA005,Water take,,ECAN-CRC001915,2035-06-21 00:00:00,Lake Ohau,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,OMA001,Water take,,ECAN-CRC213794,2032-12-23 00:00:00,Omarama,Yes,Active,Low flow restrictions due to a water conservation order has resultd in a breach of the consent conditions as we must still supply water to commerical premises and public toliets etc. WDC is looking to get an exemption for this condition.,Exceeded flow rate,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,OTE001,Water take,,ECAN-CRC185065,2044-05-08 00:00:00,Otematata,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,STO001,Water take,,ORC-RM17.121.01,2052-09-01 00:00:00,Stoneburn,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,STO001,Water take,,ORC-RM17.121.02,2052-09-01 00:00:00,Stoneburn,Yes,Active,,,5 - Highly Reliable
+ACC-00008499,Waitaki District Council,WAI215,Water take,,ORC-RM11.025.01,2046-03-21 00:00:00,Waihemo,Yes,Active,This consent has an abatement notice currently in place for exceeding the 7 day volume limit. No exceedances occurred during this reporting period. Looking to cancel the abatement notice,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,BEN002,Other (Please identify in the comments section),Bed Use,AUTH116843.01.01,2043-04-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,BEN002,Water take,,AUTH116844.01.02,2031-04-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,BEN002,Discharge to water,,AUTH117945.01.01,2031-04-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,BEN002,Water take,,AUTH143938.01.01,2031-04-07 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,MOK002,Water take,,AUTH113544.01.01,2026-09-15 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,MOK002,Land use,,AUTH113544.01.01,2049-01-15 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,MOK002,Discharge to water,,AUTH113545.01.01,2026-09-15 00:00:00,,Yes,Active,Exceeded volume and flow rate,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008576,Waitomo District Council,PIO001,Water take,,AUTH107477.01.02,2023-08-01 00:00:00,,Yes,Operating under s124 RMA,,Exceeded flow rate,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,PIO001,Discharge to water,,AUTH107478.01.02,2023-08-01 00:00:00,,Yes,Operating under s124 RMA,Dissolve Aluminium,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008576,Waitomo District Council,PIO001,Land use,,AUTH108776.01.01,2023-08-01 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,TEK003,Land use,,AUTH103577.01.01,2035-11-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,TEK003,Water take,,AUTH133317.01.01,2040-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008576,Waitomo District Council,TEK003,Other (Please identify in the comments section),Bed Use,AUTH136029.01.01,2050-10-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,122086,2035-11-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,123496,2047-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,14748 / WAT60273690,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,14749 / WAT60273716,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,14750 / WAT60273757,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,15837 / DIS60263732,2035-04-17 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,25309 / WAT60274741,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,25311 / DIS60263520,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,25312 / DIS60263532,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,25313 / LUS60273006,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,25314 / DIS60263544,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,25315 / DIS60263555,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Land Use,,25316 / LUS60273021,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,25336 / DIS60264264,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Land Use,,25337 / LUS60273107,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,26979 / DIS80297101,2030-12-31 00:00:00,STHUI Lagoon SW,Yes,Active,Water quality standards of lagoon discharge exceeded,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Stormwater,26981 / DIS60308354,2030-12-31 00:00:00,STHUI - Parau Landfill Erosion and Sediment Control,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to land,,26983 / DIS80296456,2030-12-31 00:00:00,STWTK - Landfill discharges,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Stormwater,26984,2030-12-31 00:00:00,STWTK - sludge landfill stormwater,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,29369 / LUS60273840,2039-12-31 00:00:00,STHUI Armstrong Gully,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,29832 / LUS60273787,2039-12-31 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,29833 / DIS60262701,2039-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,35534 / DIS60266601,2030-12-31 00:00:00,STHUI - Process and off-spec discharges,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,35755 / WAT60273897,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,36125 / DIS60267254,2044-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,36380,2030-12-31 00:00:00,STWTK - Off-spec discharges,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,36527 / WAT60274684 / ARC_25301,2044-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,36631 / WAT60274700 /  NRSI_25302,2044-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Land Use,,36632 / LUS60273611 / NRSI_25303,2044-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36633 / DIS60263491 / NRSI_25304,2044-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36634 / DIS60263505 / NRSI_25305,2044-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,36635 / LUS60273092 / NRSI_25335,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,36636 / WAT60273917 / NRSI_25332,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36637 / DIS60264241 / NRSI_25333,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36638 / DIS60264250 / NRSI_25334,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,36639 / WAT60275209,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,36640 / LUS60273072 / NRSI_25328,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,36641 / WAT60275221,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36642 / DIS60264215,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36643 / DIS60264227,2044-07-28 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,36644 / WAT60275196,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,36645 / LUS60273056,2040-07-09 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,36646 / WAT60275184,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36647 /  DIS60264202,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36648 / DIS60264758,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,36649 / WAT60274754,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,36650 / LUS60273034,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,36651 / WAT60274764,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36652 / DIS60263575,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,36653 / DIS60264191,2040-09-07 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to land,,37113 / DIS80297122,2030-12-31 00:00:00,STHUI - Parau landfill discharge,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,39469 / WAT80316875,2035-07-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Dam,,39470 / WAT80316917,2035-07-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,39471 / DIS80296822,2035-07-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,39472 / WAT80316960,2035-07-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,39473 / WAT80317001,2035-07-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,39474 / DIS80296860,2035-07-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Stormwater,39614,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to land,,42796,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Diversion of Water,960090,2032-05-01 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,AUTH122083.01.01,2048-07-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,AUTH122087.01.02,2035-10-11 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,AUTH122097.01.02,2035-10-11 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water Take,,AUTH122099.01.02,2035-10-11 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,AUTH123494.01.01,2047-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Dam,AUTH123495.01.01,2047-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,AUTH123497.01.01,2047-06-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water take,,AUTH131259.01.02,2043-01-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,AUTH131259.02.01,2042-01-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,AUTH131259.03.01,2042-01-21 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,AUTH137497.01.01,2032-05-01 00:00:00,,Yes,Active,Discharge quality exceedances,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,AUTH137497.02.01,2032-05-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Stormwater,AUTH137497.03.01,2032-05-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,AUTH142423.01.01,2026-01-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to water,,AUTH142778.01.01,2026-06-01 00:00:00,,Yes,Active,Discharge volume exceedance on 1 day,Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Water take,,AUTH960089.01.05,2032-05-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Other (Please identify in the comments section),Works in a Watercourse,AUTH960092.01.04,2032-05-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,DIS60382532,2025-05-30 00:00:00,,No,Expired,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Discharge to Water,,DIS60382588,2025-04-30 00:00:00,,No,Expired,,,5 - Highly Reliable
+ACC-00001216,Watercare,AUC003,Land use,,LUC0357/13,2048-11-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,BOM003,Water take,,14706 / WAT60276460,2027-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Water Take,,20785 / WAT60275452,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Water Take,,25161 / WAT60274646,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Water Take,,25168 / WAT60274702,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Water Take,,25169 / WAT60274717,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Dam,25170 / WAT60274728,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Dam,25171 / WAT60274746,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Dam,25172 / WAT60274758,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Dam,25173 / WAT60274775,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Dam,25174 / WAT60275194,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Dam,25185 /WAT60275232,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Discharge to Water,,25186 / DIS60265007,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Discharge to Water,,25188 / DIS60265022,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Works in a Watercourse,25189 / LUS60273138,2026-04-10 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Water take,,33977 / WAT60274844,2028-05-31 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HEL005,Other (Please identify in the comments section),Works in a Watercourse,LUS60390728,2057-03-01 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,HUI006,Discharge to water,,36376 / DIS80299761,2039-12-31 00:00:00,STHUV - Process and off-spec discharges,Yes,Active,Discharge of process waters to Lower Huia reservoir exceeded 50m3/d limit,Exceeded flow rate,5 - Highly Reliable
+ACC-00001216,Watercare,MUR011,Water take,,WAT60358714,2055-07-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,SNE002,Water take,,37953 / WAT60274031,2029-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,SNE002,Water take,,37993 / WAT60275761,2029-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,SNE002,Discharge to water,,DIS60414154,2028-03-03 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,SNE002,Discharge to water,,REG-66476 / DIS60051403,2036-07-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP00001,Water take,,R/REG/2015/2443 / WAT60148969,2051-12-02 00:00:00,STONE - Bore abstraction,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Discharge to water,,DIS60358390,2030-08-04 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Land use,,LUC60360797,2030-08-04 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Water take,,R/VCC/2014/3235,2027-05-31 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Water take,,WAT60276238,2026-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Water take,,WAT603622508,2057-06-17 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04063,Water take,,WAT60386923,2055-05-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,Discharge to Water,,37587 / DIS60266833,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,Other (Please identify in the comments section),Stormwater,DIS60366154,2055-12-17 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,Discharge to water,,DIS60375065,2056-08-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,Discharge to Water,,DIS80298308 / 37317,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,Land use,,LUC60375066,2056-08-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,Water Take,,WAT80316391 / 37316,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,TP04070,Other (Please identify in the comments section),Dam,WAT80317020 / 37315,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WAI214,Water take,,AUTH135970.01.01,2052-08-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WAI214,Discharge to water,,DIS60423180,2030-12-31 00:00:00,,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WAI214,Water take,,WAT60071034,2052-08-14 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WAR006,Discharge to water,,DIS60321276,2053-09-05 00:00:00,STWAW - Process discharges,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WAR006,Land use,,LUC60321277,2053-09-05 00:00:00,STWAW - Landuse and stormwater,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WAR006,Water take,,REG-64397 / WAT60274987,2044-08-10 00:00:00,STWAW - Abstraction,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WEL004,Discharge to water,,DIS60396929,2033-06-30 00:00:00,STWEL - Discharges,Yes,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WEL004,Water take,,WAT60396928,2033-06-30 00:00:00,STWEL - Hōteo Take,Yes,Active,"Annual abstraction volume exceeded limit, and quarterly report was submitted late",Exceeded volume,5 - Highly Reliable
+ACC-00001216,Watercare,WEL004,Water take,,WAT60397717,2033-06-30 00:00:00,STWEL - Supplementary groundwater take,No,Active,,,5 - Highly Reliable
+ACC-00001216,Watercare,WEL004,Water take,,WAT60400411,2063-06-30 00:00:00,STWEL - Groundwater consent,No,Active,,,5 - Highly Reliable
+ACC-00008546,Wellington Water Ltd.,,,,,,,,,No,,4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN000199 [20538],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN000199 [20539],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000199 [36617],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000200 [20540],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000200 [20544],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000201 [20548],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000201 [20550],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000201 [20552],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000201 [20554],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN000201 [20558],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN100214 [33822],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN150128 [33303],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN150128 [33304],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN150128 [33305],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN150128 [33306],2036-08-17 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN970036 [33820],2033-08-12 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Water take,,WGN970036 [33821],2033-08-12 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00008546,Wellington Water Ltd.,WEL003,Discharge to water,,WGN970041 [33662],2030-03-01 00:00:00,,Yes,Active,No,Other (Please identify in the comments section),4 - Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,Discharge to land,,24995,2032-10-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,Water take,,62045,2038-12-31 00:00:00,,Yes,Active,,Exceeded flow rate,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,Water take,,62428,2039-01-31 00:00:00,,Yes,Active,Instrument sensitivity not high enough to pick up very low pump run hours or small totaliser flows,Flow not recorded,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,ATH003,Water take,,66439,2045-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,KAT003,Water take,,62621,2040-03-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,OMO003,Water take,,61431,2036-11-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,OMO003,Water take,,61527,2037-03-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,PON003,Water take,,RM24-0653,2060-01-31 00:00:00,,Yes,Active,Level Transducer faulted,Equipment failure,5 - Highly Reliable
+ACC-00001161,Western Bay of Plenty District Council,TEP002,Water take,,RM21-0054,2037-06-30 00:00:00,,Yes,Active,Faulty Flow meter,Flow not recorded,5 - Highly Reliable
+ACC-00008497,Westland District Council,ARA001,Water take,,RC-2019-0046,2054-09-02 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,FOX001,Water take,,RC-2019-0045,2054-11-01 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,FRA001,Water take,,RC-2015-0055-01,2050-04-24 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,FRA001,Water take,,RC00390,2036-09-21 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,HAA001,Water take,,RC01164/1,2036-08-21 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,HAA001,Land use,,RC01164/2,2036-08-21 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008497,Westland District Council,HAR001,Water take,,RC06273,2042-03-22 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Discharge to land,,RC03076/1,2038-05-06 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Discharge to water,,RC11031,2046-09-16 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Water take,,RC11033,2046-09-29 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Other (Please identify on the comments section),To disturb river bed to install intake structure to maintain diversion channel,RC2015-0077-01,2050-07-15 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Other (Please identify in the comments section),To divert water to undertake construction works and maintain flows over intake structure.,RC2015-0077-02,2050-07-15 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008497,Westland District Council,HOK001,Water take,,RC2015-0077-03,2050-07-15 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,KUM001,Water take,,RC10159,2045-08-23 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,ROS001,Water take,,RC00359/1,2036-01-30 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008497,Westland District Council,ROS001,Land use,,RC00359/2,2036-01-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008497,Westland District Council,WHA002,Water take,,RC03068,2038-08-22 00:00:00,,Yes,Active,"See comments in ""other comments""",Other (Please identify in the comments section),5 - Highly Reliable
+ACC-00008495,Whakatane District Council,MAT005,Water take,Take water from Jennings Spring at Awakaponga for Matatā community water supplies.,20280,2026-10-01 00:00:00,,Yes,Active,"Council has funded and established a reconsenting programme.  The budget will enable monitoring environmental impacts, establishing co-design groups, preparing specialist reports and applications for resource consent, and to have the applications notified, heard and decided.  All 2026 expiring Consents are included in this programme with application for new consents to be submitted within the regulatory timeframes.",,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,MUR002,Water take,Take and use water from two bores accessing an underground stream for the Murupara public water supply purposes.,20114,2026-10-01 00:00:00,,Yes,Active,"Council has funded and established a reconsenting programme.  The budget will enable monitoring environmental impacts, establishing co-design groups, preparing specialist reports and applications for resource consent, and to have the applications notified, heard and decided.  All 2026 expiring Consents are included in this programme with application for new consents to be submitted within the regulatory timeframes.",,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,OTU010,Water take,Take and use water from a bore for the Otumahi water supply.,66359.0.02-WT+,2045-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,OTU010,Water take,Take and use water from a bore for the Otumahi water supply.,66359.0.03-WT,2045-09-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,OTU010,Water take,Take and use groundwater from well/bore number BN-3305 at Tahuna Road for the Otumahi water supply scheme.,RM18-0540-WT.01+,2045-09-30 00:00:00,,Yes,Active,,Exceeded volume,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,RAN007,Water take,Take and use water from Braemar Spring for the purpose of water supply to the Rangitaiki Plains water supply.,20094,2026-10-01 00:00:00,,Yes,Active,"Council has funded and established a reconsenting programme.  The budget will enable monitoring environmental impacts, establishing co-design groups, preparing specialist reports and applications for resource consent, and to have the applications notified, heard and decided.  All 2026 expiring Consents are included in this programme with application for new consents to be submitted within the regulatory timeframes.",,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,RAN007,Water take,Take water from a bore for the Rangitāiki Plains water supply.,RM15-0017-WT.01,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,RAN007,Water take,Take water from a bore for the Rangitāiki Plains water supply.,RM15-0017-WT.02,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,RAN007,Water take,Use water from two bores for the Rangitāiki Plains water supply.,RM15-0017-WU.01,2031-12-31 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,RUA003,Water take,Take water from two bores for Rūātoki water supply. Continuing under Section 124 of the RMA,62627,2019-09-30 00:00:00,,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,TAN001,Water take,Take water from two bores adjacent to the Waimana River for the Taneatua water supply.,21044,2026-10-01 00:00:00,,Yes,Active,"Council has funded and established a reconsenting programme.  The budget will enable monitoring environmental impacts, establishing co-design groups, preparing specialist reports and applications for resource consent, and to have the applications notified, heard and decided.  All 2026 expiring Consents are included in this programme with application for new consents to be submitted within the regulatory timeframes.",,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,TEM004,Water take,Take water from a bore for community supply at the Te Mahoe Village.,RM22-0032-WT.01,2037-04-30 00:00:00,,Yes,Active,,,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,WAI017,Water take,Take water from a well for the Waimana water supply.,20283,2026-10-01 00:00:00,,Yes,Active,"Council has funded and established a reconsenting programme.  The budget will enable monitoring environmental impacts, establishing co-design groups, preparing specialist reports and applications for resource consent, and to have the applications notified, heard and decided.  All 2026 expiring Consents are included in this programme with application for new consents to be submitted within the regulatory timeframes.",,5 - Highly Reliable
+ACC-00008495,Whakatane District Council,WHA005,Water take,Take and use water from the Whakatane River for a municipal water supply to Whakatāne and Ōhope and also a right to discharge waste water to the river.,20198,2026-10-01 00:00:00,,Yes,Active,"Council has funded and established a reconsenting programme.  The budget will enable monitoring environmental impacts, establishing co-design groups, preparing specialist reports and applications for resource consent, and to have the applications notified, heard and decided.  All 2026 expiring Consents are included in this programme with application for new consents to be submitted within the regulatory timeframes.",,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,FOR001,Water take,,ATH2009012584.01,2024-05-01 00:00:00,Reids Hill Bore (Fordell) - S124 Global Consent applied for,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,MAX001,Water take,,ATH2004010430,2018-12-17 00:00:00,Maxwell Bore (Pakaraka) - Global Consent applied for.  Previous consent expired prior to new application no S124 but Horizons have communicated that no action will be taken in relation to non compliance provided the conditions under the previous consent are met.,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Water take,,ATH2001009362.01,2021-02-20 00:00:00,Aramoho - S124 Global Consent applied for,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Water take,,ATH2009012581,2022-07-01 00:00:00,Kai-iwi No 2 - S124 Global Consent has been applied for,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Water take,,ATH2009012582,2022-07-01 00:00:00,Kai-iwi No 1 - S124 Global Consent has been applied for,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Water take,,ATH2009012583,2022-07-01 00:00:00,Kai-iwi No 3 - S124 Global Consent has been applied for,No,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Water take,,ATH2011013969,2025-07-01 00:00:00,Heloise (Reservoir Bore 3) - Global Consent applied for,Yes,Operating under s124 RMA,,,5 - Highly Reliable
+ACC-00001151,Whanganui District Council,WAN001,Water take,,ATH2018202280,2032-07-01 00:00:00,New Development Bore (Kai-iwi Bore No 4) - Global Consent has been applied for,Yes,Active,,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Discharge to water,,AUT.001916.01.04,2028-05-31 00:00:00,,Yes,Active,Discharge from Ruakaka WTP,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Other (Please identify in the comments section),Water Permit,AUT.001999.01.02,2035-05-31 00:00:00,,No,Active,PUBLIC WATER SUPPLY,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Land use,,AUT.001999.02.01,2035-05-31 00:00:00,,No,Active,WHANGAREI DISTRICT COUNCIL--,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Water take,,AUT.001999.03.01,2035-05-31 00:00:00,,No,Active,Dam for public water supply,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Water take,,AUT.001999.04.01,2035-05-31 00:00:00,,No,Active,Weir for Public water supply,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Land use,,AUT.005973.01.02,2031-05-31 00:00:00,,Yes,Active,"Overhead pipelines, Waipu",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Water take,,AUT.007404.01.02,2028-05-31 00:00:00,,Yes,Active,"Public water take supply, Flyger Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Land use,,AUT.007404.02.02,2028-05-31 00:00:00,,Yes,Active,"Public water take supply, Flyger Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Discharge to water,,AUT.007404.03.01,2028-05-31 00:00:00,,Yes,Active,"Public water take supply, Flyger Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Water take,,AUT.007405.01.03,2038-05-31 00:00:00,,Yes,Active,To take water from the Ahuroa River for public water take supply,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Other (Please identify in the comments section),Water Permit,AUT.007406.01.03,2038-05-31 00:00:00,,Yes,Active,"Public water take supply, Prescott Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Water take,,AUT.007406.02.03,2038-05-31 00:00:00,,Yes,Active,"Public water take supply, Prescott Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Other (Please identify in the comments section),Water Permit,AUT.007406.03.01,2038-05-31 00:00:00,,Yes,Active,"Public water take supply, Prescott Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Water take,,AUT.007406.10.02,2038-05-31 00:00:00,,Yes,Active,"Public water take supply, Prescott Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Land use,,AUT.007406.12.01,2038-05-31 00:00:00,,Yes,Active,"Public water take supply, Prescott Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,BRE001,Discharge to water,,AUT.007406.13.01,2038-05-31 00:00:00,,Yes,Active,"Public water take supply, Prescott Road, Ruakaka",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,MAN,Water take,,AUT.003533.01.03,2033-06-30 00:00:00,,Yes,Active,To take water from the Tauraroa River for w/s Mangapai,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,MAU002,Water take,,AUT.001881.01.03,2026-06-30 00:00:00,,Yes,Active,"Public water take supply, Maungakaramea",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,MAU002,Other (Please identify in the comments section),Bore Consent,AUT.001881.99.01,2035-05-31 00:00:00,,Yes,Active,"Bore for public water supply, Maungakaramea",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,MAU002,Water take,,AUT.008642.01.02,2026-06-30 00:00:00,,Yes,Active,"Public water take supply, Maungakaramea",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA0007,Discharge to water,,AUT.003505.01.02,2028-05-31 00:00:00,,Yes,Active,"Discharge treated water, Gunson's Reservoir, Maunu",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Water take,,AUT.000964.01.04,2045-05-31 00:00:00,,Yes,Active,"Public water take supply, Newton Road, Maunu",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Other (Please identify in the comments section),Water Permit,AUT.001725.01.02,2034-05-31 00:00:00,,Yes,Active,Whau Valley Dam,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Water take,,AUT.001725.02.02,2034-05-31 00:00:00,,Yes,Active,Whau Valley Dam,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Land use,,AUT.001725.03.02,2034-05-31 00:00:00,,Yes,Active,Whau Valley Dam,,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Water take,,AUT.002960.01.03,2044-06-30 00:00:00,,Yes,Active,"Water take for public supply, Poroti Springs",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Discharge to water,,AUT.003506.01.02,2028-05-31 00:00:00,,Yes,Active,"Discharge treated water, Ruddell's Reservoir, Maunu",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Water take,,AUT.004609.01.02,2044-06-30 00:00:00,,No,Active,"Public water take supply, Wairua River, Mangakahia",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Water take,,AUT.007398.01.02,2028-05-31 00:00:00,,Yes,Active,"Public water take supply, Whareora Road, Whangarei",,5 - Highly Reliable
+ACC-00001181,Whangarei District Council,WHA007,Discharge to water,,AUT.038238.01.01,2051-08-01 00:00:00,,Yes,Active,"Water treatment plant discharge, Whau Valley",,5 - Highly Reliable
