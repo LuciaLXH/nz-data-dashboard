@@ -32,6 +32,8 @@ ECan/Southland/Auckland/Waikato 待 W1.5 补（候选：LAWA 内部 Umbraco API�
 
 **region_map 实测验证（2026-08-30）**：`data/ref/region_map.json` 的 aliases 与 LAWA 河流水质 State Quartile 表（11,004 行）逐一比对 —— 6 council 5,954 行**全部精确匹配**（auckland 401 / canterbury 1616 / hawkes_bay 928 / otago 1017 / southland 761 / waikato 1231），其余 11 区域正确未匹配（含 macron 变体 manawatū-whanganui），无错配无遗漏。
 
+**NEPR 组织→区域映射验证（2026-08-30）**：`scripts/transform.py` 的 `ORG_REGION`（33 个组织→6 大区）基于新西兰地方政府地理知识编写（会话中未查阅特定官方文件）。已用 Stats NZ 官方 SDMX 人口数据数值验证：每个大区 TA 级人口求和 = RC 级人口，Auckland/Hawke's Bay/Southland **8 年全对（差值 0）**；Waikato/Canterbury/Otago 差 0.3–0.7%，经排查为 **Stats NZ 跨区域辖区效应**（Taupō 区约 3,850 人统计归入 Bay of Plenty；Waitaki 区约 1,900 人归入 Canterbury），非映射错误。供水设施按"区议会所属区域议会"归区是正确层级。
+
 ## 人口（年度）
 
 | Source | 端点 | 状态 | 备注 |

@@ -68,6 +68,16 @@ def _population_records(raw_pop: dict) -> list[dict]:
 
 # Org (NEPR participant) → project region. Orgs outside the 6 regions map to
 # None and are excluded from the analysis (they are out of scope, not missing).
+#
+# Verification (2026-08-30): each territorial authority belongs to exactly one
+# regional council (Stats NZ geographic areas). This mapping was checked
+# numerically against the official Stats NZ SDMX population data: summing the
+# TA-level 2025 ERPs per region matches the regional-council ERP exactly for
+# Auckland / Hawke's Bay / Southland (all 8 years), and within 0.3–0.7% for
+# Waikato / Canterbury / Otago — the residual is the documented Stats NZ
+# split-TA effect (≈3,850 of Taupō District classified to Bay of Plenty;
+# ≈1,900 of Waitaki District classified to Canterbury), not a mapping error.
+# Council-level assignment is the correct level for water infrastructure.
 ORG_REGION = {
     "Watercare": "auckland", "Auckland Council": "auckland", "Papakura": "auckland",
     "Hamilton City Council": "waikato", "Waikato District Council": "waikato",
