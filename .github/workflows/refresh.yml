@@ -2,12 +2,23 @@ name: refresh
 
 on:
   schedule:
-    # cron times are UTC. Flow: start at 24 h during bring-up, switch to
-    # `0 */6 * * *` once stable. Population & water quality are monthly —
-    # sources are annual, a daily check would be performative.
-    - cron: "0 */24 * * *"     # flow / level
-    - cron: "0 3 1 * *"        # population + water quality (1st of month)
+    # cron times are UTC. Flow telemetry refreshes every 6 h; population and
+    # water quality are monthly — sources are annual, a daily check would be
+    # performative.
+    - cron: "0 */6 * * *"     # flow / level
+    - cron: "0 3 1 * *"       # population + water quality (1st of month)
   workflow_dispatch:
+
+# deploy-pages needs write permissions on pages + a short-lived id token
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# one deploy at a time; cancel a running refresh when a new one starts
+concurrency:
+  group: pages
+  cancel-in-progress: true
 
 jobs:
   refresh:
@@ -17,11 +28,21 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - run: pip install -r requirements.txt    # TODO(W1): pin deps (uv preferred)
-      - run: make data
+      - run: pip install -r requirements.txt
+      - name: Fetch, transform, validate
+        run: make data
         env:
           STATS_NZ_API_KEY: ${{ secrets.STATS_NZ_API_KEY }}
-      - name: Run tests
+      - name: Run tests (schema, units, regions, DST, missing values, percentile)
         run: make test
-      # TODO(W3): build the static site and deploy via actions/deploy-pages.
-      # Data must NOT be committed to git history.
+      - name: Build static site (copies data/processed + data/ref → site/data)
+        run: make site-data
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

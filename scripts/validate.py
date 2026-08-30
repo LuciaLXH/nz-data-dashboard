@@ -95,6 +95,31 @@ def main() -> int:
         print(f"  {'✅' if ok else '⚠️'} {name}")
 
     degraded = [c for c in flow.get("status", {}).values() if not c.get("ok")]
+
+    def _null_rates(rows: list[dict], numeric_fields: list[str]) -> dict[str, float]:
+        """Share of rows with a NULL/non-numeric value, per field (0–100)."""
+        out = {}
+        for f in numeric_fields:
+            vals = [r.get(f) for r in rows]
+            n = len(vals)
+            out[f] = round(100.0 * sum(v is None or v == "" for v in vals) / n, 1) if n else None
+        return out
+
+    datasets = {
+        "flow_sites": n_sites,
+        "flow_points": n_points,
+        "regions": len(regions.get("regions", [])),
+        "population_region_years": sum(len(v) for v in population.get("data", {}).get("regions", {}).values()),
+        "population_growth_rows": growth_rows,
+        "supply_per_capita_rows": supply_rows,
+        "flow_percentile_rows": flow_pct_rows,
+    }
+    nulls = {
+        "supply_per_capita": _null_rates(supply.get("rows", []),
+                                         ["l_per_person_day_w", "loss_pct_w", "ili_w", "carl_l_conn_day_w"]),
+        "flow_percentile": _null_rates(flow_pct.get("rows", []),
+                                       ["pctile_pct", "median_hist_m3s", "min_hist_m3s", "max_hist_m3s"]),
+    }
     run = {
         "utc": datetime.now(timezone.utc).isoformat(),
         "schema_version": 1,
@@ -104,6 +129,8 @@ def main() -> int:
         "flow_points": n_points,
         "flow_degraded_councils": [c.get("council") for c in degraded],
         "population_ok": population.get("status", {}).get("ok", False),
+        "rows": datasets,
+        "null_pct": nulls,
     }
     with open("data/processed/_runs.jsonl", "a", encoding="utf-8") as f:
         f.write(json.dumps(run) + "\n")

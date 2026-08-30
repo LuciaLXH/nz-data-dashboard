@@ -25,6 +25,7 @@ from __future__ import annotations
 import json
 import os
 import sys
+import time
 from datetime import datetime, timezone
 
 import requests
@@ -45,14 +46,25 @@ AREA_TARGETS = {
 MEASURE_TARGETS = {"POP", "MEDAGE", "NETMIG"}
 
 
-def fetch() -> tuple[dict, str]:
-    """Fetch ALL observations; returns (data, raw_text). Raises on failure."""
-    r = requests.get(f"{SDMX_BASE}/ALL",
-                     headers={"Ocp-Apim-Subscription-Key": os.environ["STATS_NZ_API_KEY"],
-                              "Accept": ACCEPT},
-                     timeout=TIMEOUT)
-    r.raise_for_status()
-    return r.json(), r.text
+def fetch(retries: int = 3) -> tuple[dict, str]:
+    """Fetch ALL observations; returns (data, raw_text). Retries with
+    exponential backoff (W3: resilient scheduled runs); raises on final
+    failure so main() records a degraded _status.json."""
+    last_err: Exception | None = None
+    for attempt in range(1, retries + 1):
+        try:
+            r = requests.get(f"{SDMX_BASE}/ALL",
+                             headers={"Ocp-Apim-Subscription-Key": os.environ["STATS_NZ_API_KEY"],
+                                      "Accept": ACCEPT},
+                             timeout=TIMEOUT)
+            r.raise_for_status()
+            return r.json(), r.text
+        except Exception as e:  # noqa: BLE001 — network errors vary
+            last_err = e
+            if attempt < retries:
+                time.sleep(1.5 * (2 ** (attempt - 1)))
+    assert last_err is not None
+    raise last_err
 
 
 def main() -> int:

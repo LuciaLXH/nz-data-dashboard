@@ -4,7 +4,7 @@ ifneq ("$(wildcard .venv/bin/python)","")
 PYTHON := .venv/bin/python
 endif
 
-.PHONY: all data site test serve clean
+.PHONY: all data site site-data test serve clean
 
 all: data site            ## fetch → transform → validate → build site
 
@@ -14,11 +14,13 @@ data:                     ## run the full extract/transform/validate pipeline
 	$(PYTHON) scripts/transform.py
 	$(PYTHON) scripts/validate.py
 
-site: data                ## build the static site into site/ (W2)
+site-data:                ## copy processed + ref data into site/data (no fetch)
 	mkdir -p site/data
 	cp data/processed/*.json data/processed/*.jsonl site/data/
 	cp data/ref/boundaries_regions_simple.geojson site/data/boundaries.geojson
 	cp data/ref/flow_sites.json data/ref/water_consents.json site/data/
+
+site: data site-data      ## build the static site into site/ (W2)
 	@echo "site: built into site/ — run 'make serve' to preview"
 
 test:                     ## pytest: schema, units, region names, DST, nulls
