@@ -66,6 +66,74 @@ def _population_records(raw_pop: dict) -> list[dict]:
     return rows
 
 
+# Org (NEPR participant) → project region. Orgs outside the 6 regions map to
+# None and are excluded from the analysis (they are out of scope, not missing).
+ORG_REGION = {
+    "Watercare": "auckland", "Auckland Council": "auckland", "Papakura": "auckland",
+    "Hamilton City Council": "waikato", "Waikato District Council": "waikato",
+    "Taupo District Council": "waikato", "South Waikato District Council": "waikato",
+    "Waitomo District Council": "waikato", "Otorohanga District Council": "waikato",
+    "Thames Coromandel District Council": "waikato", "Waipa District Council": "waikato",
+    "Matamata Piako District Council": "waikato", "Hauraki District Council": "waikato",
+    "Christchurch City Council": "canterbury", "Selwyn District Council": "canterbury",
+    "Waimakariri District Council": "canterbury", "Ashburton District Council": "canterbury",
+    "Hurunui District Council": "canterbury", "Kaikoura District Council": "canterbury",
+    "Mackenzie District Council": "canterbury", "Timaru District Council": "canterbury",
+    "Waimate District Council": "canterbury",
+    "Dunedin City Council": "otago", "Central Otago District Council": "otago",
+    "Queenstown Lakes District Council": "otago", "Clutha District Council": "otago",
+    "Waitaki District Council": "otago",
+    "Invercargill City Council": "southland", "Southland District Council": "southland",
+    "Gore District Council": "southland",
+    "Napier City Council": "hawkes_bay", "Hastings District Council": "hawkes_bay",
+    "Central Hawke's Bay District Council": "hawkes_bay", "Wairoa District Council": "hawkes_bay",
+}
+
+NEPR_NETWORK_CSV = ("data/raw/taumata_nepr/"
+                    "NEPM Final Data Extract for Release 27072026 DW_Network.csv")
+
+
+def _nepr_network_rows() -> list[dict]:
+    """Dedupe the NEPR unit-level CSV → one row per supply with region mapping.
+
+    Columns of interest (NEPM 2024/25 data dictionary):
+      D-EH3  Total population served
+      D-EH4  Total volume of water supplied to network (m³/yr)
+      D-RE1  Total drinking water loss across network (m³/yr)
+      D-RE2.1 CARL (m³/connection/day)
+      D-RE3  Infrastructure leakage index (ILI)
+      D-RE4  Median residential water consumption (L/connection/day)
+    Metering % is NOT published in the unit-level extract (only a per-supply
+    counting method); metering figures for the 9 main urban suppliers live in
+    data/ref/water_demand.json (curated, sourced) as supplementary context.
+    """
+    import pandas as pd
+
+    df = pd.read_csv(NEPR_NETWORK_CSV, low_memory=False)
+    cols = {
+        "Supply ID": "supply_id",
+        "Org Name": "org",
+        "Supply name": "supply",
+        "D-EH1.1 Number of residential connections": "res_connections",
+        "D-EH3 Total population served": "pop_served",
+        "D-EH4 Total volume of water supplied to network (m3/year)": "water_supplied_m3",
+        "D-RE1 Total drinking water loss across network (m3/year)": "loss_m3",
+        "D-RE2.1 Current annual real loss - CARL (m3/year)": "carl_m3_year",
+        "D-RE3 Infrastructure leakage index - ILI": "ili",
+        "D-RE4 Median residential water consumption (L/connection/day)": "median_res_l_conn_day",
+    }
+    keep = [c for c in cols if c in df.columns]
+    sub = df[keep].copy()
+    sub = sub.rename(columns=cols)
+    for c in ("res_connections", "pop_served", "water_supplied_m3", "loss_m3",
+              "carl_m3_year", "ili", "median_res_l_conn_day"):
+        sub[c] = pd.to_numeric(sub[c], errors="coerce")
+    # one row per supply: max() is safe (rows repeat the same reported values)
+    sub = sub.groupby("supply_id", as_index=False).agg({c: "max" for c in sub.columns if c != "supply_id"})
+    sub["region"] = sub["org"].map(ORG_REGION)
+    return sub[sub["region"].notna()].to_dict("records")
+
+
 def _run_sql_analyses(population_raw: dict) -> list[dict]:
     """Run each sql/ analysis against DuckDB; returns [{name, key, sql_file, rows}]."""
     import pandas as pd
@@ -74,10 +142,10 @@ def _run_sql_analyses(population_raw: dict) -> list[dict]:
     rows = _population_records(population_raw)
     if rows:
         con.register("population", pd.DataFrame(rows))
-    # water demand (NEPR 2024/25 primary, per supplier) — see data/ref/water_demand.json
-    demand = _load("data/ref/water_demand.json", {}).get("primary", {}).get("suppliers", [])
-    if demand:
-        con.register("water_demand", pd.DataFrame(demand))
+    # full NEPR 2024/25 network data (all registered supplies in the 6 regions)
+    nepr = _nepr_network_rows()
+    if nepr:
+        con.register("nepr_network", pd.DataFrame(nepr))
     results = []
     for sql_file, out_name, key in SQL_OUTPUTS:
         sql = open(sql_file, encoding="utf-8").read()
