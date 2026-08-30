@@ -1,6 +1,6 @@
 # 项目检查点 · NZ 数据仪表盘（nz-data-dashboard）
 
-*生成于 2026-08-30（晚更新：**W2 完成，进入 W3**）。本文件供「以项目目录为工作区」的会话恢复上下文（直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」）。*
+*生成于 2026-08-30（夜更新：**W3 完成，站点已上线；明日继续：视觉微调 + W4**）。本文件供「以项目目录为工作区」的会话恢复上下文（直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」）。*
 *求职（career-ops）相关内容在 CV 工作区：`/Users/liuxiaohan/NZ-Jobseeking/2026 JOB/CV/.agents/context_checkpoint.md`（绝对路径，需要时跨区读取，无需写权限）。*
 
 ## 项目定位（已定稿，勿改）
@@ -40,7 +40,7 @@
   - ✅ **W1 全部完成**（2026-08-30）：流量（HBRC+ORC）、人口（6 council×2018–2025）、NPR/NEPR（water_demand.json）、区域映射（官方 REGC 验证）、边界 4.9KB、`make data` 8/8
   - ⏳ W1.5：LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量（SurfacewaterZones?pageId=25991 返回 zone Id=29298 等，但 FlowSites/flowstats?pageId=<zone> 仍返回 []；**ORC 当前平台=A QWebPortal** data.orc.govt.nz）
 - **W2 ✅ 完成**（2026-08-30 晚）：DuckDB + sql/01-03 + 静态站（地图/2 图/consents/发现卡）+ 3 条发现 + STORY-3MIN.md；定位调整（sql/03=旁证层，主线 6/6 NEPR）；本地提交 **45f06e8 → bde5ab8 → 3498ca1**（HEAD=3498ca1，含 3 轮视觉迭代，详见 W2 进度）
-- **W3 ⏳（当前）**：工程+包装 —— 见下方「W3 清单」
+- **W3 ✅ 完成**（2026-08-30 夜）：工程+包装全绿，**站点已上线** `https://lucialxh.github.io/nz-data-dashboard/`（用户确认可打开；首次 CI 构建成功 14/14/11 站）；两次 CI 失败已修复（见下）。**明日待办：视觉微调收尾 + W4**（LinkedIn 曝光 + CV 联动）
 - **W4**：LinkedIn 曝光 + **CV 联动**（见下）
 
 ## 已核实事实（勿虚构）
@@ -102,3 +102,9 @@
 - ✅ **移动端验收程序化通过**（`scripts/smoke_mobile.py`，390×844）：首屏 513ms（<3s）、无横向滚动、6 导航切换全通、0 控制台错误（排除 fig 图 404 预期项）== 验收标准
 - ✅ README 占位符 USER/REPO → LuciaLXH/nz-data-dashboard（badges/live 链接/clone 命令）；workflow YAML 解析验证（6h+月度 cron、deploy perms）
 - 本地提交：… → c507422 → a138e54 → 7066540 → 7f2004b → 629c5ec → d960c28 → c299bfe → 11bc32f → **ab3b4df** → **1efeff0**（**已推送 GitHub main**，线上运行 33305916729 成功）
+
+## 明日待办（次日会话从此处继续）
+- **视觉微调收尾**（用户会带来具体意见）：发现卡效果已上线的当前形态 = 484px 正方形 auto-fit 3/2/1 列、悬停 1.2 倍+邻卡变淡、文字 1.1 倍居中、≤10 词总结句、背景图 fig1-3.png 已就位（fig1/fig2 由 jpeg 转 png，headless 验证显示正常）；标题亮银 #e8eef4；左侧导航透明绿字
+- **W4**：LinkedIn 曝光（帖子 + 1 张图）+ **CV 联动**（更新 career-ops 规则 10：去「无 GitHub 链接」，加 GitHub `github.com/LuciaLXH/nz-data-dashboard` + 本项目条目 + 一句量化结果，如「22.5% of 6-region supply leaks; HB 610 vs Akl 270 L/p/d」；master_cv.md 在 CV 工作区绝对路径见上）
+- **可选小项**：本地 doc 提交（477f75c 检查点等）随下次 push 一起；NEPR CSV 年度更新备忘（data/raw/taumata_nepr/*.csv 入库，PDF 忽略）
+- 会话恢复：直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」
