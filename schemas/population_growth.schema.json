@@ -1,0 +1,28 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/population_growth.schema.json",
+  "title": "Population growth analysis (W2, sql/01)",
+  "description": "Per-region YoY growth % and 5-year CAGR computed by DuckDB window functions from sql/01_region_population_growth.sql.",
+  "type": "object",
+  "required": ["schema_version", "sql", "processed_utc", "rows"],
+  "properties": {
+    "schema_version": {"const": 1},
+    "sql": {"type": "string"},
+    "processed_utc": {"type": "string", "format": "date-time"},
+    "rows": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["region", "year", "pop", "yoy_growth_pct"],
+        "properties": {
+          "region": {"type": "string", "enum": ["auckland", "waikato", "hawkes_bay", "canterbury", "otago", "southland"]},
+          "year": {"type": "integer", "minimum": 2018, "maximum": 2030},
+          "pop": {"type": "number", "minimum": 0},
+          "yoy_growth_pct": {"type": "number"},
+          "cagr5_pct": {"type": ["number", "null"]},
+          "pop_gain_5yr": {"type": ["integer", "null"]}
+        }
+      }
+    }
+  }
+}

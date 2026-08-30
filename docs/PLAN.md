@@ -29,8 +29,8 @@ at 15–20 h/week; ~10–12 days full-time.
 - 验收: `make data` runs from scratch ✅（2026-08-30，含人口/NPR 全量）
 
 ## W2 · Analysis + static site
-- [ ] DuckDB wired in; Python does IO/orchestration only
-- [ ] sql/01_region_population_growth.sql — window fns YoY + 5yr CAGR
+- [x] DuckDB wired in; Python does IO/orchestration only ✅（transform.py 经 DuckDB 跑 sql/；Makefile 用 .venv python）
+- [x] sql/01_region_population_growth.sql — window fns YoY + 5yr CAGR ✅（→ data/processed/population_growth.json，10/10 校验）
 - [ ] sql/02_supply_per_capita.sql — pop × NPR join
 - [ ] sql/03_flow_percentile.sql — same-week historical percentile
 - [ ] Map: Leaflet + simplified boundary choropleth
