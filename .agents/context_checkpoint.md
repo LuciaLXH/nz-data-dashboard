@@ -85,13 +85,15 @@
 - ⏳ **视觉待办（用户明确"后面再慢慢调整"，不阻塞 W3）**：用户补图 `site/img/fig1-3.png`（发现卡背景图，命名对即可显示）；其余微调意见随时回来改
 - ⏳ **W1.5 线索（已实测，供后续）**：ORC 当前平台 = AQWebPortal（data.orc.govt.nz，本沙箱 DNS 不通）；LAWA Umbraco API：region pageId（Otago=26001）→ `mapservice/SurfacewaterZones?pageId=`（Amisfield=31611/Arrow=31610/Bannock=31605/Benger=31593/Cardrona=31564/Taieri=31355）→ `FlowSites?pageId=<zone>` 稀疏 → `waterquantityservice/flowstats`/`sensorservice/getLatestSample` zone 级 null；riverapp 站页有 meta 坐标+实时 ORC 流量
 
-## W3 进度（2026-08-30 晚；HEAD=c507422）
+## W3 进度（2026-08-30 晚；HEAD=7066540）
 - ✅ tests/：**6 套件 24 用例**（schema/units/region names/DST/missing-value/percentile；SQL 逻辑测试用内联表跑真实 sql/；离线）
 - ✅ validate.py：_runs.jsonl 增 rows/null_pct；站点 Data Health 面板（last run NZ 时间/行数/空值率/schema ver/**近 20 次色条** + >31 天显示 pipeline paused）
 - ✅ 时间：存储 UTC、站点 Pacific/Auckland 显示（Intl）；tests/test_dst.py 钉死 NZ DST 边界（2026-04-04 14:00 UTC 转 NZST、2026-09-26 14:00 UTC 转 NZDT）
 - ✅ fetch_population 补 retry+指数退避；Hilltop 原有；失败写 _status、transform 读最后快照（cache last success）
 - ✅ refresh.yml：flow cron `0 */6 * * *` + 月度；configure/upload/deploy-pages（permissions+concurrency）；Makefile 拆 `site-data`（仅复制，CI 用）与 `site`
-- ✅ README 更新（Status/测试/部署）；Attribution 核对；keepalive 已有
+- ✅ **15s demo GIF 已自动生成** `docs/demo.gif`（2.5MB，560px/8fps/64 色，13s 脚本化导览）：`scripts/make_demo_gif.py` = playwright headless chromium 录屏（缓存浏览器）+ ffmpeg 抽帧 + Pillow 组装（Playwright 精简 ffmpeg 无 GIF/palette 过滤器）；`make gif` 可重录
+- ✅ **部署产物瘦身**：site-data 只复制站点实际消费的文件（原误带 1.3MB flow.json + population.json）→ site/data **44KB**（移动端 <3s 目标）
+- ✅ **端到端验证**：完整 `make data`（真实 key）通过 —— Stats NZ 6×48 区域年、HBRC 3 站 5332 点、ORC 8 站 20201 点、transform 11 站百分位、validate 14/14 == CI 行为
 - ✅ **key 验证：完整 API key 值（32 位）从未进 git 历史**（git log -p 精确比对；旧历史仅 4 字符 redact 前缀）
-- ⏳ **用户步骤**：① 15s GIF（录屏 → docs/demo.gif）② 转公开 + 开 Pages（需 GH token：`gh repo edit LuciaLXH/nz-data-dashboard --visibility public` + Settings→Pages 开 deploy-pages 源）③ 移动端验收（<3s 无横滚全链接）
-- 本地提交：45f06e8 → bde5ab8 → 3498ca1 → 8bfc43b → **c507422**（W3 工程）；仍未推送
+- ⏳ **剩余（用户步骤）**：① 转公开 + 开 Pages（需 GH token：`gh repo edit LuciaLXH/nz-data-dashboard --visibility public` + Settings→Pages→Source: GitHub Actions）② 移动端验收（<3s 无横滚全链接）③ push（需 token）
+- 本地提交：45f06e8 → bde5ab8 → 3498ca1 → 8bfc43b → c507422 → a138e54 → **7066540**（GIF+瘦身+E2E）；仍未推送
