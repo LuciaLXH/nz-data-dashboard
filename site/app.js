@@ -21,6 +21,7 @@ const DATA = {
 const _nf0 = new Intl.NumberFormat("en-NZ", { maximumFractionDigits: 0 });
 const fmt = (n) => _nf0.format(n);
 const fmt1 = new Intl.NumberFormat("en-NZ", { maximumFractionDigits: 1 });
+const fmt3 = new Intl.NumberFormat("en-NZ", { maximumFractionDigits: 3 });
 
 const BAND = {
   low: { color: "#D55E00", label: "Low flow (dry)" },
@@ -122,32 +123,25 @@ function buildFindings(supply, flowPct) {
   return [
     {
       img: FIG[0], imgAlt: "Per-capita water use, Hawke's Bay vs Auckland — chart",
-      num: `${fmt1.format(hb.l_per_person_day_w)} vs ${fmt1.format(akl.l_per_person_day_w)} L/p/d`,
-      title: "Per-capita use differs 2.3× across the 6 regions — growth is not the only lever",
-      soWhat: `Hawke's Bay supplies ${fmt1.format(hb.l_per_person_day_w)} litres/person/day; Auckland ${fmt1.format(akl.l_per_person_day_w)}. ` +
-        `Matching Auckland's efficiency in Hawke's Bay alone would free ≈ ${fmt(hbFree)} m³/day — ` +
-        `≈ ${Math.round((hbFree / (totProj - totNow)) * 100)}% of the whole 6-region demand growth projected to 2030 (${fmt(totProj - totNow)} m³/day).`,
+      headline: "Efficiency is the cheapest new water.",
+      num: `${fmt3.format(hb.l_per_person_day_w)} vs ${fmt3.format(akl.l_per_person_day_w)} L/p/d`,
+      soWhat: `Matching Auckland's efficiency frees ${fmt(hbFree)} m³/day — ${Math.round((hbFree / (totProj - totNow)) * 100)}% of all 6-region demand growth to 2030.`,
       foot: "Source: NEPR 2024/25 unit-level extract (sql/02) · Stats NZ ERP 2025",
       target: "charts",
     },
     {
       img: FIG[1], imgAlt: "Leaks as a share of daily supply — chart",
-      num: `${fmt(totLeak)} m³/day (${fmt1.format(100 * totLeak / totNow)}%)`,
-      title: "Leaks lose a fifth of everything the networks put in",
-      soWhat: `Canterbury alone loses ${fmt(cant.leak_m3_day)} m³/day — ${fmt1.format(cantRatio)}× its own projected 2030 demand growth. ` +
-        `Across the 6 regions the leaked volume would serve ≈ ${fmt(leakPeople)} people at Auckland's usage. ` +
-        `Leakage is a supply-side lever that does not wait for population.`,
+      headline: "Fix the pipes before building new plants.",
+      num: `${fmt(totLeak)} m³/day (${fmt3.format(100 * totLeak / totNow)}%)`,
+      soWhat: `Canterbury leaks ${fmt(cant.leak_m3_day)} m³/day — ${fmt3.format(cantRatio)}× its own projected growth. The leaked volume could serve ${fmt(leakPeople)} people.`,
       foot: "Source: NEPR 2024/25 unit-level extract (sql/02)",
       target: "charts",
     },
     {
       img: FIG[2], imgAlt: "River flow percentiles at monitored sites — map",
+      headline: "We can't see the water.",
       num: "2 of 6 councils",
-      title: "Only 2 of 6 councils publish open river-flow time series",
-      soWhat: `HBRC publishes live telemetry; ORC's public server froze at 2021-04-23 (current values live on ORC's AQWebPortal / LAWA). ` +
-        `Where we can look, late-Aug 2026 flows are at the ${pctMin == null ? "—" : fmt1.format(pctMin)}th–${pctMax == null ? "—" : fmt1.format(pctMax)}th percentile — ` +
-        `Ngaruroro at Fernhill is in the driest ~10% of its 5-year record. Source-water availability is only locally observable; ` +
-        `demand-side planning must lean on 6/6 datasets like NEPR.`,
+      soWhat: `HBRC is live; ORC's public record froze in 2021. Live HB flows sit at the ${pctMin == null ? "—" : fmt3.format(pctMin)}th–${pctMax == null ? "—" : fmt3.format(pctMax)}th percentile — Fernhill is in its driest 10%.`,
       foot: "Source: council Hilltop servers (sql/03) · see flow caveats",
       target: "map-section",
     },
@@ -159,9 +153,9 @@ function renderFindings(cards) {
     <div class="card" data-target="${c.target}" tabindex="0" role="button" aria-label="Jump to evidence for finding ${i + 1}">
       <img class="card-img" src="img/${c.img}" alt="${c.imgAlt}" onerror="this.style.display='none'">
       <div class="card-body">
+        <div class="headline">${c.headline}</div>
         <div class="num">${c.num}</div>
-        <h3>${i + 1}. ${c.title}</h3>
-        <p class="so-what"><b>So what:</b> ${c.soWhat}</p>
+        <p class="so-what">${c.soWhat}</p>
         <div class="foot">${c.foot}</div>
       </div>
     </div>`).join("");

@@ -10,167 +10,157 @@
 </head>
 <body>
 
-<div class="layout">
+<!-- ============ Full-width title bar ============ -->
+<header>
+  <h1>NZ Water × Population</h1>
+  <p class="thesis">Where will population growth put NZ council water supplies under pressure first?</p>
+  <p class="sub">Scope: 6 councils · Decision supported: which supply zones face a demand–supply gap in the next 5 years</p>
+</header>
 
-  <!-- ============ Left sidebar nav ============ -->
-  <aside id="sidebar">
-    <div class="brand">NZ Water × Population</div>
-    <nav id="sidenav">
-      <a href="#findings" data-section="findings" class="active">Findings</a>
-      <a href="#map-section" data-section="map-section">Map</a>
-      <a href="#consents-section" data-section="consents-section">Water use</a>
-      <a href="#charts" data-section="charts">Charts</a>
-      <a href="#flow-section" data-section="flow-section">Flow sites</a>
-      <a href="#method" data-section="method">Method</a>
-    </nav>
-    <div class="side-foot">Data: Stats NZ · NEPR · LAWA · council Hilltop<br>All CC-licensed — see Method</div>
-  </aside>
+<!-- ============ Nav (below title bar, left) + content ============ -->
+<div class="body-row">
+  <nav id="sidenav" aria-label="Sections">
+    <a href="#findings" data-section="findings" class="active">Findings</a>
+    <a href="#map-section" data-section="map-section">Map</a>
+    <a href="#consents-section" data-section="consents-section">Water use</a>
+    <a href="#charts" data-section="charts">Charts</a>
+    <a href="#flow-section" data-section="flow-section">Flow sites</a>
+    <a href="#method" data-section="method">Method</a>
+  </nav>
 
-  <!-- ============ Main content ============ -->
-  <div class="content">
+  <main>
 
-    <header>
-      <h1>NZ Water × Population</h1>
-      <p class="thesis">Where will population growth put NZ council water supplies under pressure first?</p>
-      <p class="sub">Audience: regional-council asset planners &amp; three-waters analysts · Scope: 6 councils ·
-        Decision supported: which supply zones face a demand–supply gap in the next 5 years</p>
-    </header>
+    <!-- ============ Key findings (landing) ============ -->
+    <section id="findings">
+      <h2>Key findings <span class="asof" id="asof-findings"></span></h2>
+      <p class="caption">Three numbers that matter for the next 5 years of water planning.
+        Hover a finding to focus it; click to jump to its evidence.</p>
+      <div class="cards" id="finding-cards"><!-- filled by app.js --></div>
+    </section>
 
-    <main>
-
-      <!-- ============ Key findings (landing) ============ -->
-      <section id="findings">
-        <h2>Key findings <span class="asof" id="asof-findings"></span></h2>
-        <p class="caption">Three numbers that matter for the next 5 years of water planning.
-          Click a finding to jump to its evidence.</p>
-        <div class="cards" id="finding-cards"><!-- filled by app.js --></div>
-      </section>
-
-      <!-- ============ Map ============ -->
-      <section id="map-section" hidden>
-        <h2>Where is the pressure? <span class="asof" id="asof-map"></span></h2>
-        <p class="caption">How to read it: <b>regions</b> are shaded by the metric you pick (default: projected 2030
-          demand growth) — <span class="swatch" style="background:#d7301f"></span>darker red = higher pressure.
-          <b>Circles</b> are monitored river-flow sites vs their own same-week historical percentile —
-          <span class="dot" style="background:#D55E00"></span>red = low flow (dry / stressed),
-          <span class="dot" style="background:#E69F00"></span>amber = near normal,
-          <span class="dot" style="background:#009E73"></span>green = high flow. <b>In both layers, red means
-          “watch this”.</b></p>
-        <div class="map-grid">
-          <div id="map" aria-label="Map of New Zealand with region pressure shading and river flow sites"></div>
-          <div class="map-side">
-            <div class="map-controls" id="metric-buttons" role="group" aria-label="Region shading metric">
-              <button data-metric="growth" class="active">2030 demand growth</button>
-              <button data-metric="percap">Per-capita use</button>
-              <button data-metric="leak">Leakage %</button>
-            </div>
-            <div class="map-controls" id="panel-toggle" role="group" aria-label="Side panel content">
-              <button data-panel="regions" class="active">Regions</button>
-              <button data-panel="sites">Flow sites</button>
-            </div>
-            <div class="list-pane" id="region-list"><!-- filled by app.js --></div>
-            <div class="list-pane" id="flow-site-list" hidden><!-- filled by app.js --></div>
+    <!-- ============ Map ============ -->
+    <section id="map-section" hidden>
+      <h2>Where is the pressure? <span class="asof" id="asof-map"></span></h2>
+      <p class="caption">How to read it: <b>regions</b> are shaded by the metric you pick (default: projected 2030
+        demand growth) — <span class="swatch" style="background:#d7301f"></span>darker red = higher pressure.
+        <b>Circles</b> are monitored river-flow sites vs their own same-week historical percentile —
+        <span class="dot" style="background:#D55E00"></span>red = low flow (dry / stressed),
+        <span class="dot" style="background:#E69F00"></span>amber = near normal,
+        <span class="dot" style="background:#009E73"></span>green = high flow. <b>In both layers, red means
+        “watch this”.</b></p>
+      <div class="map-grid">
+        <div id="map" aria-label="Map of New Zealand with region pressure shading and river flow sites"></div>
+        <div class="map-side">
+          <div class="map-controls" id="metric-buttons" role="group" aria-label="Region shading metric">
+            <button data-metric="growth" class="active">2030 demand growth</button>
+            <button data-metric="percap">Per-capita use</button>
+            <button data-metric="leak">Leakage %</button>
           </div>
+          <div class="map-controls" id="panel-toggle" role="group" aria-label="Side panel content">
+            <button data-panel="regions" class="active">Regions</button>
+            <button data-panel="sites">Flow sites</button>
+          </div>
+          <div class="list-pane" id="region-list"><!-- filled by app.js --></div>
+          <div class="list-pane" id="flow-site-list" hidden><!-- filled by app.js --></div>
         </div>
-        <div id="map-legend" class="legend"></div>
-      </section>
+      </div>
+      <div id="map-legend" class="legend"></div>
+    </section>
 
-      <!-- ============ Water consents ============ -->
-      <section id="consents-section" hidden>
-        <h2>Water consents: how is water used? <span class="asof" id="asof-consents"></span></h2>
-        <p class="caption">Share of <b>consented</b> water volume by use, per region (LAWA, CC BY 4.0). A consent
-          authorises a take — it is not actual use. It shows where each region’s water is <em>allocated</em>:
-          Canterbury allocates 82% of consented volume to irrigation, Auckland 63% to drinking water.
-          Otago publishes no consent-use data on LAWA. Click “View on LAWA” for the source page.</p>
-        <div id="chart-consents" class="chart chart-tall"></div>
-      </section>
+    <!-- ============ Water consents ============ -->
+    <section id="consents-section" hidden>
+      <h2>Water consents: how is water used? <span class="asof" id="asof-consents"></span></h2>
+      <p class="caption">Share of <b>consented</b> water volume by use, per region (LAWA, CC BY 4.0). A consent
+        authorises a take — it is not actual use. It shows where each region’s water is <em>allocated</em>:
+        Canterbury allocates 82% of consented volume to irrigation, Auckland 63% to drinking water.
+        Otago publishes no consent-use data on LAWA. Click “View on LAWA” for the source page.</p>
+      <div id="chart-consents" class="chart chart-tall"></div>
+    </section>
 
-      <!-- ============ Charts ============ -->
-      <section id="charts" hidden>
-        <h2>Demand &amp; efficiency <span class="asof" id="asof-charts"></span></h2>
-        <div class="chart-grid">
-          <div class="chart-box">
-            <h3>Population growth vs litres per person per day</h3>
-            <p class="caption">Bubble size = total daily demand; colour = % of supply lost to leaks (NEPR 2024/25).
-              Auckland grows fastest in absolute terms but uses the least per person.</p>
-            <div id="chart-bubble" class="chart"></div>
-          </div>
-          <div class="chart-box">
-            <h3>Daily demand now vs 2030 (and leaks)</h3>
-            <p class="caption">Bars = implied daily network demand, 2025 vs 2030 at current per-capita use;
-              red line = cubic metres per day lost to leaks. Sorted by projected growth.</p>
-            <div id="chart-demand" class="chart"></div>
-          </div>
+    <!-- ============ Charts ============ -->
+    <section id="charts" hidden>
+      <h2>Demand &amp; efficiency <span class="asof" id="asof-charts"></span></h2>
+      <div class="chart-grid">
+        <div class="chart-box">
+          <h3>Population growth vs litres per person per day</h3>
+          <p class="caption">Bubble size = total daily demand; colour = % of supply lost to leaks (NEPR 2024/25).
+            Auckland grows fastest in absolute terms but uses the least per person.</p>
+          <div id="chart-bubble" class="chart"></div>
         </div>
-      </section>
+        <div class="chart-box">
+          <h3>Daily demand now vs 2030 (and leaks)</h3>
+          <p class="caption">Bars = implied daily network demand, 2025 vs 2030 at current per-capita use;
+            red line = cubic metres per day lost to leaks. Sorted by projected growth.</p>
+          <div id="chart-demand" class="chart"></div>
+        </div>
+      </div>
+    </section>
 
-      <!-- ============ Flow site table ============ -->
-      <section id="flow-section" hidden>
-        <h2>Monitored flow sites (sql/03) <span class="asof" id="asof-flow"></span></h2>
-        <p class="caption">Latest observed river flow vs the same-week historical percentile (15-day window across years).
-          HBRC = live telemetry. ORC = last observation of the <em>public</em> server, which froze at 2021-04-23
-          (current ORC values are published on ORC&rsquo;s AQWebPortal / LAWA — outside this pipeline&rsquo;s scope so far).
-          <span class="stale">Orange text = historical record, not current conditions.</span></p>
-        <div class="table-wrap"><table id="flow-table"></table></div>
-      </section>
+    <!-- ============ Flow site table ============ -->
+    <section id="flow-section" hidden>
+      <h2>Monitored flow sites (sql/03) <span class="asof" id="asof-flow"></span></h2>
+      <p class="caption">Latest observed river flow vs the same-week historical percentile (15-day window across years).
+        HBRC = live telemetry. ORC = last observation of the <em>public</em> server, which froze at 2021-04-23
+        (current ORC values are published on ORC&rsquo;s AQWebPortal / LAWA — outside this pipeline&rsquo;s scope so far).
+        <span class="stale">Orange text = historical record, not current conditions.</span></p>
+      <div class="table-wrap"><table id="flow-table"></table></div>
+    </section>
 
-      <!-- ============ Method ============ -->
-      <section id="method" hidden>
-        <h2>How this was built &amp; why I don&rsquo;t claim causation</h2>
+    <!-- ============ Method ============ -->
+    <section id="method" hidden>
+      <h2>How this was built &amp; why I don&rsquo;t claim causation</h2>
 
-        <details>
-          <summary>Pipeline &amp; SQL (click to expand)</summary>
-          <p>Stats NZ population (2018–2025) × Taumata Arowai NEPR 2024/25 unit-level network data (all registered
-            supplies in the 6 regions) → per-region implied daily demand, leakage and 2030 projection. All business logic
-            lives in <code>sql/</code>, executed by DuckDB; the static site reads only <code>data/processed/*.json</code>.</p>
-          <ul>
-            <li><code>sql/01</code> — population YoY + 5-yr CAGR (Stats NZ SDMX API, CC BY 4.0)</li>
-            <li><code>sql/02</code> — per-capita supply, leakage, CARL, ILI, implied demand + 2030 projection (NEPR 2024/25, CC BY 3.0 NZ)</li>
-            <li><code>sql/03</code> — river-flow same-week percentile per monitored site (council Hilltop servers)</li>
-          </ul>
-        </details>
+      <details>
+        <summary>Pipeline &amp; SQL (click to expand)</summary>
+        <p>Stats NZ population (2018–2025) × Taumata Arowai NEPR 2024/25 unit-level network data (all registered
+          supplies in the 6 regions) → per-region implied daily demand, leakage and 2030 projection. All business logic
+          lives in <code>sql/</code>, executed by DuckDB; the static site reads only <code>data/processed/*.json</code>.</p>
+        <ul>
+          <li><code>sql/01</code> — population YoY + 5-yr CAGR (Stats NZ SDMX API, CC BY 4.0)</li>
+          <li><code>sql/02</code> — per-capita supply, leakage, CARL, ILI, implied demand + 2030 projection (NEPR 2024/25, CC BY 3.0 NZ)</li>
+          <li><code>sql/03</code> — river-flow same-week percentile per monitored site (council Hilltop servers)</li>
+        </ul>
+      </details>
 
-        <details>
-          <summary>Why I don&rsquo;t claim causation</summary>
-          <ul>
-            <li><strong>Ecological fallacy</strong> — council-level numbers say nothing about catchment-level mechanism.</li>
-            <li><strong>n = 6</strong> — no correlation across this few units is robust; one large council can flip a sign.</li>
-            <li><strong>Confounding</strong> — land use (dairy intensity, irrigation) drives NZ river water quality far more
-              than urban population. Section B in ANALYSIS.md sets out the test; analysis pending.</li>
-            <li><strong>Self-reported</strong> — NEPR/NPR figures are council-reported; metering coverage varies.</li>
-            <li><strong>Consents ≠ use</strong> — the consent chart shows authorised volume, not actual takes.</li>
-          </ul>
-        </details>
+      <details>
+        <summary>Why I don&rsquo;t claim causation</summary>
+        <ul>
+          <li><strong>Ecological fallacy</strong> — council-level numbers say nothing about catchment-level mechanism.</li>
+          <li><strong>n = 6</strong> — no correlation across this few units is robust; one large council can flip a sign.</li>
+          <li><strong>Confounding</strong> — land use (dairy intensity, irrigation) drives NZ river water quality far more
+            than urban population. Section B in ANALYSIS.md sets out the test; analysis pending.</li>
+          <li><strong>Self-reported</strong> — NEPR/NPR figures are council-reported; metering coverage varies.</li>
+          <li><strong>Consents ≠ use</strong> — the consent chart shows authorised volume, not actual takes.</li>
+        </ul>
+      </details>
 
-        <details>
-          <summary>Flow data caveats (read before citing the circles)</summary>
-          <ul>
-            <li><strong>Curated sample, not the full network</strong> — 11 sites from 2 of the 6 councils
-              (HBRC live telemetry; ORC historical). Only these councils publish open flow time series;
-              Canterbury/Southland/Auckland public endpoints expose metadata only, Waikato&rsquo;s is down.</li>
-            <li><strong>ORC is historical</strong> — the public server froze at 2021-04-23; circles show the last
-              observation vs same-week history at the end of the public record, <em>not</em> current conditions.</li>
-            <li>Coordinates: 5 sites verified from LAWA datasets; 3 approximate (riverapp.net / OpenStreetMap);
-              3 have no public coordinates and appear in the table only.</li>
-          </ul>
-        </details>
-      </section>
+      <details>
+        <summary>Flow data caveats (read before citing the circles)</summary>
+        <ul>
+          <li><strong>Curated sample, not the full network</strong> — 11 sites from 2 of the 6 councils
+            (HBRC live telemetry; ORC historical). Only these councils publish open flow time series;
+            Canterbury/Southland/Auckland public endpoints expose metadata only, Waikato&rsquo;s is down.</li>
+          <li><strong>ORC is historical</strong> — the public server froze at 2021-04-23; circles show the last
+            observation vs same-week history at the end of the public record, <em>not</em> current conditions.</li>
+          <li>Coordinates: 5 sites verified from LAWA datasets; 3 approximate (riverapp.net / OpenStreetMap);
+            3 have no public coordinates and appear in the table only.</li>
+        </ul>
+      </details>
+    </section>
 
-    </main>
+  </main>
+</div>
 
-    <footer>
-      <div id="health-strip" class="health-strip"><!-- filled by app.js --></div>
-      <p>Built by Xiaohan (Lucia) Liu · Master of Applied Data Science, University of Canterbury ·
-        <a href="https://linkedin.com/in/xiaohan-liu-755017382">LinkedIn</a></p>
-      <p class="attribution">Data: Stats NZ (CC BY 4.0) · Taumata Arowai NEPR (CC BY 3.0 NZ) · LAWA &amp; NZ regional
-        councils (CC BY 4.0) · Hawke&rsquo;s Bay RC &amp; Otago RC public Hilltop servers (per-council terms) ·
-        boundaries derived from Stats NZ via LAWA. Map tiles &copy; OpenStreetMap contributors.</p>
-      <p class="attribution">Full run log: <code>data/processed/_runs.jsonl</code> · source URLs, dates, hashes:
-        <code>MANIFEST.md</code> (LAWA), <code>docs/W1-data-sources.md</code>.</p>
-    </footer>
-
-  </div><!-- /.content -->
-</div><!-- /.layout -->
+<footer>
+  <div id="health-strip" class="health-strip"><!-- filled by app.js --></div>
+  <p>Built by Xiaohan (Lucia) Liu · Master of Applied Data Science, University of Canterbury ·
+    <a href="https://linkedin.com/in/xiaohan-liu-755017382">LinkedIn</a></p>
+  <p class="attribution">Data: Stats NZ (CC BY 4.0) · Taumata Arowai NEPR (CC BY 3.0 NZ) · LAWA &amp; NZ regional
+    councils (CC BY 4.0) · Hawke&rsquo;s Bay RC &amp; Otago RC public Hilltop servers (per-council terms) ·
+    boundaries derived from Stats NZ via LAWA. Map tiles &copy; OpenStreetMap contributors.</p>
+  <p class="attribution">Full run log: <code>data/processed/_runs.jsonl</code> · source URLs, dates, hashes:
+    <code>MANIFEST.md</code> (LAWA), <code>docs/W1-data-sources.md</code>.</p>
+</footer>
 
 <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
