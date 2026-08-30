@@ -125,7 +125,9 @@ make test                   # pytest: schema, units, region names, DST, nulls
 python -m http.server -d site 8000
 ```
 
-`data/raw/sample/` holds a trimmed fixture set so `make test` runs offline.
+`make test` runs offline: the SQL-logic tests (percentile, missing-value
+propagation) use small inline tables, and the schema/unit/region tests read
+`data/processed/` (skipped when not built yet).
 
 ## Repo layout
 
@@ -142,10 +144,15 @@ data/
 
 ## Status
 
-Pipeline runs on GitHub Actions: flow every 6 h (ramping from 24 h during
-bring-up), water quality and population monthly. If the badge above is red or
-the site header says *pipeline paused*, the data shown is the last good
-snapshot — the site degrades to stale rather than blank, by design.
+Pipeline runs on GitHub Actions: flow every 6 h, water quality and population
+monthly. The workflow fetches → transforms → validates (**`make test`: 6 suites
+— schema, units, region names, DST boundaries, missing-value propagation,
+percentile**) → builds `site/` → deploys to GitHub Pages via
+`actions/deploy-pages` (data is never committed to git; the deployed site is a
+build artifact). If the badge above is red or the site footer says
+*pipeline paused*, the data shown is the last good snapshot — the site
+degrades to stale rather than blank, by design. Times are stored in UTC and
+displayed in Pacific/Auckland on the site.
 
 ---
 

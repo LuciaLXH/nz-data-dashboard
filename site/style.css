@@ -187,3 +187,10 @@ footer .attribution { max-width: 62rem; margin: .4rem auto 0; }
   padding: .55rem .9rem; margin-bottom: 1rem; font-size: .8rem;
 }
 .health-strip b { color: var(--accent-dark); }
+.health-strip .paused { color: #b3541e; }
+.health-strip .run-bars { display: inline-flex; align-items: flex-end; gap: 2px; }
+.health-strip .bar { width: 6px; height: 14px; border-radius: 2px; display: inline-block; }
+.health-strip .bar.ok { background: #2e9e6b; }
+.health-strip .bar.degraded { background: #E69F00; }
+.health-strip .bar.fail { background: #D55E00; }
+.health-strip .bars-label { font-size: .72rem; color: var(--muted); margin-left: .3rem; }

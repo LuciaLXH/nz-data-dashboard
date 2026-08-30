@@ -22,6 +22,11 @@ const _nf0 = new Intl.NumberFormat("en-NZ", { maximumFractionDigits: 0 });
 const fmt = (n) => _nf0.format(n);
 const fmt1 = new Intl.NumberFormat("en-NZ", { maximumFractionDigits: 1 });
 const fmt3 = new Intl.NumberFormat("en-NZ", { maximumFractionDigits: 3 });
+// pipeline stores UTC; the site displays Pacific/Auckland (browser is DST-aware)
+const nzDateFmt = new Intl.DateTimeFormat("en-NZ", { timeZone: "Pacific/Auckland", year: "numeric", month: "short", day: "numeric" });
+const nzDtFmt = new Intl.DateTimeFormat("en-NZ", { timeZone: "Pacific/Auckland", year: "numeric", month: "short", day: "numeric", hour: "2-digit", minute: "2-digit" });
+const nzDate = (iso) => (iso ? nzDateFmt.format(new Date(iso)) : "—");
+const nzDateTime = (iso) => (iso ? nzDtFmt.format(new Date(iso)) : "—");
 
 const BAND = {
   low: { color: "#D55E00", label: "Low flow (dry)" },
@@ -474,27 +479,38 @@ function renderFlowTable(flowPct, flowSites) {
 }
 
 function renderHealth(d) {
-  const { supply, growth, flowPct, consents, runs } = d;
+  const { runs } = d;
   const last = runs[runs.length - 1] || {};
-  const rows = [
-    ["Population growth (sql/01)", growth.processed_utc, `${growth.rows.length} rows`],
-    ["Supply per capita (sql/02)", supply.processed_utc, `${supply.rows.length} regions`],
-    ["Flow percentile (sql/03)", flowPct.processed_utc, `${flowPct.rows.length} sites`],
-    ["Water consents (LAWA)", consents.compiled_utc, `${consents.regions.length} regions`],
-  ];
-  const stamp = (t) => (t || "—").replace("T", " ").slice(0, 16) + " UTC";
-  el("health-strip").innerHTML = rows.map(([name, ts, n]) =>
-    `<span><b>${name}</b> ${stamp(ts)} · ${n}</span>`).join("") +
-    `<span><b>Last validation</b> ${stamp(last.utc)} · ${last.checks_passed}/${last.checks_total} checks</span>`;
+  const rows = last.rows || {};
+  const nulls = last.null_pct || {};
+  const lastUtc = last.utc ? new Date(last.utc) : null;
+  const paused = !lastUtc || (Date.now() - lastUtc.getTime()) > 31 * 86400e3;
+
+  const parts = [];
+  if (paused) parts.push(`<span class="paused"><b>⚠ pipeline paused</b> — showing last good snapshot</span>`);
+  if (last.utc) parts.push(
+    `<span><b>Last run</b> ${nzDateTime(last.utc)} NZ · ${last.checks_passed}/${last.checks_total} checks · schema v${last.schema_version || 1}</span>`);
+  if (rows.supply_per_capita_rows != null) parts.push(
+    `<span><b>Rows</b> supply ${rows.supply_per_capita_rows} · growth ${rows.population_growth_rows} · flow sites ${rows.flow_percentile_rows} · pop ${rows.population_region_years}</span>`);
+  const sn = nulls.supply_per_capita, fn = nulls.flow_percentile;
+  if (sn && sn.l_per_person_day_w != null && fn && fn.pctile_pct != null) parts.push(
+    `<span><b>Null rates</b> supply ${sn.l_per_person_day_w}% · flow ${fn.pctile_pct}%</span>`);
+  const last20 = runs.slice(-20);
+  parts.push(`<span class="run-bars" title="Last ${last20.length} validation runs">` +
+    last20.map((r) => {
+      const cls = r.checks_passed === r.checks_total ? "ok"
+        : r.checks_passed > 0 ? "degraded" : "fail";
+      return `<span class="bar ${cls}" title="${(r.utc || "").slice(0, 16)} · ${r.checks_passed}/${r.checks_total}"></span>`;
+    }).join("") + `<span class="bars-label">last ${last20.length} runs</span></span>`);
+  el("health-strip").innerHTML = parts.join("");
 }
 
 function setAsOf(d) {
-  const d8 = (iso) => shortDate(iso);
-  el("asof-findings").textContent = `As of ${d8(d.supply.processed_utc)} (NEPR 2024/25)`;
-  el("asof-map").textContent = `Demand: ${d8(d.supply.processed_utc)} · Flow: ${d8(d.flowPct.processed_utc)}`;
-  el("asof-consents").textContent = `Accessed ${d8(d.consents.compiled_utc)}`;
-  el("asof-charts").textContent = `As of ${d8(d.supply.processed_utc)}`;
-  el("asof-flow").textContent = `As of ${d8(d.flowPct.processed_utc)}`;
+  el("asof-findings").textContent = `As of ${nzDate(d.supply.processed_utc)} (NEPR 2024/25)`;
+  el("asof-map").textContent = `Demand: ${nzDate(d.supply.processed_utc)} · Flow: ${nzDate(d.flowPct.processed_utc)}`;
+  el("asof-consents").textContent = `Accessed ${nzDate(d.consents.compiled_utc)}`;
+  el("asof-charts").textContent = `As of ${nzDate(d.supply.processed_utc)}`;
+  el("asof-flow").textContent = `As of ${nzDate(d.flowPct.processed_utc)}`;
 }
 
 /* ------------------------------------------------------------------ */

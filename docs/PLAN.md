@@ -42,19 +42,19 @@ at 15–20 h/week; ~10–12 days full-time.
   If not — fix the thesis, don't add features.（故事脚本见 docs/STORY-3MIN.md）
 
 ## W3 · Engineering + packaging
-- [ ] GH Actions schedule: flow 6 h (from 24 h) · water quality monthly ·
-      population monthly
-- [ ] retry + exponential backoff + cache last success + graceful degrade
-- [ ] `_runs.jsonl` + **Data Health panel** on the site
-- [ ] Times: store UTC, display Pacific/Auckland
-- [ ] 6 tests: schema · units · region names · DST boundary · missing-value
-      propagation · percentile
-- [ ] README finalised + 15 s GIF (docs/demo.gif)
-- [ ] Attribution blocks (site footer + README)
-- [ ] keepalive workflow (scaffolded) + "pipeline paused" fallback text
-- [ ] Data not committed to git — CI builds and deploys via deploy-pages
-- [ ] Make repo public + open Pages + **verify no key in git history**
-- 验收: mobile load < 3 s, no horizontal scroll, all links work
+- [x] GH Actions schedule: flow 6 h (from 24 h) · water quality monthly ·
+      population monthly ✅（refresh.yml cron 改 `0 */6 * * *` + 月度）
+- [x] retry + exponential backoff + cache last success + graceful degrade ✅（fetch_population 补 3 次指数退避；Hilltop 原有；失败写 _status、transform 读最后快照）
+- [x] `_runs.jsonl` + **Data Health panel** ✅（record 增 rows/null_pct；站点页脚：last run/行数/空值率/schema ver/近 20 次色条 + pipeline paused 回退）
+- [x] Times: store UTC, display Pacific/Auckland ✅（站点 Intl 转换；tests/test_dst.py 钉死 NZ DST 边界）
+- [x] 6 tests: schema · units · region names · DST boundary · missing-value
+      propagation · percentile ✅（tests/ 24 个用例，含真实 sql/ 逻辑内联夹具）
+- [x] README finalised ✅（Status/测试说明/部署描述）；15 s GIF 待用户录屏 → docs/demo.gif ⏳
+- [x] Attribution blocks ✅（site footer + README 许可表，W1/W2 已有）
+- [x] keepalive workflow ✅ + "pipeline paused" 回退文案 ✅（页脚 >31 天显示）
+- [x] Data not committed to git — CI builds and deploys via deploy-pages ✅（refresh.yml 已加 configure/upload/deploy-pages；site-data 目标避免重复抓取）
+- [ ] Make repo public + open Pages + **verify no key in git history** ⏳（key 验证已完成 ✓ full 值从未进历史；转公开需用户 token）
+- 验收: mobile load < 3 s, no horizontal scroll, all links work（待用户测）
 
 ## W4 · After launch
 - [ ] LinkedIn post + one chart
