@@ -36,7 +36,22 @@ ECan/Southland/Auckland/Waikato 待 W1.5 补（候选：LAWA 内部 Umbraco API�
 
 | Source | 端点 | 状态 | 备注 |
 |---|---|---|---|
-| Stats NZ ADE API | `https://api.stats.govt.nz/opendata/v1/` | ⏸️ **后端 502** | 2026-08-30 实测：DNS/TLS 正常，Azure 网关后端故障（不带 key 也 502，非 key 问题）。订阅 `Lucia-NZ-DA-API-Key` 已激活。**稍后重试**；key 已在本地 `.env`，勿提交 |
+| Stats NZ **SDMX API**（新 ADE 后端） | `https://api.data.stats.govt.nz/rest/data/STATSNZ,POPES_SUB_001,1.0/ALL` | ✅ **已跑通（2026-08-30 下午）** | 数据流 POPES_SUB_001（2018-base ERP，2018–2025）。Key 与 opendata 相同（`Ocp-Apim-Subscription-Key`）。**旧 opendata API（api.stats.govt.nz/opendata）整会话 502**，新 API 完全绕过。查询要点：年份位置不支持通配（`A.02.POP` → NoRecordsFound），必须用全 key `.../ALL` 客户端过滤；Accept 需 `application/vnd.sdmx.data+json; charset=utf-8; version=1.0.0-wd` |
+| ~~Stats NZ ADE OData API~~ | `https://api.stats.govt.nz/opendata/v1/` | ⏸️ 502（整会话） | 已弃用；fetch_population.py 已切换到新 SDMX API |
+
+**人口结果（2026-08-30 实测）**：6 council × 2018–2025 完整（`data/raw/population/20260830.json`）：
+Auckland 1,654,800→1,816,000（+9.7%）、Canterbury 622,800→698,200（+12.1%）、Waikato 475,600→532,100（+11.9%）、Otago 235,000→253,900（+8.0%）、Hawke's Bay 172,400→179,700（+4.2%）、Southland 100,500→104,800（+4.3%）。含 MEDAGE/NETMIG。
+
+**REGC 代码已官方验证**（SDMX codelist，与旧 REGC 方案不同）：Auckland=02, Waikato=03, Hawke's Bay=06, **Canterbury=13, Otago=14, Southland=15** → `data/ref/region_map.json` verified=true。
+
+## 用水需求 / 漏损 / 计量（NPR → NEPR）
+
+> **关键发现（子代理研究，2026-08-30）**：Water NZ 的 NPR 止于 **2021/22**（最终版）；继任者是 **Taumata Arowai NEPR**（最新 2024/25，2026-06 发布，data.govt.nz **CC BY 3.0 NZ** 单位级 CSV）。
+
+- 完整数据已落盘：`data/raw/waternz_npr/npr_2013-2022_dashboard_extract.csv`（574 行×9 年，Water NZ 公开 Tableau 提取）+ `data/raw/taumata_nepr/`（NEPR 2024/25 单位级 CSV + 2023/24、2024/25 报告 PDF）
+- 结构化交付物：`data/ref/water_demand.json`（9 供应商 × NEPR 2024/25 主表 + NPR 2021/22 表 + 全国背景）
+- 报告：`docs/NPR-research.md`（4 表 + 13 条注意事项 + 许可）；Dunedin/Invercargill 细节：`docs/W1-water-demand-dunedin-invercargill.md`
+- 示例（NEPR 2024/25，L/人/日 供应口径）：Watercare/Auckland **268.6**（漏损 19.7%、计量 99.9%）、Hastings **675.7**（26.3%、13.3%）、Invercargill **442.4**（17.0%、3.2%）、Napier **434.0**（22.6%、3.4%）、Dunedin **385.0**（18.6%、0.8%）、Christchurch **367.2**（30.0%、93.5%）、Hamilton **319.1**（14.9%、n/r）
 
 ## 水质（年度快照，手动下载）
 
@@ -60,11 +75,11 @@ LAWA 批量下载（[download-data](https://www.lawa.org.nz/download-data)，202
 
 - [x] Hilltop/流量端点验证 + **取数脚本落地**（HBRC 3 站实时 + ORC 8 站历史，`scripts/fetch_hilltop.py`，日流量聚合）
 - [x] LAWA 批量下载源确认 + 7 个 xlsx 快照已落盘（MANIFEST.md）
-- [x] 边界几何简化 ✅ → `data/processed/boundaries_regions_simple.geojson`（**4.9 KB**，远低于 500KB；来源为 LAWA `mapservice/boundaryforNZ` WKT，CC BY 4.0，替代 Stats NZ GDS 因 datafinder 需 JS 交互；LAWA 边界源自 Stats NZ 区域议会边界）
-- [x] 区域名归一化映射表 ✅ → `data/ref/region_map.json`（REGC ↔ council ↔ LAWA zone + macron 别名；REGC 代码待 ADE 恢复后确认）
-- [ ] Stats NZ ADE API 跑通（仍 502；`fetch_population.py` 已实现重试+优雅降级）
-- [ ] Water NZ NPR 提取（研究中）
-- [ ] `make data` 一条命令产出 processed JSON（W1 最小版管线已接，见下）
+- [x] 边界几何简化 ✅ → `data/ref/boundaries_regions_simple.geojson`（**4.9 KB**，远低于 500KB；来源为 LAWA `mapservice/boundaryforNZ` WKT，CC BY 4.0，替代 Stats NZ GDS 因 datafinder 需 JS 交互；LAWA 边界源自 Stats NZ 区域议会边界）
+- [x] 区域名归一化映射表 ✅ → `data/ref/region_map.json`（REGC **官方验证**：02/03/06/13/14/15 ↔ council ↔ LAWA zone + macron 别名）
+- [x] **Stats NZ 人口跑通** ✅（新 SDMX API；6 council × 2018–2025 完整落盘）
+- [x] **Water NZ NPR/NEPR 提取** ✅（NPR 全量 574 行 + NEPR 2024/25 单位级 CSV 落盘；`data/ref/water_demand.json`）
+- [x] `make data` 一条命令产出 processed JSON（W1 管线含 schema 校验 8/8）
 
 ## 已知问题（补充，2026-08-30 下午）
 

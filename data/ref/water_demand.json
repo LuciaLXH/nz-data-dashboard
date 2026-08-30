@@ -1,0 +1,51 @@
+{
+  "schema_version": 1,
+  "note": "Water demand / leakage / metering per NZ water supplier for the 6 project regions. PRIMARY source = Taumata Arowai Network Environmental Performance Report (NEPR) 2024/25 unit-level extract (data.govt.nz, CC BY 3.0 NZ) — the successor to Water NZ's National Performance Review (NPR), which ended at 2021/22. SECONDARY = final NPR 2021/22 participant dashboard data (Water NZ public Tableau; Water NZ standard copyright, non-commercial reuse with attribution). Caveats: figures are per TERRITORIAL AUTHORITY / supplier (not regional council); Canterbury = 3 suppliers, Hawke's Bay = 2; L/person/day bases differ between sources (supply÷pop÷365 here) — never mix; leakage % vs CARL are different metrics. Full analysis: docs/NPR-research.md.",
+  "compiled_utc": "2026-08-30",
+  "primary": {
+    "source": "Taumata Arowai NEPR 2024/25 (published June 2026), unit-level CSV extract from data.govt.nz",
+    "licence": "CC BY 3.0 NZ",
+    "raw": "data/raw/taumata_nepr/",
+    "report": "docs/NPR-research.md",
+    "year": "2024/25",
+    "suppliers": [
+      {"region": "auckland",   "supplier": "Watercare (Auckland)",          "pop_served": 1663170, "res_connections": 480944, "l_per_person_day": 268.6, "median_res_l_per_conn_day": 490.0,  "loss_pct": 19.7, "carl_l_per_conn_day": 173.7, "ili": 2.30,  "res_metering_pct": 99.9, "confidence_note": null},
+      {"region": "canterbury", "supplier": "Christchurch City Council",     "pop_served": 387390,  "res_connections": 169906, "l_per_person_day": 367.2, "median_res_l_per_conn_day": 411.0,  "loss_pct": 30.0, "carl_l_per_conn_day": 239.7, "ili": 4.32,  "res_metering_pct": 93.5, "confidence_note": null},
+      {"region": "canterbury", "supplier": "Selwyn District Council",       "pop_served": 70840,   "res_connections": 26678,  "l_per_person_day": 356.0, "median_res_l_per_conn_day": 615.0,  "loss_pct": 17.6, "carl_l_per_conn_day": 153.1, "ili": 1.60,  "res_metering_pct": 83.6, "confidence_note": null},
+      {"region": "canterbury", "supplier": "Waimakariri District Council",  "pop_served": 54374,   "res_connections": 22426,  "l_per_person_day": 390.6, "median_res_l_per_conn_day": 459.7,  "loss_pct": 24.3, "carl_l_per_conn_day": 230.4, "ili": 3.33,  "res_metering_pct": 29.0, "confidence_note": null},
+      {"region": "otago",      "supplier": "Dunedin City Council",          "pop_served": 115357,  "res_connections": 50251,  "l_per_person_day": 385.0, "median_res_l_per_conn_day": 677.0,  "loss_pct": 18.6, "carl_l_per_conn_day": 78.4,  "ili": 0.87,  "res_metering_pct": 0.8,  "confidence_note": "D-RE4 flagged '1 - Very Uncertain'"},
+      {"region": "southland",  "supplier": "Invercargill City Council",     "pop_served": 50197,   "res_connections": 21469,  "l_per_person_day": 442.4, "median_res_l_per_conn_day": 224.0,  "loss_pct": 17.0, "carl_l_per_conn_day": 120.8, "ili": 2.20,  "res_metering_pct": 3.2,  "confidence_note": null},
+      {"region": "hawkes_bay", "supplier": "Napier City Council",           "pop_served": 62992,   "res_connections": 24997,  "l_per_person_day": 434.0, "median_res_l_per_conn_day": 555.0,  "loss_pct": 22.6, "carl_l_per_conn_day": 197.3, "ili": 4.00,  "res_metering_pct": 3.4,  "confidence_note": null},
+      {"region": "hawkes_bay", "supplier": "Hastings District Council",     "pop_served": 69959,   "res_connections": 24599,  "l_per_person_day": 675.7, "median_res_l_per_conn_day": 717.8,  "loss_pct": 26.3, "carl_l_per_conn_day": 434.4, "ili": 5.68,  "res_metering_pct": 13.3, "confidence_note": null},
+      {"region": "waikato",    "supplier": "Hamilton City Council",         "pop_served": 192000,  "res_connections": 65083,  "l_per_person_day": 319.1, "median_res_l_per_conn_day": 650.0,  "loss_pct": 14.9, "carl_l_per_conn_day": 139.8, "ili": 3.10,  "res_metering_pct": null, "confidence_note": "residential metering n/r"}
+    ]
+  },
+  "npr_2021_22": {
+    "source": "Water New Zealand National Performance Review, final edition 2021/22 (published ~Mar 2023); participant dashboard data (public Tableau); Auckland & Hastings rows are 2020/21 (absent from final edition)",
+    "licence": "Water NZ standard copyright: non-commercial reproduction OK with attribution; commercial reuse needs permission",
+    "raw": "data/raw/waternz_npr/npr_2013-2022_dashboard_extract.csv",
+    "year": "2021/22",
+    "suppliers": [
+      {"region": "auckland",   "supplier": "Watercare/Auckland", "year": "2020/21", "pop_served": 1590000, "l_per_person_day": 239.8, "loss_pct": 14.6, "carl_l_per_conn_day": 132.8, "ili": 6.19, "res_metering_pct": 100.0},
+      {"region": "canterbury", "supplier": "Christchurch CC",    "year": "2021/22", "pop_served": 381764,  "l_per_person_day": null, "loss_pct": 22.3, "carl_l_per_conn_day": 279.8, "ili": 4.10, "res_metering_pct": 92.4},
+      {"region": "canterbury", "supplier": "Selwyn DC",          "year": "2021/22", "pop_served": 50113,   "l_per_person_day": 450.5, "loss_pct": 20.5, "carl_l_per_conn_day": 145.0, "ili": 1.70, "res_metering_pct": 97.8},
+      {"region": "canterbury", "supplier": "Waimakariri DC",     "year": "2021/22", "pop_served": 52711,   "l_per_person_day": 367.6, "loss_pct": 24.9, "carl_l_per_conn_day": 263.0, "ili": 3.00, "res_metering_pct": 24.4},
+      {"region": "otago",      "supplier": "Dunedin CC",         "year": "2021/22", "pop_served": 114273,  "l_per_person_day": 387.4, "loss_pct": 21.6, "carl_l_per_conn_day": 216.9, "ili": 2.16, "res_metering_pct": 0.3},
+      {"region": "southland",  "supplier": "Invercargill CC",    "year": "2021/22", "pop_served": 49641,   "l_per_person_day": 457.9, "loss_pct": 9.6,  "carl_l_per_conn_day": 136.0, "ili": 2.98, "res_metering_pct": 1.1},
+      {"region": "hawkes_bay", "supplier": "Napier CC",          "year": "2021/22", "pop_served": 66700,   "l_per_person_day": 349.6, "loss_pct": 16.0, "carl_l_per_conn_day": 130.0, "ili": 2.90, "res_metering_pct": 3.1},
+      {"region": "hawkes_bay", "supplier": "Hastings DC",        "year": "2020/21", "pop_served": 66318,   "l_per_person_day": 588.9, "loss_pct": 29.8, "carl_l_per_conn_day": 520.0, "ili": 5.53, "res_metering_pct": 4.9},
+      {"region": "waikato",    "supplier": "Hamilton CC",        "year": "2021/22", "pop_served": 178500,  "l_per_person_day": 330.4, "loss_pct": 15.8, "carl_l_per_conn_day": 144.0, "ili": 3.00, "res_metering_pct": 0.5}
+    ]
+  },
+  "national_context": {
+    "source": "Water NZ NPR press releases; Taumata Arowai NEPR 2024/25",
+    "figures": [
+      {"metric": "average NZ property water use", "value": "213,000 L/property/year", "year": "2021/22"},
+      {"metric": "average NZ water loss in pipes", "value": "~20% of drinking water", "year": "2021/22"},
+      {"metric": "national average water use", "value": "281.8 L/person/day", "year": "2020/21"},
+      {"metric": "Auckland (fully metered) residential use", "value": "146 L/person/day", "year": "2020/21"},
+      {"metric": "unmetered districts", "value": "up to 800 L/person/day", "year": "2020/21"},
+      {"metric": "median household use (national)", "value": "678 L/connection/day", "year": "2024/25"}
+    ]
+  }
+}

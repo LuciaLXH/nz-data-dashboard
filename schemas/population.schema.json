@@ -2,7 +2,7 @@
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/xli246/nz-data-dashboard/schemas/population.schema.json",
   "title": "Population processed dataset (W1)",
-  "description": "Subnational population fetch status from Stats NZ ADE. While the ADE backend is down the status is ok=false (graceful degradation, recorded for Data Health).",
+  "description": "Subnational population estimates (6 councils, 2018-2025) from the Stats NZ SDMX API (dataflow POPES_SUB_001), plus fetch status for Data Health.",
   "type": "object",
   "required": ["schema_version", "status", "processed_utc"],
   "properties": {
@@ -18,6 +18,32 @@
         "attempts": {"type": "integer", "minimum": 0},
         "last_status": {"type": ["integer", "null"]},
         "last_error": {"type": ["string", "null"]}
+      }
+    },
+    "data": {
+      "type": "object",
+      "required": ["source", "dataflow", "fetched_utc", "regions"],
+      "properties": {
+        "source": {"type": "string"},
+        "dataflow": {"type": "string"},
+        "fetched_utc": {"type": "string", "format": "date-time"},
+        "measures": {"type": "array", "items": {"type": "string"}},
+        "areas": {"type": "object"},
+        "regions": {
+          "type": "object",
+          "propertyNames": {"enum": ["auckland", "waikato", "hawkes_bay", "canterbury", "otago", "southland"]},
+          "additionalProperties": {
+            "type": "object",
+            "additionalProperties": {
+              "type": "object",
+              "properties": {
+                "POP": {"type": "number"},
+                "MEDAGE": {"type": "number"},
+                "NETMIG": {"type": "number"}
+              }
+            }
+          }
+        }
       }
     }
   }

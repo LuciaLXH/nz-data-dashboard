@@ -1,6 +1,6 @@
 # Water NZ National Performance Review (NPR) — Data Extraction for 6 Regions
 
-**Prepared:** 2026-08-30 · **Status:** draft (supplier cross-checks pending merge)
+**Prepared:** 2026-08-30 · **Status:** complete (cross-checked against supplier annual reports and Water NZ/Taumata publications)
 
 **Purpose:** per-capita water use and leakage figures for the water suppliers serving the 6 target
 regional-council areas: Auckland, Canterbury, Otago, Hawke's Bay, Southland, Waikato.
@@ -127,6 +127,28 @@ Waimakariri 27.7% · Christchurch n/r (WSB5 not reported).*
 | Total reported water loss | 162M m³ ≈ 29% of supply of respondents (2023/24) | ~159M m³ across densities (2024/25, Fig. 9) |
 | ILI: % networks <2 / ≥4 | — | 27% / 36% (2024/25) |
 
+### Table 4 — Supplier-published figures (council Annual Reports / DIA mandatory measures / Watercare AR)
+Cross-checks extracted from the suppliers' own documents (subagent-verified; exact metric names quoted).
+These use **different bases** from Tables 1–2 (see caveats 9–12).
+
+| Supplier | Year | L/person/day (as published) | Real loss % (as published) | Metering (as published) | Population / connections (as published) | Source |
+|---|---|---|---|---|---|---|
+| Watercare (Auckland) | FY2024/25 | **257 L/person/day** gross per-capita (incl. commercial; target 247–259) | **12.8%** network water loss (target <13%); **119.2 L/conn/day** real loss (SOI measure) | ~100% (all households metered) | ~1.7 million | [Watercare AR 2025](https://www.aucklandcouncil.govt.nz/content/dam/ac/docs/reports/ccos/watercare-annual-report-2025.pdf) pp.14, 87, 95; [ComCom trends 2025](https://www.comcom.govt.nz/assets/Documents/crown-monitor/Watercares-performance-trends-2025-edition-28-November-2025.pdf) |
+| Christchurch CC | 2025 (AR) | **239 L/resident/day** (DIA measure 5; target ≤220; 2024: 298, 2023: 261) | **28.6%** real water loss (DIA measure 2; target ≤25%; 2024: 29.2%, 2023: 27.3%) | ≈99.9% of connections metered per WSP (130,612/130,707) — legacy meters, limited volumetric charging | 389,299 (WSP 2019/20); 130,707 conns (WSP; AR2025 says ~170,000, different basis) | [CCC AR 2025 LOS](https://christchurch.infocouncil.biz/Open/2025/10/CNCL_20251030_ATT_10656_EXCLUDED.PDF) pp.98, 104; [Christchurch WSP](https://fyi.org.nz/request/28299/response/109012/attach/6/Water%20Safety%20Plan%20WSP%20Volume%20B%20Christchurch%20Lyttelton%20Current%20version%20Optimized.pdf) |
+| Selwyn DC | 2020/21 (NPR, via council news) | **296 L/person/day** (5-yr avg prior 379; natl avg 282) | NEPR 2023/24: **35 L/conn/day** real loss ("among the lowest in NZ") | **100%** universal metering (rollout 2015–2018) | ~30,000 households + 8,000+ businesses | [Selwyn news Apr 2022 (Wayback)](http://web.archive.org/web/20260201221859/https://www.selwyn.govt.nz/news-And-events/news/archived/selwyn-water-systems-continue-to-rank-among-the-best-2022); [Selwyn charges](https://www.selwyn.govt.nz/services/water/water-supplies/your-water-charges) |
+| Waimakariri DC | 2025 (planning estimate) | **319 L/person/day incl. leakage; 260 excl.** | 25% avg leakage (2019 assessment: 239 L/conn/day, ILI 2.7 Band B); NEPR 2023/24 35 L/conn/day (low-confidence) | ≈0% residential (no universal metering; ~114 special meters + bulk meters) | 56,100 serviced FY2024/25; 22,425 DW connections | [Waimakariri WSP Assessment](https://www.waimakariri.govt.nz/__data/assets/pdf_file/0038/186896/Assessment-of-Drinking-Water-Services-WSP-Report.PDF) p.34; [WSDP 2025](https://www.waimakariri.govt.nz/__data/assets/pdf_file/0027/178047/Local-Water-Done-Well-Water-Services-Delivery-Plan-For-DIA-Review-and-Acceptance-07.07.2025.pdf) |
+| Dunedin CC | 2023/24, 2024/25 | **276 L/p/d (2023/24)**, **269 L/p/d (2024/25)** per resident (target <240; "not achieved") | **15% (2023/24)**, **9% (2024/25)** real water loss (non-revenue-water basis; target ≤20%) | **0% domestic** (all unmetered, fixed-rate charging) | 48,033 water connections (30 Jun 2024); pop 115,357 (4 schemes); serviced 116,058 | [DCC WSDP 2025](https://www.dunedin.govt.nz/__data/assets/pdf_file/0018/1265112/Water-Services-Delivery-Plan.pdf); [DCC 9YP 2025-34 p.170](https://www.dunedin.govt.nz/__data/assets/pdf_file/0005/1143473/9-Year-Plan-2025-34.pdf) |
+| Invercargill CC | 2022/23 baseline; 2024/25 Q3 | **231 L/day (2022/23 baseline)**, **209.9 L/day (2024/25 Q3 YTD)** (target <300) | **18.5% (2022/23 baseline)** (target <30%; AMP: "just below 20%") | No universal metering (area meters 2025/26–2028/29; universal planned 2033/34); high-use non-res metered | 57,100 pop (2023); 21,760 conns (20,360 res + 1,400 non-res) | [ICC LTP 2024-34](https://www.icc.govt.nz/repository/libraries/id:2swc6cbtp1cxby8vraxn/hierarchy/assets/council/documents/plans-and-reports/long-term-plan/2024-2034-LTP-Proper-Full-document.pdf) p.80; [ICC 3Ws AMP 2024](https://www.icc.govt.nz/repository/libraries/id:2swc6cbtp1cxby8vraxn/hierarchy/assets/council/documents/asset-management-plans/Three-Waters-Asset-Management-Plan-A5424593.pdf); [ICC Perf Q3 2025](https://www.icc.govt.nz/repository/libraries/id:2swc6cbtp1cxby8vraxn/hierarchy/assets/council/council-performance/performance-reports/2024-2025/2025%2005%2020%20ICC%20Performance%20report%20Q3%202025%20%28A5891179%29.pdf) |
+| Napier CC | 2024/25 (AR) | **436 L/p/d** per resident (2022/23: **361** — this is the "~360 L/p/d" figure from the brief; 2023/24: 394) | **18%** real loss (2022/23: 14.8%; 2023/24: 19.1%) | 6.9% of connections metered (804 res + 923 non-res of 24,997) | 62,992; 24,997 conns | [Napier AR 2024/25](https://www.napier.govt.nz/assets/Document-Library/Reports/Annual-Reports/NCC-AnnualReport2025-Web.pdf) p.25; [Napier AR 2022/23](https://www.napier.govt.nz/assets/Document-Library/Reports/Annual-Reports/NCC-Annual-Report-2022-23-Spread-Version.pdf) p.25 |
+| Hastings DC | 2024/25 (AR) | **666 L/p/d** per resident (2023/24: 663) | **22.6%** real loss (2023/24: 18.9%) | 16.1% of connections metered (3,025 res + 947 non-res of 24,599) + ~2,000-property smart-meter trial | 69,959 district (65,026 urban); 24,599 conns | [Hastings AR 2024/25](https://www.hastingsdc.govt.nz/assets/Document-Library/Reports/Annual-Report/2024-2025-Annual-Report-web-version.pdf) pp.19–20 |
+| Hamilton CC | 2024/25 (AR) | **321 L/p/d** per resident (2023/24: 323; target ≤400) | **14.9%** real loss (2023/24: 11.6% ±31% CI; Apr 2024–Mar 2025 ±23% CI) | Res meters not reported; non-res 62.8% (3,449 of 5,490); "most water use unmetered at point of supply" | 192,000; 65,083 conns | [Hamilton AR 2024/25](https://hamilton.govt.nz/assets/Uploads/Documents/2024-2025-Annual-Report-V25-Digital-F.pdf) pp.156, 160 |
+
+> **Note on the brief's "~360 L/person/day":** no published Hastings figure near 360 exists — that figure is
+> **Napier's 361 L/p/d (2022/23)**. Hastings' published per-capita consumption is 663–666 L/p/d (council
+> DIA measure) and ≈672–682 L/p/d (NEPR-derived). All Hawke's Bay urban supplies are unmetered, which
+> drives very high use (RNZ, 4 Aug 2026: Hastings CARL 436 L/conn/day ≈ 10.0M L/day lost;
+> Napier 197 ≈ 5.5M L/day — https://www.rnz.co.nz/news/regions/884218/leaks-waste-more-than-15-million-litres-of-water-a-day-in-hawke-s-bay).
+
 ---
 
 ## (c) Caveats
@@ -160,6 +182,26 @@ Waimakariri 27.7% · Christchurch n/r (WSB5 not reported).*
    with care.
 8. The NEPR explicitly cautions that **% water loss is not directly comparable across operators**
    (different estimation methods, especially in unmetered networks).
+9. **L/person/day bases differ (Tables 1/2 vs Table 4):** Table 1/2 L/person/day = *water supplied per
+   capita* (supply ÷ population ÷ 365). Table 4 figures are the suppliers' own published measures:
+   most councils publish *consumption per resident* (DIA measure 5), which excludes network losses and
+   non-residential use — e.g. Christchurch 239 L/resident/day (DIA) vs 367 L/person/day (supply-based);
+   Watercare 257 L/person/day (gross, incl. commercial) vs 269 (supply-based). Never mix the two bases
+   in one analysis.
+10. **Leakage bases differ:** council "real water loss %" (DIA measure 2 / water balance) ≠ NEPR
+    "total drinking water loss" (D-RE1) ≠ CARL L/connection/day. Example: Watercare reports 12.8%
+    network loss (AR 2025) while NEPR 2024/25 D-RE1 implies 19.7% — different scopes (e.g. whether
+    private-side loss and unmetered estimates are included). Report the exact metric name with every
+    number.
+11. **NEPR 2023/24 water-loss values are low-confidence** (Taumata's own external review found 50% of
+    operators corrected their loss data; e.g. Selwyn & Waimakariri show 35 L/conn/day CARL in 2023/24
+    vs 153/230 in 2024/25 — a methodology/data change, not a real 7× increase). Prefer 2024/25 values.
+12. **NPR 2021/22 data gap:** Water NZ's final NPR report PDF was archived as a definitions/mapping
+    document; the participant-level data lives in the public Tableau dashboard (extracted here).
+    Auckland (Watercare) and Hastings did not submit 2021/22 rows — their latest NPR row is 2020/21.
+13. **Waimakariri & Christchurch figures:** Waimakariri's 319/260 L/p/d is a 2025 planning estimate
+    (not measured); Christchurch was absent from NEPR 2023/24 supply/loss figures (did not report) —
+    its NEPR 2024/25 and CCC AR 2025 figures are used instead.
 
 ---
 

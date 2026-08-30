@@ -1,104 +1,110 @@
-"""Fetch subnational population estimates (6 regional councils) from Stats NZ
-Aotearoa Data Explorer (ADE) OData API.
+"""Fetch subnational population estimates (6 regional councils) from Stats NZ.
 
-Endpoint: https://api.stats.govt.nz/opendata/v1/odata/<dataset>
-Header   : Ocp-Apim-Subscription-Key: <key from env STATS_NZ_API_KEY>
+W1 (2026-08-30): the old ADE OData API (api.stats.govt.nz/opendata) has been
+down (502) all session. The successor API works — SDMX at
+https://api.data.stats.govt.nz/rest (dotstatsuite; the backend behind the new
+explore.data.stats.govt.nz) with the same Ocp-Apim-Subscription-Key.
 
-W1 status (2026-08-30): the ADE backend is returning HTTP 502 (Azure
-Application Gateway) — DNS/TLS fine, key activated and valid. This script
-therefore implements retry + exponential backoff + graceful degradation:
-on failure it records an honest status file and exits 0, so `make data`
-still runs from scratch. The exact population dataset OData query is wired
-up for the moment the API recovers (see fetch_dataset()).
+Dataflow: STATSNZ:POPES_SUB_001(1.0) — subnational population estimates
+(2018-base, ERP), dimensions YEAR_POPES_SUB_001 × AREA_POPES_SUB_001 ×
+MEASURE_POPES_SUB_001 (POP, MEDAGE, NETMIG, ...). Areas use Stats NZ numeric
+codes: Auckland=02, Waikato=03, Hawke's Bay=06, Canterbury=13, Otago=14,
+Southland=15 (verified from the API codelist — these differ from the older
+REGC scheme where Canterbury was 14).
 
-Output: data/raw/population/ (raw snapshots when the API is up)
-        data/raw/population/_status.json (last attempt status, always written)
+Notes from debugging (2026-08-30):
+- year wildcards ('A'/'ALL' in the YEAR position) return NoRecordsFound;
+  the full-key query `.../ALL` works and returns every observation.
+- dimensionAtObservation must name a real dimension; TIME_PERIOD is invalid.
+
+Output: data/raw/population/<YYYYMMDD>.json — {council: {year: pop}} plus
+MEDAGE and NETMIG, and _status.json.
 """
 from __future__ import annotations
 
 import json
 import os
 import sys
-import time
 from datetime import datetime, timezone
 
 import requests
 
-ADE_BASE = "https://api.stats.govt.nz/opendata/v1/odata"
-# Dataset + OData query for subnational population estimates by regional
-# council (REGC), yearly. TODO(W1.5): confirm exact dataset name + dimension
-# codes against the live API when the 502 clears, then enable.
-POPULATION_DATASET = "SubnationalPopulationEstimates"
-POPULATION_QUERY = (
-    f"{POPULATION_DATASET}"
-    "?$select=Year,REGC2023,REGC2023_name,Value"
-    "&$filter=REGC2023 in ('02','03','06','14','15','16')"
-)
-MAX_ATTEMPTS = 3
-BACKOFF = [5, 15, 45]  # seconds between attempts
+SDMX_BASE = "https://api.data.stats.govt.nz/rest/data/STATSNZ,POPES_SUB_001,1.0"
+ACCEPT = "application/vnd.sdmx.data+json; charset=utf-8; version=1.0.0-wd"
+TIMEOUT = 90
+
+# area code -> region key (verified from the API codelist, 2026-08-30)
+AREA_TARGETS = {
+    "02": "auckland",
+    "03": "waikato",
+    "06": "hawkes_bay",
+    "13": "canterbury",
+    "14": "otago",
+    "15": "southland",
+}
+MEASURE_TARGETS = {"POP", "MEDAGE", "NETMIG"}
 
 
-def attempt(api_key: str) -> tuple[bool, dict]:
-    """One retry loop; returns (ok, status_detail). Never raises."""
-    detail: dict = {"attempts": 0, "last_status": None, "last_error": None}
-    for attempt_no in range(1, MAX_ATTEMPTS + 1):
-        detail["attempts"] = attempt_no
-        try:
-            r = requests.get(
-                f"{ADE_BASE}/{POPULATION_QUERY}",
-                headers={"Ocp-Apim-Subscription-Key": api_key},
-                timeout=30,
-            )
-            detail["last_status"] = r.status_code
-            if r.status_code == 200:
-                data = r.json()
-                rows = data.get("value", [])
-                if not rows:
-                    detail["last_error"] = "200 OK but empty value array (check query)"
-                    return False, detail
-                return True, detail
-            if r.status_code in (403, 429, 500, 502, 503, 504):
-                # 403 observed once while the gateway is flaky (root returns
-                # 502) — treat as retryable, but record the status each time.
-                if attempt_no < MAX_ATTEMPTS:
-                    time.sleep(BACKOFF[attempt_no - 1])
-                continue
-            detail["last_error"] = f"non-retryable HTTP {r.status_code}: {r.text[:200]}"
-            return False, detail
-        except requests.RequestException as e:
-            detail["last_error"] = str(e)
-            if attempt_no < MAX_ATTEMPTS:
-                time.sleep(BACKOFF[attempt_no - 1])
-    return False, detail
+def fetch() -> tuple[dict, str]:
+    """Fetch ALL observations; returns (data, raw_text). Raises on failure."""
+    r = requests.get(f"{SDMX_BASE}/ALL",
+                     headers={"Ocp-Apim-Subscription-Key": os.environ["STATS_NZ_API_KEY"],
+                              "Accept": ACCEPT},
+                     timeout=TIMEOUT)
+    r.raise_for_status()
+    return r.json(), r.text
 
 
 def main() -> int:
     key = os.environ.get("STATS_NZ_API_KEY")
     if not key:
-        # config error → hard fail (not a transient API problem)
         raise SystemExit("STATS_NZ_API_KEY is not set — see .env.example")
+    try:
+        doc, raw = fetch()
+    except Exception as e:  # noqa: BLE001 — graceful degradation
+        now = datetime.now(timezone.utc).isoformat()
+        os.makedirs("data/raw/population", exist_ok=True)
+        with open("data/raw/population/_status.json", "w", encoding="utf-8") as f:
+            json.dump({"ok": False, "note": f"fetch failed: {e}", "attempted_utc": now}, f, indent=1)
+        print(f"⚠️ Stats NZ SDMX: fetch failed ({e}) — recorded for Data Health")
+        return 0
 
-    os.makedirs("data/raw/population", exist_ok=True)
+    sv = doc["data"]["structure"]["dimensions"]["observation"]
+    year_vals, area_vals, measure_vals = ([v["id"] for v in x["values"]] for x in sv)
+    obs = doc["data"]["dataSets"][0]["observations"]
+
+    # {region: {year: {measure: value}}}
+    result: dict[str, dict[str, dict[str, float]]] = {}
+    for okey, oval in obs.items():
+        yi, ai, mi = (int(x) for x in okey.split(":"))
+        area, measure = area_vals[ai], measure_vals[mi]
+        region = AREA_TARGETS.get(area)
+        if not region or measure not in MEASURE_TARGETS:
+            continue
+        year = year_vals[yi]
+        value = oval[0] if isinstance(oval, list) else oval
+        result.setdefault(region, {}).setdefault(year, {})[measure] = value
+
     now = datetime.now(timezone.utc).isoformat()
-    ok, detail = attempt(key)
-
-    if ok:
-        # TODO(W1.5): write the snapshot rows to data/raw/population/…json
-        # once the live query shape is confirmed (see POPULATION_QUERY).
-        status = {"ok": True, "note": "API reachable; snapshot writing lands in W1.5",
-                  "attempted_utc": now, **detail}
-    else:
-        status = {
-            "ok": False,
-            "note": "Stats NZ ADE unavailable (HTTP 502 backend since 2026-08-30); "
-                    "recorded for Data Health — pipeline continues degraded",
-            "attempted_utc": now, **detail,
-        }
+    os.makedirs("data/raw/population", exist_ok=True)
+    stamp = now[:10].replace("-", "")
+    path = f"data/raw/population/{stamp}.json"
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump({
+            "source": f"{SDMX_BASE}/ALL",
+            "dataflow": "STATSNZ:POPES_SUB_001(1.0)",
+            "fetched_utc": now,
+            "measures": sorted(MEASURE_TARGETS),
+            "areas": AREA_TARGETS,
+            "regions": {r: {y: v for y, v in sorted(years.items())}
+                        for r, years in sorted(result.items())},
+        }, f, ensure_ascii=False, indent=1)
     with open("data/raw/population/_status.json", "w", encoding="utf-8") as f:
-        json.dump(status, f, indent=1)
-    print(f"{'✅' if ok else '⚠️'} Stats NZ ADE: status={detail['last_status']} "
-          f"attempts={detail['attempts']}")
-    return 0  # graceful: record and continue (decision: degrade, don't hard-fail)
+        json.dump({"ok": True, "file": path, "fetched_utc": now}, f, indent=1)
+
+    n = sum(len(years) for years in result.values())
+    print(f"✅ Stats NZ SDMX: {len(result)} regions × {n} region-years → {path}")
+    return 0
 
 
 if __name__ == "__main__":
