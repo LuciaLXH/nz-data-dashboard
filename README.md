@@ -86,9 +86,10 @@ All business logic lives in `sql/`; Python only does IO and orchestration (DuckD
 
 | Source | Used for | Cadence | Licence |
 |---|---|---|---|
-| [Stats NZ — Aotearoa Data Explorer](https://portal.apis.stats.govt.nz/) | Subnational population estimates | Annual (30 Jun, released Oct) | CC BY 4.0 |
+| [Stats NZ SDMX API](https://explore.data.stats.govt.nz/) | Subnational population estimates (2018–2025, 6 regions) | Annual (30 Jun) | CC BY 4.0 |
+| [Taumata Arowai NEPR](https://www.taumataarowai.govt.nz/) | Water demand, leakage (CARL), metering per supplier (NPR successor) | Annual | CC BY 3.0 NZ |
+| [Water New Zealand NPR 2021/22](https://www.waternz.org.nz/NationalPerformanceReview) | Demand / leakage / metering (final edition; dashboard data) | Ended 2021/22 | Water NZ terms (non-commercial with attribution) |
 | [LAWA](https://www.lawa.org.nz/explore-data/water-quantity/) | Regional council boundaries (WKT via LAWA map service, derived from Stats NZ) | Static | CC BY 4.0 |
-| [Water New Zealand NPR](https://www.waternz.org.nz/NationalPerformanceReview) | Litres/person/day, leakage, metering | Annual | See publisher terms |
 | HBRC Hilltop (`data.hbrc.govt.nz`) | River flow, realtime (3 sites) | 15 min | Per-council terms; public access |
 | ORC Hilltop (`gisdata.orc.govt.nz`) | River flow, historical 2010–2021 (8 sites) | 5 min | Per-council terms; public access |
 | [LAWA](https://www.lawa.org.nz/download-data) | River water quality state & trend | Annual snapshot, downloaded 2026-08-30 | CC BY 4.0 |
@@ -96,8 +97,9 @@ All business logic lives in `sql/`; Python only does IO and orchestration (DuckD
 Contains data sourced from Stats NZ and licensed for reuse under **CC BY 4.0**.
 Water quality data courtesy of **LAWA** and New Zealand's regional councils.
 Boundary data via **LAWA** (CC BY 4.0; originally derived from Stats NZ regional
-council boundaries). River flow data courtesy of **Hawke's Bay Regional Council**
-and **Otago Regional Council** public Hilltop servers.
+council boundaries). Water demand/network data courtesy of **Taumata Arowai**
+(CC BY 3.0 NZ) and **Water New Zealand**. River flow data courtesy of
+**Hawke's Bay Regional Council** and **Otago Regional Council** public Hilltop servers.
 
 ## Run it yourself
 

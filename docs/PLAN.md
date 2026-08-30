@@ -25,8 +25,8 @@ at 15–20 h/week; ~10–12 days full-time.
   （2026-08-30：7 个 xlsx → `data/raw/lawa/`，清单 `data/raw/lawa/MANIFEST.md`）
 - [x] One command produces data/processed/*.json + schema + timestamps ✅（`make data`，schema 校验 8/8）
 
-> **W1 进度（2026-08-30 下午）**：流量取数脚本落地 ✅（HBRC 3 站实时 5 年 + ORC 8 站历史 ~10 年，`scripts/fetch_hilltop.py`，日流量，0 错误；其余 council 公开端点无时序，见 `docs/W1-data-sources.md`）；边界简化 ✅（LAWA boundaryforNZ WKT → `data/ref/boundaries_regions_simple.geojson` 4.9KB，替代 Stats NZ GDS）；区域映射表 ✅（`data/ref/region_map.json`）；`make data` 从零跑通 ✅（W1 最小版 transform/validate，5/5 校验；流量 11 站 + 区域 6 + 人口降级记录）。Stats NZ ADE 仍 502/403（`fetch_population.py` 重试+优雅降级已实现）。
-- 验收: `make data` runs from scratch ✅（2026-08-30）
+> **W1 完成（2026-08-30 晚）**：流量取数（HBRC 3 站实时 + ORC 8 站历史）；人口 6 council × 2018–2025（新 SDMX API，REGC 官方验证）；NPR/NEPR 需求数据（`data/ref/water_demand.json`）；区域映射（实测验证）；边界 4.9KB；`make data` 从零跑通（8/8 schema 校验）。唯一待办：GitHub 推送（等 workflow-scope token）。
+- 验收: `make data` runs from scratch ✅（2026-08-30，含人口/NPR 全量）
 
 ## W2 · Analysis + static site
 - [ ] DuckDB wired in; Python does IO/orchestration only
