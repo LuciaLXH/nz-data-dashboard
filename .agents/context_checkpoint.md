@@ -20,28 +20,26 @@
 ## 数据源与许可（README 许可表为准）
 | 源 | 用途 | 许可 | 状态 |
 |---|---|---|---|
-| Stats NZ ADE API | 分区人口（年度） | CC BY 4.0 | ⏸️ 仍 502/403（网关不稳），key 有效（`.env`）；`fetch_population.py` 重试+优雅降级已实现 |
-| Water NZ NPR | 人均 L/日/漏损/计量 | 逐项确认 | 🔄 子代理研究中 |
+| **Stats NZ SDMX API**（新 ADE 后端） | 分区人口（年度，2018–2025） | CC BY 4.0 | ✅ **已跑通**：`api.data.stats.govt.nz/rest/data/STATSNZ,POPES_SUB_001,1.0/ALL`（旧 opendata 502 整会话，已弃用）。6 council × 48 区域-年落盘 |
+| **Water NZ NPR 2021/22**（最终版） | 人均 L/日/漏损/计量 | Water NZ 版权（非商用+署名） | ✅ 全量 574 行落盘 `data/raw/waternz_npr/`（公开 Tableau 提取） |
+| **Taumata Arowai NEPR 2024/25**（NPR 继任者） | 按连接计量（L/conn/d、CARL、ILI、计量%） | **CC BY 3.0 NZ** | ✅ 单位级 CSV + PDF 落盘 `data/raw/taumata_nepr/` |
 | HBRC Hilltop（data.hbrc.govt.nz） | 流量实时（3 站：Fernhill/Tukituki Red Bridge/Mohaka Raupunga） | per-council 公开 | ✅ 已落地（5 年日流量） |
 | ORC Hilltop（gisdata.orc.govt.nz） | 流量历史 2010-12→2021-04（8 站，cumecs） | per-council 公开 | ✅ 已落地（~10 年日流量） |
-| ECan/Southland/Auckland/WRC | 流量 | per-council | ⚠️ 公开端点无时序；**W1.5 候选：LAWA 内部 Umbraco API**（flowstats/wateravailable/waterusage，CC BY 4.0） |
+| ECan/Southland/Auckland/WRC | 流量 | per-council | ⚠️ 公开端点无时序；**W1.5 候选：LAWA 内部 Umbraco API**（flowstats/wateravailable/waterusage） |
 | LAWA 批量下载 | 水质/生态/湖泊/地下水/土地覆盖 | CC BY 4.0 | ✅ 已完成（2026-08-30，7 xlsx） |
-| LAWA boundaryforNZ | 区域边界（WKT） | CC BY 4.0 | ✅ 已简化 → `data/ref/boundaries_regions_simple.geojson` 4.9KB（替代 Stats NZ GDS——datafinder 需 JS 交互） |
+| LAWA boundaryforNZ | 区域边界（WKT） | CC BY 4.0 | ✅ 已简化 → `data/ref/boundaries_regions_simple.geojson` 4.9KB |
 | ~~Stats NZ GDS~~ | 边界 | — | 绕过：LAWA 边界源自 Stats NZ |
 
 ## 进度
 - **W0 ✅**：脚手架就位（README.md / ANALYSIS.md / Makefile / .gitignore / .env.example / .github/workflows/{refresh,keepalive}.yml / sql/01-03 / scripts 骨架 / docs/PLAN.md / 评审原件 docs/review/）
-- **W1 进行中**（2026-08-30 下午大推进）：
-  - ✅ **`make data` 从零跑通**（11 流量站 + 6 区域 + 人口降级记录，**8/8 校验含 JSON Schema**，exit 0）
-  - ✅ **JSON Schema**：`schemas/{flow,regions,population}.schema.json`，validate.py 用 jsonschema 校验（W3 的 6 测试将扩展）
-  - ✅ **流量取数脚本** `scripts/fetch_hilltop.py`：HBRC 3 站实时（FlowM3S [Water Level]，m³/s）+ ORC 8 站历史（Flow [Water Level]，cumecs）→ 客户端日聚合 → `data/raw/flow/<council>/<date>.json` + `_status.json`
-  - ✅ **区域映射表** `data/ref/region_map.json`（REGC 02/03/06/14/15/16 ↔ council ↔ LAWA zone + macron；REGC 标记 verified:false，待 ADE 恢复确认）
-  - ✅ **边界** `data/ref/boundaries_regions.geojson`（66KB 全精度）+ `_simple`（4.9KB）
-  - ✅ **git 提交** c1f8f2f / 2abc21c / 663b81d（本地 main 分支；.env/data.raw/data.processed/tools/.venv 全排除）
-  - ✅ **建仓脚本** `scripts/create_github_repo.py`（PAT 走 env `GH_TOKEN`，libsodium 加密 Actions secret，pynacl 装在 `.venv`）
-  - ⏸️ Stats NZ ADE：根路径仍 502（整会话未恢复）；fetch_population.py 重试(403/429/5xx)+指数退避+优雅降级已实现
-  - 🔄 Water NZ NPR 提取：子代理研究结果待收（已跑 ~50min）
-  - ⬜ **W1 剩余**：① GitHub 私有 repo + Secrets（**等用户 PAT**，脚本已就绪；repo 名 `nz-data-dashboard`）② NPR 落地 ③ ADE 恢复后跑通人口查询（数据集名待确认为 SubnationalPopulationEstimates）④ （W1.5）LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量——SurfacewaterZones?pageId=25991 可返回 zone（Id=29298 等），但 FlowSites/flowstats?pageId=<zoneId> 仍返回 []，待更深入逆向
+- **W1 基本完成 ✅**（2026-08-30 晚）：
+  - ✅ **人口数据落地**：`fetch_population.py` 切到新 SDMX API（`api.data.stats.govt.nz/rest`），6 council × 2018–2025 完整（Auckland 165.5万→181.6万等）；REGC 代码**官方验证**：02/03/06/**13/14/15**（Canterbury=13 非 14！）
+  - ✅ **NPR/NEPR 提取完成**：`data/ref/water_demand.json`（NEPR 2024/25 主表 9 供应商 + NPR 2021/22 表 + 全国背景）；原始数据 `data/raw/waternz_npr/` + `data/raw/taumata_nepr/`（gitignored）；报告 `docs/NPR-research.md` + `docs/W1-water-demand-dunedin-invercargill.md`
+  - ✅ **`make data` 全绿**（8/8 含 schema；流量 11 站 + 人口 6 区域 + 区域 6）
+  - ✅ **GitHub repo 已建**：`github.com/LuciaLXH/nz-data-dashboard`（private）+ `STATS_NZ_API_KEY` secret 已验证配置
+  - ⏳ **推送被拒**：用户首个 token 缺 `workflow` scope（推 workflow 文件被 GitHub 拒）；已请用户生成 `repo`+`workflow` 双 scope 新 token。**repo/secret 就绪，只差 push**
+  - ⏳ W1.5：LAWA flowstats API 补 ECan/Southland/Auckland/WRC 流量（SurfacewaterZones?pageId=25991 返回 zone Id=29298 等，但 FlowSites/flowstats?pageId=<zone> 仍返回 []）
+- **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**（人口 2018–2025 与 NPR/NEPR 需求数据已齐，W2 可直接开工）
 - **W2**：DuckDB 接入、sql/01-03 实现、Leaflet 地图 + 2 图、**3 条书面发现**（数字+图+so what）、ANALYSIS.md、Limitations/非因果章节 —— 验收 = **能讲 3 分钟故事**
 - **W3**：工程+包装（_runs.jsonl/Data Health/6 测试/Attribution/15s GIF/转公开开 Pages/验证 key 不进历史）—— 验收 = 移动端 <3s 无横滚
 - **W4**：LinkedIn 曝光 + **CV 联动**（见下）
@@ -49,6 +47,8 @@
 ## 已核实事实（勿虚构）
 - 评审修正项：README 落款已是真实姓名 **Xiaohan (Lucia) Liu**（"Feng Jiang" 是模板）；**Distinction 勿虚构**；Southland 700L 示例数字需 W1 复核
 - 数据快照全部来源 URL / 日期 / 哈希记录于 MANIFEST.md
+- **REGC 代码（官方 API 验证）**：Auckland=02, Waikato=03, Hawke's Bay=06, **Canterbury=13, Otago=14, Southland=15**（注意与旧 REGC 方案不同——旧方案 Canterbury=14/Otago=15/Southland=16 是**错的**，勿再使用）
+- **NPR 已终止**：Water NZ NPR 止于 2021/22；继任者 = Taumata Arowai NEPR（最新 2024/25，CC BY 3.0 NZ 单位级 CSV 在 data.govt.nz）
 - **ORC "No data" 谜团已解**：公共服务器只提供 2010-12-29→2021-04-23 历史数据（无实时）；2026 窗口自然无数据
 - **HBRC SiteList 只含历史站**（1968–2000）；实时站需直接 GetData（精选清单）
 - **Hilltop 编码**：拒绝 `+` 空格（"No Measurements available"），必须 `%20`；`Interval=P1D` 无效 → 客户端日聚合
@@ -57,7 +57,7 @@
 - Python 3.12.2；openpyxl 3.1.5；pandas 2.2.3；requests 2.32.3；jsonschema 4.23.0；**duckdb 未安装**（W2 需要时 `pip install duckdb`）
 - **`.venv` 项目虚拟环境**（--system-site-packages，gitignored）：pynacl 已装（建仓脚本用）；pip 直接装包会写 ~/.local 被沙箱拦，**以后装包用 `.venv/bin/pip`**
 - mapshaper 0.7.55 装在 `tools/`（npm --prefix，gitignored）
-- git：user.name=xli246，email=xli246@uclive.ac.nz；本地分支 main（提交 c1f8f2f/2abc21c/663b81d）；**无 gh CLI/ssh key/GH_TOKEN**（建 repo 等用户 PAT）
+- git：user.name=xli246，email=xli246@uclive.ac.nz；本地分支 main（提交至 2457c64）；**GitHub 用户 = LuciaLXH**，repo 已建（private）+ secret 已配；**推送等用户提供 `repo`+`workflow` 双 scope token**（首个 token 缺 workflow scope 被拒；token 用过即 revoke）
 - `.env`：`STATS_NZ_API_KEY=3c67...`（gitignored，勿外传勿提交；建 repo 后存 GH Secret）
 - 沙箱注意：本目录为会话工作区时，**项目内写入免审批**；项目外（如 CV 工作区）写入需 danger-full-access 审批
 
