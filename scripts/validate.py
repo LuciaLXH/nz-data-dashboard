@@ -22,6 +22,7 @@ SCHEMAS = {
     "flow": "schemas/flow.schema.json",
     "regions": "schemas/regions.schema.json",
     "population": "schemas/population.schema.json",
+    "population_growth": "schemas/population_growth.schema.json",
 }
 
 
@@ -44,6 +45,10 @@ def main() -> int:
     flow = json.load(open("data/processed/flow.json", encoding="utf-8"))
     regions = json.load(open("data/processed/regions.json", encoding="utf-8"))
     population = json.load(open("data/processed/population.json", encoding="utf-8"))
+    try:
+        growth = json.load(open("data/processed/population_growth.json", encoding="utf-8"))
+    except FileNotFoundError:
+        growth = {}
 
     n_sites = sum(len(v.get("sites", [])) for v in flow.get("councils", {}).values())
     n_points = sum(s.get("n_points", 0) for s in flow.get("status", {}).values())
@@ -51,17 +56,20 @@ def main() -> int:
     flow_ok, flow_msg = _schema_check("flow", flow)
     regions_ok, regions_msg = _schema_check("regions", regions)
     pop_ok, pop_msg = _schema_check("population", population)
+    growth_ok = bool(growth) and _schema_check("population_growth", growth)[0]
+    growth_rows = len(growth.get("rows", [])) if growth else 0
 
     checks = [
         ("flow: JSON Schema", flow_ok),
-        (f"flow: at least one council with data ({flow_msg if not flow_ok else 'ok'})",
-         flow_ok and bool(flow.get("councils"))),
+        ("flow: at least one council with data", flow_ok and bool(flow.get("councils"))),
         ("flow: at least one site", n_sites >= 1),
         ("flow: at least one point", n_points >= 1),
         ("regions: JSON Schema", regions_ok),
         ("regions: 6 councils mapped", len(regions.get("regions", [])) == 6),
         ("population: JSON Schema", pop_ok),
         ("population: status recorded (may be degraded)", "status" in population),
+        ("growth: JSON Schema", growth_ok),
+        ("growth: rows for all 6 regions × 7 years", growth_rows >= 6 * 7),
     ]
     passed, total = 0, len(checks)
     for name, ok in checks:
