@@ -1,11 +1,11 @@
 # NZ Water × Population
 
-[![pipeline](https://github.com/USER/REPO/actions/workflows/refresh.yml/badge.svg)](https://github.com/USER/REPO/actions)
+[![pipeline](https://github.com/LuciaLXH/nz-data-dashboard/actions/workflows/refresh.yml/badge.svg)](https://github.com/LuciaLXH/nz-data-dashboard/actions)
 [![data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-1c6b67)](#data-sources--licences)
 
 **Where will population growth put NZ council water supplies under pressure first?**
 
-[**Live site →**](https://USER.github.io/REPO/) · [The SQL →](sql/) · [Findings →](ANALYSIS.md)
+[**Live site →**](https://lucialxh.github.io/nz-data-dashboard/) · [The SQL →](sql/) · [Findings →](ANALYSIS.md)
 
 ![demo](docs/demo.gif)
 
@@ -118,7 +118,7 @@ council boundaries). Water demand/network data courtesy of **Taumata Arowai**
 ## Run it yourself
 
 ```bash
-git clone https://github.com/USER/REPO && cd REPO
+git clone https://github.com/LuciaLXH/nz-data-dashboard && cd nz-data-dashboard
 cp .env.example .env        # add your Stats NZ API key
 make all                    # fetch → transform → validate → build site
 make test                   # pytest: schema, units, region names, DST, nulls
