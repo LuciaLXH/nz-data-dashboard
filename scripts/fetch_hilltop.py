@@ -24,12 +24,19 @@ Output (data/raw/flow/<council>/):
     units, window, series:[[YYYY-MM-DD, daily_mean], ...]}]}
   - _status.json    — per-council run status (ok, sites_fetched, n_points, errors)
 
-The script never hard-fails on a single site/council: failures are recorded in
-_status.json so `make data` runs from scratch with graceful degradation.
+Exit semantics (2026-09-06): this script NEVER hard-fails on a site or a
+council outage — failures are recorded in _status.json so `make data`
+continues and the pipeline serves the last good snapshot (the CI workflow
+caches data/raw/flow between runs; transform reads the newest file per
+council, so a council that failed today still shows its previous snapshot).
+validate.py is the real gate: it only fails the run when there is no flow
+data at all to serve. Each council dir keeps at most its two newest
+snapshots so the CI cache stays small.
 """
 from __future__ import annotations
 
 import argparse
+import glob
 import json
 import os
 import sys
@@ -47,6 +54,14 @@ UTC = timezone.utc
 REQUEST_TIMEOUT = 60  # seconds
 SLEEP_BETWEEN_REQUESTS = 0.35
 MAX_ATTEMPTS = 3
+
+# HBRC sits behind Cloudflare; some CF configurations throttle or challenge
+# requests whose User-Agent is the bare python-requests default. A descriptive
+# UA identifies the consumer (2026-09-06, after intermittent runner IP
+# blocks). Retry + graceful degradation remains the real safety net.
+HEADERS = {
+    "User-Agent": "nz-data-dashboard/1.0 (+https://github.com/LuciaLXH/nz-data-dashboard; data pipeline)",
+}
 
 # Verified live/historical flow sites per council.
 # (site, request_as measurement, units, window_kind)
@@ -93,7 +108,7 @@ def _hilltop_get(base: str, params: dict, attempts: int = MAX_ATTEMPTS) -> str:
     last_err: Exception | None = None
     for attempt in range(1, attempts + 1):
         try:
-            r = requests.get(url, timeout=REQUEST_TIMEOUT)
+            r = requests.get(url, timeout=REQUEST_TIMEOUT, headers=HEADERS)
             r.raise_for_status()
             return r.text
         except Exception as e:  # noqa: BLE001 — network errors vary by lib version
@@ -228,8 +243,9 @@ def fetch_council(council: str, days: int, out_dir: str) -> dict:
     now = datetime.now(UTC)
     if all_series:
         stamp = now.strftime("%Y%m%d")
-        path = os.path.join(out_dir, council, f"{stamp}.json")
-        os.makedirs(os.path.dirname(path), exist_ok=True)
+        council_dir = os.path.join(out_dir, council)
+        path = os.path.join(council_dir, f"{stamp}.json")
+        os.makedirs(council_dir, exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
             json.dump({
                 "council": council, "label": label,
@@ -238,6 +254,13 @@ def fetch_council(council: str, days: int, out_dir: str) -> dict:
                 "sites": all_series,
             }, f, ensure_ascii=False, indent=1)
         status["file"] = os.path.relpath(path)
+        # keep only the two newest snapshots per council — enough for a one-run
+        # fallback, keeps the CI cache small
+        for old in sorted(glob.glob(os.path.join(council_dir, "[0-9]*.json")))[:-2]:
+            try:
+                os.remove(old)
+            except OSError:
+                pass
     return status
 
 
@@ -262,10 +285,32 @@ def main(argv: list[str] | None = None) -> int:
         print(f"{mark} {status['label']}: sites={status['sites_fetched']} "
               f"points={status['n_points']} errors={len(status['errors'])}")
 
+    # Graceful degradation (2026-09-06): a council whose live fetch failed can
+    # still be served from its previous snapshot — the CI workflow caches
+    # data/raw/flow between runs, and fetch_council keeps the newest 2
+    # snapshots. Exit 1 only when a council has NO data this run AND NO
+    # snapshot to fall back on: deploying would blank that council's section,
+    # so better to keep the last good deployment (and let the run be flagged).
     os.makedirs(args.out, exist_ok=True)
+    missing: list[str] = []
+    for council, st in statuses.items():
+        if st["ok"]:
+            continue
+        snaps = sorted(glob.glob(os.path.join(args.out, council, "[0-9]*.json")))
+        st["fallback_snapshot"] = os.path.relpath(snaps[-1]) if snaps else None
+        if snaps:
+            print(f"  ↻ {LABELS[council]}: fetch failed this run → using last good "
+                  f"snapshot {os.path.basename(snaps[-1])} (degraded, run continues)")
+        else:
+            missing.append(council)
+
     with open(os.path.join(args.out, "_status.json"), "w", encoding="utf-8") as f:
         json.dump(statuses, f, ensure_ascii=False, indent=1)
-    return 0 if all(s["ok"] for s in statuses.values()) else 1
+    if missing:
+        print("✗ no data and no fallback snapshot for: "
+              + ", ".join(LABELS[m] for m in missing) + " — keeping last deployment")
+        return 1
+    return 0
 
 
 if __name__ == "__main__":

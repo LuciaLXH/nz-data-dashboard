@@ -488,6 +488,11 @@ function renderHealth(d) {
 
   const parts = [];
   if (paused) parts.push(`<span class="paused"><b>⚠ pipeline paused</b> — showing last good snapshot</span>`);
+  // A council whose live server was unreachable this run (fetch recorded in
+  // _status.json) — the site shows its last good snapshot, flagged degraded.
+  const degraded = (last.flow_degraded_councils || []).filter(Boolean);
+  if (degraded.length) parts.push(
+    `<span class="paused"><b>⚠ degraded</b> — ${degraded.map((c) => c.toUpperCase()).join(", ")} flow from last good snapshot</span>`);
   if (last.utc) parts.push(
     `<span><b>Last run</b> ${nzDateTime(last.utc)} NZ · ${last.checks_passed}/${last.checks_total} checks · schema v${last.schema_version || 1}</span>`);
   if (rows.supply_per_capita_rows != null) parts.push(

@@ -61,7 +61,12 @@ def main() -> int:
         flow_pct = {}
 
     n_sites = sum(len(v.get("sites", [])) for v in flow.get("councils", {}).values())
-    n_points = sum(s.get("n_points", 0) for s in flow.get("status", {}).values())
+    # Count points actually present in the snapshots transform used (a council
+    # whose live fetch failed degrades to its cached snapshot — fetch-reported
+    # _status.n_points would be 0 for it even though data is served).
+    n_points = sum(len(site.get("series", []))
+                   for v in flow.get("councils", {}).values()
+                   for site in v.get("sites", []))
 
     flow_ok, flow_msg = _schema_check("flow", flow)
     regions_ok, regions_msg = _schema_check("regions", regions)
