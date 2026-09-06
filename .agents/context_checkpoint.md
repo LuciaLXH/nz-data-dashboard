@@ -1,15 +1,19 @@
 # 项目检查点 · NZ 数据仪表盘（nz-data-dashboard）
 
-*2026-08-31 更新。恢复方式：直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」。*
+*2026-09-06 更新。恢复方式：直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」。*
 *求职（career-ops）相关内容在 CV 工作区：`/Users/liuxiaohan/NZ-Jobseeking/2026 JOB/CV/.agents/context_checkpoint.md`（绝对路径，跨区只读无需权限）。*
 
-## 当前状态速览（2026-08-31）
+## 当前状态速览（2026-09-06）
+- **refresh 工作流间歇失败已修复**（HBRC 故障→全 job 红→邮件轰炸）：HBRC Hilltop 在 Cloudflare 后，从 GH runner IP 访问约 40% 间歇失败（09-02 起）。改法 = ① `fetch_hilltop.py` 单个 council 全挂不再 exit 1（有历史快照即降级续跑，validate 才是"无数据可服务"的总闸）；② `refresh.yml` 用 `actions/cache` 在 run 之间缓存 `data/raw/flow`+`data/raw/population`（key `flow-raw-<run_id>`+prefix fallback）→ transform 读最新快照实现"陈旧而非空白"；③ 抓取加固（UA + 保留重试）；④ `validate.py` n_points 改按实际 series 计数（降级 council 的 _status.n_points=0 不再误伤）；⑤ 站点 Data Health 条：last run 带 `flow_degraded_councils` 时显示橙色「⚠ degraded — X flow from last good snapshot」。本地已验证：降级 run 14/14、健康 run 数值不变、无快照全挂仍 exit 1（保旧部署）
+- 其余 W0–W3 完成态不变（见下）；W4 仍未启动
+
+## 之前状态速览（2026-08-31）
 - **W0–W3 全部完成，站点上线**：`https://lucialxh.github.io/nz-data-dashboard/`（HTTP 200，Data Health 14/14；repo PUBLIC `github.com/LuciaLXH/nz-data-dashboard`）
 - **视觉已定稿（用户 2026-08-31 确认"效果先过"）**：河蓝主题 `75d2082`——标题栏渐变 `#003f5f→#0072B2(Okabe-Ito 蓝)→#56B4E9`（无公认「蓝洞色」，以 Okabe-Ito 蓝为锚，色盲安全）；标题字 #eaf3fb；左侧导航字体同色（普通 #0072B2/active #005a8d）；ink #14303e + 淡蓝 tint；语义色红/琥珀/绿未动；demo.gif 已按新主题重录（2.7MB）
 - **GitHub 链接已上线（`d8d5d65`，线上验证 2 处）**：Method 顶部 caption + footer（`Built by … · LinkedIn · GitHub`）；Method 名字未改
 - **自动化**：`refresh.yml` 已加 push 触发器（`site/**` 与 workflow 改动自动部署，run 33338732307 验证成功）；另 6h 流量 + 月度 cron
 - **新增 `docs/STORY-2MIN.md`**：英文口语稿，半技术听众，~290 词≈2 分钟，数字基于已核实事实
-- 本地 HEAD = 远程 main = **9ad66f6**，工作树干净（本次会话收尾再提交 2 文件）
+- 本地 HEAD = 远程 main = **7f261a1**（2026-09-06 修复 refresh 故障后推进）；工作树已随修复提交
 - 剩余：**W4**（LinkedIn 曝光 + CV 联动，用户明确不急）；可选 W1.5（见下）；章节 B 水质分析未做
 
 ## 项目定位（已定稿，勿改）

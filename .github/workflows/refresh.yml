@@ -12,11 +12,15 @@ on:
     branches: [main]
     paths: ["site/**", ".github/workflows/**"]
 
-# deploy-pages needs write permissions on pages + a short-lived id token
+# deploy-pages needs write permissions on pages + a short-lived id token.
+# actions: write lets actions/cache persist data/raw/flow between runs so a
+# council whose live server is down degrades to its last good snapshot
+# instead of failing the run.
 permissions:
   contents: read
   pages: write
   id-token: write
+  actions: write
 
 # one deploy at a time; cancel a running refresh when a new one starts
 concurrency:
@@ -28,6 +32,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      # Restore last run's raw flow/population snapshots. If a council server
+      # is unreachable this run, fetch_hilltop records it in _status.json and
+      # the pipeline serves the cached snapshot (stale, not blank — see
+      # scripts/fetch_hilltop.py). Unique key per run + prefix fallback: save
+      # always creates a fresh entry, restore picks the newest one.
+      - uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/raw/flow
+            data/raw/population
+          key: flow-raw-${{ github.run_id }}
+          restore-keys: flow-raw-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -40,6 +56,15 @@ jobs:
         run: make test
       - name: Build static site (copies data/processed + data/ref → site/data)
         run: make site-data
+      # Persist this run's raw snapshots (fresh where fetch succeeded, the
+      # restored ones where it degraded) for the next run's fallback.
+      - uses: actions/cache/save@v4
+        if: always()
+        with:
+          path: |
+            data/raw/flow
+            data/raw/population
+          key: flow-raw-${{ github.run_id }}
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload Pages artifact
