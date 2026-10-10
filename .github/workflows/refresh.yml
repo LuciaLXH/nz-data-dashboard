@@ -40,15 +40,25 @@ jobs:
       # scripts/fetch_hilltop.py). Unique key per run + prefix fallback: save
       # always creates a fresh entry, restore picks the newest one.
       - uses: actions/cache/restore@v4
+        id: snapshots
         with:
           path: |
             data/raw/flow
             data/raw/population
             data/processed/_runs.jsonl
-          key: pipeline-v2-${{ github.run_id }}-${{ github.run_attempt }}
-          restore-keys: |
-            pipeline-v2-
-            flow-raw-
+          key: pipeline-v3-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: pipeline-v3-
+      # Cache versions hash the path list. The legacy raw-only cache must
+      # be restored with its original paths, not just its key prefix.
+      - name: Restore legacy snapshots on first migrated build
+        if: steps.snapshots.outputs.cache-matched-key == ''
+        uses: actions/cache/restore@v4
+        with:
+          path: |
+            data/raw/flow
+            data/raw/population
+          key: flow-raw-${{ github.run_id }}
+          restore-keys: flow-raw-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -71,7 +81,7 @@ jobs:
             data/raw/flow
             data/raw/population
             data/processed/_runs.jsonl
-          key: pipeline-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          key: pipeline-v3-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Choose artifact name
