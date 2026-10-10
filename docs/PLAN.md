@@ -1,63 +1,46 @@
-# Execution plan (W0–W4)
+# Project roadmap
 
-Source: external review 2026-08-30 (see `docs/review/`). Target: 2.5–3 weeks
-at 15–20 h/week; ~10–12 days full-time.
+Updated: 2026-10-10. This roadmap separates delivered functionality from
+remaining analytical and engineering work.
 
-## W0 · Decisions before building ✅
-- [x] Thesis A (supply pressure): **Where will population growth put NZ
-      council water supplies under pressure first?**
-- [x] Section B ("population can't explain water quality") → ANALYSIS.md
-- [x] Cut Streamlit / dual frontend — static site only
-- [x] 6 councils: Auckland · Canterbury · Otago · Hawke's Bay · Southland ·
-      Waikato (verify Hilltop in W1; ORC/HBRC as confirmed backups)
-- [x] Hosting: develop private → make public → open Pages
-- 验收 ✅ One sentence: who / for what decision / why this page → README
+## Delivered
 
-## W1 · Data landing
-- [x] `.gitignore` + `.env` in place（GH Secret 已配置：STATS_NZ_API_KEY）
-- [x] Stats NZ 人口 API 跑通 ✅（**新 SDMX API** api.data.stats.govt.nz，2026-08-30；旧 opendata 仍 502）
-- [x] Subnational population estimates ✅（6 councils × 2018–2025，`data/raw/population/`）
-- [x] Water NZ NPR/NEPR 提取 ✅（NPR 2021/22 全量 + NEPR 2024/25 单位级 CSV，`data/ref/water_demand.json`）
-- [x] Boundaries ✅ → `data/ref/boundaries_regions_simple.geojson`（4.9KB；LAWA WKT 替代 Stats NZ GDS，CC BY 4.0）
-- [x] Region-name normalisation map ✅ → `data/ref/region_map.json`（REGC 官方验证 02/03/06/13/14/15）
-- [x] Hilltop 取数脚本 ✅（HBRC 实时 + ORC 历史；ECan/Southland/Auckland/WRC 无公开时序，W1.5 候选 LAWA flowstats API）
-- [x] LAWA water-quality snapshot downloaded manually, record date + URL
-  （2026-08-30：7 个 xlsx → `data/raw/lawa/`，清单 `data/raw/lawa/MANIFEST.md`）
-- [x] One command produces data/processed/*.json + schema + timestamps ✅（`make data`，schema 校验 8/8）
+- Public static dashboard hosted on GitHub Pages, with charts and a regional map.
+- Stats NZ population estimates for six regions, NEPR 2024/25 network data,
+  and river-flow observations from three HBRC and eight ORC sites.
+- DuckDB SQL for population growth, regional supply scenarios, and flow percentiles.
+- JSON Schema validation, offline regression tests, and a Data Health panel.
+- Scheduled refreshes every six hours, cached source snapshots, per-site fallback,
+  and explicit warnings when a source is degraded.
+- Separate build and deployment jobs, unique Pages artifacts, and migration from
+  the previous raw-snapshot cache format.
+- Mobile layout checks and clear labels for estimated volumes and source years.
 
-> **W1 完成（2026-08-30 晚）**：流量取数（HBRC 3 站实时 + ORC 8 站历史）；人口 6 council × 2018–2025（新 SDMX API，REGC 官方验证）；NPR/NEPR 需求数据（`data/ref/water_demand.json`）；区域映射（实测验证）；边界 4.9KB；`make data` 从零跑通（8/8 schema 校验）。唯一待办：GitHub 推送（等 workflow-scope token）。
-- 验收: `make data` runs from scratch ✅（2026-08-30，含人口/NPR 全量）
+The [2026-10-10 review](REVIEW-2026-10-10.md) records the deployment incident,
+repairs, verification results, and remaining limitations.
 
-## W2 · Analysis + static site
-- [x] DuckDB wired in; Python does IO/orchestration only ✅（transform.py 经 DuckDB 跑 sql/；Makefile 用 .venv python）
-- [x] sql/01_region_population_growth.sql — window fns YoY + 5yr CAGR ✅（→ data/processed/population_growth.json，10/10 校验）
-- [x] sql/02_supply_per_capita.sql — pop × NEPR 全量 269 系统 ✅（→ supply_per_capita.json，6/6 校验）
-- [x] sql/03_flow_percentile.sql — same-week historical percentile ✅（→ flow_percentile.json，11 站；同期窗口跨年按月-日对齐，独立 pandas 交叉验证一致）
-- [x] Map: Leaflet + simplified boundary choropleth（供需压力着色 6/6 + 流量站标记 8 个有坐标）✅
-- [x] Chart 1: pop growth vs per-capita use (bubbles, colour = leakage; metering 见 water_demand.json 9 供应商) ✅
-- [x] Chart 2: leakage / demand–supply gap by council（现 vs 2030 投影 + 漏损叠加线）✅
-- [x] **Three written findings finalised** (number + chart + so what) ✅ → ANALYSIS.md + README TL;DR + site Key Findings
-- [x] "Why I don't claim causation" written ✅（README + ANALYSIS.md + site，含 flow 覆盖与自报数据限制）
-- [ ] 验收（关键闸门）: can tell a 3-minute story in front of the screen.
-  If not — fix the thesis, don't add features.
+## Analytical priorities
 
-## W3 · Engineering + packaging
-- [x] GH Actions schedule: flow 6 h (from 24 h) · water quality monthly ·
-      population monthly ✅（refresh.yml cron 改 `0 */6 * * *` + 月度）
-- [x] retry + exponential backoff + cache last success + graceful degrade ✅（fetch_population 补 3 次指数退避；Hilltop 原有；失败写 _status、transform 读最后快照）
-- [x] `_runs.jsonl` + **Data Health panel** ✅（record 增 rows/null_pct；站点页脚：last run/行数/空值率/schema ver/近 20 次色条 + pipeline paused 回退）
-- [x] Times: store UTC, display Pacific/Auckland ✅（站点 Intl 转换；tests/test_dst.py 钉死 NZ DST 边界）
-- [x] 6 tests: schema · units · region names · DST boundary · missing-value
-      propagation · percentile ✅（tests/ 24 个用例，含真实 sql/ 逻辑内联夹具）
-- [x] README finalised ✅（Status/测试说明/部署描述）；15 s GIF 待用户录屏 → docs/demo.gif ⏳
-- [x] Attribution blocks ✅（site footer + README 许可表，W1/W2 已有）
-- [x] keepalive workflow ✅ + "pipeline paused" 回退文案 ✅（页脚 >31 天显示）
-- [x] Data not committed to git — CI builds and deploys via deploy-pages ✅（refresh.yml 已加 configure/upload/deploy-pages；site-data 目标避免重复抓取）
-- [ ] Make repo public + open Pages + **verify no key in git history** ⏳（key 验证已完成 ✓ full 值从未进历史；转公开需用户 token）
-- 验收: mobile load < 3 s, no horizontal scroll, all links work（待用户测）
+- Separate reported network totals from population-based regional scenarios.
+- Align the population coverage used in efficiency and projected-growth comparisons.
+- Aggregate loss rates using total reported loss divided by total reported supply.
+- Carry explicit base and projection years through SQL, schemas, charts, and labels.
+- Correct and test seasonal percentile windows around year boundaries and leap days.
+- Assess efficiency scenarios against cost and recoverable-loss evidence before
+  presenting them as investment recommendations.
+- Complete the proposed water-quality and land-use analysis; it is currently pending.
 
-## W4 · After launch
-- [ ] LinkedIn post + one chart
-- [ ] CV line: link + one quantified result (update career-ops rule 10 then)
-- [ ] Prepare for 3 questions: why no causation / how were sources chosen /
-      what happens when the pipeline breaks
+## Engineering priorities
+
+- Fetch recent HBRC observations incrementally and reuse unchanged ORC history.
+- Distinguish source year, latest observation, fetch time, and build time in the UI.
+- Define freshness thresholds appropriate to each source and the refresh schedule.
+- Add small public-source fixtures for a reproducible offline build.
+- Review action-runtime upgrades against official release notes and Linux CI.
+
+## Documentation and data maintenance
+
+- Maintain English technical documentation, source attribution, and dated limitations.
+- Update NEPR and LAWA reference snapshots manually when new releases are adopted.
+- Keep personal interview notes, career preparation, and local tool logs outside
+  version control.

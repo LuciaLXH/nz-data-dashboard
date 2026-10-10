@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/flow_percentile.schema.json",
+  "$id": "https://github.com/LuciaLXH/nz-data-dashboard/schemas/flow_percentile.schema.json",
   "title": "Source-water availability: same-week flow percentile (W2, sql/03)",
   "description": "Per monitored flow site: latest observed flow vs the same-week historical percentile (15-day window shifted across years, excluding the latest measurement). band: low (<25th), normal (25-75th), high (>75th), insufficient (<5 history days). stale_days flags sites whose last measurement is old (ORC public server ended 2021-04).",
   "type": "object",

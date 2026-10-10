@@ -9,11 +9,10 @@
 
 ![demo](docs/demo.gif)
 
-> **Status: W2 — analysis + static site.** The pipeline is live and the
-> numbers below are real (2026-08-30 run): Stats NZ population (6 regions) ×
-> Taumata Arowai NEPR 2024/25 (all registered supplies) → findings 1–2 below
-> are 6/6-region backed. Finding 3 is the data-availability finding.
-> Section B (water quality vs land use) is outlined in [ANALYSIS.md](ANALYSIS.md).
+> **Status: deployed and maintained.** The dashboard combines population
+> estimates for six regions, NEPR 2024/25 network data, and selected river-flow
+> records. Supply and leakage projections are scenarios, with assumptions and
+> coverage limits documented below. Water-quality/land-use analysis is pending.
 
 ---
 
@@ -23,8 +22,9 @@
    Auckland **270** (NEPR 2024/25). Matching Auckland's efficiency in HB
    alone frees ≈ **48,800 m³/day — ~62% of the 6-region demand growth
    projected to 2030**.
-   *So what:* efficiency and metering buy 1.5–2 years of growth headroom
-   before new capacity is needed.
+   *Planning implication:* investigate efficiency and metering alongside capacity
+   options. This scenario does not establish achievable savings or investment cost.
+   The 62% comparison uses different population coverage and needs alignment.
    ![](site/img/fig1.png)
 
 2. **Estimated leakage at regional network rates.** Applying NEPR rates to
@@ -33,10 +33,10 @@
    **86,832 m³/day — 3.5× its own
    projected 2030 demand growth**. The leaked volume ≈ 1.1M people at
    Auckland's usage.
-   *So what:* fixing leaks is a supply-side lever that doesn't wait for
-   population — Canterbury's leaks already exceed a decade of its growth.
+   *Planning implication:* assess recoverable leakage alongside demand growth;
+   estimated losses are not equivalent to practically recoverable savings.
 
-3. **2 of 6 councils publish open flow time series.** HBRC is live; ORC's
+3. **Flow time series integrated for 2 of 6 regions.** HBRC is live; ORC's
    public server froze at 2021-04-23 (current values are on ORC AQWebPortal /
    LAWA). Where we can look (3 live HB sites, 2026-08-30), flows sit at the
    **9.5th–40.5th** percentile — Ngaruroro at Fernhill is in the driest ~10%
@@ -55,9 +55,10 @@ demand–supply gap under projected population growth over the next 5 years.
 Every chart on the site answers one sub-question of that decision.
 Scope: **6 councils** — Auckland · Canterbury · Otago · Hawke's Bay ·
 Southland · Waikato. Depth over national coverage, deliberately.
-Flow coverage: only HBRC (live) and ORC (historical public record) publish
-open flow time series; the other four councils' public endpoints expose
-metadata only — see the flow caveats on the site and in ANALYSIS.md.
+Flow coverage: HBRC live observations and ORC historical public records are
+integrated. The inspected endpoints for the other regions did not provide
+usable flow series; this does not establish that no alternative services exist.
+See the flow caveats on the site and in ANALYSIS.md.
 
 ## How it works
 
@@ -71,7 +72,8 @@ LAWA snapshot ────┘                                                   
 - `data/processed/` is the **single source of truth** for the front end:
   versioned JSON + JSON Schema + a UTC timestamp per source.
 - Refresh cadence matches each source's real cadence — see the table below.
-  This is an **automated pipeline with freshness SLAs**, not a real-time feed.
+  This is an automated pipeline; source-specific freshness thresholds remain
+  a maintenance priority.
 - The site's **Data Health** panel reads `_runs.jsonl`: last successful run,
   row counts, null rates, schema version, last 20 runs.
 
@@ -91,10 +93,10 @@ All business logic lives in `sql/`; Python only does IO and orchestration (DuckD
   catchment-level mechanism.
 - **n = 6** — no correlation across this few units is robust; one large
   council can flip the sign.
-- **Confounding** — land use (dairy intensity, irrigation) drives NZ river
-  water quality far more than urban population. Section B in
-  [ANALYSIS.md](ANALYSIS.md) sets out the test for this claim (population
-  signal vs land use, stratified) — analysis pending after W2.
+- **Confounding** — land use, irrigation, and other factors may confound relationships
+  between population and water quality. Section B in
+  [ANALYSIS.md](ANALYSIS.md) sets out a proposed test (population
+  signal vs land use, stratified); analysis remains pending.
 - **Site selection bias** — LAWA monitoring sites are not randomly located.
 - NEPR/NPR figures are council-reported; metering coverage varies.
 - Daily demand and leakage are regional extrapolations, including residents
@@ -154,11 +156,10 @@ data/
 
 Pipeline runs on GitHub Actions every 6 h plus a monthly trigger. Each run
 currently fetches both flow and population; NEPR, LAWA and other reference
-snapshots require manual updates. The workflow fetches → transforms → validates (**`make test`: 6 suites
-— schema, units, region names, DST boundaries, missing-value propagation,
-percentile**) → builds `site/` → deploys to GitHub Pages via
-`actions/deploy-pages` (data is never committed to git; the deployed site is a
-build artifact). If the badge above is red or the site footer says
+snapshots require manual updates. The workflow fetches → transforms → validates and tests (schemas, units, region names, DST boundaries,
+missing-value propagation, percentiles, and fetch fallback) → builds `site/` → deploys to GitHub Pages via
+`actions/deploy-pages` (generated data is deployed as a build artifact; the attributed NEPR
+reference CSVs are retained in Git). If the badge above is red or the site footer says
 *pipeline paused*, the data shown is the last good snapshot — the site
 degrades to stale rather than blank, by design. Times are stored in UTC and
 displayed in Pacific/Auckland on the site.

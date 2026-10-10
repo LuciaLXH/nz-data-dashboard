@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/flow.schema.json",
+  "$id": "https://github.com/LuciaLXH/nz-data-dashboard/schemas/flow.schema.json",
   "title": "River flow processed dataset (W1)",
   "description": "Daily-mean river flow snapshots per council from Hilltop servers. Produced by scripts/transform.py (W1-minimal; full DuckDB version in W2).",
   "type": "object",

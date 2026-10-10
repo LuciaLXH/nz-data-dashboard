@@ -3,7 +3,7 @@
 Writes data/processed/_runs.jsonl (one line per run; the W3 Data Health panel
 expands this with null rates / schema version / 20-run colour bars).
 
-Checks (record-only, graceful — see engineering decision "缺失率仅记录不硬失败"):
+Checks (coverage degradation is recorded; schema and minimum coverage are enforced):
   - JSON Schema (schemas/*.schema.json) for flow / regions / population
   - flow: ≥1 council with data, ≥1 site, ≥1 point
   - regions: 6 councils present
@@ -92,8 +92,8 @@ def main() -> int:
         ("supply: JSON Schema", supply_ok),
         ("supply: rows for all 6 regions", supply_rows >= 6),
         ("flow_percentile: JSON Schema", flow_pct_ok),
-        # coverage is record-only (per engineering decision "缺失率仅记录不
-        # 硬失败"): a transient per-site fetch error must NOT fail the run —
+        # Partial coverage is recorded rather than rejected: a transient
+        # per-site fetch error must not fail the run when usable sites remain —
         # the count is recorded in _runs.jsonl and shown on the Data Health
         # panel; hard-fail only if we have no monitored sites at all
         ("flow_percentile: at least one monitored site", flow_pct_rows >= 1),

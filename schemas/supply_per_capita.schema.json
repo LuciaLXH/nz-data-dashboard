@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/supply_per_capita.schema.json",
+  "$id": "https://github.com/LuciaLXH/nz-data-dashboard/schemas/supply_per_capita.schema.json",
   "title": "Demand-side supply pressure (W2, sql/02)",
   "description": "Per-region demand-side pressure from the FULL NEPR 2024/25 unit-level extract (all registered supplies): population x weighted per-capita supply, leakage, CARL, ILI, implied daily demand and 5-year projection. Metering % is not published in the unit-level extract and is therefore not computed here (curated metering figures for the 9 main urban suppliers live in data/ref/water_demand.json).",
   "type": "object",

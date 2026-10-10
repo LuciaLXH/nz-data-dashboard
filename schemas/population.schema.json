@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/xli246/nz-data-dashboard/schemas/population.schema.json",
+  "$id": "https://github.com/LuciaLXH/nz-data-dashboard/schemas/population.schema.json",
   "title": "Population processed dataset (W1)",
   "description": "Subnational population estimates (6 councils, 2018-2025) from the Stats NZ SDMX API (dataflow POPES_SUB_001), plus fetch status for Data Health.",
   "type": "object",

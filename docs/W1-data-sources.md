@@ -1,91 +1,108 @@
-# W1 · Data source registry（2026-08-30 实测）
+# Data source registry
 
-> 所有端点均为本次会话**实测验证**（curl，2026-08-30）。标注 ✅ = 返回有效数据。
+Initial checks: 2026-08-30. Maintenance notes updated: 2026-10-10.
+Endpoint behaviour below describes those checks; access and coverage may change.
 
-## 河流流量 / 水位（实时）
+## River flow
 
-> 2026-08-30 下午实测更新：**HBRC + ORC 时序取数全链路打通**（`scripts/fetch_hilltop.py`），
-> 其余 council 公开端点无时序（记录如下）。详细行为见 [BROWSER-TESTS.md](BROWSER-TESTS.md)。
+| Provider | Endpoint | Observed scope |
+|---|---|---|
+| Hawke's Bay Regional Council | `https://data.hbrc.govt.nz/Envirodata/EMAR.hts` | Live Hilltop telemetry for three curated sites. Direct requests are needed because `SiteList` primarily exposed historical sites. |
+| Otago Regional Council | `http://gisdata.orc.govt.nz/hilltop/Global.hts` | Historical Hilltop flow for eight curated sites, ending in April 2021 at this endpoint. |
+| Environment Canterbury | `https://gis1.ecan.govt.nz/arcgis/rest/services/Public/Well_Drillers/MapServer/13` | River Flow and Stage site metadata; no time series found in this layer. |
+| Environment Southland | `https://maps.es.govt.nz/server/rest/services/Public/` | Soil-moisture series, catchment polygons, and site metadata were found; a usable flow series was not identified. |
+| Auckland Council | `https://mapspublic.aucklandcouncil.govt.nz/arcgis3/rest/services/NonCouncil/LAWA/MapServer` | Monitoring-site reference data. |
+| Waikato Regional Council | Candidate Hilltop hosts | Connection or HTML error responses during the checks; integration remains pending. |
 
-| Council | 系统 | 端点（已验证） | 状态 | 备注 |
-|---|---|---|---|---|
-| Hawke's Bay (HBRC) | Hilltop | `https://data.hbrc.govt.nz/Envirodata/EMAR.hts` | ✅ 实时取数 | `SiteList` **只列历史站**（数据止于 1968–2000）；实时遥测站（如 `Ngaruroro River at Fernhill`）**不在 SiteList** 但可直接 `MeasurementList`/`GetData`。取数：`Measurement=FlowM3S [Water Level]`（m³/s，15 分钟） |
-| Otago (ORC) | Hilltop | `http://gisdata.orc.govt.nz/hilltop/Global.hts` | ✅ 历史取数 | 公共服务器**只提供 2010-12-29 → 2021-04-23**（无实时）。`Measurement=Flow [Water Level]`（cumecs=m³/s，5 分钟）。早前 "No data" 是请求了错误时间窗（2026 年）——已解决 |
-| Canterbury (ECan) | ArcGIS REST | `https://gis1.ecan.govt.nz/arcgis/rest/services/Public/Well_Drillers/MapServer/13` | ⚠️ 仅站点元数据 | 图层 13 是 River Flow and Stage 站点属性（SITE/SITENUMBER/TELEMETERED…），**无时序**。官方数据门户 `data.ecan.govt.nz` 为 JS 应用，含 "Water permit use" 等数据集（可取水许可侧，W2 供需分析候选）；水文时序 API 待 W1.5 挖 |
-| Southland (ES) | ArcGIS REST | `https://maps.es.govt.nz/server/rest/services/Public/` | ⚠️ 无流量时序 | `RiversRainfall/0` = Soil Moisture（有 Site/Date/Value 时序）；`WaterAndLand/2` = Water Quantity 是**流域多边形**（如 'Waiau Catchment'）；`EnvData` = 站点元数据。真实流量时序未在公开服务中找到 |
-| Auckland (AC) | ArcGIS REST | `https://mapspublic.aucklandcouncil.govt.nz/arcgis3/rest/services/NonCouncil/LAWA/MapServer` | ⚠️ 仅参考数据 | 图层 0 = MonitoringSiteReferenceData（站点参考），无流量时序 |
-| Waikato (WRC) | Hilltop? | 候选均失败：`data.waikatoregion.govt.nz` 连接失败；`www.waikatoregion.govt.nz/Envirodata/EMAR.hts` 返回 HTML 错误页 | ❌ TBD | 不影响 MVP 启动 |
+`scripts/fetch_hilltop.py` retrieves HBRC and ORC observations and calculates
+daily means. ORC uses `Flow [Water Level]` in cumecs; HBRC uses
+`FlowM3S [Water Level]` in m³/s. The fetcher reads measurement availability
+windows, encodes spaces as `%20`, and retains cached site series when a request
+fails or returns no observations. Fresh fetches and fallback coverage are
+reported separately. See [endpoint checks](BROWSER-TESTS.md) for sample requests.
 
-**流量覆盖结论（W1）**：程序化时序 = **HBRC（实时）+ ORC（历史）**，脚本已落地
-（HBRC 3 站 × 5 年日流量、ORC 8 站 × ~10 年日流量，2026-08-30 实测 0 错误）。
-ECan/Southland/Auckland/Waikato 待 W1.5 补（候选：LAWA 内部 Umbraco API）。
+These findings concern the inspected endpoints. They do not establish that
+other providers have no public flow data through different services.
 
-### LAWA water quantity 内部 API（W1.5 候选，非稳定公共契约）
+## Population
 
-水量探索器（lawa.org.nz/explore-data/water-quantity/，Angular + Umbraco）暴露：
-- `/umbraco/api/mapservice/FlowSites?pageId=…` — 某区域流量站点（pageId 见页面 `init('25991','region')`）
-- `/umbraco/api/waterquantityservice/flowstats?pageId=…` — 流量统计
-- `/umbraco/api/waterquantityservice/wateravailable|waterusage` — 可用/用水量（供需分析直接可用）
-- `/umbraco/api/mapservice/boundaryforNZ` — **全部区域边界（WKT）** ✅ 已用于边界简化
-若 W1.5 打通 flowstats，可统一覆盖 6 council（CC BY 4.0）。
-- 另发现 `waterquantityservice/wateravailable?pageId=<region>` 返回**区域尺度降雨/径流**（如 HB：降雨 19.7 Bm³/年、径流 11 Bm³/年，源自 NIWA）——W2 供应侧可作补充信号；`waterusage?pageId=<region>` 返回 null（需 zone 页 id）。
+The pipeline uses Stats NZ's SDMX dataflow:
 
-**region_map 实测验证（2026-08-30）**：`data/ref/region_map.json` 的 aliases 与 LAWA 河流水质 State Quartile 表（11,004 行）逐一比对 —— 6 council 5,954 行**全部精确匹配**（auckland 401 / canterbury 1616 / hawkes_bay 928 / otago 1017 / southland 761 / waikato 1231），其余 11 区域正确未匹配（含 macron 变体 manawatū-whanganui），无错配无遗漏。
+`https://api.data.stats.govt.nz/rest/data/STATSNZ,POPES_SUB_001,1.0/ALL`
 
-**NEPR 组织→区域映射验证（2026-08-30）**：`scripts/transform.py` 的 `ORG_REGION`（33 个组织→6 大区）基于新西兰地方政府地理知识编写（会话中未查阅特定官方文件）。已用 Stats NZ 官方 SDMX 人口数据数值验证：每个大区 TA 级人口求和 = RC 级人口，Auckland/Hawke's Bay/Southland **8 年全对（差值 0）**；Waikato/Canterbury/Otago 差 0.3–0.7%，经排查为 **Stats NZ 跨区域辖区效应**（Taupō 区约 3,850 人统计归入 Bay of Plenty；Waitaki 区约 1,900 人归入 Canterbury），非映射错误。供水设施按"区议会所属区域议会"归区是正确层级。
+Authentication uses `Ocp-Apim-Subscription-Key`, supplied through an environment
+variable. The checked request used the Accept header
+`application/vnd.sdmx.data+json; charset=utf-8; version=1.0.0-wd`.
+The full key `ALL` is filtered locally; abbreviated keys returned no records
+in the initial checks. The legacy OData endpoint returned HTTP 502 at that time.
 
-## 人口（年度）
+The initial snapshot covered six regions for 2018–2025, including estimated
+resident population, median age, and net migration. Regional codes were checked
+against the SDMX codelist: Auckland 02, Waikato 03, Hawke's Bay 06, Canterbury 13,
+Otago 14, and Southland 15. `data/ref/region_map.json` stores these mappings.
 
-| Source | 端点 | 状态 | 备注 |
-|---|---|---|---|
-| Stats NZ **SDMX API**（新 ADE 后端） | `https://api.data.stats.govt.nz/rest/data/STATSNZ,POPES_SUB_001,1.0/ALL` | ✅ **已跑通（2026-08-30 下午）** | 数据流 POPES_SUB_001（2018-base ERP，2018–2025）。Key 与 opendata 相同（`Ocp-Apim-Subscription-Key`）。**旧 opendata API（api.stats.govt.nz/opendata）整会话 502**，新 API 完全绕过。查询要点：年份位置不支持通配（`A.02.POP` → NoRecordsFound），必须用全 key `.../ALL` 客户端过滤；Accept 需 `application/vnd.sdmx.data+json; charset=utf-8; version=1.0.0-wd` |
-| ~~Stats NZ ADE OData API~~ | `https://api.stats.govt.nz/opendata/v1/` | ⏸️ 502（整会话） | 已弃用；fetch_population.py 已切换到新 SDMX API |
+## Water supply, leakage, and metering
 
-**人口结果（2026-08-30 实测）**：6 council × 2018–2025 完整（`data/raw/population/20260830.json`）：
-Auckland 1,654,800→1,816,000（+9.7%）、Canterbury 622,800→698,200（+12.1%）、Waikato 475,600→532,100（+11.9%）、Otago 235,000→253,900（+8.0%）、Hawke's Bay 172,400→179,700（+4.2%）、Southland 100,500→104,800（+4.3%）。含 MEDAGE/NETMIG。
+The primary analytical input is Taumata Arowai's NEPR 2024/25 unit-level CSV
+extract, retained under `data/raw/taumata_nepr/` with its source manifest and
+CC BY 3.0 NZ attribution. `data/ref/water_demand.json` also records selected
+supplier metrics and historical NPR comparisons.
 
-**REGC 代码已官方验证**（SDMX codelist，与旧 REGC 方案不同）：Auckland=02, Waikato=03, Hawke's Bay=06, **Canterbury=13, Otago=14, Southland=15** → `data/ref/region_map.json` verified=true。
+Water New Zealand's final NPR edition was 2021/22. A local research extract
+from its public Tableau dashboard covered 574 supplier-year rows across nine
+years. Large reports and exploratory extracts are not distributed with this repo.
+See [NPR and NEPR research](NPR-research.md) and the
+[Dunedin/Invercargill notes](W1-water-demand-dunedin-invercargill.md) for metric
+definitions, reporting differences, quality flags, and source references.
 
-## 用水需求 / 漏损 / 计量（NPR → NEPR）
+Supply per person is derived from reported supply divided by served population;
+it is not necessarily residential consumption. The dashboard's daily regional
+supply and loss volumes apply network rates to regional resident populations.
+They are scenarios, not measured network totals. The
+[2026-10-10 review](REVIEW-2026-10-10.md) quantifies this distinction.
 
-> **关键发现（子代理研究，2026-08-30）**：Water NZ 的 NPR 止于 **2021/22**（最终版）；继任者是 **Taumata Arowai NEPR**（最新 2024/25，2026-06 发布，data.govt.nz **CC BY 3.0 NZ** 单位级 CSV）。
+## Geographic mapping
 
-- 完整数据已落盘：`data/raw/waternz_npr/npr_2013-2022_dashboard_extract.csv`（574 行×9 年，Water NZ 公开 Tableau 提取）+ `data/raw/taumata_nepr/`（NEPR 2024/25 单位级 CSV + 2023/24、2024/25 报告 PDF）
-- 结构化交付物：`data/ref/water_demand.json`（9 供应商 × NEPR 2024/25 主表 + NPR 2021/22 表 + 全国背景）
-- 报告：`docs/NPR-research.md`（4 表 + 13 条注意事项 + 许可）；Dunedin/Invercargill 细节：`docs/W1-water-demand-dunedin-invercargill.md`
-- 示例（NEPR 2024/25，L/人/日 供应口径）：Watercare/Auckland **268.6**（漏损 19.7%、计量 99.9%）、Hastings **675.7**（26.3%、13.3%）、Invercargill **442.4**（17.0%、3.2%）、Napier **434.0**（22.6%、3.4%）、Dunedin **385.0**（18.6%、0.8%）、Christchurch **367.2**（30.0%、93.5%）、Hamilton **319.1**（14.9%、n/r）
+The LAWA boundary service `/umbraco/api/mapservice/boundaryforNZ` supplied WKT
+geometry used for `data/ref/boundaries_regions_simple.geojson` (approximately
+4.9 KB after simplification). Attribution follows LAWA's CC BY 4.0 terms;
+the underlying regional council boundaries are derived from Stats NZ.
 
-## 水质（年度快照，手动下载）
+Region aliases were checked against 11,004 LAWA river-quality records. All
+5,954 records within the six selected regions matched the expected mapping;
+the remaining regions were outside scope.
 
-LAWA 批量下载（[download-data](https://www.lawa.org.nz/download-data)，2026-08-30 确认可访问）：
-- 河流水质 state & trend：`lawa-river-water-quality-state-and-trend-results_30oct2025.xlsx`
-- 河流生态：`lawa-river-ecology-monitoring-data_16dec2025.xlsx` / `lawa-river-ecology-state-and-trend-results_30oct2025.xlsx`
-- 湖泊：`lawa-lake-quality-dataset__16dec2025.xlsx`
-- 地下水：`lawa-groundwater-quality-dataset_17oct2025.xlsx`
-- 休闲/游泳水质：`lawa-recreational-water-quality-monitoring-data-20019-2025_6march2026.xlsx`
-- 土地覆盖：`lawa-land-cover-data_oct2025.xlsx`
+The supplier-to-region mapping in `scripts/transform.py` groups territorial
+authorities by region. Population cross-checks matched regional totals exactly
+for Auckland, Hawke's Bay, and Southland over the eight checked years. Differences
+of approximately 0.3–0.7% in the other regions were consistent with territorial
+authorities crossing regional boundaries. These checks support the mapping but
+do not remove the coverage differences between service networks and regions.
 
-> **W1 状态（2026-08-30）：7 个文件已全部下载 ✅** → `data/raw/lawa/`（共 ~45MB，SHA-256 + 来源 URL 见 [`data/raw/lawa/MANIFEST.md`](../data/raw/lawa/MANIFEST.md)，README 许可表已引用下载日期）。
->
-> 结构速览（openpyxl 实测）：
-> - 河流水质（state-and-trend）：`State Quartile Results`（11,005 行：Region/Agency/Catchment/LawaSiteID/SiteID/Latitude/Longitude/WFSLanduse/WFSAltitude/RECLandCover/SedimentClass/Indicator/Median/Quartile_AllSites/Quartile_SameLandUse/...）、`State Attribute Band`（8,282）、`Trend`（43,781：TrendScore/TrendDescription，如 "Likely degrading"）。Region 为小写（`auckland`）→ 归一到 6 council 需映射表
-> - 河流生态：`River Ecology State`（4,989：Year/Median/NPSFM Attribute Band）、`River Ecology Trend`（10,406）
-> - 土地覆盖：`Regional/Catchment Broad|Medium|Detailed`（Area 1996–2018 ha，含区域/流域两粒度）—— 章节 B 用
-> - 湖泊/地下水/休闲水质：结构待 W1 剩余步骤抽查（不影响 MVP 主线）
+## Water quality and land cover
 
-## W1 待办状态（2026-08-30 下午更新）
+Seven LAWA workbooks were downloaded locally on 2026-08-30 from
+[LAWA's download page](https://www.lawa.org.nz/download-data). They cover river
+quality, river ecology, lakes, groundwater, recreational quality, and land cover.
+The local source manifest records URLs and SHA-256 hashes; these large raw
+workbooks are excluded from Git. Their analysis is not part of the current
+supply-pressure findings.
 
-- [x] Hilltop/流量端点验证 + **取数脚本落地**（HBRC 3 站实时 + ORC 8 站历史，`scripts/fetch_hilltop.py`，日流量聚合）
-- [x] LAWA 批量下载源确认 + 7 个 xlsx 快照已落盘（MANIFEST.md）
-- [x] 边界几何简化 ✅ → `data/ref/boundaries_regions_simple.geojson`（**4.9 KB**，远低于 500KB；来源为 LAWA `mapservice/boundaryforNZ` WKT，CC BY 4.0，替代 Stats NZ GDS 因 datafinder 需 JS 交互；LAWA 边界源自 Stats NZ 区域议会边界）
-- [x] 区域名归一化映射表 ✅ → `data/ref/region_map.json`（REGC **官方验证**：02/03/06/13/14/15 ↔ council ↔ LAWA zone + macron 别名）
-- [x] **Stats NZ 人口跑通** ✅（新 SDMX API；6 council × 2018–2025 完整落盘）
-- [x] **Water NZ NPR/NEPR 提取** ✅（NPR 全量 574 行 + NEPR 2024/25 单位级 CSV 落盘；`data/ref/water_demand.json`）
-- [x] `make data` 一条命令产出 processed JSON（W1 管线含 schema 校验 8/8）
+The river-quality workbook includes state quartiles, attribute bands, and trends;
+region names require normalization. Land-cover tables contain regional and
+catchment areas for 1996–2018. Water-quality and land-use analysis remains pending.
 
-## 已知问题（补充，2026-08-30 下午）
+## Candidate integrations
 
-- **ORC GetData "No data" 已解决**：原因 = 公共服务器只提供 **2010-12-29 → 2021-04-23** 的历史数据（无实时），早前用 2026 年窗口请求自然无数据。`Measurement=Flow [Water Level]`（cumecs）正常工作。脚本按站点 MeasurementList 的 From/To 自动取窗口。
-- **HBRC SiteList 只含历史站**：实时遥测站（Fernhill / Tukituki Red Bridge / Mohaka Raupunga）不在 SiteList，但直接 MeasurementList/GetData 可用。脚本用精选站点清单。
-- **Hilltop 拒绝 `+` 空格编码**（"No Measurements available"），必须 `%20`（urllib `quote_via=quote`）。
-- **Hilltop `Interval=P1D` 无效**：HBRC/ORC 都忽略日聚合参数 → 客户端日聚合（`daily_means()`）。
+LAWA's explorer exposed internal Umbraco routes for flow sites, flow statistics,
+available water, and usage. These are research leads rather than a stable public
+API contract. Regional rainfall/runoff summaries must not be treated as urban
+network supply. New integrations require endpoint, metric, licence, and
+coverage checks before inclusion.
+
+## Maintenance
+
+Flow and population are requested on each scheduled run. NEPR, LAWA, and other
+reference snapshots require manual updates, dated attribution, and validation.
+An annual source publication does not become current merely because the site
+has a recent build timestamp.
