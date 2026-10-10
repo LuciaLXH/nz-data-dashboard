@@ -1,0 +1,48 @@
+{
+  "checked_utc": "2026-10-10T02:28:44.459876+00:00",
+  "asset_sha256": {
+    "app.js": "2f4c7070ced435121cd952cf9a670014bfbda9289af3b135b116100a9b1b8705",
+    "style.css": "54de19b2ae407c207d33ab6628b126de4baeedfd4ffd60b62897000ac5ddbe44"
+  },
+  "last_validation": {
+    "utc": "2026-10-10T02:26:39.589905+00:00",
+    "schema_version": 1,
+    "checks_passed": 14,
+    "checks_total": 14,
+    "flow_sites": 10,
+    "flow_points": 23720,
+    "flow_degraded_councils": [
+      "hbrc"
+    ],
+    "population_ok": true,
+    "rows": {
+      "flow_sites": 10,
+      "flow_points": 23720,
+      "regions": 6,
+      "population_region_years": 48,
+      "population_growth_rows": 42,
+      "supply_per_capita_rows": 6,
+      "flow_percentile_rows": 10
+    },
+    "null_pct": {
+      "supply_per_capita": {
+        "l_per_person_day_w": 0.0,
+        "loss_pct_w": 0.0,
+        "ili_w": 0.0,
+        "carl_l_conn_day_w": 0.0
+      },
+      "flow_percentile": {
+        "pctile_pct": 0.0,
+        "median_hist_m3s": 0.0,
+        "min_hist_m3s": 0.0,
+        "max_hist_m3s": 0.0
+      }
+    }
+  },
+  "mobile": {
+    "status": "pass",
+    "horizontal_overflow": false,
+    "clipped_cards": 0,
+    "page_errors": []
+  }
+}
