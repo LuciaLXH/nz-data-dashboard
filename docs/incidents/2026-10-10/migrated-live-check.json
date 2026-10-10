@@ -1,0 +1,35 @@
+{
+  "utc": "2026-10-10T02:41:58.589726+00:00",
+  "schema_version": 1,
+  "checks_passed": 14,
+  "checks_total": 14,
+  "flow_sites": 11,
+  "flow_points": 25537,
+  "flow_degraded_councils": [
+    "hbrc"
+  ],
+  "population_ok": true,
+  "rows": {
+    "flow_sites": 11,
+    "flow_points": 25537,
+    "regions": 6,
+    "population_region_years": 48,
+    "population_growth_rows": 42,
+    "supply_per_capita_rows": 6,
+    "flow_percentile_rows": 11
+  },
+  "null_pct": {
+    "supply_per_capita": {
+      "l_per_person_day_w": 0.0,
+      "loss_pct_w": 0.0,
+      "ili_w": 0.0,
+      "carl_l_conn_day_w": 0.0
+    },
+    "flow_percentile": {
+      "pctile_pct": 0.0,
+      "median_hist_m3s": 0.0,
+      "min_hist_m3s": 0.0,
+      "max_hist_m3s": 0.0
+    }
+  }
+}

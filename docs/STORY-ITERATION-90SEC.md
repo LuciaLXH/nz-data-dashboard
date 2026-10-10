@@ -6,13 +6,15 @@
 
 My dashboard helps compare population growth and water supply pressure across six New Zealand regions.
 
-One useful iteration started with an automated failure alert. I first checked whether the problem was in the data, the calculations, or publishing the website. The data checks had passed. The initial failure was in the hosting service, and retrying exposed a second issue with duplicate publishing files.
+One iteration started with an automatic update failure. I checked whether the problem was with the data, calculations, or publishing. The data checks passed, but publishing failed.
 
-That led to a broader review. I found that if one monitoring station stopped responding, its previous data could disappear from the next update. I also found that some wording could mislead readers: a leakage figure was an estimate for the whole region, rather than a directly measured total, and a fixed sentence about dry river conditions could remain after the data changed.
+That prompted a broader review. I found that unavailable data sources could cause old readings to disappear. I also found that a leakage estimate could be mistaken for a measured total, and some text about river conditions did not change with the data.
 
-I worked through these issues with an AI assistant, reviewing the changes and the evidence. We kept the last available station readings when a source failed, made the warnings clearer, separated data preparation from publishing, and clarified the estimates and dates. We also fixed text being cut off on mobile.
+With an AI assistant, I worked through these issues and reviewed the evidence. We preserved available previous readings, clarified warnings, estimates and dates, and separated data preparation from publishing. Checking the live website then revealed an issue moving the old saved data into the new system, so we corrected that too.
 
-The updated version passed 30 automated tests, the data checks, and browser checks. The main lesson was that a useful dashboard needs more than attractive charts. Readers need to understand what the numbers represent, how current they are, and what happens when a source is unavailable.
+The final update passed 30 automated tests and data and browser checks. Fresh data for two stations could not be retrieved during publication, but all 11 station records remained visible, with clear warnings.
+
+My main lesson was that a useful dashboard needs trustworthy information: readers should understand what the numbers mean, how current they are, and what happens when sources are unavailable.
 
 ## 中文讲解要点
 
