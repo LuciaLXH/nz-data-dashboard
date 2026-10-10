@@ -24,13 +24,13 @@ Output (data/raw/flow/<council>/):
     units, window, series:[[YYYY-MM-DD, daily_mean], ...]}]}
   - _status.json    — per-council run status (ok, sites_fetched, n_points, errors)
 
-Exit semantics (2026-09-06): this script NEVER hard-fails on a site or a
-council outage — failures are recorded in _status.json so `make data`
-continues and the pipeline serves the last good snapshot (the CI workflow
+Exit semantics: outages are recorded in _status.json. With a usable cached
+snapshot, `make data` continues and serves the last good site series (the CI workflow
 caches data/raw/flow between runs; transform reads the newest file per
 council, so a council that failed today still shows its previous snapshot).
-validate.py is the real gate: it only fails the run when there is no flow
-data at all to serve. Each council dir keeps at most its two newest
+Without any snapshot for a failed council, fetching exits 1 to retain the
+previous deployment. validate.py also gates schemas and dataset coverage.
+Each council dir keeps at most its two newest
 snapshots so the CI cache stays small.
 """
 from __future__ import annotations
@@ -228,22 +228,36 @@ def fetch_council(council: str, days: int, out_dir: str) -> dict:
         "ok": False, "sites_fetched": 0, "n_points": 0, "errors": {},
     }
     all_series: list[dict] = []
+    council_dir = os.path.join(out_dir, council)
+    snapshots = sorted(glob.glob(os.path.join(council_dir, "[0-9]*.json")))
+    previous = {}
+    for snapshot in snapshots:
+        with open(snapshot, encoding="utf-8") as f:
+            previous.update({s["site"]: s for s in json.load(f).get("sites", [])
+                             if s.get("series")})
+    status["fallback_sites"] = []
     for site, measurement, units, window_kind in CURATED_SITES[council]:
         try:
             rec = fetch_site(base, site, measurement, window_kind, days)
+            if not rec["series"]:
+                raise ValueError("No observations returned")
             rec["units"] = units
+            rec["fetched_utc"] = datetime.now(UTC).isoformat()
             all_series.append(rec)
             status["sites_fetched"] += 1
             status["n_points"] += len(rec["series"])
         except Exception as e:  # noqa: BLE001 — per-site degradation
             status["errors"][site] = str(e)[:200]
+            if site in previous:
+                all_series.append(previous[site])
+                status["fallback_sites"].append(site)
         time.sleep(SLEEP_BETWEEN_REQUESTS)
 
-    status["ok"] = bool(all_series)
+    status["ok"] = not status["errors"] and status["sites_fetched"] > 0
+    status["sites_served"] = len(all_series)
     now = datetime.now(UTC)
     if all_series:
         stamp = now.strftime("%Y%m%d")
-        council_dir = os.path.join(out_dir, council)
         path = os.path.join(council_dir, f"{stamp}.json")
         os.makedirs(council_dir, exist_ok=True)
         with open(path, "w", encoding="utf-8") as f:
@@ -299,8 +313,8 @@ def main(argv: list[str] | None = None) -> int:
         snaps = sorted(glob.glob(os.path.join(args.out, council, "[0-9]*.json")))
         st["fallback_snapshot"] = os.path.relpath(snaps[-1]) if snaps else None
         if snaps:
-            print(f"  ↻ {LABELS[council]}: fetch failed this run → using last good "
-                  f"snapshot {os.path.basename(snaps[-1])} (degraded, run continues)")
+            print(f"  ↻ {LABELS[council]}: fetch degraded → serving available data "
+                  f"from {os.path.basename(snaps[-1])} (run continues)")
         else:
             missing.append(council)
 

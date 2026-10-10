@@ -1,0 +1,15 @@
+  ✅ flow: JSON Schema
+  ✅ flow: at least one council with data
+  ✅ flow: at least one site
+  ✅ flow: at least one point
+  ✅ regions: JSON Schema
+  ✅ regions: 6 councils mapped
+  ✅ population: JSON Schema
+  ✅ population: status recorded (may be degraded)
+  ✅ growth: JSON Schema
+  ✅ growth: rows for all 6 regions × 7 years
+  ✅ supply: JSON Schema
+  ✅ supply: rows for all 6 regions
+  ✅ flow_percentile: JSON Schema
+  ✅ flow_percentile: at least one monitored site
+validate: 14/14 checks passed → appended _runs.jsonl

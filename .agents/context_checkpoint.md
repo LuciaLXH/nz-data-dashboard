@@ -1,5 +1,7 @@
 # 项目检查点 · NZ 数据仪表盘（nz-data-dashboard）
 
+> 2026-10-10 最新审查见 `docs/REVIEW-2026-10-10.md`。本次 Pages 502 已经由全新运行 38009523209 恢复上线（原 run 重跑遇到同名产物冲突）；本地新增快照回退、独立部署 job、历史缓存、前端降级提示和估算口径修正，30 项测试通过。用户已于 2026-10-10 授权提交并推送本次改动，新版部署验证进行中。以下为历史检查点。
+
 *2026-09-06 更新。恢复方式：直接问「读取 .agents/context_checkpoint.md 恢复我们的工作」。*
 *求职（career-ops）相关内容在 CV 工作区：`/Users/liuxiaohan/NZ-Jobseeking/2026 JOB/CV/.agents/context_checkpoint.md`（绝对路径，跨区只读无需权限）。*
 

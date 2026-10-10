@@ -1,0 +1,478 @@
+refresh	Set up job	﻿2026-10-10T00:22:56.9505541Z Current runner version: '2.337.0'
+refresh	Set up job	2026-10-10T00:22:56.9541765Z ##[group]Runner Image Provisioner
+refresh	Set up job	2026-10-10T00:22:56.9543582Z Hosted Compute Agent
+refresh	Set up job	2026-10-10T00:22:56.9544666Z Version: 20261002.596
+refresh	Set up job	2026-10-10T00:22:56.9545769Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+refresh	Set up job	2026-10-10T00:22:56.9547076Z Build Date: 2026-10-02T22:28:27Z
+refresh	Set up job	2026-10-10T00:22:56.9548255Z Worker ID: {7d50e557-8490-4fca-aadd-67029cdbd47f}
+refresh	Set up job	2026-10-10T00:22:56.9549491Z Region: eastus
+refresh	Set up job	2026-10-10T00:22:56.9550563Z Cloud: Azure
+refresh	Set up job	2026-10-10T00:22:56.9551713Z ##[endgroup]
+refresh	Set up job	2026-10-10T00:22:56.9554241Z ##[group]Operating System
+refresh	Set up job	2026-10-10T00:22:56.9555292Z Ubuntu
+refresh	Set up job	2026-10-10T00:22:56.9556156Z 24.04.5
+refresh	Set up job	2026-10-10T00:22:56.9557109Z LTS
+refresh	Set up job	2026-10-10T00:22:56.9557972Z ##[endgroup]
+refresh	Set up job	2026-10-10T00:22:56.9558972Z ##[group]Runner Image
+refresh	Set up job	2026-10-10T00:22:56.9560014Z Image: ubuntu-24.04
+refresh	Set up job	2026-10-10T00:22:56.9561414Z Version: 20261004.327.1
+refresh	Set up job	2026-10-10T00:22:56.9563712Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+refresh	Set up job	2026-10-10T00:22:56.9566876Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+refresh	Set up job	2026-10-10T00:22:56.9568559Z ##[endgroup]
+refresh	Set up job	2026-10-10T00:22:56.9570811Z ##[group]GITHUB_TOKEN Permissions
+refresh	Set up job	2026-10-10T00:22:56.9574231Z Actions: write
+refresh	Set up job	2026-10-10T00:22:56.9575271Z Contents: read
+refresh	Set up job	2026-10-10T00:22:56.9576245Z Metadata: read
+refresh	Set up job	2026-10-10T00:22:56.9577329Z Pages: write
+refresh	Set up job	2026-10-10T00:22:56.9578252Z ##[endgroup]
+refresh	Set up job	2026-10-10T00:22:56.9581372Z Secret source: Actions
+refresh	Set up job	2026-10-10T00:22:56.9583253Z Cache mode: write
+refresh	Set up job	2026-10-10T00:22:56.9584708Z Prepare workflow directory
+refresh	Set up job	2026-10-10T00:22:57.0057356Z Prepare all required actions
+refresh	Set up job	2026-10-10T00:22:57.0106404Z Getting action download info
+refresh	Set up job	2026-10-10T00:22:57.1989096Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+refresh	Set up job	2026-10-10T00:22:57.2906019Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+refresh	Set up job	2026-10-10T00:22:57.3909676Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+refresh	Set up job	2026-10-10T00:22:57.4732909Z Download action repository 'actions/configure-pages@v5' (SHA:983d7736d9b0ae728b81ab479565c72886d7745b)
+refresh	Set up job	2026-10-10T00:22:57.6225204Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+refresh	Set up job	2026-10-10T00:22:57.7117563Z Download action repository 'actions/deploy-pages@v4' (SHA:d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e)
+refresh	Set up job	2026-10-10T00:22:58.0450078Z Getting action download info
+refresh	Set up job	2026-10-10T00:22:58.1058087Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+refresh	Set up job	2026-10-10T00:22:58.2669635Z Complete job name: refresh
+refresh	Run actions/checkout@v4	﻿2026-10-10T00:22:58.3739434Z ##[group]Run actions/checkout@v4
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3740932Z with:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3742136Z   repository: LuciaLXH/nz-data-dashboard
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3750444Z   token: ***
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3751301Z   ssh-strict: true
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3752603Z   ssh-user: git
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3753521Z   persist-credentials: true
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3754509Z   clean: true
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3755406Z   sparse-checkout-cone-mode: true
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3756470Z   fetch-depth: 1
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3757336Z   fetch-tags: false
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3758247Z   show-progress: true
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3759170Z   lfs: false
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3760045Z   submodules: false
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3760951Z   set-safe-directory: true
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3762110Z   allow-unsafe-pr-checkout: false
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.3763820Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4833162Z Syncing repository: LuciaLXH/nz-data-dashboard
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4836483Z ##[group]Getting Git version info
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4838142Z Working directory is '/home/runner/work/nz-data-dashboard/nz-data-dashboard'
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4840901Z [command]/usr/bin/git version
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4895042Z git version 2.55.0
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4921136Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4951816Z Temporarily overriding HOME='/home/runner/work/_temp/3777cd7e-3080-43d2-89bf-321b5fa16892' before making global git config changes
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4956343Z Adding repository directory to the temporary git global config as a safe directory
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.4960450Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nz-data-dashboard/nz-data-dashboard
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5010956Z Deleting the contents of '/home/runner/work/nz-data-dashboard/nz-data-dashboard'
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5015703Z ##[group]Initializing the repository
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5019722Z [command]/usr/bin/git init /home/runner/work/nz-data-dashboard/nz-data-dashboard
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5145925Z hint: Using 'master' as the name for the initial branch. This default branch name
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5150050Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5153889Z hint: to use in all of your new repositories, which will suppress this warning,
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5156741Z hint: call:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5158296Z hint:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5160112Z hint: 	git config --global init.defaultBranch <name>
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5162482Z hint:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5164506Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5167705Z hint: 'development'. The just-created branch can be renamed via this command:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5169284Z hint:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5170129Z hint: 	git branch -m <name>
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5171270Z hint:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5174004Z hint: Disable this message with "git config set advice.defaultBranchName false"
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5177888Z Initialized empty Git repository in /home/runner/work/nz-data-dashboard/nz-data-dashboard/.git/
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5184241Z [command]/usr/bin/git remote add origin https://github.com/LuciaLXH/nz-data-dashboard
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5223436Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5226285Z ##[group]Disabling automatic garbage collection
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5228648Z [command]/usr/bin/git config --local gc.auto 0
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5264427Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5266787Z ##[group]Setting up auth
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5271145Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5305312Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5687567Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5735080Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.5976651Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.6015185Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.6252947Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.6296844Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.6298829Z ##[group]Fetching the repository
+refresh	Run actions/checkout@v4	2026-10-10T00:22:58.6308774Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +39b0b180f6732d923dc03731533d4e3f2c00941f:refs/remotes/origin/main
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.0996013Z From https://github.com/LuciaLXH/nz-data-dashboard
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.0997063Z  * [new ref]         39b0b180f6732d923dc03731533d4e3f2c00941f -> origin/main
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1002624Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1003496Z ##[group]Determining the checkout info
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1006077Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1013329Z [command]/usr/bin/git sparse-checkout disable
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1107078Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1149206Z ##[group]Checking out the ref
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1149937Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1454710Z Switched to a new branch 'main'
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1459986Z branch 'main' set up to track 'origin/main'.
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1467143Z ##[endgroup]
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1514338Z [command]/usr/bin/git log -1 --format=%H
+refresh	Run actions/checkout@v4	2026-10-10T00:22:59.1542398Z 39b0b180f6732d923dc03731533d4e3f2c00941f
+refresh	Run actions/cache/restore@v4	﻿2026-10-10T00:22:59.1815302Z ##[group]Run actions/cache/restore@v4
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1815745Z with:
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1816067Z   path: data/raw/flow
+refresh	Run actions/cache/restore@v4	data/raw/population
+refresh	Run actions/cache/restore@v4	
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1816489Z   key: flow-raw-37996530712
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1816873Z   restore-keys: flow-raw-
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1817230Z   enableCrossOsArchive: false
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1817591Z   fail-on-cache-miss: false
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1817935Z   lookup-only: false
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.1818243Z ##[endgroup]
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.2930673Z (node:2331) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.2932650Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.3620050Z Cache hit for: flow-raw-37996530712
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.3727773Z (node:2331) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.4225122Z Received 135868 of 135868 (100.0%), 6.8 MBs/sec
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.4226124Z Cache Size: ~0 MB (135868 B)
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.4256043Z [command]/usr/bin/tar -xf /home/runner/work/_temp/8bd194d1-5830-4f65-a1b6-92285c39a045/cache.tzst -P -C /home/runner/work/nz-data-dashboard/nz-data-dashboard --use-compress-program unzstd
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.4382792Z Cache restored successfully
+refresh	Run actions/cache/restore@v4	2026-10-10T00:22:59.4462275Z Cache restored from key: flow-raw-37996530712
+refresh	Run actions/setup-python@v5	﻿2026-10-10T00:22:59.4642588Z ##[group]Run actions/setup-python@v5
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4643046Z with:
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4643331Z   python-version: 3.12
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4643657Z   check-latest: false
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4646502Z   token: ***
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4646810Z   update-environment: true
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4647151Z   allow-prereleases: false
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4647478Z   freethreaded: false
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.4647780Z ##[endgroup]
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.6024397Z ##[group]Installed versions
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.6123864Z (node:2348) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.6126326Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.6127808Z Successfully set up CPython (3.12.15)
+refresh	Run actions/setup-python@v5	2026-10-10T00:22:59.6129547Z ##[endgroup]
+refresh	Run pip install -r requirements.txt	﻿2026-10-10T00:22:59.6341041Z ##[group]Run pip install -r requirements.txt
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6342020Z ^[[36;1mpip install -r requirements.txt^[[0m
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6667103Z shell: /usr/bin/bash -e {0}
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6667844Z env:
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6668523Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6669600Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6670676Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6671780Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6672523Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6673270Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Run pip install -r requirements.txt	2026-10-10T00:22:59.6673895Z ##[endgroup]
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.6276221Z Collecting requests==2.32.3 (from -r requirements.txt (line 3))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.6799747Z   Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.6999691Z Collecting openpyxl==3.1.5 (from -r requirements.txt (line 4))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.7046155Z   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.8488143Z Collecting pandas==2.2.3 (from -r requirements.txt (line 5))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.8559272Z   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.9247263Z Collecting jsonschema==4.23.0 (from -r requirements.txt (line 6))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:00.9317129Z   Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.1792672Z Collecting duckdb==1.5.5 (from -r requirements.txt (line 7))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.1837011Z   Downloading duckdb-1.5.5-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (4.2 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.2114972Z Collecting pytest==7.4.4 (from -r requirements.txt (line 8))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.2154489Z   Downloading pytest-7.4.4-py3-none-any.whl.metadata (7.9 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.3609347Z Collecting charset-normalizer<4,>=2 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.3650355Z   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.3859687Z Collecting idna<4,>=2.5 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.3896708Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.4153895Z Collecting urllib3<3,>=1.21.1 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.4197835Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.4395443Z Collecting certifi>=2017.4.17 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.4429652Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.4547475Z Collecting et-xmlfile (from openpyxl==3.1.5->-r requirements.txt (line 4))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.4585321Z   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.6555366Z Collecting numpy>=1.26.0 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.6602621Z   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.6744445Z Collecting python-dateutil>=2.8.2 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.6779701Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7310247Z Collecting pytz>=2020.1 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7350780Z   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7521135Z Collecting tzdata>=2022.7 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7556054Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7694292Z Collecting attrs>=22.2.0 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7730569Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7857799Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.7922468Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.8090385Z Collecting referencing>=0.28.4 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:01.8137517Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.0847929Z Collecting rpds-py>=0.7.1 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.0889961Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1017475Z Collecting iniconfig (from pytest==7.4.4->-r requirements.txt (line 8))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1069551Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1243979Z Collecting packaging (from pytest==7.4.4->-r requirements.txt (line 8))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1277409Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1405250Z Collecting pluggy<2.0,>=0.12 (from pytest==7.4.4->-r requirements.txt (line 8))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1438356Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1619768Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.3->-r requirements.txt (line 5))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1651859Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1846806Z Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1889102Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.1985962Z Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.2050308Z Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.2154451Z Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.2842517Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 195.4 MB/s  0:00:00
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.2890488Z Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.2969637Z Downloading duckdb-1.5.5-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (21.5 MB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4102608Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.5/21.5 MB 193.0 MB/s  0:00:00
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4150834Z Downloading pytest-7.4.4-py3-none-any.whl (325 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4224813Z Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4292060Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4347588Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4412557Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4475220Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4537971Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4599932Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.4661427Z Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5345527Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 252.2 MB/s  0:00:00
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5389376Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5455155Z Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5522728Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5584799Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5651501Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5708409Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5769623Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5841805Z Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5903996Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.5961708Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:02.8283124Z Installing collected packages: pytz, urllib3, tzdata, typing-extensions, six, rpds-py, pluggy, packaging, numpy, iniconfig, idna, et-xmlfile, duckdb, charset-normalizer, certifi, attrs, requests, referencing, python-dateutil, pytest, openpyxl, pandas, jsonschema-specifications, jsonschema
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:11.0644355Z 
+refresh	Run pip install -r requirements.txt	2026-10-10T00:23:11.0674775Z Successfully installed attrs-26.1.0 certifi-2026.7.22 charset-normalizer-3.5.2 duckdb-1.5.5 et-xmlfile-2.0.0 idna-3.20 iniconfig-2.3.1 jsonschema-4.23.0 jsonschema-specifications-2025.9.1 numpy-2.5.3 openpyxl-3.1.5 packaging-26.3 pandas-2.2.3 pluggy-1.6.0 pytest-7.4.4 python-dateutil-2.9.0.post0 pytz-2026.5 referencing-0.37.0 requests-2.32.3 rpds-py-2026.9.1 six-1.17.0 typing-extensions-4.16.0 tzdata-2026.5 urllib3-2.8.0
+refresh	Fetch, transform, validate	﻿2026-10-10T00:23:11.1675657Z ##[group]Run make data
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1676089Z ^[[36;1mmake data^[[0m
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1742070Z shell: /usr/bin/bash -e {0}
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1742438Z env:
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1742818Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1743469Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1744119Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1744702Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1745276Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1745854Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1746547Z   STATS_NZ_API_KEY: ***
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1746865Z ##[endgroup]
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.1858010Z python3 scripts/fetch_population.py
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.9726518Z ✅ Stats NZ SDMX: 6 regions × 48 region-years → data/raw/population/20261010.json
+refresh	Fetch, transform, validate	2026-10-10T00:23:11.9913902Z python3 scripts/fetch_hilltop.py
+refresh	Fetch, transform, validate	2026-10-10T00:32:06.2312212Z ✅ Hawke's Bay (HBRC): sites=2 points=3519 errors=1
+refresh	Fetch, transform, validate	2026-10-10T00:32:06.2313204Z ✅ Otago (ORC): sites=8 points=20201 errors=0
+refresh	Fetch, transform, validate	2026-10-10T00:32:06.2593298Z python3 scripts/transform.py
+refresh	Fetch, transform, validate	2026-10-10T00:32:06.9092499Z transform: flow sites=10 | regions=6 | population regions=6 | growth rows=42 | flow percentile sites=10
+refresh	Fetch, transform, validate	2026-10-10T00:32:06.9582502Z python3 scripts/validate.py
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6234215Z   ℹ️ flow_percentile: 10/11 sites (transient fetch degradation recorded)
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6236561Z   ✅ flow: JSON Schema
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6237904Z   ✅ flow: at least one council with data
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6238884Z   ✅ flow: at least one site
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6239461Z   ✅ flow: at least one point
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6239973Z   ✅ regions: JSON Schema
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6240479Z   ✅ regions: 6 councils mapped
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6240983Z   ✅ population: JSON Schema
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6242074Z   ✅ population: status recorded (may be degraded)
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6242797Z   ✅ growth: JSON Schema
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6243341Z   ✅ growth: rows for all 6 regions × 7 years
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6243911Z   ✅ supply: JSON Schema
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6244398Z   ✅ supply: rows for all 6 regions
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6244960Z   ✅ flow_percentile: JSON Schema
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6245566Z   ✅ flow_percentile: at least one monitored site
+refresh	Fetch, transform, validate	2026-10-10T00:32:07.6246300Z validate: 14/14 checks passed → appended _runs.jsonl
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	﻿2026-10-10T00:32:07.6483997Z ##[group]Run make test
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6484370Z ^[[36;1mmake test^[[0m
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6548858Z shell: /usr/bin/bash -e {0}
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6549239Z env:
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6549654Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6550355Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6551042Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6551930Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6552567Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6553219Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6553749Z ##[endgroup]
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:07.6653645Z python3 -m pytest -q
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:09.1418844Z ........................                                                 [100%]
+refresh	Run tests (schema, units, regions, DST, missing values, percentile)	2026-10-10T00:32:09.1419633Z 24 passed in 0.89s
+refresh	Build static site (copies data/processed + data/ref → site/data)	﻿2026-10-10T00:32:09.2456118Z ##[group]Run make site-data
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2456551Z ^[[36;1mmake site-data^[[0m
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2524573Z shell: /usr/bin/bash -e {0}
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2524932Z env:
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2525312Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2525956Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2526587Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2527152Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2527759Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2528498Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2528981Z ##[endgroup]
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2636245Z rm -rf site/data
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2646305Z mkdir -p site/data
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2660084Z # only the datasets consumed by site/app.js — raw flow.json (1.3 MB) and
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2666988Z # population.json are W1 packaging artifacts, not used by the front end
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2674273Z cp data/processed/population_growth.json data/processed/supply_per_capita.json \
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2675861Z    data/processed/flow_percentile.json data/processed/regions.json \
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2676600Z    data/processed/_runs.jsonl site/data/
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2689422Z cp data/ref/boundaries_regions_simple.geojson site/data/boundaries.geojson
+refresh	Build static site (copies data/processed + data/ref → site/data)	2026-10-10T00:32:09.2702172Z cp data/ref/flow_sites.json data/ref/water_consents.json site/data/
+refresh	Run actions/cache/save@v4	﻿2026-10-10T00:32:09.2779819Z ##[group]Run actions/cache/save@v4
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2780286Z with:
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2780680Z   path: data/raw/flow
+refresh	Run actions/cache/save@v4	data/raw/population
+refresh	Run actions/cache/save@v4	
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2781175Z   key: flow-raw-37996530712
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2781965Z   enableCrossOsArchive: false
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2782416Z env:
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2782843Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2783493Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2784162Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2784753Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2785394Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2785963Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.2802161Z ##[endgroup]
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.3954604Z (node:2555) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.3956411Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.4161833Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/nz-data-dashboard/nz-data-dashboard --files-from manifest.txt --use-compress-program zstdmt
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.5214237Z Failed to save: Unable to reserve cache with key flow-raw-37996530712, another job may be creating this cache.
+refresh	Run actions/cache/save@v4	2026-10-10T00:32:09.5236870Z ##[warning]Cache save failed.
+refresh	Configure Pages	﻿2026-10-10T00:32:09.5352118Z ##[group]Run actions/configure-pages@v5
+refresh	Configure Pages	2026-10-10T00:32:09.5352502Z with:
+refresh	Configure Pages	2026-10-10T00:32:09.5355274Z   token: ***
+refresh	Configure Pages	2026-10-10T00:32:09.5355511Z   enablement: false
+refresh	Configure Pages	2026-10-10T00:32:09.5355745Z env:
+refresh	Configure Pages	2026-10-10T00:32:09.5356040Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Configure Pages	2026-10-10T00:32:09.5356533Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Configure Pages	2026-10-10T00:32:09.5357020Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Configure Pages	2026-10-10T00:32:09.5357461Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Configure Pages	2026-10-10T00:32:09.5357910Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Configure Pages	2026-10-10T00:32:09.5358353Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Configure Pages	2026-10-10T00:32:09.5358729Z ##[endgroup]
+refresh	Upload Pages artifact	﻿2026-10-10T00:32:09.8347510Z ##[group]Run actions/upload-pages-artifact@v3
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8347907Z with:
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8348139Z   path: site
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8348383Z   name: github-pages
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8348649Z   retention-days: 1
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8348888Z env:
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8349190Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8349720Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8350230Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8350688Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8351146Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8351827Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8352443Z   GITHUB_PAGES: true
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8352714Z ##[endgroup]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8416866Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8446525Z ##[group]Run echo ::group::Archive artifact
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8446937Z ^[[36;1mecho ::group::Archive artifact^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8447285Z ^[[36;1mtar \^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8447585Z ^[[36;1m  --dereference --hard-dereference \^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8447985Z ^[[36;1m  --directory "$INPUT_PATH" \^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8448360Z ^[[36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8448713Z ^[[36;1m  --exclude=.git \^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8449005Z ^[[36;1m  --exclude=.github \^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8449306Z ^[[36;1m  .^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8449551Z ^[[36;1mecho ::endgroup::^[[0m
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8481329Z shell: /usr/bin/sh -e {0}
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8481878Z env:
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8482211Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8482761Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8483283Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8483760Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8484254Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8484737Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8485160Z   GITHUB_PAGES: true
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8485434Z   INPUT_PATH: site
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8485695Z ##[endgroup]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8531915Z ##[group]Archive artifact
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8547782Z ./
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8548132Z ./index.html
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8548486Z ./data/
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8548841Z ./data/flow_sites.json
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8552324Z ./data/supply_per_capita.json
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8552810Z ./data/flow_percentile.json
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8553215Z ./data/boundaries.geojson
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8553513Z ./data/water_consents.json
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8553778Z ./data/regions.json
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8554015Z ./data/_runs.jsonl
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8554258Z ./data/population_growth.json
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8554522Z ./img/
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8554754Z ./img/fig2.png
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8555136Z ./img/fig3.png
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8557872Z ./img/fig1.png
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8568453Z ./app.js
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8568874Z ./style.css
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8569243Z ./.gitkeep
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8572682Z ##[endgroup]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8586153Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=16]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8590900Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8597277Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8600281Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8605143Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8607502Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8645822Z ##[group]Run actions/upload-artifact@v4
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8646247Z with:
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8646563Z   name: github-pages
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8647104Z   path: /home/runner/work/_temp/artifact.tar
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8647727Z   retention-days: 1
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8648185Z   if-no-files-found: error
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8648607Z   compression-level: 6
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8648948Z   overwrite: false
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8649295Z   include-hidden-files: false
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8649678Z env:
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8650084Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8650772Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8651724Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8652711Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8653322Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8653955Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8654541Z   GITHUB_PAGES: true
+refresh	Upload Pages artifact	2026-10-10T00:32:09.8654903Z ##[endgroup]
+refresh	Upload Pages artifact	2026-10-10T00:32:10.0525638Z (node:2589) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	Upload Pages artifact	2026-10-10T00:32:10.0527583Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	Upload Pages artifact	2026-10-10T00:32:10.0614996Z With the provided path, there will be 1 file uploaded
+refresh	Upload Pages artifact	2026-10-10T00:32:10.0642293Z Artifact name is valid!
+refresh	Upload Pages artifact	2026-10-10T00:32:10.0642936Z Root directory input is valid!
+refresh	Upload Pages artifact	2026-10-10T00:32:10.2758138Z Beginning upload of artifact content to blob storage
+refresh	Upload Pages artifact	2026-10-10T00:32:10.3731130Z (node:2589) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+refresh	Upload Pages artifact	2026-10-10T00:32:10.4947651Z Uploaded bytes 1957821
+refresh	Upload Pages artifact	2026-10-10T00:32:10.5135447Z Finished uploading artifact content to blob storage!
+refresh	Upload Pages artifact	2026-10-10T00:32:10.5136982Z SHA256 digest of uploaded artifact zip is 00e628553008970609e89a7bd79ea3dd3f3678f531f29ea3684b16f4af3274da
+refresh	Upload Pages artifact	2026-10-10T00:32:10.5138617Z Finalizing artifact upload
+refresh	Upload Pages artifact	2026-10-10T00:32:10.8080542Z Artifact github-pages.zip successfully finalized. Artifact ID 11652807209
+refresh	Upload Pages artifact	2026-10-10T00:32:10.8082838Z Artifact github-pages has been successfully uploaded! Final size is 1957821 bytes. Artifact ID is 11652807209
+refresh	Upload Pages artifact	2026-10-10T00:32:10.8090106Z Artifact download URL: https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/37996530712/artifacts/11652807209
+refresh	Upload Pages artifact	2026-10-10T00:32:10.8224225Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=961]
+refresh	Deploy to GitHub Pages	﻿2026-10-10T00:32:10.8327044Z ##[group]Run actions/deploy-pages@v4
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8327407Z with:
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8330306Z   token: ***
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8330555Z   timeout: 600000
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8330816Z   error_count: 10
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8331070Z   reporting_interval: 5000
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8331377Z   artifact_name: github-pages
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8331988Z   preview: false
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8332235Z env:
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8332555Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8333082Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8333613Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8334088Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8334562Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8335035Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8335445Z   GITHUB_PAGES: true
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:10.8335744Z ##[endgroup]
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:11.0305925Z (node:2601) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:11.0306888Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:11.0823581Z Fetching artifact metadata for "github-pages" in this workflow run
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:11.1584046Z Found 2 artifact(s)
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:11.1594091Z ##[error]Fetching artifact metadata failed. Is githubstatus.com reporting issues with API requests, Pages, or Actions? Please re-run the deployment at a later time.
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:11.3249667Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+refresh	Deploy to GitHub Pages	    at getArtifactMetadata (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/api-client.js:89:1)
+refresh	Deploy to GitHub Pages	    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+refresh	Deploy to GitHub Pages	    at Deployment.create (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/deployment.js:66:1)
+refresh	Deploy to GitHub Pages	    at main (/home/runner/work/_actions/actions/deploy-pages/v4/src/index.js:30:1)
+refresh	Deploy to GitHub Pages	2026-10-10T00:32:11.3267722Z ##[error]Error: Multiple artifacts named "github-pages" were unexpectedly found for this workflow run. Artifact count is 2.
+refresh	Post Run actions/checkout@v4	﻿2026-10-10T00:32:11.3525446Z Post job cleanup.
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4464181Z [command]/usr/bin/git version
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4514414Z git version 2.55.0
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4556214Z Temporarily overriding HOME='/home/runner/work/_temp/172e39f2-30a1-4dc3-aa4c-a48d815f7845' before making global git config changes
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4557954Z Adding repository directory to the temporary git global config as a safe directory
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4563561Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nz-data-dashboard/nz-data-dashboard
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4613284Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4653842Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4922545Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4958245Z http.https://github.com/.extraheader
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.4971128Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.5020143Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.5301132Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+refresh	Post Run actions/checkout@v4	2026-10-10T00:32:11.5354137Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+refresh	Complete job	﻿2026-10-10T00:32:11.5815359Z Cleaning up orphan processes
+refresh	Complete job	2026-10-10T00:32:11.6123153Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache/restore@v4, actions/cache/save@v4, actions/checkout@v4, actions/configure-pages@v5, actions/deploy-pages@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

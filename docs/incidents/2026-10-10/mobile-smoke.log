@@ -1,0 +1,11 @@
+mobile 390x844: load 379 ms | DOM 278 ms | 2297 KB
+horizontal scroll: scrollWidth=390 innerWidth=390
+clipped finding cards: 0
+  nav map-section: ✓
+  nav consents-section: ✓
+  nav charts: ✓
+  nav flow-section: ✓
+  nav method: ✓
+  nav findings: ✓
+console/HTTP errors: 0
+RESULT: PASS

@@ -29,6 +29,13 @@ def test_supply_units_and_bounds(processed):
 
 def test_population_positive(processed):
     rows = processed["population_growth"]["rows"]
-    assert len(rows) == 42  # 6 regions × 7 years
+    # Annual releases can add years; coverage must remain balanced.
+    years = {r["year"] for r in rows}
+    regions = {r["region"] for r in processed["regions"]["regions"]}
+    assert len(years) >= 7
+    assert len(rows) == len(regions) * len(years)
+    assert {(r["region"], r["year"]) for r in rows} == {
+        (region, year) for region in regions for year in years
+    }
     for r in rows:
         assert r["pop"] > 0

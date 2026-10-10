@@ -2,15 +2,14 @@ name: refresh
 
 on:
   schedule:
-    # cron times are UTC. Flow telemetry refreshes every 6 h; population and
-    # water quality are monthly — sources are annual, a daily check would be
-    # performative.
+    # Cron times are UTC. make data currently fetches both flow and population
+    # on every trigger; NEPR/LAWA reference snapshots are updated manually.
     - cron: "0 */6 * * *"     # flow / level
-    - cron: "0 3 1 * *"       # population + water quality (1st of month)
+    - cron: "0 3 1 * *"       # additional monthly run (1st of month)
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["site/**", ".github/workflows/**"]
+    paths: ["site/**", "scripts/**", "sql/**", "schemas/**", "tests/**", "data/ref/**", "data/raw/taumata_nepr/**", "requirements.txt", "Makefile", ".github/workflows/**"]
 
 # deploy-pages needs write permissions on pages + a short-lived id token.
 # actions: write lets actions/cache persist data/raw/flow between runs so a
@@ -28,8 +27,11 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  refresh:
+  build:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
+    outputs:
+      artifact_name: ${{ steps.artifact-name.outputs.name }}
     steps:
       - uses: actions/checkout@v4
       # Restore last run's raw flow/population snapshots. If a council server
@@ -42,8 +44,11 @@ jobs:
           path: |
             data/raw/flow
             data/raw/population
-          key: flow-raw-${{ github.run_id }}
-          restore-keys: flow-raw-
+            data/processed/_runs.jsonl
+          key: pipeline-v2-${{ github.run_id }}-${{ github.run_attempt }}
+          restore-keys: |
+            pipeline-v2-
+            flow-raw-
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
@@ -59,18 +64,38 @@ jobs:
       # Persist this run's raw snapshots (fresh where fetch succeeded, the
       # restored ones where it degraded) for the next run's fallback.
       - uses: actions/cache/save@v4
-        if: always()
+        # Save only validated snapshots, and preserve validation history.
+        if: success()
         with:
           path: |
             data/raw/flow
             data/raw/population
-          key: flow-raw-${{ github.run_id }}
+            data/processed/_runs.jsonl
+          key: pipeline-v2-${{ github.run_id }}-${{ github.run_attempt }}
       - name: Configure Pages
         uses: actions/configure-pages@v5
+      - name: Choose artifact name
+        id: artifact-name
+        run: echo "name=github-pages-${GITHUB_RUN_ID}-${GITHUB_RUN_ATTEMPT}" >> "$GITHUB_OUTPUT"
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
+          name: ${{ steps.artifact-name.outputs.name }}
           path: site
+          retention-days: 7
+
+  # A transient Pages API error can now be recovered with "Re-run failed
+  # jobs" without refetching council data or rebuilding the validated site.
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+        with:
+          artifact_name: ${{ needs.build.outputs.artifact_name }}

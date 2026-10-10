@@ -25,10 +25,12 @@
    projected to 2030**.
    *So what:* efficiency and metering buy 1.5–2 years of growth headroom
    before new capacity is needed.
-   ![](docs/fig1.png)
+   ![](site/img/fig1.png)
 
-2. **22.5% of supply leaks.** **298,671 m³/day** is lost to leaks across the
-   6 regions; Canterbury alone leaks **86,832 m³/day — 3.5× its own
+2. **Estimated leakage at regional network rates.** Applying NEPR rates to
+   the entire regional population gives **298,671 m³/day (22.5% of implied
+   supply)** across the 6 regions; Canterbury's estimate is
+   **86,832 m³/day — 3.5× its own
    projected 2030 demand growth**. The leaked volume ≈ 1.1M people at
    Auckland's usage.
    *So what:* fixing leaks is a supply-side lever that doesn't wait for
@@ -95,6 +97,9 @@ All business logic lives in `sql/`; Python only does IO and orchestration (DuckD
   signal vs land use, stratified) — analysis pending after W2.
 - **Site selection bias** — LAWA monitoring sites are not randomly located.
 - NEPR/NPR figures are council-reported; metering coverage varies.
+- Daily demand and leakage are regional extrapolations, including residents
+  outside reporting networks. They are scenarios rather than measured
+  network totals; the reported NEPR loss sum is about **264,779 m³/day**.
 
 ## Data sources & licences
 
@@ -119,10 +124,13 @@ council boundaries). Water demand/network data courtesy of **Taumata Arowai**
 
 ```bash
 git clone https://github.com/LuciaLXH/nz-data-dashboard && cd nz-data-dashboard
+python3 -m venv .venv
+.venv/bin/python -m pip install -r requirements.txt
 cp .env.example .env        # add your Stats NZ API key
+set -a; source .env; set +a # export the key to the pipeline
 make all                    # fetch → transform → validate → build site
 make test                   # pytest: schema, units, region names, DST, nulls
-python -m http.server -d site 8000
+make serve
 ```
 
 `make test` runs offline: the SQL-logic tests (percentile, missing-value
@@ -144,8 +152,9 @@ data/
 
 ## Status
 
-Pipeline runs on GitHub Actions: flow every 6 h, water quality and population
-monthly. The workflow fetches → transforms → validates (**`make test`: 6 suites
+Pipeline runs on GitHub Actions every 6 h plus a monthly trigger. Each run
+currently fetches both flow and population; NEPR, LAWA and other reference
+snapshots require manual updates. The workflow fetches → transforms → validates (**`make test`: 6 suites
 — schema, units, region names, DST boundaries, missing-value propagation,
 percentile**) → builds `site/` → deploys to GitHub Pages via
 `actions/deploy-pages` (data is never committed to git; the deployed site is a
@@ -153,6 +162,14 @@ build artifact). If the badge above is red or the site footer says
 *pipeline paused*, the data shown is the last good snapshot — the site
 degrades to stale rather than blank, by design. Times are stored in UTC and
 displayed in Pacific/Auckland on the site.
+
+Build and deployment run as separate jobs. If Pages returns a transient
+server error after the build succeeds, use **Re-run failed jobs** within the
+artifact's 7-day retention window to retry deployment without refetching.
+Validation history is cached between successful builds; cache eviction can
+reset it. These bars describe data validation, not deployment status.
+
+Review and repair record: [2026-10-10 project review](docs/REVIEW-2026-10-10.md).
 
 ---
 

@@ -26,9 +26,10 @@ README TL;DR and in the site's Key Findings block.
   regions (Hawke's Bay, Otago 511, Southland 536 L/p/d) have the most
   headroom.
 
-### Finding 2 — Leaks lose a fifth of everything the 6 regions put into their networks
-- **Evidence:** **298,671 m³/day (22.5% of daily supply)** is lost to leaks
-  across the 6 regions. Canterbury alone leaks **86,832 m³/day — 3.5× its own
+### Finding 2 — Regional extrapolation estimates leakage at a fifth of implied supply
+- **Evidence:** Applying NEPR network rates to regional ERP gives
+  **298,671 m³/day (22.5% of implied daily supply)** across the 6 regions.
+  Canterbury's extrapolated leakage is **86,832 m³/day — 3.5× its own
   projected 2030 demand growth** (+24,815 m³/day). The leaked volume would
   serve ≈ **1.1 million people** at Auckland's usage.
 - **Chart:** demand-now-vs-2030 bars with leak volume overlay.
@@ -103,5 +104,12 @@ The consents layer is a **context layer**: it shows where each region's water is
 - **Projection is demand-only** — "2030 demand" multiplies today's per-capita
   use by projected population; it is not a full supply–demand model
   (consents, network capacity, climate).
+- **Regional extrapolation differs from measured network totals** — daily
+  demand and leakage use regional ERP, including residents outside reporting
+  networks. Directly summing reported NEPR annual volumes and dividing by
+  365 gives about 1,178,309 m³/day supplied and 264,779 m³/day lost; sql/02
+  scenarios give 1,326,635 and 298,671 respectively. Leakage percentages
+  currently use population weights rather than volume weights. These
+  scenarios cannot establish a recoverable water volume or investment cost.
 - **Consents ≠ use** — the LAWA consent chart shows authorised volume, not
   actual takes; Otago publishes no consent-use data on LAWA.

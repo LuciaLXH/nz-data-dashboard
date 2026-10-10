@@ -119,7 +119,6 @@ function buildFindings(supply, flowPct) {
   const cant = rows.find((r) => r.region === "canterbury");
   const hbFree = (hb.l_per_person_day_w - akl.l_per_person_day_w) * hb.pop_served / 1000;
   const cantRatio = cant.leak_m3_day / (cant.proj_demand_m3_day - cant.daily_demand_m3);
-  const leakPeople = (totLeak * 1000) / akl.l_per_person_day_w;
   const hbrc = (flowPct.rows || []).filter((r) => r.council === "hbrc")
     .map((r) => r.pctile_pct).filter((v) => v != null).sort((a, b) => a - b);
   const pctMin = hbrc.length ? hbrc[0] : null;
@@ -137,16 +136,16 @@ function buildFindings(supply, flowPct) {
     {
       img: FIG[1], imgAlt: "Leaks as a share of daily supply — chart",
       headline: "Fix the pipes before building new plants.",
-      num: `${fmt(totLeak)} m³/day (${fmt3.format(100 * totLeak / totNow)}%)`,
-      soWhat: `Canterbury leaks ${fmt(cant.leak_m3_day)} m³/day — ${fmt3.format(cantRatio)}× its own projected growth. The leaked volume could serve ${fmt(leakPeople)} people.`,
-      foot: "Source: NEPR 2024/25 unit-level extract (sql/02)",
+      num: `Estimated ${fmt(totLeak)} m³/day (${fmt3.format(100 * totLeak / totNow)}%)`,
+      soWhat: `Canterbury's extrapolated leakage is ${fmt(cant.leak_m3_day)} m³/day — ${fmt3.format(cantRatio)}× its projected demand growth. This scenario assumes network rates apply to the whole regional population.`,
+      foot: "Regional extrapolation: NEPR 2024/25 rates × Stats NZ ERP (sql/02)",
       target: "charts",
     },
     {
       img: FIG[2], imgAlt: "River flow percentiles at monitored sites — map",
       headline: "We can't see the water.",
       num: "2 of 6 councils",
-      soWhat: `HBRC is live; ORC's public record froze in 2021. Live HB flows sit at the ${pctMin == null ? "—" : fmt3.format(pctMin)}th–${pctMax == null ? "—" : fmt3.format(pctMax)}th percentile — Fernhill is in its driest 10%.`,
+      soWhat: `HBRC publishes telemetry; ORC's public record froze in 2021. Latest available HB observations span the ${pctMin == null ? "—" : fmt3.format(pctMin)}th–${pctMax == null ? "—" : fmt3.format(pctMax)}th percentile. See the flow table for each site's observation date.`,
       foot: "Source: council Hilltop servers (sql/03) · see flow caveats",
       target: "map-section",
     },
@@ -464,7 +463,7 @@ function renderFlowTable(flowPct, flowSites) {
     return `<tr>
       <td>${r.council.toUpperCase()}</td>
       <td>${r.site}</td>
-      <td>${r.latest_date}${stale ? ` <span class="stale">(public server ended 2021-04)</span>` : ""}</td>
+      <td>${r.latest_date}${stale ? `<span class="stale">(${r.council === "orc" ? "public server ended 2021-04" : "stale observation"})</span>` : ""}</td>
       <td>${r.latest_flow_m3s}</td>
       <td>${r.pctile_pct == null ? "—" : fmt1.format(r.pctile_pct)}</td>
       <td><span class="badge ${r.band}">${BAND[r.band] ? BAND[r.band].label : r.band}</span></td>
@@ -493,6 +492,8 @@ function renderHealth(d) {
   const degraded = (last.flow_degraded_councils || []).filter(Boolean);
   if (degraded.length) parts.push(
     `<span class="paused"><b>⚠ degraded</b> — ${degraded.map((c) => c.toUpperCase()).join(", ")} flow from last good snapshot</span>`);
+  if (last.population_ok === false) parts.push(
+    `<span class="paused"><b>⚠ degraded</b> — population from last good snapshot</span>`);
   if (last.utc) parts.push(
     `<span><b>Last run</b> ${nzDateTime(last.utc)} NZ · ${last.checks_passed}/${last.checks_total} checks · schema v${last.schema_version || 1}</span>`);
   if (rows.supply_per_capita_rows != null) parts.push(
@@ -503,7 +504,8 @@ function renderHealth(d) {
   const last20 = runs.slice(-20);
   parts.push(`<span class="run-bars" title="Last ${last20.length} validation runs">` +
     last20.map((r) => {
-      const cls = r.checks_passed === r.checks_total ? "ok"
+      const cls = r.checks_passed === r.checks_total
+        ? ((r.flow_degraded_councils || []).length || r.population_ok === false ? "degraded" : "ok")
         : r.checks_passed > 0 ? "degraded" : "fail";
       return `<span class="bar ${cls}" title="${(r.utc || "").slice(0, 16)} · ${r.checks_passed}/${r.checks_total}"></span>`;
     }).join("") + `<span class="bars-label">last ${last20.length} runs</span></span>`);
@@ -511,11 +513,11 @@ function renderHealth(d) {
 }
 
 function setAsOf(d) {
-  el("asof-findings").textContent = `As of ${nzDate(d.supply.processed_utc)} (NEPR 2024/25)`;
-  el("asof-map").textContent = `Demand: ${nzDate(d.supply.processed_utc)} · Flow: ${nzDate(d.flowPct.processed_utc)}`;
+  el("asof-findings").textContent = `NEPR 2024/25 · built ${nzDate(d.supply.processed_utc)}`;
+  el("asof-map").textContent = `Built: demand ${nzDate(d.supply.processed_utc)} · flow ${nzDate(d.flowPct.processed_utc)}`;
   el("asof-consents").textContent = `Accessed ${nzDate(d.consents.compiled_utc)}`;
-  el("asof-charts").textContent = `As of ${nzDate(d.supply.processed_utc)}`;
-  el("asof-flow").textContent = `As of ${nzDate(d.flowPct.processed_utc)}`;
+  el("asof-charts").textContent = `ERP 2025 · built ${nzDate(d.supply.processed_utc)}`;
+  el("asof-flow").textContent = `Processed ${nzDate(d.flowPct.processed_utc)} · observation dates below`;
 }
 
 /* ------------------------------------------------------------------ */

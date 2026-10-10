@@ -1,0 +1,31 @@
+{
+  "method": "Existing NEPR supply deduplication and org mapping; sum reported annual quantities / 365",
+  "reported_by_region": {
+    "auckland": {
+      "water_supplied_m3": 470294.622,
+      "loss_m3": 92157.488
+    },
+    "canterbury": {
+      "water_supplied_m3": 266009.268,
+      "loss_m3": 77685.395
+    },
+    "hawkes_bay": {
+      "water_supplied_m3": 87574.827,
+      "loss_m3": 18619.894
+    },
+    "otago": {
+      "water_supplied_m3": 124593.995,
+      "loss_m3": 32521.192
+    },
+    "southland": {
+      "water_supplied_m3": 38304.477,
+      "loss_m3": 7327.496
+    },
+    "waikato": {
+      "water_supplied_m3": 191531.597,
+      "loss_m3": 36467.814
+    }
+  },
+  "reported_daily_supply_m3": 1178308.7859032054,
+  "reported_daily_loss_m3": 264779.27835634793
+}

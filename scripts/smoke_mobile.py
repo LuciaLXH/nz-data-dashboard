@@ -1,13 +1,13 @@
 """W3 acceptance smoke: load the site at a mobile viewport and verify the
-acceptance criteria — <3 s load, no horizontal scroll, every nav section
-switches, no console errors (finding-card 404s are expected until the user
-adds site/img/figN.png).
+acceptance criteria — <3 s data-ready load, no horizontal scroll, every nav
+section switches, no console errors or failed asset requests.
 
 Usage:  .venv/bin/python scripts/smoke_mobile.py   (serves site/ itself)
 Requires: playwright installed (browsers cached) + site/data built.
 """
 from __future__ import annotations
 
+import argparse
 import subprocess
 import sys
 import time
@@ -20,6 +20,9 @@ PORT = 8091
 
 
 def main() -> int:
+    parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
+    parser.add_argument("--screenshot", type=Path, help="optional mobile evidence PNG")
+    args = parser.parse_args()
     server = subprocess.Popen([sys.executable, "-m", "http.server", str(PORT), "-d", str(ROOT / "site")],
                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     time.sleep(1.2)
@@ -33,9 +36,11 @@ def main() -> int:
             errors: list[str] = []
             page.on("console", lambda m: errors.append(m.text) if m.type == "error" else None)
             page.on("pageerror", lambda e: errors.append(str(e)))
+            page.on("response", lambda r: errors.append(f"HTTP {r.status}: {r.url}") if r.status >= 400 else None)
 
             t0 = time.time()
             page.goto(f"http://127.0.0.1:{PORT}/", wait_until="load")
+            page.wait_for_function("document.querySelector('#health-strip').textContent.includes('Last run')")
             load_ms = (time.time() - t0) * 1000
             perf = page.evaluate("""() => {
                 const t = performance.timing;
@@ -55,6 +60,15 @@ def main() -> int:
             if sw > iw:
                 failures.append("horizontal overflow")
 
+            clipped = page.evaluate("""() => [...document.querySelectorAll('.card')]
+                .filter(card => [...card.querySelectorAll('.headline, .foot')].some(text => {
+                  const c = card.getBoundingClientRect(), t = text.getBoundingClientRect();
+                  return t.top < c.top || t.bottom > c.bottom;
+                })).length""")
+            print(f"clipped finding cards: {clipped}")
+            if clipped:
+                failures.append("finding card text clipped")
+
             for section in ["map-section", "consents-section", "charts", "flow-section", "method", "findings"]:
                 page.click(f"#sidenav a[data-section='{section}']")
                 page.wait_for_timeout(350)
@@ -63,10 +77,13 @@ def main() -> int:
                 if not visible:
                     failures.append(f"nav {section} failed")
 
-            real_errors = [e for e in errors if "fig" not in e and "404" not in e]
+            real_errors = errors
             if real_errors:
                 failures.append(f"console errors: {real_errors[:2]}")
-            print(f"console errors (excl. pending fig images): {len(real_errors)}")
+            print(f"console/HTTP errors: {len(real_errors)}")
+            if args.screenshot:
+                args.screenshot.parent.mkdir(parents=True, exist_ok=True)
+                page.screenshot(path=str(args.screenshot), full_page=True)
             browser.close()
     finally:
         server.terminate()

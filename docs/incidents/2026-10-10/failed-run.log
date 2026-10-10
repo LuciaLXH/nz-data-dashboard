@@ -1,0 +1,486 @@
+refresh	UNKNOWN STEP	﻿2026-10-09T21:57:50.5552058Z Current runner version: '2.337.0'
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5575470Z ##[group]Runner Image Provisioner
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5576203Z Hosted Compute Agent
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5576766Z Version: 20261002.596
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5577293Z Commit: c3d12f3313a95f25162a1503be624f3b0617f8c0
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5577961Z Build Date: 2026-10-02T22:28:27Z
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5578551Z Worker ID: {b4e4af9b-c774-4252-ad53-2d945228472b}
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5579126Z Region: westus3
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5579645Z Cloud: Azure
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5580095Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5581354Z ##[group]Operating System
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5581951Z Ubuntu
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5582370Z 24.04.5
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5582884Z LTS
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5583319Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5584039Z ##[group]Runner Image
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5584607Z Image: ubuntu-24.04
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5585138Z Version: 20261004.327.1
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5586278Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20261004.327/images/ubuntu/Ubuntu2404-Readme.md
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5587583Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20261004.327
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5588366Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5589413Z ##[group]GITHUB_TOKEN Permissions
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5591431Z Actions: write
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5592248Z Contents: read
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5592776Z Metadata: read
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5593240Z Pages: write
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5594019Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5595872Z Secret source: Actions
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5596750Z Cache mode: write
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5597372Z Prepare workflow directory
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5879584Z Prepare all required actions
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.5919706Z Getting action download info
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.8854585Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+refresh	UNKNOWN STEP	2026-10-09T21:57:50.9812591Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+refresh	UNKNOWN STEP	2026-10-09T21:57:51.1829563Z Download action repository 'actions/setup-python@v5' (SHA:a26af69be951a213d495a4c3e4e4022e16d87065)
+refresh	UNKNOWN STEP	2026-10-09T21:57:51.3108095Z Download action repository 'actions/configure-pages@v5' (SHA:983d7736d9b0ae728b81ab479565c72886d7745b)
+refresh	UNKNOWN STEP	2026-10-09T21:57:51.9246487Z Download action repository 'actions/upload-pages-artifact@v3' (SHA:56afc609e74202658d3ffba0e8f6dda462b719fa)
+refresh	UNKNOWN STEP	2026-10-09T21:57:52.1461883Z Download action repository 'actions/deploy-pages@v4' (SHA:d6db90164ac5ed86f2b6aed7e0febac5b3c0c03e)
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.0119660Z Getting action download info
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.1244198Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4144191Z Complete job name: refresh
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4840704Z ##[group]Run actions/checkout@v4
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4841178Z with:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4841396Z   repository: LuciaLXH/nz-data-dashboard
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4844072Z   token: ***
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4844257Z   ssh-strict: true
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4844462Z   ssh-user: git
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4844650Z   persist-credentials: true
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4844846Z   clean: true
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4845038Z   sparse-checkout-cone-mode: true
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4845277Z   fetch-depth: 1
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4845470Z   fetch-tags: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4845643Z   show-progress: true
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4845827Z   lfs: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4846002Z   submodules: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4846178Z   set-safe-directory: true
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4846391Z   allow-unsafe-pr-checkout: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.4846820Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.5745860Z Syncing repository: LuciaLXH/nz-data-dashboard
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.5747472Z ##[group]Getting Git version info
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.5748133Z Working directory is '/home/runner/work/nz-data-dashboard/nz-data-dashboard'
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.5748931Z [command]/usr/bin/git version
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7105093Z git version 2.55.0
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7121984Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7135093Z Temporarily overriding HOME='/home/runner/work/_temp/bc71982f-7a43-4cb2-b84a-a9374a1628ad' before making global git config changes
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7136628Z Adding repository directory to the temporary git global config as a safe directory
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7139831Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nz-data-dashboard/nz-data-dashboard
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7427842Z Deleting the contents of '/home/runner/work/nz-data-dashboard/nz-data-dashboard'
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7431188Z ##[group]Initializing the repository
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7435203Z [command]/usr/bin/git init /home/runner/work/nz-data-dashboard/nz-data-dashboard
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7542916Z hint: Using 'master' as the name for the initial branch. This default branch name
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7543860Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7544532Z hint: to use in all of your new repositories, which will suppress this warning,
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7545022Z hint: call:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7545200Z hint:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7545513Z hint: 	git config --global init.defaultBranch <name>
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7545777Z hint:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7546039Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7546475Z hint: 'development'. The just-created branch can be renamed via this command:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7546781Z hint:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7547027Z hint: 	git branch -m <name>
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7547314Z hint:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7547780Z hint: Disable this message with "git config set advice.defaultBranchName false"
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7548444Z Initialized empty Git repository in /home/runner/work/nz-data-dashboard/nz-data-dashboard/.git/
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7554248Z [command]/usr/bin/git remote add origin https://github.com/LuciaLXH/nz-data-dashboard
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7605880Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7609820Z ##[group]Disabling automatic garbage collection
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7610189Z [command]/usr/bin/git config --local gc.auto 0
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7648006Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7648365Z ##[group]Setting up auth
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7648760Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.7679996Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8023295Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8058305Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8259703Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8295727Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8512286Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8555431Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8556075Z ##[group]Fetching the repository
+refresh	UNKNOWN STEP	2026-10-09T21:57:53.8564068Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +39b0b180f6732d923dc03731533d4e3f2c00941f:refs/remotes/origin/main
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1236922Z From https://github.com/LuciaLXH/nz-data-dashboard
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1237573Z  * [new ref]         39b0b180f6732d923dc03731533d4e3f2c00941f -> origin/main
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1240044Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1240569Z ##[group]Determining the checkout info
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1247322Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1254337Z [command]/usr/bin/git sparse-checkout disable
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1299609Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1365339Z ##[group]Checking out the ref
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1373450Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1633501Z Switched to a new branch 'main'
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1637737Z branch 'main' set up to track 'origin/main'.
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1643336Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1704665Z [command]/usr/bin/git log -1 --format=%H
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1712066Z 39b0b180f6732d923dc03731533d4e3f2c00941f
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1931564Z ##[group]Run actions/cache/restore@v4
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1931866Z with:
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1932061Z   path: data/raw/flow
+refresh	UNKNOWN STEP	data/raw/population
+refresh	UNKNOWN STEP	
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1932304Z   key: flow-raw-37996530712
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1932508Z   restore-keys: flow-raw-
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1932712Z   enableCrossOsArchive: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1932918Z   fail-on-cache-miss: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1933110Z   lookup-only: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.1933305Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.2821996Z (node:2117) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.2822708Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.4957217Z Cache hit for restore-key: flow-raw-37928623975
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.5038940Z (node:2117) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9293616Z Received 147373 of 147373 (100.0%), 0.7 MBs/sec
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9294527Z Cache Size: ~0 MB (147373 B)
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9316309Z [command]/usr/bin/tar -xf /home/runner/work/_temp/9372923d-ebfb-4661-be47-aa5fb9d790a2/cache.tzst -P -C /home/runner/work/nz-data-dashboard/nz-data-dashboard --use-compress-program unzstd
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9413497Z Cache restored successfully
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9472531Z Cache restored from key: flow-raw-37928623975
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9592731Z ##[group]Run actions/setup-python@v5
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9592979Z with:
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9593153Z   python-version: 3.12
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9593356Z   check-latest: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9595915Z   token: ***
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9596114Z   update-environment: true
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9596328Z   allow-prereleases: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9596518Z   freethreaded: false
+refresh	UNKNOWN STEP	2026-10-09T21:57:55.9596707Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.0677909Z ##[group]Installed versions
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.0750514Z (node:2135) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.0751304Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.0751837Z Successfully set up CPython (3.12.15)
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.0795516Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.0940006Z ##[group]Run pip install -r requirements.txt
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.0940386Z ^[[36;1mpip install -r requirements.txt^[[0m
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3026908Z shell: /usr/bin/bash -e {0}
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3027167Z env:
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3027415Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3027789Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3028143Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3028457Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3028764Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3029079Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T21:57:56.3029344Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:58:01.7888953Z Collecting requests==2.32.3 (from -r requirements.txt (line 3))
+refresh	UNKNOWN STEP	2026-10-09T21:58:01.8568526Z   Downloading requests-2.32.3-py3-none-any.whl.metadata (4.6 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:01.8722240Z Collecting openpyxl==3.1.5 (from -r requirements.txt (line 4))
+refresh	UNKNOWN STEP	2026-10-09T21:58:01.8822880Z   Downloading openpyxl-3.1.5-py2.py3-none-any.whl.metadata (2.5 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:01.9980595Z Collecting pandas==2.2.3 (from -r requirements.txt (line 5))
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.0083351Z   Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (89 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.0626711Z Collecting jsonschema==4.23.0 (from -r requirements.txt (line 6))
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.0728122Z   Downloading jsonschema-4.23.0-py3-none-any.whl.metadata (7.9 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.2927664Z Collecting duckdb==1.5.5 (from -r requirements.txt (line 7))
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.3043293Z   Downloading duckdb-1.5.5-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (4.2 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.6247918Z Collecting pytest==7.4.4 (from -r requirements.txt (line 8))
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.6349331Z   Downloading pytest-7.4.4-py3-none-any.whl.metadata (7.9 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.7381003Z Collecting charset-normalizer<4,>=2 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.7484845Z   Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (46 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.7658093Z Collecting idna<4,>=2.5 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	UNKNOWN STEP	2026-10-09T21:58:02.7755755Z   Downloading idna-3.20-py3-none-any.whl.metadata (7.2 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.0003229Z Collecting urllib3<3,>=1.21.1 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.0102891Z   Downloading urllib3-2.8.0-py3-none-any.whl.metadata (7.4 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.0350992Z Collecting certifi>=2017.4.17 (from requests==2.32.3->-r requirements.txt (line 3))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.0449215Z   Downloading certifi-2026.7.22-py3-none-any.whl.metadata (2.5 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.0547272Z Collecting et-xmlfile (from openpyxl==3.1.5->-r requirements.txt (line 4))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.0644928Z   Downloading et_xmlfile-2.0.0-py3-none-any.whl.metadata (2.7 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.2067591Z Collecting numpy>=1.26.0 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.2170136Z   Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl.metadata (6.6 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.4766080Z Collecting python-dateutil>=2.8.2 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.4864348Z   Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl.metadata (8.4 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.5768840Z Collecting pytz>=2020.1 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.5868861Z   Downloading pytz-2026.5-py2.py3-none-any.whl.metadata (22 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.6868051Z Collecting tzdata>=2022.7 (from pandas==2.2.3->-r requirements.txt (line 5))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.6966373Z   Downloading tzdata-2026.5-py2.py3-none-any.whl.metadata (1.4 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.9595007Z Collecting attrs>=22.2.0 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	UNKNOWN STEP	2026-10-09T21:58:03.9693304Z   Downloading attrs-26.1.0-py3-none-any.whl.metadata (8.8 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.0723800Z Collecting jsonschema-specifications>=2023.03.6 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.0825422Z   Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl.metadata (2.9 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.2960998Z Collecting referencing>=0.28.4 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.3065946Z   Downloading referencing-0.37.0-py3-none-any.whl.metadata (2.8 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.4957627Z Collecting rpds-py>=0.7.1 (from jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.5061810Z   Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl.metadata (4.1 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.5160606Z Collecting iniconfig (from pytest==7.4.4->-r requirements.txt (line 8))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.5260026Z   Downloading iniconfig-2.3.1-py3-none-any.whl.metadata (2.8 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.7106575Z Collecting packaging (from pytest==7.4.4->-r requirements.txt (line 8))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.7208118Z   Downloading packaging-26.3-py3-none-any.whl.metadata (3.5 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.7468115Z Collecting pluggy<2.0,>=0.12 (from pytest==7.4.4->-r requirements.txt (line 8))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.7567172Z   Downloading pluggy-1.6.0-py3-none-any.whl.metadata (4.8 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.7705379Z Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas==2.2.3->-r requirements.txt (line 5))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.7803211Z   Downloading six-1.17.0-py2.py3-none-any.whl.metadata (1.7 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.9586192Z Collecting typing-extensions>=4.4.0 (from referencing>=0.28.4->jsonschema==4.23.0->-r requirements.txt (line 6))
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.9685955Z   Downloading typing_extensions-4.16.0-py3-none-any.whl.metadata (3.3 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:04.9832798Z Downloading requests-2.32.3-py3-none-any.whl (64 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.0057872Z Downloading openpyxl-3.1.5-py2.py3-none-any.whl (250 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.0444545Z Downloading pandas-2.2.3-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (12.7 MB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.4959528Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.7/12.7 MB 29.5 MB/s  0:00:00
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.5061557Z Downloading jsonschema-4.23.0-py3-none-any.whl (88 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.5637422Z Downloading duckdb-1.5.5-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (21.5 MB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.8532475Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 21.5/21.5 MB 74.2 MB/s  0:00:00
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.8636390Z Downloading pytest-7.4.4-py3-none-any.whl (325 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.8892965Z Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.9020520Z Downloading idna-3.20-py3-none-any.whl (69 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.9142647Z Downloading pluggy-1.6.0-py3-none-any.whl (20 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.9261848Z Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.9391184Z Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.9531042Z Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.9663270Z Downloading jsonschema_specifications-2025.9.1-py3-none-any.whl (18 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:05.9806768Z Downloading numpy-2.5.3-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.1341257Z    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 109.0 MB/s  0:00:00
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.1442575Z Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.1565223Z Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.1699972Z Downloading referencing-0.37.0-py3-none-any.whl (26 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.1818528Z Downloading rpds_py-2026.9.1-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (371 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.1945430Z Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.2063282Z Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.2186206Z Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.2313059Z Downloading et_xmlfile-2.0.0-py3-none-any.whl (18 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.2713831Z Downloading iniconfig-2.3.1-py3-none-any.whl (7.6 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.3012059Z Downloading packaging-26.3-py3-none-any.whl (129 kB)
+refresh	UNKNOWN STEP	2026-10-09T21:58:06.7520957Z Installing collected packages: pytz, urllib3, tzdata, typing-extensions, six, rpds-py, pluggy, packaging, numpy, iniconfig, idna, et-xmlfile, duckdb, charset-normalizer, certifi, attrs, requests, referencing, python-dateutil, pytest, openpyxl, pandas, jsonschema-specifications, jsonschema
+refresh	UNKNOWN STEP	2026-10-09T21:58:13.9699758Z 
+refresh	UNKNOWN STEP	2026-10-09T21:58:13.9720208Z Successfully installed attrs-26.1.0 certifi-2026.7.22 charset-normalizer-3.5.2 duckdb-1.5.5 et-xmlfile-2.0.0 idna-3.20 iniconfig-2.3.1 jsonschema-4.23.0 jsonschema-specifications-2025.9.1 numpy-2.5.3 openpyxl-3.1.5 packaging-26.3 pandas-2.2.3 pluggy-1.6.0 pytest-7.4.4 python-dateutil-2.9.0.post0 pytz-2026.5 referencing-0.37.0 requests-2.32.3 rpds-py-2026.9.1 six-1.17.0 typing-extensions-4.16.0 tzdata-2026.5 urllib3-2.8.0
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0629235Z ##[group]Run make data
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0629627Z ^[[36;1mmake data^[[0m
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0686167Z shell: /usr/bin/bash -e {0}
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0686378Z env:
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0686606Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0686965Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0687311Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0687618Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0687932Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0688236Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0688622Z   STATS_NZ_API_KEY: ***
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0688810Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T21:58:14.0785598Z python3 scripts/fetch_population.py
+refresh	UNKNOWN STEP	2026-10-09T21:58:15.0798698Z ✅ Stats NZ SDMX: 6 regions × 48 region-years → data/raw/population/20261009.json
+refresh	UNKNOWN STEP	2026-10-09T21:58:15.0962297Z python3 scripts/fetch_hilltop.py
+refresh	UNKNOWN STEP	2026-10-09T22:04:59.3613203Z ✅ Hawke's Bay (HBRC): sites=2 points=3519 errors=1
+refresh	UNKNOWN STEP	2026-10-09T22:04:59.3613954Z ✅ Otago (ORC): sites=8 points=20201 errors=0
+refresh	UNKNOWN STEP	2026-10-09T22:04:59.3855141Z python3 scripts/transform.py
+refresh	UNKNOWN STEP	2026-10-09T22:04:59.9973899Z transform: flow sites=10 | regions=6 | population regions=6 | growth rows=42 | flow percentile sites=10
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.0463835Z python3 scripts/validate.py
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5489632Z   ℹ️ flow_percentile: 10/11 sites (transient fetch degradation recorded)
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5490182Z   ✅ flow: JSON Schema
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5490495Z   ✅ flow: at least one council with data
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5490860Z   ✅ flow: at least one site
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5491206Z   ✅ flow: at least one point
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5491537Z   ✅ regions: JSON Schema
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5491877Z   ✅ regions: 6 councils mapped
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5492195Z   ✅ population: JSON Schema
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5492591Z   ✅ population: status recorded (may be degraded)
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5492975Z   ✅ growth: JSON Schema
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5493311Z   ✅ growth: rows for all 6 regions × 7 years
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5493911Z   ✅ supply: JSON Schema
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5494208Z   ✅ supply: rows for all 6 regions
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5494551Z   ✅ flow_percentile: JSON Schema
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5494914Z   ✅ flow_percentile: at least one monitored site
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5495343Z validate: 14/14 checks passed → appended _runs.jsonl
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5678883Z ##[group]Run make test
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5679242Z ^[[36;1mmake test^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5745671Z shell: /usr/bin/bash -e {0}
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5745894Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5746129Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5746497Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5746837Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5747139Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5747446Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5747769Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5748023Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:00.5837395Z python3 -m pytest -q
+refresh	UNKNOWN STEP	2026-10-09T22:05:01.9118850Z ........................                                                 [100%]
+refresh	UNKNOWN STEP	2026-10-09T22:05:01.9119277Z 24 passed in 0.66s
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0080816Z ##[group]Run make site-data
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0081081Z ^[[36;1mmake site-data^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0138571Z shell: /usr/bin/bash -e {0}
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0138789Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0139028Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0139384Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0139723Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0140029Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0140326Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0140812Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0141073Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0227358Z rm -rf site/data
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0235543Z mkdir -p site/data
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0246202Z # only the datasets consumed by site/app.js — raw flow.json (1.3 MB) and
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0251694Z # population.json are W1 packaging artifacts, not used by the front end
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0257150Z cp data/processed/population_growth.json data/processed/supply_per_capita.json \
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0257696Z    data/processed/flow_percentile.json data/processed/regions.json \
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0258023Z    data/processed/_runs.jsonl site/data/
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0269497Z cp data/ref/boundaries_regions_simple.geojson site/data/boundaries.geojson
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0279863Z cp data/ref/flow_sites.json data/ref/water_consents.json site/data/
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0332506Z ##[group]Run actions/cache/save@v4
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0332732Z with:
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0332940Z   path: data/raw/flow
+refresh	UNKNOWN STEP	data/raw/population
+refresh	UNKNOWN STEP	
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0333173Z   key: flow-raw-37996530712
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0333379Z   enableCrossOsArchive: false
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0333575Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0334009Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0334355Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0334700Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0335003Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0335314Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0335618Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.0335882Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.1257761Z (node:2319) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.1258338Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.1408748Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/nz-data-dashboard/nz-data-dashboard --files-from manifest.txt --use-compress-program zstdmt
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.4245092Z (node:2319) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.8196548Z Sent 135868 of 135868 (100.0%), 0.3 MBs/sec
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9445501Z Cache saved with key: flow-raw-37996530712
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9539825Z ##[group]Run actions/configure-pages@v5
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9540076Z with:
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9542366Z   token: ***
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9542546Z   enablement: false
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9542719Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9542940Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9543289Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9543886Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9544199Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9544504Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9544811Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:02.9545077Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4071677Z ##[group]Run actions/upload-pages-artifact@v3
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4071948Z with:
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4072116Z   path: site
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4072292Z   name: github-pages
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4072481Z   retention-days: 1
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4072651Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4072874Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4073217Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4073558Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4074234Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4074729Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4075039Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4075312Z   GITHUB_PAGES: true
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4075492Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4124394Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4966530Z ##[group]Run echo ::group::Archive artifact
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4966842Z ^[[36;1mecho ::group::Archive artifact^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4967068Z ^[[36;1mtar \^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4967288Z ^[[36;1m  --dereference --hard-dereference \^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4967565Z ^[[36;1m  --directory "$INPUT_PATH" \^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4967821Z ^[[36;1m  -cvf "$RUNNER_TEMP/artifact.tar" \^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4968063Z ^[[36;1m  --exclude=.git \^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4968276Z ^[[36;1m  --exclude=.github \^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4968478Z ^[[36;1m  .^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4968673Z ^[[36;1mecho ::endgroup::^[[0m
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4993606Z shell: /usr/bin/sh -e {0}
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4993910Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4994145Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4994511Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4994853Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4995205Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4995520Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4995843Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4996112Z   GITHUB_PAGES: true
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4996302Z   INPUT_PATH: site
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.4996480Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5033043Z ##[group]Archive artifact
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5047963Z ./
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5048224Z ./index.html
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5048491Z ./data/
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5048766Z ./data/flow_sites.json
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5049094Z ./data/supply_per_capita.json
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5049421Z ./data/flow_percentile.json
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5049730Z ./data/boundaries.geojson
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5050032Z ./data/water_consents.json
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5050323Z ./data/regions.json
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5050591Z ./data/_runs.jsonl
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5050863Z ./data/population_growth.json
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5051177Z ./img/
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5051413Z ./img/fig2.png
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5054361Z ./img/fig3.png
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5056724Z ./img/fig1.png
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5065786Z ./app.js
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5066194Z ./style.css
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5066419Z ./.gitkeep
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5069092Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5079724Z ##[end-action id=__actions_upload-pages-artifact.__run;outcome=success;conclusion=success;duration_ms=95]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5083109Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_2]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5088071Z ##[end-action id=__actions_upload-pages-artifact.__run_2;outcome=skipped;conclusion=skipped;duration_ms=0]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5090215Z ##[start-action display=Archive artifact;id=__actions_upload-pages-artifact.__run_3]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5093108Z ##[end-action id=__actions_upload-pages-artifact.__run_3;outcome=skipped;conclusion=skipped;duration_ms=0]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5095536Z ##[start-action display=Upload artifact;id=__actions_upload-pages-artifact.upload-artifact]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5124974Z ##[group]Run actions/upload-artifact@v4
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5125219Z with:
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5125387Z   name: github-pages
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5125606Z   path: /home/runner/work/_temp/artifact.tar
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5125841Z   retention-days: 1
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5126033Z   if-no-files-found: error
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5126231Z   compression-level: 6
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5126417Z   overwrite: false
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5126608Z   include-hidden-files: false
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5126811Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5127174Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5127516Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5127857Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5128163Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5128475Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5128790Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5129059Z   GITHUB_PAGES: true
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.5129239Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.6505858Z (node:2353) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.6506571Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.6542628Z With the provided path, there will be 1 file uploaded
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.6548417Z Artifact name is valid!
+refresh	UNKNOWN STEP	2026-10-09T22:05:03.6549133Z Root directory input is valid!
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.0053597Z Beginning upload of artifact content to blob storage
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.0721618Z (node:2353) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.6554483Z Uploaded bytes 1957814
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.7106432Z Finished uploading artifact content to blob storage!
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.7107222Z SHA256 digest of uploaded artifact zip is ac137a1d2f45adfdfce1e4993b8aecd297304b8504c2b1875c426a6bf5f17536
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.7107906Z Finalizing artifact upload
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9611290Z Artifact github-pages.zip successfully finalized. Artifact ID 11647198884
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9612157Z Artifact github-pages has been successfully uploaded! Final size is 1957814 bytes. Artifact ID is 11647198884
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9617809Z Artifact download URL: https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/37996530712/artifacts/11647198884
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9726077Z ##[end-action id=__actions_upload-pages-artifact.upload-artifact;outcome=success;conclusion=success;duration_ms=1462]
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9805737Z ##[group]Run actions/deploy-pages@v4
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9805978Z with:
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9808285Z   token: ***
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9808466Z   timeout: 600000
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9808642Z   error_count: 10
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9808827Z   reporting_interval: 5000
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9809042Z   artifact_name: github-pages
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9809249Z   preview: false
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9809420Z env:
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9809640Z   pythonLocation: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9809997Z   PKG_CONFIG_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib/pkgconfig
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9810353Z   Python_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9810668Z   Python2_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9810995Z   Python3_ROOT_DIR: /opt/hostedtoolcache/Python/3.12.15/x64
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9811306Z   LD_LIBRARY_PATH: /opt/hostedtoolcache/Python/3.12.15/x64/lib
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9811609Z   GITHUB_PAGES: true
+refresh	UNKNOWN STEP	2026-10-09T22:05:04.9811792Z ##[endgroup]
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.1336685Z (node:2365) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.1337353Z (Use `node --trace-deprecation ...` to show where the warning was created)
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.3449915Z Fetching artifact metadata for "github-pages" in this workflow run
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.5651213Z Found 1 artifact(s)
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.5662870Z Creating Pages deployment with payload:
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.5663349Z {
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.5663806Z 	"artifact_id": 11647198884,
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.5664298Z 	"pages_build_version": "39b0b180f6732d923dc03731533d4e3f2c00941f",
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.5723456Z 	"oidc_token": "***"
+refresh	UNKNOWN STEP	2026-10-09T22:05:05.5723984Z }
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.3094212Z ##[error]Creating Pages deployment failed
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.4687116Z ##[error]HttpError: Server Error
+refresh	UNKNOWN STEP	    at /home/runner/work/_actions/actions/deploy-pages/v4/node_modules/@octokit/request/dist-node/index.js:124:1
+refresh	UNKNOWN STEP	    at processTicksAndRejections (node:internal/process/task_queues:104:5)
+refresh	UNKNOWN STEP	    at createPagesDeployment (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/api-client.js:125:1)
+refresh	UNKNOWN STEP	    at Deployment.create (/home/runner/work/_actions/actions/deploy-pages/v4/src/internal/deployment.js:74:1)
+refresh	UNKNOWN STEP	    at main (/home/runner/work/_actions/actions/deploy-pages/v4/src/index.js:30:1)
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.4692559Z ##[error]Error: Failed to create deployment (status: 502) with build version 39b0b180f6732d923dc03731533d4e3f2c00941f. Request ID 4403:A4663:2C6DE4F:90A8C45:6AC96511 Server error, is githubstatus.com reporting a Pages outage? Please re-run the deployment at a later time.
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.4918636Z Post job cleanup.
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.5639480Z [command]/usr/bin/git version
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.5676790Z git version 2.55.0
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.5707654Z Temporarily overriding HOME='/home/runner/work/_temp/754df686-0794-46fe-9c37-c01ee2eefea1' before making global git config changes
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.5708754Z Adding repository directory to the temporary git global config as a safe directory
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.5712213Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/nz-data-dashboard/nz-data-dashboard
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.5749815Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.5781757Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.6007872Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.6036018Z http.https://github.com/.extraheader
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.6046195Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.6079855Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.6363807Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.6407923Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.6771627Z Cleaning up orphan processes
+refresh	UNKNOWN STEP	2026-10-09T22:05:16.7018327Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/cache/restore@v4, actions/cache/save@v4, actions/checkout@v4, actions/configure-pages@v5, actions/deploy-pages@v4, actions/setup-python@v5, actions/upload-artifact@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
