@@ -14,7 +14,6 @@
 - **视觉已定稿（用户 2026-08-31 确认"效果先过"）**：河蓝主题 `75d2082`——标题栏渐变 `#003f5f→#0072B2(Okabe-Ito 蓝)→#56B4E9`（无公认「蓝洞色」，以 Okabe-Ito 蓝为锚，色盲安全）；标题字 #eaf3fb；左侧导航字体同色（普通 #0072B2/active #005a8d）；ink #14303e + 淡蓝 tint；语义色红/琥珀/绿未动；demo.gif 已按新主题重录（2.7MB）
 - **GitHub 链接已上线（`d8d5d65`，线上验证 2 处）**：Method 顶部 caption + footer（`Built by … · LinkedIn · GitHub`）；Method 名字未改
 - **自动化**：`refresh.yml` 已加 push 触发器（`site/**` 与 workflow 改动自动部署，run 33338732307 验证成功）；另 6h 流量 + 月度 cron
-- **新增 `docs/STORY-2MIN.md`**：英文口语稿，半技术听众，~290 词≈2 分钟，数字基于已核实事实
 - 本地 HEAD = 远程 main = **7f261a1**（2026-09-06 修复 refresh 故障后推进）；工作树已随修复提交
 - 剩余：**W4**（LinkedIn 曝光 + CV 联动，用户明确不急）；可选 W1.5（见下）；章节 B 水质分析未做
 
@@ -65,7 +64,6 @@
 
 ## 关键文档
 - 执行计划 `docs/PLAN.md`（W0–W4，前 3 完成）；分析大纲 `ANALYSIS.md`；评审原件 `docs/review/`
-- **讲稿**：`docs/STORY-3MIN.md`（3 分钟逐屏脚本）+ **`docs/STORY-2MIN.md`**（2 分钟半技术口语稿，2026-08-31）
 - **讲解/面试前重读**：`docs/REVIEW-JOURNEY.md`（思考轨迹、三步验证法、面试要点）
 - 数据源实测 `docs/W1-data-sources.md`；浏览器验证 `docs/BROWSER-TESTS.md`
 - 完整进度历史见 git checkpoint 提交（477f75c/e016aec/388ba48/9ad66f6 等）与 `docs/demo.gif`

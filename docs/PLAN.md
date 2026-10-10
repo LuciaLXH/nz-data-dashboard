@@ -39,7 +39,7 @@ at 15–20 h/week; ~10–12 days full-time.
 - [x] **Three written findings finalised** (number + chart + so what) ✅ → ANALYSIS.md + README TL;DR + site Key Findings
 - [x] "Why I don't claim causation" written ✅（README + ANALYSIS.md + site，含 flow 覆盖与自报数据限制）
 - [ ] 验收（关键闸门）: can tell a 3-minute story in front of the screen.
-  If not — fix the thesis, don't add features.（故事脚本见 docs/STORY-3MIN.md）
+  If not — fix the thesis, don't add features.
 
 ## W3 · Engineering + packaging
 - [x] GH Actions schedule: flow 6 h (from 24 h) · water quality monthly ·

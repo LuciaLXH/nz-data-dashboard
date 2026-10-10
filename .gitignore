@@ -34,3 +34,6 @@ data/processed/*
 
 # site build artifacts (data copied in by `make site`; static code stays in git)
 site/data/
+
+# personal speaking and interview notes (keep locally)
+/docs/STORY-*.md
