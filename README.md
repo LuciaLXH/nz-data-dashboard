@@ -171,6 +171,7 @@ Validation history is cached between successful builds; cache eviction can
 reset it. These bars describe data validation, not deployment status.
 
 Review and repair record: [2026-10-10 project review](docs/REVIEW-2026-10-10.md).
+Project motivation and planned improvements: [roadmap](docs/PLAN.md).
 
 ---
 
