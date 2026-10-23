@@ -1,84 +1,100 @@
--- 02_supply_per_capita.sql
--- Demand-side supply pressure per regional council, derived from the FULL
--- NEPR 2024/25 unit-level extract (all registered drinking-water supplies in
--- the 6 regions — not just the main urban supplier):
---   population (2025) × per-capita water supply → implied daily system demand,
---   leakage, and a 5-year projection.
---
--- Table `nepr_network` (one row per supply; loaded by scripts/transform.py
--- from the raw NEPM unit-level CSV, orgs mapped to the 6 project regions):
---   region TEXT, org, supply, res_connections, pop_served,
---   water_supplied_m3 (m³/yr), loss_m3 (m³/yr), carl_m3_year (m³/yr),
---   ili, median_res_l_conn_day
--- Table `population(region, year, pop)` as in sql/01.
---
--- Definitions:
---   coverage_pct        = NEPR pop served / regional ERP 2025 (rural areas are
---                         self-supplied, so <100% is expected; the national
---                         share on public networks is ~84%, per NEPR 2024/25)
---   l_per_person_day    = water_supplied_m3 × 1000 ÷ 365 ÷ pop_served
---   loss_pct            = loss_m3 ÷ water_supplied_m3 × 100
---   carl_l_conn_day     = carl_m3_year × 1000 ÷ 365 ÷ res_connections
---   daily_demand_m3     = regional ERP × weighted supply / 1000   (m³/day)
---   leak_m3_day         = daily_demand × weighted loss%
---   proj_demand_m3_day  = daily_demand × (1 + cagr5)^5
-
-WITH pop AS (
+-- Version 2: reported network inputs and boundary-specific paired water loss.
+-- Inputs are identity-resolved by nepr.py, with invalid numeric values NULL.
+-- No rounding here: preserve contributions for reconciliation, round in the UI.
+-- build_context supplies period_days and scenario_horizon_years explicitly.
+WITH pop_latest AS (
     SELECT region, year, pop FROM population
-),
-latest AS (
-    SELECT region, pop AS pop_2025
-    FROM pop
-    WHERE year = (SELECT MAX(year) FROM pop)
-),
-cagr AS (
-    SELECT
-        region,
-        POWER(pop / LAG(pop, 5) OVER (PARTITION BY region ORDER BY year), 1.0 / 5) - 1 AS cagr5
-    FROM pop
-    QUALIFY LAG(pop, 5) OVER (PARTITION BY region ORDER BY year) IS NOT NULL
-           AND year = (SELECT MAX(year) FROM pop)
-),
-sup AS (
-    SELECT
-        region,
-        pop_served,
-        water_supplied_m3 * 1000 / 365 / NULLIF(pop_served, 0)  AS l_per_person_day,
-        loss_m3 / NULLIF(water_supplied_m3, 0) * 100            AS loss_pct,
-        carl_m3_year * 1000 / 365 / NULLIF(res_connections, 0)  AS carl_l_conn_day,
-        ili,
-        res_connections
+    QUALIFY ROW_NUMBER() OVER (PARTITION BY region ORDER BY year DESC) = 1
+), growth AS (
+    SELECT p.*, p.year - 5 AS cagr_start_year,
+        CASE WHEN h.n = 6 AND past.pop > 0
+             THEN POWER(p.pop / past.pop, 1.0 / 5) - 1 END AS cagr
+    FROM pop_latest p
+    LEFT JOIN population past ON past.region = p.region AND past.year = p.year - 5
+    LEFT JOIN LATERAL (
+        SELECT COUNT(*) AS n FROM population v
+        WHERE v.region = p.region AND v.year BETWEEN p.year - 5 AND p.year AND v.pop > 0
+    ) h ON TRUE
+), eligible AS (
+    SELECT *,
+        supply_m3_year IS NOT NULL AND population_served > 0 AS per_person_eligible,
+        supply_m3_year > 0 AND loss_m3_year IS NOT NULL
+            AND loss_m3_year <= supply_m3_year AS paired_eligible
     FROM nepr_network
-),
-demand AS (
-    SELECT
-        region,
-        SUM(pop_served) AS pop_served,
-        SUM(l_per_person_day * pop_served) FILTER (WHERE l_per_person_day IS NOT NULL)
-            / NULLIF(SUM(pop_served) FILTER (WHERE l_per_person_day IS NOT NULL), 0) AS l_per_person_day_w,
-        SUM(loss_pct * pop_served) FILTER (WHERE loss_pct IS NOT NULL)
-            / NULLIF(SUM(pop_served) FILTER (WHERE loss_pct IS NOT NULL), 0) AS loss_pct_w,
-        SUM(carl_l_conn_day * pop_served) FILTER (WHERE carl_l_conn_day IS NOT NULL)
-            / NULLIF(SUM(pop_served) FILTER (WHERE carl_l_conn_day IS NOT NULL), 0) AS carl_l_conn_day_w,
-        SUM(ili * pop_served) FILTER (WHERE ili IS NOT NULL)
-            / NULLIF(SUM(pop_served) FILTER (WHERE ili IS NOT NULL), 0) AS ili_w
-    FROM sup
-    GROUP BY region
+), totals AS (
+    SELECT region, COUNT(*) AS candidate_networks,
+        COUNT(supply_m3_year) AS reported_supply_networks,
+        SUM(supply_m3_year) AS reported_supply_m3_year,
+        COUNT(*) FILTER (WHERE per_person_eligible) AS supply_population_networks,
+        SUM(supply_m3_year) FILTER (WHERE per_person_eligible) AS supply_population_supply_m3_year,
+        SUM(population_served) FILTER (WHERE per_person_eligible) AS supply_population_served_people,
+        COUNT(*) FILTER (WHERE supply_m3_year IS NULL) AS missing_or_invalid_supply_networks,
+        COUNT(*) FILTER (WHERE loss_m3_year IS NULL) AS missing_or_invalid_loss_networks,
+        COUNT(*) FILTER (WHERE loss_m3_year > supply_m3_year) AS loss_above_supply_networks
+    FROM eligible GROUP BY region
+), boundaries AS (
+    SELECT g.region, b.boundary
+    FROM growth g CROSS JOIN (VALUES ('No'), ('Yes'), ('unknown')) b(boundary)
+), cohort AS (
+    SELECT b.region, b.boundary,
+        COUNT(e.network_key) AS boundary_candidate_networks,
+        COUNT(e.loss_m3_year) AS reported_loss_networks,
+        SUM(e.loss_m3_year) AS reported_loss_m3_year,
+        COUNT(*) FILTER (WHERE e.paired_eligible) AS paired_networks,
+        SUM(e.supply_m3_year) FILTER (WHERE e.paired_eligible) AS paired_supply_m3_year,
+        SUM(e.loss_m3_year) FILTER (WHERE e.paired_eligible) AS paired_loss_m3_year,
+        COUNT(*) FILTER (WHERE e.loss_m3_year > e.supply_m3_year) AS loss_above_supply_networks
+    FROM boundaries b LEFT JOIN eligible e
+        ON e.region = b.region AND e.private_loss_boundary = b.boundary
+    GROUP BY b.region, b.boundary
+), cohort_rates AS (
+    SELECT c.*,
+        100.0 * c.paired_loss_m3_year / NULLIF(c.paired_supply_m3_year, 0) AS paired_loss_pct,
+        100.0 * c.paired_networks / NULLIF(t.candidate_networks, 0) AS paired_network_coverage_pct,
+        100.0 * c.paired_supply_m3_year / NULLIF(t.reported_supply_m3_year, 0) AS paired_supply_coverage_pct
+    FROM cohort c LEFT JOIN totals t USING (region)
+), cohort_lists AS (
+    SELECT region, LIST(STRUCT_PACK(
+        boundary := boundary,
+        boundary_candidate_networks := boundary_candidate_networks,
+        reported_loss_networks := reported_loss_networks,
+        reported_loss_m3_year := reported_loss_m3_year,
+        paired_networks := paired_networks,
+        paired_supply_m3_year := paired_supply_m3_year,
+        paired_loss_m3_year := paired_loss_m3_year,
+        paired_loss_pct := paired_loss_pct,
+        paired_network_coverage_pct := paired_network_coverage_pct,
+        paired_supply_coverage_pct := paired_supply_coverage_pct,
+        loss_above_supply_networks := loss_above_supply_networks
+    ) ORDER BY boundary) AS loss_cohorts
+    FROM cohort_rates GROUP BY region
+), measures AS (
+    SELECT g.region, g.year AS population_base_year, g.pop AS population_base,
+        g.cagr_start_year, g.year AS cagr_end_year, g.cagr * 100 AS cagr5_pct,
+        g.year + ctx.scenario_horizon_years AS projection_year,
+        ctx.scenario_horizon_years, ctx.period_days,
+        COALESCE(t.candidate_networks, 0) AS candidate_networks,
+        COALESCE(t.reported_supply_networks, 0) AS reported_supply_networks,
+        t.reported_supply_m3_year, t.reported_supply_m3_year / ctx.period_days AS reported_supply_m3_day,
+        COALESCE(t.supply_population_networks, 0) AS supply_population_networks,
+        t.supply_population_supply_m3_year, t.supply_population_served_people,
+        1000.0 * t.supply_population_supply_m3_year / ctx.period_days
+            / NULLIF(t.supply_population_served_people, 0) AS supply_l_person_day,
+        100.0 * t.supply_population_networks / NULLIF(t.candidate_networks, 0) AS supply_population_network_coverage_pct,
+        100.0 * t.supply_population_supply_m3_year / NULLIF(t.reported_supply_m3_year, 0) AS supply_population_supply_coverage_pct,
+        COALESCE(t.missing_or_invalid_supply_networks, 0) AS missing_or_invalid_supply_networks,
+        COALESCE(t.missing_or_invalid_loss_networks, 0) AS missing_or_invalid_loss_networks,
+        COALESCE(t.loss_above_supply_networks, 0) AS loss_above_supply_networks,
+        c.paired_loss_pct, c.paired_networks, c.paired_supply_coverage_pct,
+        lists.loss_cohorts,
+        CASE WHEN g.cagr IS NOT NULL THEN POWER(1 + g.cagr, ctx.scenario_horizon_years) END AS growth_factor
+    FROM growth g CROSS JOIN build_context ctx
+    LEFT JOIN totals t USING (region)
+    LEFT JOIN cohort_rates c ON c.region = g.region AND c.boundary = 'No'
+    LEFT JOIN cohort_lists lists ON lists.region = g.region
 )
-SELECT
-    d.region,
-    l.pop_2025,
-    d.pop_served,
-    ROUND(d.pop_served / l.pop_2025 * 100, 1) AS coverage_pct,
-    ROUND(d.l_per_person_day_w, 1) AS l_per_person_day_w,
-    ROUND(d.loss_pct_w, 1) AS loss_pct_w,
-    ROUND(d.carl_l_conn_day_w, 1) AS carl_l_conn_day_w,
-    ROUND(d.ili_w, 2) AS ili_w,
-    ROUND(l.pop_2025 * d.l_per_person_day_w / 1000, 0) AS daily_demand_m3,
-    ROUND(l.pop_2025 * d.l_per_person_day_w * d.loss_pct_w / 100000, 0) AS leak_m3_day,
-    ROUND(c.cagr5 * 100, 2) AS cagr5_pct,
-    ROUND(l.pop_2025 * POWER(1 + c.cagr5, 5) * d.l_per_person_day_w / 1000, 0) AS proj_demand_m3_day
-FROM demand d
-JOIN latest l USING (region)
-JOIN cagr c USING (region)
-ORDER BY cagr5_pct DESC;
+SELECT * EXCLUDE (growth_factor),
+    100.0 * (growth_factor - 1) AS scenario_growth_pct,
+    population_base * supply_l_person_day / 1000 AS scenario_base_supply_m3_day,
+    population_base * supply_l_person_day / 1000 * growth_factor AS scenario_projected_supply_m3_day
+FROM measures ORDER BY region;

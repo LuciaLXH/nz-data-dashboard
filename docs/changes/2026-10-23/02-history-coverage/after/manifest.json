@@ -1,0 +1,63 @@
+{
+  "captured_utc": "2026-10-22T21:10:33.156390+00:00",
+  "section": "flow-section",
+  "input_mode": "snapshot",
+  "processed_utc": "2026-10-22T08:47:19.991796+00:00",
+  "flow_schema_version": 2,
+  "git_head": "19669bc653bb007a64958b88f683f55beb40407d",
+  "working_tree": "uncommitted work included; hashes, not HEAD alone, identify this state",
+  "source_code_sha256": {
+    "sql/03_flow_percentile.sql": "b20919db84b1915e11222a7c7edec2e46d8528668ff4becf250f8b7ba8d9ef15",
+    "scripts/transform.py": "d2e41bd49982f28de59564226e62b4fcfaf59f8971242f8d6c3ac12324320815",
+    "schemas/flow_percentile.schema.json": "662f438414f5088538c114d5624146a4f43d464dee624e3f28a59acbb2c7fe2b",
+    "site/app.js": "54c5ee43c95c1be9e5ec2e68cfea5470fa61dd48551b407d5fc71c69ab8110ea",
+    "site/index.html": "436c1e5ba4652e78b0aed6afa888da585c984857c5d89b99583900357dcf79db",
+    "site/style.css": "307f577473ae65b835692c21fd54e9cb97e9ad79037364ed24c29ca368d41ac1",
+    "scripts/flow_policy.py": "0fc95530761dada2de81c947cb4573ac336adf577ae57cd2cbda068e103cbf33",
+    "scripts/validate_flow.py": "94f0af74ee1027254b65eae6f7b15c4091d8a1ef139944a42593707d73a3f9ed"
+  },
+  "served_asset_sha256": {
+    "app.js": "54c5ee43c95c1be9e5ec2e68cfea5470fa61dd48551b407d5fc71c69ab8110ea",
+    "index.html": "436c1e5ba4652e78b0aed6afa888da585c984857c5d89b99583900357dcf79db",
+    "style.css": "307f577473ae65b835692c21fd54e9cb97e9ad79037364ed24c29ca368d41ac1"
+  },
+  "served_data_sha256": {
+    "_runs.jsonl": "da8d00e005b551e01a503990bb72a2755ae1a92f422822a9a0adfff82458aaef",
+    "boundaries.geojson": "eab02d27e27aa69b1c0bccaa65a547680273dc8649341afe1d362e700ef75ef7",
+    "flow_percentile.json": "472a26900de9a6d9fedd5381adef9e6446e5e16f9df46245f15a669003b9ef04",
+    "flow_sites.json": "b061efe371e61f18508c5a7a8e48c482b3e574ba2697405ffcde9d7f1aff0925",
+    "network_records.json": "ef0cc5006543dffe301a7bf649d290bc18a3bbea7cdec75a1a16203571476b7c",
+    "population_growth.json": "a6daedc280fbbb5f3577921e0c4b9dee67884c6d667cdabfae74d56f80dfd6c1",
+    "regions.json": "8804ee4bec17abe2a5c76816a60f3a92f8bfd781d88b30af20025fe0d08617a8",
+    "supply_per_capita.json": "b09c618afe88e2ad55a80477490601b48689d13524941b66a8caf17b35aed111",
+    "water_consents.json": "141cf737be93bd80cd97a31fa1391028ea8536259e080b0d4133a06826b220df"
+  },
+  "browser": {
+    "name": "Chromium",
+    "version": "151.0.7922.34",
+    "timezone": "Pacific/Auckland",
+    "locale": "en-NZ"
+  },
+  "views": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "device_scale_factor": 1,
+      "screenshot": "desktop.png"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "device_scale_factor": 1,
+      "screenshot": "mobile.png"
+    }
+  ],
+  "errors": [],
+  "evidence_sha256": {
+    "desktop.png": "0cf61e2a38ce401c7039077f774867e5520e410afe84f2abcd479784d256a356",
+    "mobile.png": "e755d07164c02116c73db12e66878f8798fedbceb14c22833c92c86b59c4a370",
+    "flow_percentile.json": "472a26900de9a6d9fedd5381adef9e6446e5e16f9df46245f15a669003b9ef04"
+  }
+}

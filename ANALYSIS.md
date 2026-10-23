@@ -1,115 +1,136 @@
-# Analysis & Findings
+# Analysis and interpretation
 
-> **Status: W2 — findings finalised with real numbers (2026-08-30).**
-> Main line A (demand-side supply pressure) is backed by 6/6-region data
-> (Stats NZ population × NEPR 2024/25 unit-level network data). The flow
-> layer (sql/03) is a **supporting, site-level layer**: 11 curated public
-> sites in 2 of the 6 councils — see its caveats below. Section B (water
-> quality) is outlined; analysis comes after the site is stable.
+Updated: 2026-10-23. The local v2 pipeline implements the audited identity,
+matching, reporting-boundary and year rules. Earlier savings and investment
+claims remain withdrawn. Reported network measures, coverage and optional
+population scenarios are now separated. This revision is not yet deployed.
+See the [data dictionary](docs/DATA-DICTIONARY.md) and
+[source audit](docs/SOURCE-AUDIT-2026-10-22.md).
 
-## The three findings
+## Project question
 
-Each finding = **one number + one chart + one "so what"**. These land in the
-README TL;DR and in the site's Key Findings block.
+How do population growth, network supply and water loss compare across six NZ
+regions? The intended use is to identify differences and questions for further
+investigation. The available data does not support ranking supply-zone shortages,
+forecasting drought, or choosing the cheapest infrastructure intervention.
 
-### Finding 1 — Per-capita use differs 2.3× across the 6 regions; growth is not the only lever
-- **Evidence:** Hawke's Bay supplies **609.7 L/person/day** vs Auckland
-  **269.7** (NEPR 2024/25, population-weighted across all registered supplies).
-  If Hawke's Bay matched Auckland's per-capita use it would free ≈
-  **48,800 m³/day — ~62% of the entire 6-region demand growth projected to
-  2030** (+79,300 m³/day, +6.0% at 2025 per-capita rates).
-- **Chart:** bubble chart (pop growth × litres/person/day, size = daily
-  demand, colour = leakage).
-- **So what:** before adding supply capacity, planners have a demand-side
-  lever worth 1.5–2 years of regional growth: efficiency and metering.
-  Auckland's 99.9%-metered network is the benchmark; the least-efficient
-  regions (Hawke's Bay, Otago 511, Southland 536 L/p/d) have the most
-  headroom.
+## What can be investigated
 
-### Finding 2 — Regional extrapolation estimates leakage at a fifth of implied supply
-- **Evidence:** Applying NEPR network rates to regional ERP gives
-  **298,671 m³/day (22.5% of implied daily supply)** across the 6 regions.
-  Canterbury's extrapolated leakage is **86,832 m³/day — 3.5× its own
-  projected 2030 demand growth** (+24,815 m³/day). The leaked volume would
-  serve ≈ **1.1 million people** at Auckland's usage.
-- **Chart:** demand-now-vs-2030 bars with leak volume overlay.
-- **So what:** leakage is a supply-side lever that does not wait for
-  population. A region can buy more growth headroom by fixing leaks than by
-  building new capacity — Canterbury's leak volume already exceeds a decade
-  of its projected growth.
+### Network supply per served person
 
-### Finding 3 — Only 2 of 6 councils publish open river-flow time series
-- **Evidence:** of the 6 project councils, only **HBRC (live) and ORC
-  (historical, public server frozen 2021-04-23)** expose open flow time
-  series; Canterbury/Southland/Auckland public endpoints expose metadata
-  only, Waikato's is down. Where live data exists (3 Hawke's Bay sites,
-  2026-08-30): Ngaruroro at Fernhill at the **9.5th percentile** of its
-  5-year same-week record (driest ~10% of late-August flows), Mohaka 31.1th,
-  Tukituki 40.5th.
-- **So what:** source-water availability is only locally observable today.
-  NZ's water decisions lean on fragmented public data — demand-side planning
-  must rely on 6/6 datasets like NEPR, and flow/availability needs the
-  W1.5 follow-up (LAWA water-quantity API / ORC AQWebPortal) to be
-  comparable across councils.
+NEPR D-EH4 describes water supplied to a network. Dividing by served population
+does not turn that volume into household consumption. Customer mix, non-residential
+use, water losses, metering and reporting practices can affect the result.
 
----
+Auckland can be a comparison point, but this project has not established its
+supply-per-person value as an achievable target for other networks. The previous
+Hawke's Bay savings comparison used different population scopes on its two sides;
+matching those scopes alone would still not establish recoverable savings.
 
-## Section B — Can population growth explain regional water quality?
+The v2 comparison uses resolved identities and matched supply/population records,
+with reporting coverage and the operator-based geographic qualification. Do not infer a causal effect of metering from six
+regional comparisons.
 
-**Claim to test:** population growth does **not** explain NZ river water
-quality once land use is accounted for.
+### Estimated water loss and reporting coverage
 
-- **Approach:** partial correlation / stratification — correlate population
-  growth vs LAWA water-quality metrics, then control for land use (dairy
-  intensity, irrigation area per council).
-- **Method note:** this mirrors the analytical approach used in my PHF
-  Science internship (flood-disturbance effects on water quality). **Method
-  reused; data entirely from public LAWA snapshots. No PHF data or
-  unpublished results appear in this repository.**
-- **Status:** LAWA snapshots (7 files) landed 2026-08-30; land-cover +
-  river-quality join and the stratified correlation are **pending** (after
-  the W2 site is accepted).
+The raw data distinguishes estimated total water loss, current annual real losses
+(CARL) and whether private-side losses are included. A report of loss is not a
+measurement of the water that repair work could economically recover.
 
-## Method
+The v2 rate uses summed loss divided by summed supply on the same valid networks
+and reporting boundary. It replaces the former population-weighted average. Missingness is material: after the audit's
+identity decisions, 44 of 268 candidate records lack a loss value. Southland's
+candidates all include private-side losses, so a public-side-only rate cannot be
+calculated for that group from the present extract.
 
-| Step | SQL | Data | Coverage |
-|---|---|---|---|
-| Population growth (YoY, 5-yr CAGR) | `sql/01` | Stats NZ SDMX API, 2018–2025 | 6/6 regions |
-| Demand-side pressure: per-capita supply, leakage, CARL, ILI, implied daily demand + 2030 projection | `sql/02` | NEPR 2024/25 unit-level (all registered supplies) | 6/6 regions |
-| Source availability: latest flow vs same-week historical percentile | `sql/03` | HBRC + ORC public Hilltop servers | 2/6 councils, curated sites |
-| Water consents: share of consented volume by use (context layer, not SQL) | — | LAWA water-quantity API (`waterusage`, CC BY 4.0) → `data/ref/water_consents.json` | 5/6 regions (Otago: no data published) |
+The identity audit also found OTO001 assigned to two differing source records.
+The old loader mixed their column maxima; v2 quarantines both records. It also
+quarantines Albury's missing identifier and counts Riverton's repeated water measures
+once while retaining both source references. Organization
+imports/exports need consideration before network-input sums are described as
+unique regional water volumes.
 
-All business logic lives in `sql/` and runs via DuckDB; Python only does IO.
-The consents layer is a **context layer**: it shows where each region's water is
-*allocated* (consent = authorised take, not actual use) — Canterbury allocates
-82% of consented volume to irrigation, Auckland 63% to drinking water.
+An annual daily-average volume is not a peak-demand constraint. Neither total
+reported loss nor a whole-region loss scenario establishes years of capacity
+headroom, project costs or the sequence of repair versus capacity investments.
 
-## Limitations
+### Dated flow observations
 
-- **Ecological fallacy** — council-level correlation says nothing about
-  catchment-level mechanism.
-- **n = 6** — no correlation across this few units is robust; one large
-  council can flip the sign.
-- **Confounding** — land use (dairy intensity, irrigation) drives NZ river
-  water quality far more than urban population.
-- **Site selection bias** — LAWA monitoring sites are not randomly located.
-- **NEPR is council-reported** — self-reported network data; metering
-  coverage varies; not every supply reports every metric (nulls excluded
-  from weighted averages).
-- **Flow layer is a curated sample** — 11 sites, 2 councils, not the full
-  network; ORC circles show the last observation of the public record
-  (frozen 2021-04-23), **not** current conditions. Current ORC flows are
-  published on ORC's AQWebPortal and LAWA — outside this pipeline's scope
-  so far (W1.5).
-- **Projection is demand-only** — "2030 demand" multiplies today's per-capita
-  use by projected population; it is not a full supply–demand model
-  (consents, network capacity, climate).
-- **Regional extrapolation differs from measured network totals** — daily
-  demand and leakage use regional ERP, including residents outside reporting
-  networks. Directly summing reported NEPR annual volumes and dividing by
-  365 gives about 1,178,309 m³/day supplied and 264,779 m³/day lost; sql/02
-  scenarios give 1,326,635 and 298,671 respectively. Leakage percentages
-  currently use population weights rather than volume weights. These
-  scenarios cannot establish a recoverable water volume or investment cost.
-- **Consents ≠ use** — the LAWA consent chart shows authorised volume, not
-  actual takes; Otago publishes no consent-use data on LAWA.
+The pipeline integrates three HBRC telemetry sites and eight ORC sites with
+historical records. Each percentile compares one site's latest available daily
+observation with a selected seasonal historical sample. Observation date, sample
+coverage and measurement unit matter more than the page's build date.
+
+This is coverage of the project's selected sites, not proof that other councils
+publish no flow data. The sites are not linked to individual drinking-water
+networks, and flow percentiles cannot be substituted for supply capacity.
+The v2 window uses actual calendar dates, crosses New Year and treats February 29
+as February 28 in non-leap years. The unfinished current season is excluded.
+A rank requires at least three prior seasons with at least ten daily observations
+each. Counts and seasonal day coverage remain visible, including missing years.
+This project display gate is not a hydrological standard; bands are descriptive,
+not drought classifications or long-term climate normals.
+
+## Scenarios and time
+
+The existing regional scenario multiplies regional resident population by network
+supply per served person, extending the rate to people outside the reporting
+networks. It then extends historical five-year population CAGR for another five
+years. This is an assumption-based extrapolation, not an official demographic
+projection or a demand–supply model.
+
+The current local population snapshot ends in 2025, so the scenario targets 2030.
+These are output fields, not fixed labels: a future 2026 base will target 2031.
+Year-on-year growth joins year−1; five-year growth requires all six positive annual
+observations from base−5 through base. Gaps produce an unavailable growth estimate,
+not an extension from a different year. The water rate remains the explicitly
+labelled 2024/25 rate even when population changes.
+
+## Reconciled snapshot, not a ranking
+
+The following table comes from the pinned full NEPR extract and v2 SQL, rebuilt
+locally on 2026-10-22 without fetching new source data. It is **not** the small
+offline example. Loss rates exclude private-side losses and use matched positive
+supply/non-negative loss pairs with loss no greater than supply.
+
+| Operator grouping | Candidate networks | Networks in default loss rate | Paired loss rate | Share of reported supply in those pairs |
+|---|---:|---:|---:|---:|
+| Auckland | 25 | 10 | 19.6% | 100.0%¹ |
+| Canterbury | 97 | 63 | 29.7% | 94.7% |
+| Hawke's Bay | 19 | 10 | 26.3% | 54.0% |
+| Otago | 45 | 19 | 21.6% | 25.1% |
+| Southland | 15 | 0 | Unavailable | Unavailable |
+| Waikato | 67 | 35 | 19.9% | 33.0% |
+
+¹ Rounded to one decimal; the exact Auckland fraction is below 100%. JSON retains
+unrounded contributions. Coverage is of valid **reported network inputs**, not
+all regional supply. Candidate counts already exclude quarantined identities.
+
+The important finding here is unequal comparability. For example, the default
+Otago rate describes only about a quarter of valid reported network supply.
+Southland has no default-boundary result; its separate private-loss-included
+cohort remains available. Neither case supports a region-wide efficiency ranking.
+
+## Scope and context
+
+Population describes six geographic regions. Network data is grouped through 34
+selected operators, whose service boundaries are not verified against those
+regions. The phrase “all registered supplies” is therefore inappropriate.
+Reported network population divided by regional ERP is an approximate comparison,
+not a verified connected-population coverage rate.
+
+The LAWA consent chart shows the snapshot's allocation of authorised take by use
+category. It does not measure actual consumption or water remaining, and it does
+not complete a supply-capacity model. Water-quality and land-use analysis is
+deferred; no finding about their relative explanatory power has been established.
+
+## Conditions for revised findings
+
+Publish each finding with its source period, unit, valid-record set, coverage,
+assumptions and known exclusions. Reconcile headline values to per-network
+contributions. Validate the actual pipeline using attributed offline inputs and
+targeted boundary cases, then update the README, charts and narrative together.
+
+The [roadmap](docs/PLAN.md) distinguishes local implementation from deployment
+and the outstanding source-freshness and geographic work. The [Chinese change record](docs/CHANGELOG.zh-CN.md)
+explains the adjustments without requiring knowledge of SQL or data engineering.

@@ -1,6 +1,6 @@
 # Data source registry
 
-Initial checks: 2026-08-30. Maintenance notes updated: 2026-10-10.
+Initial checks: 2026-08-30. Maintenance notes updated: 2026-10-22.
 Endpoint behaviour below describes those checks; access and coverage may change.
 
 ## River flow
@@ -56,10 +56,11 @@ See [NPR and NEPR research](NPR-research.md) and the
 definitions, reporting differences, quality flags, and source references.
 
 Supply per person is derived from reported supply divided by served population;
-it is not necessarily residential consumption. The dashboard's daily regional
-supply and loss volumes apply network rates to regional resident populations.
-They are scenarios, not measured network totals. The
-[2026-10-10 review](REVIEW-2026-10-10.md) quantifies this distinction.
+it is not necessarily residential consumption. The local v2 dashboard prioritizes reported network supply and matched loss
+cohorts with coverage. Regional population scenarios are separate; no regional
+loss volume is inferred. Network-input sums may include transfers. See the
+[data dictionary](DATA-DICTIONARY.md); the [2026-10-10 review](REVIEW-2026-10-10.md)
+records the earlier scenario-based implementation.
 
 ## Geographic mapping
 
@@ -76,8 +77,8 @@ The supplier-to-region mapping in `scripts/transform.py` groups territorial
 authorities by region. Population cross-checks matched regional totals exactly
 for Auckland, Hawke's Bay, and Southland over the eight checked years. Differences
 of approximately 0.3–0.7% in the other regions were consistent with territorial
-authorities crossing regional boundaries. These checks support the mapping but
-do not remove the coverage differences between service networks and regions.
+authorities crossing regional boundaries. These aggregate checks do not verify individual service geography. The mapping
+remains an operator grouping proxy; see the [source audit](SOURCE-AUDIT-2026-10-22.md).
 
 ## Water quality and land cover
 

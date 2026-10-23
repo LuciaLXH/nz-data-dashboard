@@ -1,0 +1,227 @@
+{
+  "fixture_version": 1,
+  "purpose": "Small attributed source excerpts for offline execution; not representative regional water totals. No synthetic values.",
+  "as_of_utc": "2026-10-22T00:00:00+00:00",
+  "network": {
+    "path": "data/raw/taumata_nepr/NEPM Final Data Extract for Release 27072026 DW_Network.csv",
+    "sha256": "e450cf967413c7d953396b758c61cf9cbc28a46ce7a2da510521ce45fcde6c38",
+    "source": "https://catalogue.data.govt.nz/dataset/network-environmental-performance-report-24-25",
+    "licence": "Taumata Arowai, CC BY 3.0 NZ",
+    "record_mapping": [
+      {
+        "fixture_csv_record": 2,
+        "original_csv_record": 2
+      },
+      {
+        "fixture_csv_record": 3,
+        "original_csv_record": 3
+      },
+      {
+        "fixture_csv_record": 4,
+        "original_csv_record": 4
+      },
+      {
+        "fixture_csv_record": 5,
+        "original_csv_record": 6
+      },
+      {
+        "fixture_csv_record": 6,
+        "original_csv_record": 9
+      },
+      {
+        "fixture_csv_record": 7,
+        "original_csv_record": 12
+      },
+      {
+        "fixture_csv_record": 8,
+        "original_csv_record": 13
+      },
+      {
+        "fixture_csv_record": 9,
+        "original_csv_record": 35
+      },
+      {
+        "fixture_csv_record": 10,
+        "original_csv_record": 36
+      },
+      {
+        "fixture_csv_record": 11,
+        "original_csv_record": 40
+      },
+      {
+        "fixture_csv_record": 12,
+        "original_csv_record": 41
+      },
+      {
+        "fixture_csv_record": 13,
+        "original_csv_record": 51
+      },
+      {
+        "fixture_csv_record": 14,
+        "original_csv_record": 59
+      },
+      {
+        "fixture_csv_record": 15,
+        "original_csv_record": 60
+      },
+      {
+        "fixture_csv_record": 16,
+        "original_csv_record": 93
+      },
+      {
+        "fixture_csv_record": 17,
+        "original_csv_record": 94
+      },
+      {
+        "fixture_csv_record": 18,
+        "original_csv_record": 99
+      },
+      {
+        "fixture_csv_record": 19,
+        "original_csv_record": 100
+      },
+      {
+        "fixture_csv_record": 20,
+        "original_csv_record": 101
+      },
+      {
+        "fixture_csv_record": 21,
+        "original_csv_record": 110
+      },
+      {
+        "fixture_csv_record": 22,
+        "original_csv_record": 152
+      },
+      {
+        "fixture_csv_record": 23,
+        "original_csv_record": 153
+      },
+      {
+        "fixture_csv_record": 24,
+        "original_csv_record": 299
+      },
+      {
+        "fixture_csv_record": 25,
+        "original_csv_record": 315
+      },
+      {
+        "fixture_csv_record": 26,
+        "original_csv_record": 316
+      },
+      {
+        "fixture_csv_record": 27,
+        "original_csv_record": 318
+      },
+      {
+        "fixture_csv_record": 28,
+        "original_csv_record": 319
+      },
+      {
+        "fixture_csv_record": 29,
+        "original_csv_record": 326
+      },
+      {
+        "fixture_csv_record": 30,
+        "original_csv_record": 327
+      },
+      {
+        "fixture_csv_record": 31,
+        "original_csv_record": 329
+      },
+      {
+        "fixture_csv_record": 32,
+        "original_csv_record": 331
+      },
+      {
+        "fixture_csv_record": 33,
+        "original_csv_record": 336
+      },
+      {
+        "fixture_csv_record": 34,
+        "original_csv_record": 404
+      },
+      {
+        "fixture_csv_record": 35,
+        "original_csv_record": 406
+      },
+      {
+        "fixture_csv_record": 36,
+        "original_csv_record": 407
+      },
+      {
+        "fixture_csv_record": 37,
+        "original_csv_record": 442
+      },
+      {
+        "fixture_csv_record": 38,
+        "original_csv_record": 452
+      },
+      {
+        "fixture_csv_record": 39,
+        "original_csv_record": 469
+      },
+      {
+        "fixture_csv_record": 40,
+        "original_csv_record": 506
+      },
+      {
+        "fixture_csv_record": 41,
+        "original_csv_record": 513
+      },
+      {
+        "fixture_csv_record": 42,
+        "original_csv_record": 522
+      }
+    ],
+    "selection": "First two candidate records in each available operator-region/private-loss cohort; first missing supply/loss record per region; audited identity conflicts, duplicate, missing ID, zero supply and loss-above-supply examples. Full original columns retained."
+  },
+  "population": {
+    "path": "data/raw/population/20260830.json",
+    "sha256": "d85c65620c5e473bee350bde660dea8c20c460b4a4954ca4ee8c38953e7d9ecb",
+    "source": "https://api.data.stats.govt.nz/rest/data/STATSNZ,POPES_SUB_001,1.0/ALL",
+    "licence": "Stats NZ, CC BY 4.0",
+    "selection": "All six regions, 2018–2025 POP only; original values retained."
+  },
+  "flow": [
+    {
+      "path": "data/raw/flow/hbrc/20260830.json",
+      "sha256": "1b68454dec306563953b5c3e2c382fef04ff273a9297259ca2f0a9899c855646",
+      "source": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts",
+      "fetched_utc": "2026-08-30T07:33:56.864804+00:00",
+      "site": "Ngaruroro River at Fernhill",
+      "series_indexes_zero_based": [
+        351,
+        716,
+        1082,
+        1447,
+        1812
+      ],
+      "licence": "Per-council public Hilltop terms; see docs/W1-data-sources.md"
+    },
+    {
+      "path": "data/raw/flow/orc/20260830.json",
+      "sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834",
+      "source": "http://gisdata.orc.govt.nz/hilltop/Global.hts",
+      "fetched_utc": "2026-08-30T07:37:10.716444+00:00",
+      "site": "3 OClock Stream at Lambhill",
+      "series_indexes_zero_based": [
+        479,
+        826,
+        1154,
+        1495,
+        1860,
+        2223,
+        2588,
+        2953,
+        3318,
+        3634
+      ],
+      "licence": "Per-council public Hilltop terms; see docs/W1-data-sources.md"
+    }
+  ],
+  "files": {
+    "networks.csv": "e5bfcd413a45a85a80ea0c57b01c00e7399a3d70766e0ea8edbd248561527a21",
+    "population.json": "d2a2076873d03807715f0cdd18b9edbe02bf45d9709fa0209c653dfafce51a61",
+    "flow.json": "06a716c8e7a5673f64ec0e12acd83f107f28e6d9dc41084717e9421ed476c7d3"
+  }
+}

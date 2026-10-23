@@ -4,7 +4,7 @@ ifneq ("$(wildcard .venv/bin/python)","")
 PYTHON := .venv/bin/python
 endif
 
-.PHONY: all data site site-data test serve clean gif
+.PHONY: all data site site-data test serve clean gif offline serve-offline
 
 all: data site            ## fetch → transform → validate → build site
 
@@ -14,16 +14,14 @@ data:                     ## run the full extract/transform/validate pipeline
 	$(PYTHON) scripts/transform.py
 	$(PYTHON) scripts/validate.py
 
-site-data:                ## copy the files the site actually reads into site/data
-	rm -rf site/data
-	mkdir -p site/data
-	# only the datasets consumed by site/app.js — raw flow.json (1.3 MB) and
-	# population.json are W1 packaging artifacts, not used by the front end
-	cp data/processed/population_growth.json data/processed/supply_per_capita.json \
-	   data/processed/flow_percentile.json data/processed/regions.json \
-	   data/processed/_runs.jsonl site/data/
-	cp data/ref/boundaries_regions_simple.geojson site/data/boundaries.geojson
-	cp data/ref/flow_sites.json data/ref/water_consents.json site/data/
+site-data:                ## package validated data for the production site
+	$(PYTHON) scripts/build_site.py
+
+offline:                  ## build attributed examples without API keys or source fetches
+	$(PYTHON) scripts/build_offline.py
+
+serve-offline:            ## preview the example separately from production
+	$(PYTHON) -m http.server -d .tmp/offline/site 8001
 
 site: data site-data      ## build the static site into site/ (W2)
 	@echo "site: built into site/ — run 'make serve' to preview"

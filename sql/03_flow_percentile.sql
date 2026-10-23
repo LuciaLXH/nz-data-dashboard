@@ -1,78 +1,82 @@
--- 03_flow_percentile.sql
--- Source-water availability: latest observed river flow vs the same-week
--- historical percentile, per monitored site (Low / Normal / High).
---
--- Table `flow` (flattened by scripts/transform.py from the council Hilltop
--- snapshots; one row per site-day):
---   council TEXT ('hbrc' | 'orc'), site TEXT, date DATE, flow DOUBLE (m3/s),
---   units TEXT
---
--- Definitions (documented so the numbers are reproducible):
---   latest_date   = the most recent day with a measurement for the site
---                   (HBRC = telemetry up to run time; ORC = the public
---                   server's final day, 2021-01, so "current" means "last
---                   known" there — the front end flags stale sites)
---   window        = the same season in every year: each history date is
---                   shifted into the latest date's year and kept when it
---                   falls within ± 7 days of the latest date (leap-year
---                   dates can land 1 day off — negligible at this window)
---   history       = all days in that window across every year, EXCLUDING the
---                   latest measurement itself; earlier days of the current
---                   year inside the window are kept (they are legitimate
---                   same-period observations)
---   pctile_pct    = share of history strictly below the latest flow × 100
---   band          = < 25 'low' · 25–75 'normal' · > 75 'high'
---                   ('insufficient' when < 5 history days — too few to rank)
---   stale_days    = days since latest_date at run time (Data Health flag)
-
+-- Latest daily flow versus completed prior seasonal windows (v2).
+-- Build the latest month/day separately in each season year; Feb 29 → Feb 28
+-- only in non-leap years. Actual date intervals cross New Year correctly.
+-- The current partial season is excluded. Window years label their centre,
+-- so a Dec/Jan window is one season, not two independent historical years.
+-- Empty seasons within the source record span remain visible in coverage.
+-- The display gate is a project convention, not a climatological standard.
 WITH flow_tbl AS (
-    SELECT council, site, CAST(date AS DATE) AS d, flow, MAX(units) AS units
-    FROM flow
-    WHERE flow IS NOT NULL
-    GROUP BY council, site, date, flow
-),
-latest AS (
-    SELECT council, site, MAX(d) AS d
-    FROM flow_tbl
-    GROUP BY council, site
-),
-current AS (
-    SELECT f.council, f.site, f.d AS latest_date, f.flow AS latest_flow, f.units
-    FROM flow_tbl f
-    JOIN latest l ON f.council = l.council AND f.site = l.site AND f.d = l.d
-),
-hist AS (
-    SELECT f.council, f.site, f.flow
-    FROM flow_tbl f
-    JOIN latest l ON f.council = l.council AND f.site = l.site
-    WHERE f.d < l.d  -- exclude the latest measurement itself
-      -- same-season window: shift each history date into the latest date's
-      -- year, keep dates within ± 7 days of the latest date
-      AND abs(dayofyear(date_trunc('year', l.d) + (f.d - date_trunc('year', f.d)))
-              - dayofyear(l.d)) <= 7
+    SELECT council, site, CAST(date AS DATE) AS d, flow, units
+    FROM flow WHERE flow IS NOT NULL AND ISFINITE(flow) AND flow >= 0
+), bounds AS (
+    SELECT council, site, MIN(d) AS first_date, MAX(d) AS latest_date
+    FROM flow_tbl GROUP BY council, site
+), current AS (
+    SELECT f.council, f.site, b.first_date, b.latest_date,
+        f.flow AS latest_flow, f.units
+    FROM flow_tbl f JOIN bounds b USING (council, site)
+    WHERE f.d = b.latest_date
+), anchors AS (
+    SELECT c.council, c.site, c.first_date, c.latest_date, y.season_year,
+        MAKE_DATE(y.season_year::INTEGER, MONTH(c.latest_date)::INTEGER,
+            LEAST(DAY(c.latest_date), DAY(LAST_DAY(MAKE_DATE(
+                y.season_year::INTEGER, MONTH(c.latest_date)::INTEGER, 1))))::INTEGER) AS anchor
+    FROM current c,
+         RANGE(YEAR(c.first_date) - 1, YEAR(c.latest_date) + 1) y(season_year)
+), windows AS (
+    SELECT a.*, p.window_radius_days * 2 + 1 AS expected_days,
+           p.min_days_per_year
+    FROM anchors a CROSS JOIN flow_policy p
+    WHERE a.anchor + p.window_radius_days < a.latest_date
+      AND a.anchor + p.window_radius_days >= a.first_date
+), history AS (
+    SELECT w.council, w.site, w.season_year, f.d, f.flow
+    FROM windows w CROSS JOIN flow_policy p
+    JOIN flow_tbl f ON f.council = w.council AND f.site = w.site
+       AND f.d BETWEEN w.anchor - p.window_radius_days AND w.anchor + p.window_radius_days
+), by_year AS (
+    SELECT w.council, w.site, w.season_year, w.expected_days,
+           COUNT(h.flow) AS observed_days,
+           COUNT(h.flow) >= w.min_days_per_year AS qualifies
+    FROM windows w LEFT JOIN history h USING (council, site, season_year)
+    GROUP BY w.council, w.site, w.season_year, w.expected_days, w.min_days_per_year
+), coverage AS (
+    SELECT council, site,
+        COUNT(*) AS n_history_seasons,
+        COUNT(*) FILTER (WHERE observed_days > 0) AS n_history_years,
+        COUNT(*) FILTER (WHERE qualifies) AS n_qualified_years,
+        MIN(season_year) AS history_year_start, MAX(season_year) AS history_year_end,
+        SUM(expected_days) AS expected_history_days,
+        100.0 * SUM(observed_days) / SUM(expected_days) AS history_coverage_pct,
+        LIST(STRUCT_PACK(season_year := season_year, observed_days := observed_days,
+             expected_days := expected_days, qualifies := qualifies) ORDER BY season_year) AS history_years
+    FROM by_year GROUP BY council, site
+), stats AS (
+    SELECT c.council, c.site, c.latest_date, c.latest_flow, c.units,
+        COUNT(h.flow) AS n_history,
+        COUNT(*) FILTER (WHERE h.flow < c.latest_flow) AS n_below_latest,
+        MIN(h.d) AS history_first_date, MAX(h.d) AS history_last_date,
+        MEDIAN(h.flow) AS median_hist_m3s, MIN(h.flow) AS min_hist_m3s,
+        MAX(h.flow) AS max_hist_m3s
+    FROM current c LEFT JOIN history h USING (council, site)
+    GROUP BY c.council, c.site, c.latest_date, c.latest_flow, c.units
+), measures AS (
+    SELECT s.* EXCLUDE(latest_flow), s.latest_flow AS latest_flow_m3s,
+        COALESCE(v.n_history_seasons, 0) AS n_history_seasons,
+        COALESCE(v.n_history_years, 0) AS n_history_years,
+        COALESCE(v.n_qualified_years, 0) AS n_qualified_years,
+        v.history_year_start, v.history_year_end,
+        COALESCE(v.expected_history_days, 0) AS expected_history_days,
+        v.history_coverage_pct, COALESCE(v.history_years, []) AS history_years,
+        CASE WHEN COALESCE(v.n_qualified_years, 0) >= p.min_history_years
+             THEN 100.0 * s.n_below_latest / NULLIF(s.n_history, 0) END AS pctile_pct,
+        DATE_DIFF('day', s.latest_date, (SELECT as_of_date FROM build_context)) AS stale_days
+    FROM stats s LEFT JOIN coverage v USING (council, site) CROSS JOIN flow_policy p
 )
-SELECT
-    c.council,
-    c.site,
-    c.latest_date,
-    ROUND(c.latest_flow, 3) AS latest_flow_m3s,
-    c.units,
-    COUNT(h.flow) AS n_history,
-    ROUND(100.0 * COUNT(*) FILTER (WHERE h.flow < c.latest_flow)
-          / NULLIF(COUNT(h.flow), 0), 1) AS pctile_pct,
-    CASE
-        WHEN COUNT(h.flow) < 5 THEN 'insufficient'
-        WHEN 100.0 * COUNT(*) FILTER (WHERE h.flow < c.latest_flow)
-             / NULLIF(COUNT(h.flow), 0) < 25 THEN 'low'
-        WHEN 100.0 * COUNT(*) FILTER (WHERE h.flow < c.latest_flow)
-             / NULLIF(COUNT(h.flow), 0) <= 75 THEN 'normal'
-        ELSE 'high'
-    END AS band,
-    ROUND(MEDIAN(h.flow), 3) AS median_hist_m3s,
-    ROUND(MIN(h.flow), 3) AS min_hist_m3s,
-    ROUND(MAX(h.flow), 3) AS max_hist_m3s,
-    DATE_DIFF('day', c.latest_date, CURRENT_DATE) AS stale_days
-FROM current c
-LEFT JOIN hist h USING (council, site)
-GROUP BY c.council, c.site, c.latest_date, c.latest_flow, c.units
-ORDER BY c.council, c.site;
+SELECT *,
+    CASE WHEN pctile_pct IS NULL THEN 'insufficient'
+         WHEN pctile_pct < 25 THEN 'low'
+         WHEN pctile_pct <= 75 THEN 'normal'
+         ELSE 'high' END AS band,
+    CASE WHEN pctile_pct IS NULL THEN 'insufficient_years' ELSE 'sufficient' END AS history_status
+FROM measures ORDER BY council, site;

@@ -1,0 +1,2 @@
+# Optional screenshot/review tooling; not needed for data builds or tests.
+playwright==1.62.0

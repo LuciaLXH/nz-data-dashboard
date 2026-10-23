@@ -1,34 +1,295 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "$id": "https://github.com/LuciaLXH/nz-data-dashboard/schemas/flow_percentile.schema.json",
-  "title": "Source-water availability: same-week flow percentile (W2, sql/03)",
-  "description": "Per monitored flow site: latest observed flow vs the same-week historical percentile (15-day window shifted across years, excluding the latest measurement). band: low (<25th), normal (25-75th), high (>75th), insufficient (<5 history days). stale_days flags sites whose last measurement is old (ORC public server ended 2021-04).",
+  "title": "Seasonal river-flow comparison v2 with historical coverage",
+  "description": "Calendar-centred completed prior seasons; current season excluded. Percentile withheld when the project multi-year display gate is not met. Not a drought classification or climatological normal.",
   "type": "object",
-  "required": ["schema_version", "sql", "processed_utc", "rows"],
+  "required": [
+    "schema_version",
+    "sql",
+    "processed_utc",
+    "rows",
+    "policy",
+    "council_snapshot_fetched_utc"
+  ],
   "properties": {
-    "schema_version": {"const": 1},
-    "sql": {"type": "string"},
-    "processed_utc": {"type": "string", "format": "date-time"},
+    "schema_version": {
+      "const": 2
+    },
+    "sql": {
+      "type": "string"
+    },
+    "processed_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
     "rows": {
       "type": "array",
       "minItems": 1,
       "items": {
         "type": "object",
-        "required": ["council", "site", "latest_date", "latest_flow_m3s", "units", "n_history", "pctile_pct", "band", "median_hist_m3s", "min_hist_m3s", "max_hist_m3s", "stale_days"],
+        "required": [
+          "council",
+          "site",
+          "latest_date",
+          "latest_flow_m3s",
+          "units",
+          "n_history",
+          "pctile_pct",
+          "band",
+          "median_hist_m3s",
+          "min_hist_m3s",
+          "max_hist_m3s",
+          "stale_days",
+          "n_below_latest",
+          "n_history_seasons",
+          "n_history_years",
+          "n_qualified_years",
+          "expected_history_days",
+          "history_year_start",
+          "history_year_end",
+          "history_first_date",
+          "history_last_date",
+          "history_coverage_pct",
+          "history_status",
+          "history_years"
+        ],
         "properties": {
-          "council": {"type": "string", "enum": ["hbrc", "orc"]},
-          "site": {"type": "string"},
-          "latest_date": {"type": "string", "format": "date"},
-          "latest_flow_m3s": {"type": "number", "minimum": 0},
-          "units": {"type": "string"},
-          "n_history": {"type": "integer", "minimum": 0},
-          "pctile_pct": {"type": ["number", "null"], "minimum": 0, "maximum": 100},
-          "band": {"type": "string", "enum": ["low", "normal", "high", "insufficient"]},
-          "median_hist_m3s": {"type": ["number", "null"], "minimum": 0},
-          "min_hist_m3s": {"type": ["number", "null"], "minimum": 0},
-          "max_hist_m3s": {"type": ["number", "null"], "minimum": 0},
-          "stale_days": {"type": "integer", "minimum": 0}
+          "council": {
+            "type": "string",
+            "enum": [
+              "hbrc",
+              "orc"
+            ]
+          },
+          "site": {
+            "type": "string"
+          },
+          "latest_date": {
+            "type": "string",
+            "format": "date"
+          },
+          "latest_flow_m3s": {
+            "type": "number",
+            "minimum": 0
+          },
+          "units": {
+            "type": "string"
+          },
+          "n_history": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "pctile_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "band": {
+            "type": "string",
+            "enum": [
+              "low",
+              "normal",
+              "high",
+              "insufficient"
+            ]
+          },
+          "median_hist_m3s": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "min_hist_m3s": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "max_hist_m3s": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "stale_days": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_below_latest": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_history_seasons": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_history_years": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "n_qualified_years": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "expected_history_days": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "history_year_start": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "history_year_end": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "history_first_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "history_last_date": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "format": "date"
+          },
+          "history_coverage_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "history_status": {
+            "enum": [
+              "sufficient",
+              "insufficient_years"
+            ]
+          },
+          "history_years": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "season_year",
+                "observed_days",
+                "expected_days",
+                "qualifies"
+              ],
+              "additionalProperties": false,
+              "properties": {
+                "season_year": {
+                  "type": "integer"
+                },
+                "observed_days": {
+                  "type": "integer",
+                  "minimum": 0,
+                  "maximum": 15
+                },
+                "expected_days": {
+                  "const": 15
+                },
+                "qualifies": {
+                  "type": "boolean"
+                }
+              }
+            }
+          }
+        },
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "history_status": {
+                  "const": "insufficient_years"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "pctile_pct": {
+                  "type": "null"
+                },
+                "band": {
+                  "const": "insufficient"
+                }
+              }
+            },
+            "else": {
+              "properties": {
+                "pctile_pct": {
+                  "type": "number"
+                },
+                "band": {
+                  "enum": [
+                    "low",
+                    "normal",
+                    "high"
+                  ]
+                }
+              }
+            }
+          }
+        ]
+      }
+    },
+    "policy": {
+      "type": "object",
+      "required": [
+        "calculation_version",
+        "window_radius_days",
+        "min_history_years",
+        "min_days_per_year",
+        "leap_day_rule",
+        "current_season",
+        "weighting"
+      ],
+      "properties": {
+        "calculation_version": {
+          "const": "seasonal-history-v2"
+        },
+        "window_radius_days": {
+          "const": 7
+        },
+        "min_history_years": {
+          "const": 3
+        },
+        "min_days_per_year": {
+          "const": 10
+        },
+        "leap_day_rule": {
+          "const": "February 29 anchors to February 28 in non-leap years"
+        },
+        "current_season": {
+          "const": "excluded; only windows ending before the latest observation"
+        },
+        "weighting": {
+          "const": "pooled daily observations across all eligible prior seasonal windows"
         }
+      }
+    },
+    "council_snapshot_fetched_utc": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string",
+        "format": "date-time"
       }
     }
   }

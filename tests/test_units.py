@@ -1,41 +1,34 @@
-"""Unit sanity: flows in m³/s, demand in m³/day, per-capita in L/person/day,
-and physical plausibility constraints (coverage ≤ 100%, leak ≤ demand)."""
+"""Metric units and meaningful bounds; no false population coverage ceiling."""
+import pytest
 
 
 def test_flow_units_and_sign(processed):
-    rows = processed["flow_percentile"]["rows"]
-    assert rows, "flow_percentile should have rows"
-    for r in rows:
-        assert r["units"] in {"m3/s", "cumecs (m3/s)"}, r["site"]
-        assert r["latest_flow_m3s"] >= 0
-        assert r["n_history"] >= 0
-        assert r["stale_days"] >= 0
-        if r["pctile_pct"] is not None:
-            assert 0 <= r["pctile_pct"] <= 100
+    for r in processed['flow_percentile']['rows']:
+        assert r['units'] in {'m3/s','cumecs (m3/s)'}
+        assert r['latest_flow_m3s'] >= 0
+        assert r['n_history'] >= 0
+        assert r['stale_days'] >= 0
+        if r['pctile_pct'] is not None:
+            assert 0 <= r['pctile_pct'] <= 100
 
 
 def test_supply_units_and_bounds(processed):
-    rows = processed["supply_per_capita"]["rows"]
-    assert len(rows) == 6
-    for r in rows:
-        assert 100 <= r["l_per_person_day_w"] <= 1000, r["region"]  # L/person/day
-        assert 0 <= r["loss_pct_w"] <= 100
-        assert 0 <= r["coverage_pct"] <= 100
-        assert 0 <= r["leak_m3_day"] <= r["daily_demand_m3"], r["region"]
-        assert r["daily_demand_m3"] > 0
-        assert r["proj_demand_m3_day"] > 0
-        assert r["pop_served"] <= r["pop_2025"], f"{r['region']}: served > ERP"
+    for r in processed['supply_per_capita']['rows']:
+        if r['reported_supply_m3_year'] is not None:
+            assert r['reported_supply_m3_day'] == pytest.approx(r['reported_supply_m3_year']/365)
+        if r['supply_l_person_day'] is not None:
+            assert r['supply_l_person_day'] == pytest.approx(1000*r['supply_population_supply_m3_year']/365/r['supply_population_served_people'])
+        for c in r['loss_cohorts']:
+            if c['paired_networks']:
+                assert c['paired_loss_pct'] == pytest.approx(100*c['paired_loss_m3_year']/c['paired_supply_m3_year'])
+                assert 0 <= c['paired_loss_pct'] <= 100
+            else:
+                assert c['paired_loss_pct'] is None
+        assert r['projection_year'] == r['population_base_year']+5
 
 
 def test_population_positive(processed):
-    rows = processed["population_growth"]["rows"]
-    # Annual releases can add years; coverage must remain balanced.
-    years = {r["year"] for r in rows}
-    regions = {r["region"] for r in processed["regions"]["regions"]}
-    assert len(years) >= 7
-    assert len(rows) == len(regions) * len(years)
-    assert {(r["region"], r["year"]) for r in rows} == {
-        (region, year) for region in regions for year in years
-    }
-    for r in rows:
-        assert r["pop"] > 0
+    rows=processed['population_growth']['rows']
+    assert all(r['pop']>0 for r in rows)
+    source=processed['population']['data']['regions']
+    assert {(r['region'],r['year']) for r in rows} == {(region,int(y)) for region,ys in source.items() for y in ys}

@@ -1,6 +1,6 @@
 # Project roadmap
 
-Updated: 2026-10-12. This roadmap separates delivered functionality from
+Updated: 2026-10-23. This roadmap separates delivered functionality from
 remaining analytical and engineering work.
 
 ## Project motivation
@@ -36,26 +36,40 @@ model, so it cannot attribute observed conditions to El Niño or predict water
 shortages. This distinction should remain clear when the motivation is added to
 the README and dashboard.
 
-## Next iteration
+## Current iteration
 
-All items below are planned. The current dashboard remains unchanged.
+The wording patch, source audit and v2 metric implementation are complete locally.
+The frontend, schemas, data dictionary and offline examples use the same rules.
+Deployment and the next analytical iteration remain separate.
+
+| Stage | Status | Delivered result or completion criteria |
+|---|---|---|
+| Wording patch | Implemented | Withdraw unsupported savings/investment claims and old demo embeds; align the project question. |
+| 1. Source and metric review | Complete | Record identity, private-loss boundaries, missingness, mapping and transfer evidence; publish the dictionary and diagnostic. |
+| 2. Implement and validate metrics | Complete locally | Shared identity rules, source/quality references, reported totals, matched supply/person and boundary-specific loss rates with coverage; actual years through SQL/schema/UI. CARL/ILI remain unaggregated pending denominator research. |
+| 2. Reproducible offline build | Complete locally | Attributed excerpts use the real pipeline; build/tests need no API key or raw cache after dependency installation. Core checks fail rather than skip missing outputs. Separate example banner, output folder and pull-request CI. |
+| 3. Publish revised findings | Local presentation checked; release pending | Snapshot table reconciled; desktop/mobile checked; publish the revised release and replace historical demonstration assets when a new demonstration is prepared. No restoration of the savings claim. |
+
+The project question is:
+
+> How do population growth, network supply and water loss compare across six NZ regions?
+
+Use the dashboard to identify questions for investigation. It does not rank
+supply-zone shortages or investment options. Reported values take priority over
+whole-region scenarios; the latter remain optional and require explicit assumptions.
+
+- [Plain-language change record in Chinese](CHANGELOG.zh-CN.md)
+- [Data dictionary and implementation status](DATA-DICTIONARY.md)
+- [Source audit and handling decisions](SOURCE-AUDIT-2026-10-22.md)
+
+## Later work
 
 | Priority | Improvement | Completion criteria |
 |---|---|---|
-| 1 | Align conclusions across the dashboard, README, analysis, and chart images | Remove unsupported claims about the cheapest intervention, fixing pipes before adding capacity, and years of growth headroom. Distinguish evidence from planning hypotheses everywhere. |
-| 1 | Separate reported values from regional scenarios | Publish reported network supply and loss alongside population-based scenarios; expose coverage and missingness; calculate aggregate loss rates as total reported loss divided by total reported supply. Align the population basis of the existing 62% comparison before interpreting it. |
-| 1 | Provide a reproducible offline example | Include small attributed fixtures and a documented build that needs no API key. Define dataset grain, join keys, and core metrics; ensure the example exercises relevant validation rather than skipping for missing data. |
-| 2 | Match the project question to the analytical scope | Present comparisons across six regions as a way to identify further investigation needs. Avoid claiming to rank supply shortages or individual supply zones without capacity, climate, and allocation evidence. |
-| 2 | Make the dashboard easier to use | Support a clear path from selecting a region to comparing metrics and checking dates, coverage, and assumptions. Place definitions beside charts and visibly distinguish historical ORC observations from recent HBRC telemetry. |
-| 2 | Strengthen date and percentile handling | Carry base/projection years through SQL, schemas, and labels; correct and test seasonal windows at year boundaries and leap days. |
-| 3 | Gather user feedback | Invite analysts or people with water-sector knowledge to try the dashboard. Record actual misunderstandings, resulting changes, and limitations; do not imply stakeholder validation before it occurs. |
-| Optional | Add a Power BI example | If relevant to intended use, reuse validated SQL outputs in a small model with documented measures and relationships. Keep definitions consistent with the main dashboard. |
-
-The first iteration should focus on the three priority-1 items before adding
-new charts or data integrations. A possible revised question is:
-
-> How do population growth, per-capita supply and reported water losses compare
-> across six NZ regions?
+| Complete locally, 2026-10-23 | Seasonal percentiles and history sufficiency | Calendar windows cross New Year, Feb 29 has an explicit convention, current partial seasons are excluded, and per-season coverage controls whether a rank is shown. Before/after evidence is retained. |
+| After the core metric release | User path and source dates | Make region → measure → coverage/assumptions easy to follow; distinguish observation, fetch and build dates and historical ORC records from HBRC telemetry. |
+| After a usable revision | User feedback | Record actual misunderstandings and resulting changes; do not imply water-sector validation before it occurs. |
+| Deferred | Water quality, land use, new integrations and Power BI | Reassess their value after the existing measures are reproducible and interpretable. |
 
 ## Delivered
 
@@ -68,33 +82,46 @@ new charts or data integrations. A possible revised question is:
   and explicit warnings when a source is degraded.
 - Separate build and deployment jobs, unique Pages artifacts, and migration from
   the previous raw-snapshot cache format.
-- Mobile layout checks and clear labels for estimated volumes and source years.
+- Mobile layout checks and labels for scenarios and historical observations.
+- A source audit, v2 metric dictionary and independent contribution reconciliation.
+- Calendar-based seasonal flow comparisons, independent daily-source reconciliation and explicit history coverage.
+- Attributed offline examples, schema v2 water/population outputs and coverage tables.
 
 The [2026-10-10 review](REVIEW-2026-10-10.md) records the deployment incident,
 repairs, verification results, and remaining limitations.
 
 ## Analytical priorities
 
-- Separate reported network totals from population-based regional scenarios.
-- Align the population coverage used in efficiency and projected-growth comparisons.
-- Aggregate loss rates using total reported loss divided by total reported supply.
-- Carry explicit base and projection years through SQL, schemas, charts, and labels.
-- Correct and test seasonal percentile windows around year boundaries and leap days.
-- Assess efficiency scenarios against cost and recoverable-loss evidence before
-  presenting them as investment recommendations.
-- Complete the proposed water-quality and land-use analysis; it is currently pending.
+- Maintain the applied identity decisions and reconcile each new source release before adoption.
+- Distinguish supply, estimated total water loss, physical loss and residential consumption.
+- Calculate aggregate loss rates on the same valid networks and reporting boundary;
+  publish unavailable rather than zero when the comparable cohort is empty.
+- Publish metric-specific coverage and exclusions; retain operator grouping as an
+  explicitly approximate geography until service areas can be verified.
+- Check transfers before interpreting network-input sums as unique regional volumes.
+- Preserve explicit base/projection years and annual-continuity checks when adopting new population releases.
+- Keep achievable savings, capacity headroom and costs outside the findings unless
+  supporting evidence is added.
 
 ## Engineering priorities
 
 - Fetch recent HBRC observations incrementally and reuse unchanged ORC history.
 - Distinguish source year, latest observation, fetch time, and build time in the UI.
 - Define freshness thresholds appropriate to each source and the refresh schedule.
-- Add small public-source fixtures for a reproducible offline build.
+- Keep attributed offline fixtures synchronized with versioned contracts; never present their sample totals as findings.
 - Review action-runtime upgrades against official release notes and Linux CI.
 
 ## Documentation and data maintenance
 
 - Maintain English technical documentation, source attribution, and dated limitations.
+- Before each logical change, capture the affected page and its data under
+  `docs/changes/<date>/<step>/before/`; after validation, capture `after/` using the
+  same input snapshots, calculation date, section and viewport. Do not overwrite
+  evidence or manufacture missing before images. Explain changes in plain Chinese.
+  See the [snapshot workflow](changes/README.md) and `scripts/capture_change.py`.
+- Record each substantive adjustment in `CHANGELOG.zh-CN.md`: what changed, why,
+  what readers should do differently, and what remains pending. Update the data
+  dictionary whenever a source, metric definition or reporting boundary changes.
 - Update NEPR and LAWA reference snapshots manually when new releases are adopted.
 - Keep personal interview notes, career preparation, and local tool logs outside
   version control.

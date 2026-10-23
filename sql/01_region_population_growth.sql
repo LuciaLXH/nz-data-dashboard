@@ -1,40 +1,17 @@
--- 01_region_population_growth.sql
--- Population growth per regional council: YoY % and 5-year CAGR (window fns).
--- Source: Stats NZ subnational population estimates (POPES_SUB_001, as at 30 June),
--- loaded by scripts/transform.py into DuckDB table `population`:
---   population(region TEXT, year INTEGER, pop DOUBLE, medage DOUBLE, netmig DOUBLE)
---
--- Definitions:
---   yoy_growth_pct  = (pop_t / pop_{t-1} - 1) * 100
---   cagr5_pct       = (pop_t / pop_{t-5})^(1/5) - 1, in %  (5-year compound growth)
---   pop_gain_5yr    = pop_t - pop_{t-5}                     (absolute change, people)
-
-WITH pop AS (
-    SELECT region, year, pop
-    FROM population
-),
-growth AS (
-    SELECT
-        region,
-        year,
-        pop,
-        LAG(pop)      OVER (PARTITION BY region ORDER BY year) AS prev_year_pop,
-        LAG(pop, 5)   OVER (PARTITION BY region ORDER BY year) AS five_yr_ago_pop
-    FROM pop
-)
-SELECT
-    region,
-    year,
-    pop,
-    ROUND((pop / prev_year_pop - 1) * 100, 2)   AS yoy_growth_pct,
-    CASE
-        WHEN five_yr_ago_pop IS NOT NULL
-        THEN ROUND((POWER(pop / five_yr_ago_pop, 1.0 / 5) - 1) * 100, 2)
-    END                                          AS cagr5_pct,
-    CASE
-        WHEN five_yr_ago_pop IS NOT NULL
-        THEN pop - five_yr_ago_pop
-    END                                          AS pop_gain_5yr
-FROM growth
-WHERE prev_year_pop IS NOT NULL   -- no YoY for the first year
-ORDER BY region, year;
+-- Calendar-year joins: missing years never become the previous available row.
+SELECT p.region, p.year, p.pop,
+    p.year - 1 AS previous_year,
+    p.year - 5 AS cagr_start_year,
+    p.year AS cagr_end_year,
+    100.0 * (p.pop / NULLIF(prev.pop, 0) - 1) AS yoy_growth_pct,
+    CASE WHEN history.n = 6 AND past.pop > 0
+         THEN 100.0 * (POWER(p.pop / past.pop, 1.0 / 5) - 1) END AS cagr5_pct,
+    CASE WHEN history.n = 6 THEN p.pop - past.pop END AS pop_gain_5yr
+FROM population p
+LEFT JOIN population prev ON prev.region = p.region AND prev.year = p.year - 1
+LEFT JOIN population past ON past.region = p.region AND past.year = p.year - 5
+LEFT JOIN LATERAL (
+    SELECT COUNT(*) AS n FROM population h
+    WHERE h.region = p.region AND h.year BETWEEN p.year - 5 AND p.year AND h.pop > 0
+) history ON TRUE
+ORDER BY p.region, p.year;

@@ -1,84 +1,27 @@
-"""Transform raw snapshots → data/processed/*.json via DuckDB (sql/).
-
-All business logic lives in sql/; this module only orchestrates IO:
-  1. package raw flow / regions / population snapshots (W1 shape, unchanged)
-  2. load population into DuckDB, run each sql/ analysis, export the result
-     as data/processed/<name>.json (W2+).
-
-Runs are recorded by scripts/validate.py into data/processed/_runs.jsonl.
-"""
+"""Build versioned datasets from snapshots; production and examples share this path."""
 from __future__ import annotations
 
-import glob
+import argparse
 import json
-import os
+import math
 import sys
 from datetime import date, datetime, timezone
+from pathlib import Path
 
 import duckdb
 
-SQL_OUTPUTS = [
-    # (sql file, output json name, expected top-level key of the result rows)
-    ("sql/01_region_population_growth.sql", "population_growth.json", "rows"),
-    ("sql/02_supply_per_capita.sql", "supply_per_capita.json", "rows"),
-    ("sql/03_flow_percentile.sql", "flow_percentile.json", "rows"),
-]
+from nepr import FIELDS, PERIOD, normalize_networks
+from flow_policy import FLOW_POLICY, register_flow_policy
 
+ROOT = Path(__file__).resolve().parent.parent
+SQL_OUTPUTS = [
+    ("01_region_population_growth.sql", "population_growth"),
+    ("02_supply_per_capita.sql", "supply_per_capita"),
+    ("03_flow_percentile.sql", "flow_percentile"),
+]
 REGION_ORDER = ["auckland", "waikato", "hawkes_bay", "canterbury", "otago", "southland"]
 
-
-def _load(path: str, default):
-    try:
-        with open(path, encoding="utf-8") as f:
-            return json.load(f)
-    except FileNotFoundError:
-        return default
-
-
-def _flow_snapshot() -> dict:
-    """Latest flow snapshot per council + overall status."""
-    status = _load("data/raw/flow/_status.json", {})
-    snapshots: dict[str, dict] = {}
-    for council in ("hbrc", "orc"):
-        files = sorted(glob.glob(f"data/raw/flow/{council}/*.json"))
-        if files:
-            snapshots[council] = _load(files[-1], {})
-    return {
-        "schema_version": 1,
-        "source": "council Hilltop servers (see docs/W1-data-sources.md)",
-        "fetched_utc": datetime.now(timezone.utc).isoformat(),
-        "councils": snapshots,
-        "status": status,
-    }
-
-
-def _population_records(raw_pop: dict) -> list[dict]:
-    """Flatten data/raw/population/<stamp>.json → DuckDB rows."""
-    rows = []
-    for region, years in raw_pop.get("regions", {}).items():
-        for year, measures in years.items():
-            rows.append({
-                "region": region,
-                "year": int(year),
-                "pop": measures.get("POP"),
-                "medage": measures.get("MEDAGE"),
-                "netmig": measures.get("NETMIG"),
-            })
-    return rows
-
-
-# Org (NEPR participant) → project region. Orgs outside the 6 regions map to
-# None and are excluded from the analysis (they are out of scope, not missing).
-#
-# Verification (2026-08-30): each territorial authority belongs to exactly one
-# regional council (Stats NZ geographic areas). This mapping was checked
-# numerically against the official Stats NZ SDMX population data: summing the
-# TA-level 2025 ERPs per region matches the regional-council ERP exactly for
-# Auckland / Hawke's Bay / Southland (all 8 years), and within 0.3–0.7% for
-# Waikato / Canterbury / Otago — the residual is the documented Stats NZ
-# split-TA effect (≈3,850 of Taupō District classified to Bay of Plenty;
-# ≈1,900 of Waitaki District classified to Canterbury), not a mapping error.
-# Council-level assignment is the correct level for water infrastructure.
+# Operator grouping only; no claim of exact network service geography.
 ORG_REGION = {
     "Watercare": "auckland", "Auckland Council": "auckland", "Papakura": "auckland",
     "Hamilton City Council": "waikato", "Waikato District Council": "waikato",
@@ -100,152 +43,151 @@ ORG_REGION = {
     "Central Hawke's Bay District Council": "hawkes_bay", "Wairoa District Council": "hawkes_bay",
 }
 
-NEPR_NETWORK_CSV = ("data/raw/taumata_nepr/"
-                    "NEPM Final Data Extract for Release 27072026 DW_Network.csv")
+NEPR_NETWORK_CSV = ROOT / "data/raw/taumata_nepr/NEPM Final Data Extract for Release 27072026 DW_Network.csv"
 
 
-def _nepr_network_rows() -> list[dict]:
-    """Dedupe the NEPR unit-level CSV → one row per supply with region mapping.
+def _load(path: Path, default=None):
+    if not path.exists():
+        return default
+    return json.loads(path.read_text(encoding="utf-8"))
 
-    Columns of interest (NEPM 2024/25 data dictionary):
-      D-EH3  Total population served
-      D-EH4  Total volume of water supplied to network (m³/yr)
-      D-RE1  Total drinking water loss across network (m³/yr)
-      D-RE2.1 CARL (m³/connection/day)
-      D-RE3  Infrastructure leakage index (ILI)
-      D-RE4  Median residential water consumption (L/connection/day)
-    Metering % is NOT published in the unit-level extract (only a per-supply
-    counting method); metering figures for the 9 main urban suppliers live in
-    data/ref/water_demand.json (curated, sourced) as supplementary context.
-    """
-    import pandas as pd
 
-    df = pd.read_csv(NEPR_NETWORK_CSV, low_memory=False)
-    cols = {
-        "Supply ID": "supply_id",
-        "Org Name": "org",
-        "Supply name": "supply",
-        "D-EH1.1 Number of residential connections": "res_connections",
-        "D-EH3 Total population served": "pop_served",
-        "D-EH4 Total volume of water supplied to network (m3/year)": "water_supplied_m3",
-        "D-RE1 Total drinking water loss across network (m3/year)": "loss_m3",
-        "D-RE2.1 Current annual real loss - CARL (m3/year)": "carl_m3_year",
-        "D-RE3 Infrastructure leakage index - ILI": "ili",
-        "D-RE4 Median residential water consumption (L/connection/day)": "median_res_l_conn_day",
+def _flow_snapshot() -> dict:
+    folder = ROOT / "data/raw/flow"
+    snapshots = {}
+    for council in ("hbrc", "orc"):
+        files = sorted((folder / council).glob("[0-9]*.json"))
+        if files:
+            snapshots[council] = _load(files[-1])
+    if not snapshots:
+        raise ValueError("No flow snapshots. Fetch data or use make offline.")
+    return {
+        "schema_version": 1,
+        "source": "council Hilltop servers (docs/W1-data-sources.md)",
+        "fetched_utc": max(v["fetched_utc"] for v in snapshots.values()),
+        "councils": snapshots, "status": _load(folder / "_status.json", {}),
     }
-    keep = [c for c in cols if c in df.columns]
-    sub = df[keep].copy()
-    sub = sub.rename(columns=cols)
-    for c in ("res_connections", "pop_served", "water_supplied_m3", "loss_m3",
-              "carl_m3_year", "ili", "median_res_l_conn_day"):
-        sub[c] = pd.to_numeric(sub[c], errors="coerce")
-    # one row per supply: max() is safe (rows repeat the same reported values)
-    sub = sub.groupby("supply_id", as_index=False).agg({c: "max" for c in sub.columns if c != "supply_id"})
-    sub["region"] = sub["org"].map(ORG_REGION)
-    return sub[sub["region"].notna()].to_dict("records")
 
 
-def _flow_rows(flow: dict) -> list[dict]:
-    """Flatten the W1 flow snapshot → one DuckDB row per site-day."""
-    rows = []
-    for council, info in flow.get("councils", {}).items():
-        for site in info.get("sites", []):
-            units = site.get("units", "")
-            for day, value in site.get("series", []):
-                rows.append({
-                    "council": council,
-                    "site": site["site"],
-                    "date": day,
-                    "flow": value,
-                    "units": units,
-                })
+def _population_records(raw_pop: dict) -> list[dict]:
+    rows, seen = [], set()
+    for region, years in raw_pop.get("regions", {}).items():
+        if region not in REGION_ORDER:
+            raise ValueError(f"Unknown population region: {region}")
+        for year, values in years.items():
+            key = (region, int(year))
+            pop = values.get("POP")
+            if key in seen or not isinstance(pop, (int, float)) or not math.isfinite(pop) or pop <= 0:
+                raise ValueError(f"Duplicate or invalid population record: {key}")
+            seen.add(key)
+            rows.append({"region": region, "year": int(year), "pop": pop})
+    if not rows:
+        raise ValueError("No population observations. Fetch data or use make offline.")
     return rows
 
 
-def _run_sql_analyses(flow: dict, population_raw: dict) -> list[dict]:
-    """Run each sql/ analysis against DuckDB; returns [{name, key, sql_file, rows}]."""
-    import pandas as pd
+def _flow_rows(flow: dict) -> tuple[list[dict], dict]:
+    rows, seen, excluded = [], set(), []
+    for council, info in flow.get("councils", {}).items():
+        for site in info.get("sites", []):
+            if site.get("units") not in ("m3/s", "cumecs (m3/s)"):
+                raise ValueError(f"Unsupported flow units for {site.get('site')}")
+            for day, value in site.get("series", []):
+                key = (council, site["site"], day)
+                date.fromisoformat(day)
+                if key in seen:
+                    raise ValueError(f"Duplicate daily flow: {key}")
+                seen.add(key)
+                if not isinstance(value, (int, float)) or not math.isfinite(value) or value < 0:
+                    excluded.append({"council": council, "site": site["site"], "date": day,
+                                     "reason": "non-numeric, non-finite or negative flow"})
+                    continue
+                rows.append({"council": council, "site": site["site"], "date": day,
+                             "flow": value, "units": site["units"]})
+    if not rows:
+        raise ValueError("No usable flow observations")
+    return rows, {"excluded_observations": excluded, "usable_observations": len(rows),
+                  "policy": "Raw observations retained; invalid values excluded from percentile analysis, never replaced with zero."}
 
-    con = duckdb.connect()
-    flow_rows = _flow_rows(flow)
-    if flow_rows:
-        con.register("flow", pd.DataFrame(flow_rows))
-    rows = _population_records(population_raw)
-    if rows:
-        con.register("population", pd.DataFrame(rows))
-    # full NEPR 2024/25 network data (all registered supplies in the 6 regions)
-    nepr = _nepr_network_rows()
-    if nepr:
-        con.register("nepr_network", pd.DataFrame(nepr))
-    results = []
-    for sql_file, out_name, key in SQL_OUTPUTS:
-        sql = open(sql_file, encoding="utf-8").read()
-        rel = con.execute(sql)
-        cols = [d[0] for d in rel.description]
 
-        def _jsonable(v):
-            # DuckDB DATE/TIMESTAMP come back as date/datetime → ISO strings
-            if isinstance(v, (date, datetime)):
-                return v.isoformat()
-            return v
+def run_analyses(population: list[dict], flow: list[dict], networks: list[dict],
+                 as_of: date, horizon_years: int = 5) -> dict:
+    # Explicit types keep an all-missing numeric column numeric, even in small examples.
+    with duckdb.connect() as con:
+        con.execute("CREATE TABLE population(region VARCHAR, year INTEGER, pop DOUBLE)")
+        con.executemany("INSERT INTO population VALUES (?, ?, ?)",
+                        [(r["region"], r["year"], r["pop"]) for r in population])
+        con.execute("CREATE TABLE flow(council VARCHAR, site VARCHAR, date DATE, flow DOUBLE, units VARCHAR)")
+        con.executemany("INSERT INTO flow VALUES (?, ?, ?, ?, ?)",
+                        [(r["council"], r["site"], r["date"], r["flow"], r["units"]) for r in flow])
+        cols = ["network_key", "region", "private_loss_boundary", *FIELDS]
+        con.execute("CREATE TABLE nepr_network(" + ", ".join(
+            f"{c} {'VARCHAR' if c in cols[:3] else 'DOUBLE'}" for c in cols) + ")")
+        if networks:
+            con.executemany("INSERT INTO nepr_network VALUES (" + ",".join("?" for _ in cols) + ")",
+                            [[r[c] for c in cols] for r in networks])
+        con.execute("CREATE TABLE build_context(as_of_date DATE, period_days INTEGER, scenario_horizon_years INTEGER)")
+        con.execute("INSERT INTO build_context VALUES (?, ?, ?)", [as_of, PERIOD["period_days"], horizon_years])
+        register_flow_policy(con)
+        output = {}
+        for sql, name in SQL_OUTPUTS:
+            cursor = con.execute((ROOT / "sql" / sql).read_text())
+            columns = [d[0] for d in cursor.description]
+            output[name] = [{c: (v.isoformat() if isinstance(v, (date, datetime)) else v)
+                             for c, v in zip(columns, row)} for row in cursor.fetchall()]
+        return output
 
-        result_rows = [
-            {c: _jsonable(v) for c, v in zip(cols, r)}
-            for r in rel.fetchall()
-        ]
-        results.append({"name": out_name, "key": key, "sql_file": sql_file, "rows": result_rows})
-    con.close()
-    return results
+
+def build(output_dir: Path, population_raw: dict, flow: dict, nepr_path: Path = NEPR_NETWORK_CSV,
+          *, input_mode: str = "snapshot", processed_utc: str | None = None,
+          population_status: dict | None = None) -> dict:
+    now = processed_utc or datetime.now(timezone.utc).isoformat()
+    as_of = datetime.fromisoformat(now.replace("Z", "+00:00")).date()
+    pop_rows = _population_records(population_raw)
+    flow_rows, flow_quality = _flow_rows(flow)
+    networks = normalize_networks(nepr_path, ORG_REGION)
+    analyses = run_analyses(pop_rows, flow_rows, networks["rows"], as_of)
+    common = {"processed_utc": now, "input_mode": input_mode}
+    datasets = {
+        "flow": {**flow, **common, "quality": flow_quality},
+        "regions": {"schema_version": 1, "source": "data/ref/region_map.json", **common,
+                    "regions": _load(ROOT / "data/ref/region_map.json")["regions"]},
+        "population": {"schema_version": 1, **common, "data": population_raw,
+                       "status": population_status or {"ok": True, "note": "provided snapshot"}},
+        "network_records": {**networks, **common},
+    }
+    for sql, name in SQL_OUTPUTS:
+        datasets[name] = {"schema_version": 2,
+                          "sql": "sql/" + sql, **common, "rows": analyses[name]}
+    datasets["supply_per_capita"].update({
+        **PERIOD, "calculation_version": "network-comparison-v2",
+        "geography": "operator_region_proxy", "default_loss_boundary": "No",
+        "source_file": networks["source_file"], "source_sha256": networks["source_sha256"],
+        "source_audit": networks["audit"]["counts"],
+        "scenario_assumption": "Regional population at the stated base year uses reported network supply/person; historical CAGR continues for five years. Transfers are not reconciled.",
+    })
+    datasets["flow_percentile"].update({
+        "quality": flow_quality, "policy": FLOW_POLICY,
+        "council_snapshot_fetched_utc": {c: v["fetched_utc"] for c, v in flow["councils"].items()},
+    })
+    output_dir.mkdir(parents=True, exist_ok=True)
+    for name, data in datasets.items():
+        (output_dir / (name + ".json")).write_text(
+            json.dumps(data, ensure_ascii=False, indent=1, allow_nan=False) + "\n", encoding="utf-8")
+    return datasets
 
 
 def main() -> int:
-    os.makedirs("data/processed", exist_ok=True)
-    now = datetime.now(timezone.utc).isoformat()
-
-    # 1) W1 packaging (unchanged shape)
-    flow = _flow_snapshot()
-    with open("data/processed/flow.json", "w", encoding="utf-8") as f:
-        json.dump(flow, f, ensure_ascii=False, indent=1)
-
-    regions = {
-        "schema_version": 1,
-        "source": "data/ref/region_map.json (REGC ↔ council ↔ LAWA zone)",
-        "regions": _load("data/ref/region_map.json", {}).get("regions", []),
-    }
-    with open("data/processed/regions.json", "w", encoding="utf-8") as f:
-        json.dump(regions, f, ensure_ascii=False, indent=1)
-
-    pop_files = sorted(glob.glob("data/raw/population/[0-9]*.json"))
-    population_raw = _load(pop_files[-1], {}) if pop_files else {}
-    population = {
-        "schema_version": 1,
-        "status": _load("data/raw/population/_status.json",
-                        {"ok": False, "note": "no population fetch attempted"}),
-        "processed_utc": now,
-    }
-    if population_raw:
-        population["data"] = population_raw
-    with open("data/processed/population.json", "w", encoding="utf-8") as f:
-        json.dump(population, f, ensure_ascii=False, indent=1)
-
-    # 2) W2 analyses via DuckDB + sql/
-    analyses = _run_sql_analyses(flow, population_raw)
-    for item in analyses:
-        out = {
-            "schema_version": 1,
-            "sql": item["sql_file"],
-            "processed_utc": now,
-            item["key"]: item["rows"],
-        }
-        with open(f"data/processed/{item['name']}", "w", encoding="utf-8") as f:
-            json.dump(out, f, ensure_ascii=False, indent=1)
-
-    n_flow = sum(len(v.get("sites", [])) for v in flow["councils"].values())
-    n_pop = len(population_raw.get("regions", {}))
-    n_growth = len(analyses[0]["rows"]) if analyses else 0
-    n_flow_pct = len(analyses[2]["rows"]) if len(analyses) > 2 else 0
-    print(f"transform: flow sites={n_flow} | regions={len(regions['regions'])} | "
-          f"population regions={n_pop} | growth rows={n_growth} | flow percentile sites={n_flow_pct}")
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--out", type=Path, default=ROOT / "data/processed")
+    args = parser.parse_args()
+    pop_files = sorted((ROOT / "data/raw/population").glob("[0-9]*.json"))
+    if not pop_files:
+        raise ValueError("No population snapshot. Fetch data or use make offline.")
+    datasets = build(args.out, _load(pop_files[-1]), _flow_snapshot(),
+                     population_status=_load(ROOT / "data/raw/population/_status.json", {"ok": False}))
+    print(f"transform: schema v2 water/population; {len(datasets['network_records']['rows'])} candidate networks; "
+          f"{len(datasets['supply_per_capita']['rows'])} regional comparisons → {args.out}")
     return 0
 
 

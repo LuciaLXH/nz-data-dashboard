@@ -1,0 +1,123 @@
+{
+  "schema_version": 1,
+  "source": "Attributed excerpt: fixtures/offline/MANIFEST.json",
+  "councils": {
+    "hbrc": {
+      "council": "hbrc",
+      "label": "Hawke's Bay (HBRC)",
+      "fetched_utc": "2026-08-30T07:33:56.864804+00:00",
+      "source": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts",
+      "measurement": "daily mean river flow",
+      "sites": [
+        {
+          "site": "Ngaruroro River at Fernhill",
+          "measurement": "FlowM3S [Water Level]",
+          "window": [
+            "2021-08-31",
+            "2026-08-30"
+          ],
+          "series": [
+            [
+              "2022-08-30",
+              57.2662
+            ],
+            [
+              "2023-08-30",
+              27.9643
+            ],
+            [
+              "2024-08-30",
+              49.0951
+            ],
+            [
+              "2025-08-30",
+              21.13
+            ],
+            [
+              "2026-08-30",
+              20.571
+            ]
+          ],
+          "units": "m3/s"
+        }
+      ]
+    },
+    "orc": {
+      "council": "orc",
+      "label": "Otago (ORC)",
+      "fetched_utc": "2026-08-30T07:37:10.716444+00:00",
+      "source": "http://gisdata.orc.govt.nz/hilltop/Global.hts",
+      "measurement": "daily mean river flow",
+      "sites": [
+        {
+          "site": "3 OClock Stream at Lambhill",
+          "measurement": "Flow [Water Level]",
+          "window": [
+            "2010-05-12",
+            "2021-01-09"
+          ],
+          "series": [
+            [
+              "2012-01-09",
+              0.2244
+            ],
+            [
+              "2013-01-09",
+              0.4006
+            ],
+            [
+              "2014-01-09",
+              1.2571
+            ],
+            [
+              "2015-01-09",
+              0.0836
+            ],
+            [
+              "2016-01-09",
+              0.0653
+            ],
+            [
+              "2017-01-09",
+              0.304
+            ],
+            [
+              "2018-01-09",
+              0.1398
+            ],
+            [
+              "2019-01-09",
+              0.7624
+            ],
+            [
+              "2020-01-09",
+              0.3517
+            ],
+            [
+              "2021-01-09",
+              2.8521
+            ]
+          ],
+          "units": "cumecs (m3/s)"
+        }
+      ]
+    }
+  },
+  "status": {
+    "hbrc": {
+      "council": "hbrc",
+      "ok": true,
+      "sites_fetched": 0,
+      "n_points": 5,
+      "note": "Fixed offline excerpt, not a live fetch"
+    },
+    "orc": {
+      "council": "orc",
+      "ok": true,
+      "sites_fetched": 0,
+      "n_points": 10,
+      "note": "Fixed offline excerpt, not a live fetch"
+    }
+  },
+  "fetched_utc": "2026-08-30T07:37:10.716444+00:00"
+}

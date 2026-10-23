@@ -1,43 +1,71 @@
-"""Missing-value propagation: a supply with a NULL metric must be EXCLUDED
-from sql/02's population-weighted averages, not counted as zero.
-
-Runs the real sql/02_supply_per_capita.sql against a tiny inline NEPR table
-with one NULL per-capita row and asserts the weighted mean stays clean.
-"""
-import pandas as pd
-
-from conftest import run_sql
-
-POPULATION = pd.DataFrame([
-    {"region": "southland", "year": y, "pop": 100000 + i}
-    for i, y in enumerate(range(2020, 2026))
-])
-
-# region "southland": supply A reports water (1000 L/p/d), supply B reports
-# water=NULL (e.g. a supply that did not report volume this year).
-NEPR = pd.DataFrame([
-    {"region": "southland", "supply_id": "A", "org": "Southland District Council",
-     "supply": "A", "res_connections": 100, "pop_served": 100.0,
-     "water_supplied_m3": 36500.0, "loss_m3": 3650.0, "carl_m3_year": 100.0,
-     "ili": 2.0, "median_res_l_conn_day": None},
-    {"region": "southland", "supply_id": "B", "org": "Southland District Council",
-     "supply": "B", "res_connections": 100, "pop_served": 100.0,
-     "water_supplied_m3": None, "loss_m3": None, "carl_m3_year": None,
-     "ili": None, "median_res_l_conn_day": None},
-])
+"""Synthetic cases distinguish ratio-of-totals, paired denominators and boundaries."""
+from datetime import date
+import pytest
+from nepr import FIELDS
+from transform import run_analyses
 
 
-def test_null_per_capita_excluded_from_weighted_average():
-    rows = run_sql("02_supply_per_capita.sql", {"population": POPULATION, "nepr_network": NEPR})
-    southland = next(r for r in rows if r["region"] == "southland")
-    # supply A: 36500 m3/yr / 365 = 100 m3/day; /100 people *1000 = 1000 L/p/d.
-    # If supply B's NULL were counted as 0, the mean would be 500.
-    assert southland["l_per_person_day_w"] == 1000.0
-    # loss: 3650/36500 = 10% (B's NULL excluded, not 0%)
-    assert southland["loss_pct_w"] == 10.0
-    assert southland["pop_served"] == 200.0  # pop_served itself sums fine
+def network(key,supply,loss,pop=100,boundary='No'):
+    return {**dict.fromkeys(FIELDS), 'network_key':key,'region':'southland',
+            'private_loss_boundary':boundary,'supply_m3_year':supply,
+            'loss_m3_year':loss,'population_served':pop}
 
 
-def test_null_does_not_crash_sql():
-    rows = run_sql("02_supply_per_capita.sql", {"population": POPULATION, "nepr_network": NEPR})
-    assert len(rows) == 1  # only southland in this fixture
+def analyse(networks,years=range(2020,2026)):
+    return run_analyses([{'region':'southland','year':y,'pop':100000*1.02**(y-2020)} for y in years],
+        [{'council':'orc','site':'synthetic','date':'2026-01-01','flow':1,'units':'m3/s'}],
+        networks,date(2026,10,22))
+
+
+def test_rate_is_ratio_of_sums_not_population_weighted_mean():
+    r=analyse([network('a',36500,3650),network('b',109500,54750)])['supply_per_capita'][0]
+    assert r['paired_loss_pct']==40  # (3650+54750)/(36500+109500), NOT (10+50)/2
+    assert r['supply_l_person_day']==2000
+    assert r['reported_supply_m3_day']==400
+
+
+def test_missing_zero_excess_and_private_boundaries_have_separate_denominators():
+    r=analyse([network('a',36500,3650),network('supply-only',36500,None),
+               network('loss-only',None,10000),network('zero',0,0),network('excess',100,101),
+               network('private',36500,18250,boundary='Yes'),
+               network('unknown',36500,7300,boundary='unknown')])['supply_per_capita'][0]
+    assert r['paired_loss_pct']==10
+    assert r['paired_networks']==1
+    assert r['supply_population_networks']==6
+    assert r['supply_population_served_people']==600  # exclude loss-only population
+    cohorts={c['boundary']:c for c in r['loss_cohorts']}
+    assert cohorts['No']['reported_loss_m3_year']==13751 # zero, loss-only, excessive retained here
+    assert cohorts['No']['paired_loss_m3_year']==3650
+    assert cohorts['No']['paired_network_coverage_pct']==pytest.approx(100/7)
+    assert cohorts['Yes']['paired_loss_pct']==50
+    assert cohorts['unknown']['paired_loss_pct']==20
+
+
+def test_empty_comparable_cohort_is_null_not_zero():
+    r=analyse([network('a',36500,0,boundary='Yes')])['supply_per_capita'][0]
+    assert r['paired_loss_pct'] is None
+    assert r['paired_networks']==0
+    assert next(c for c in r['loss_cohorts'] if c['boundary']=='Yes')['paired_loss_pct']==0
+
+
+def test_all_missing_and_no_networks_remain_null():
+    for networks in ([network('missing',None,None)],[]):
+        r=analyse(networks)['supply_per_capita'][0]
+        assert r['reported_supply_m3_year'] is None
+        assert r['supply_l_person_day'] is None
+        assert r['scenario_projected_supply_m3_day'] is None
+
+
+def test_calendar_gaps_do_not_become_previous_year_or_five_year_growth():
+    result=analyse([],years=[2019,2020,2021,2022,2024,2025])
+    rows={r['year']:r for r in result['population_growth']}
+    assert rows[2024]['yoy_growth_pct'] is None
+    assert rows[2025]['cagr5_pct'] is None
+    assert result['supply_per_capita'][0]['scenario_growth_pct'] is None
+
+
+def test_new_population_year_updates_base_target_and_cagr():
+    r=analyse([network('a',36500,3650)],years=range(2021,2027))['supply_per_capita'][0]
+    assert (r['population_base_year'],r['projection_year'],r['cagr_start_year'],r['cagr_end_year'])==(2026,2031,2021,2026)
+    assert r['cagr5_pct']==pytest.approx(2)
+    assert r['scenario_growth_pct']==pytest.approx(100*(1.02**5-1))

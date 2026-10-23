@@ -3,89 +3,78 @@
 [![pipeline](https://github.com/LuciaLXH/nz-data-dashboard/actions/workflows/refresh.yml/badge.svg)](https://github.com/LuciaLXH/nz-data-dashboard/actions)
 [![data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-1c6b67)](#data-sources--licences)
 
-**Where will population growth put NZ council water supplies under pressure first?**
+**How do population growth, network supply and water loss compare across six NZ regions?**
 
-[**Live site →**](https://lucialxh.github.io/nz-data-dashboard/) · [The SQL →](sql/) · [Findings →](ANALYSIS.md)
+[**Live site →**](https://lucialxh.github.io/nz-data-dashboard/) · [The SQL →](sql/) · [Analysis →](ANALYSIS.md)
 
-![demo](docs/demo.gif)
+> **Local revision: water, population and seasonal-flow schema v2 implemented.** Identity conflicts
+> are quarantined, supply/person uses matched records, and loss rates use total
+> loss divided by total supply within the same reporting boundary. Coverage and
+> actual years accompany the results. This local revision has not been deployed;
+> the live site can still show the previous release.
 
-> **Status: deployed and maintained.** The dashboard combines population
-> estimates for six regions, NEPR 2024/25 network data, and selected river-flow
-> records. Supply and leakage projections are scenarios, with assumptions and
-> coverage limits documented below. Water-quality/land-use analysis is pending.
+[Data dictionary](docs/DATA-DICTIONARY.md) ·
+[Source audit and decisions](docs/SOURCE-AUDIT-2026-10-22.md) ·
+[修改说明（中文）](docs/CHANGELOG.zh-CN.md) ·
+[修改前后快照](docs/changes/README.md)
 
----
+## What the dashboard helps you investigate
 
-## TL;DR — three findings
+1. **Network supply per served person.** Differences can reflect customer mix,
+   water losses, metering and reporting methods. They do not directly measure
+   household consumption or achievable efficiency savings.
+2. **Reported water loss and coverage.** Providers estimate losses, sometimes
+   including private-side losses. Comparisons need consistent boundaries and
+   the same networks in the numerator and denominator. The default cohort excludes private-side losses; included and unknown
+   boundaries appear separately. An empty cohort is unavailable, never zero.
+3. **Dated river observations.** The project integrates three HBRC telemetry
+   sites and eight historical ORC sites. These selected observations do not
+   establish region-wide availability, and a cached reading may be old.
 
-1. **2.3× per-capita gap.** Hawke's Bay supplies **610 L/person/day** vs
-   Auckland **270** (NEPR 2024/25). Matching Auckland's efficiency in HB
-   alone frees ≈ **48,800 m³/day — ~62% of the 6-region demand growth
-   projected to 2030**.
-   *Planning implication:* investigate efficiency and metering alongside capacity
-   options. This scenario does not establish achievable savings or investment cost.
-   The 62% comparison uses different population coverage and needs alignment.
-   ![](site/img/fig1.png)
-
-2. **Estimated leakage at regional network rates.** Applying NEPR rates to
-   the entire regional population gives **298,671 m³/day (22.5% of implied
-   supply)** across the 6 regions; Canterbury's estimate is
-   **86,832 m³/day — 3.5× its own
-   projected 2030 demand growth**. The leaked volume ≈ 1.1M people at
-   Auckland's usage.
-   *Planning implication:* assess recoverable leakage alongside demand growth;
-   estimated losses are not equivalent to practically recoverable savings.
-
-3. **Flow time series integrated for 2 of 6 regions.** HBRC is live; ORC's
-   public server froze at 2021-04-23 (current values are on ORC AQWebPortal /
-   LAWA). Where we can look (3 live HB sites, 2026-08-30), flows sit at the
-   **9.5th–40.5th** percentile — Ngaruroro at Fernhill is in the driest ~10%
-   of its 5-year record.
-   *So what:* source-water availability is only locally observable;
-   demand-side planning must lean on 6/6 datasets like NEPR.
-
-> Full write-up, method and caveats: [ANALYSIS.md](ANALYSIS.md)
+The earlier savings comparison and investment-priority claims have been
+withdrawn. Read [ANALYSIS.md](ANALYSIS.md) for the evidence boundaries and
+conditions for publishing revised findings. The previous demo GIF is retained
+as a historical asset and is no longer embedded as a current demonstration.
 
 ## Who this is for
 
-**Audience:** regional council asset planners and three-waters analysts.
-**Decision it supports:** which supply zones are most likely to face a
-demand–supply gap under projected population growth over the next 5 years.
+**Audience:** analysts exploring public water-network and population data.
+**Use:** identify differences and data gaps that warrant further investigation.
+Select a region, inspect the measure, then check dates, coverage and assumptions.
 
-Every chart on the site answers one sub-question of that decision.
-Scope: **6 councils** — Auckland · Canterbury · Otago · Hawke's Bay ·
-Southland · Waikato. Depth over national coverage, deliberately.
-Flow coverage: HBRC live observations and ORC historical public records are
-integrated. The inspected endpoints for the other regions did not provide
-usable flow series; this does not establish that no alternative services exist.
-See the flow caveats on the site and in ANALYSIS.md.
+Scope: **six regions** — Auckland · Canterbury · Otago · Hawke's Bay · Southland ·
+Waikato. Networks are grouped by operator; this does not verify each network's
+service area against regional boundaries. The project cannot rank supply-zone
+shortages or investment options without capacity, climate, allocation and cost
+evidence. Water-quality and land-use analysis is deferred.
 
 ## How it works
 
 ```
 Stats NZ ADE API ─┐
-Water NZ NPR ─────┼─→ scripts/  ─→ DuckDB ─→ data/processed/*.json ─→ static site
+Taumata NEPR ────┼─→ scripts/  ─→ DuckDB ─→ data/processed/*.json ─→ static site
 Council Hilltop ──┤     (extract)   (sql/)     + schema + _runs.jsonl    (ECharts
 LAWA snapshot ────┘                                                     + Leaflet)
 ```
 
 - `data/processed/` is the **single source of truth** for the front end:
   versioned JSON + JSON Schema + a UTC timestamp per source.
-- Refresh cadence matches each source's real cadence — see the table below.
-  This is an automated pipeline; source-specific freshness thresholds remain
-  a maintenance priority.
+- The pipeline runs every six hours. Source release/observation dates differ
+  from refresh time; source-specific fetching and freshness rules remain pending.
 - The site's **Data Health** panel reads `_runs.jsonl`: last successful run,
   row counts, null rates, schema version, last 20 runs.
 
 ## The SQL
 
-All business logic lives in `sql/`; Python only does IO and orchestration (DuckDB).
+Python prepares source records; DuckDB runs the analytical SQL in `sql/`.
+Python preserves source records and exclusions; validation reconciles the SQL
+outputs to per-network contributions. See the data dictionary for each denominator.
 
 | File | What it does |
 |---|---|
-| [`01_region_population_growth.sql`](sql/01_region_population_growth.sql) | YoY + 5-year CAGR per council (window functions) |
-| [`02_supply_per_capita.sql`](sql/02_supply_per_capita.sql) | Population × NEPR 2024/25 (all registered supplies): litres/person/day, leakage, CARL, ILI, implied daily demand + 2030 projection |
-| [`03_flow_percentile.sql`](sql/03_flow_percentile.sql) | Latest observed river flow vs same-week historical percentile, per monitored site (supporting layer: 11 curated sites, HBRC live + ORC historical) |
+| [`01_region_population_growth.sql`](sql/01_region_population_growth.sql) | YoY + 5-year CAGR per region using actual calendar years; missing years suppress growth measures |
+| [`02_supply_per_capita.sql`](sql/02_supply_per_capita.sql) | Reported network supply, matched supply/person, boundary-specific loss rates and coverage; separate population scenarios with explicit years |
+| [`03_flow_percentile.sql`](sql/03_flow_percentile.sql) | Latest observed river flow vs calendar-centred completed prior seasons; ranks require ≥3 seasons with ≥10 days each, with per-season coverage (11 curated sites) |
 
 ## Why I don't claim causation
 
@@ -93,23 +82,22 @@ All business logic lives in `sql/`; Python only does IO and orchestration (DuckD
   catchment-level mechanism.
 - **n = 6** — no correlation across this few units is robust; one large
   council can flip the sign.
-- **Confounding** — land use, irrigation, and other factors may confound relationships
-  between population and water quality. Section B in
-  [ANALYSIS.md](ANALYSIS.md) sets out a proposed test (population
-  signal vs land use, stratified); analysis remains pending.
+- **Confounding** — customer mix, metering, geography and reporting methods can
+  affect water comparisons. Their individual effects have not been isolated.
+  Water-quality and land-use analysis is deferred.
 - **Site selection bias** — LAWA monitoring sites are not randomly located.
 - NEPR/NPR figures are council-reported; metering coverage varies.
-- Daily demand and leakage are regional extrapolations, including residents
-  outside reporting networks. They are scenarios rather than measured
-  network totals; the reported NEPR loss sum is about **264,779 m³/day**.
+- Optional regional supply scenarios include residents outside reporting
+  networks; no regional loss scenario is inferred. Reported values may also be
+  estimates, and network-input sums may double count transfers.
 
 ## Data sources & licences
 
 | Source | Used for | Cadence | Licence |
 |---|---|---|---|
-| [Stats NZ SDMX API](https://explore.data.stats.govt.nz/) | Subnational population estimates (2018–2025, 6 regions) | Annual (30 Jun) | CC BY 4.0 |
-| [Taumata Arowai NEPR](https://www.taumataarowai.govt.nz/) | Water demand, leakage (CARL), metering per supplier (NPR successor) | Annual | CC BY 3.0 NZ |
-| [Water New Zealand NPR 2021/22](https://www.waternz.org.nz/NationalPerformanceReview) | Demand / leakage / metering (final edition; dashboard data) | Ended 2021/22 | Water NZ terms (non-commercial with attribution) |
+| [Stats NZ SDMX API](https://explore.data.stats.govt.nz/) | Subnational population estimates (series starts 2018, 6 regions) | Annual (30 Jun) | CC BY 4.0 |
+| [Taumata Arowai NEPR](https://www.taumataarowai.govt.nz/) | Network supply, estimated water loss and reporting context (NPR successor) | Annual | CC BY 3.0 NZ |
+| [Water New Zealand NPR 2021/22](https://www.waternz.org.nz/NationalPerformanceReview) | Historical research/reference material; not the current sql/02 input | Ended 2021/22 | Water NZ terms (non-commercial with attribution) |
 | [LAWA](https://www.lawa.org.nz/explore-data/water-quantity/) | Regional council boundaries (WKT via LAWA map service, derived from Stats NZ) | Static | CC BY 4.0 |
 | HBRC Hilltop (`data.hbrc.govt.nz`) | River flow, realtime (3 sites) | 15 min | Per-council terms; public access |
 | ORC Hilltop (`gisdata.orc.govt.nz`) | River flow, historical 2010–2021 (8 sites) | 5 min | Per-council terms; public access |
@@ -124,20 +112,41 @@ council boundaries). Water demand/network data courtesy of **Taumata Arowai**
 
 ## Run it yourself
 
+Install the dependencies once, then build and test the attributed examples:
+
 ```bash
 git clone https://github.com/LuciaLXH/nz-data-dashboard && cd nz-data-dashboard
 python3 -m venv .venv
 .venv/bin/python -m pip install -r requirements.txt
-cp .env.example .env        # add your Stats NZ API key
-set -a; source .env; set +a # export the key to the pipeline
-make all                    # fetch → transform → validate → build site
-make test                   # pytest: schema, units, region names, DST, nulls
-make serve
+make offline                # real transform → schemas → reconciliation → example site
+make test                   # creates fresh example outputs; no API key or raw cache
+make serve-offline          # http://localhost:8001
 ```
 
-`make test` runs offline: the SQL-logic tests (percentile, missing-value
-propagation) use small inline tables, and the schema/unit/region tests read
-`data/processed/` (skipped when not built yet).
+Examples are small source excerpts, **not representative regional totals**.
+Their [manifest](fixtures/offline/MANIFEST.json) records attribution, selection,
+hashes and original record numbers. The example site is isolated in `.tmp/offline/`
+and displays an explicit banner. Data builds/tests make no network requests;
+browser libraries, map tiles and external links still need internet access.
+
+For a production refresh:
+
+```bash
+cp .env.example .env        # add your Stats NZ API key
+set -a; source .env; set +a
+make all                    # fetch → transform → validate → package production site
+DASHBOARD_PROCESSED_DIR=data/processed make test
+make serve                  # http://localhost:8000
+```
+
+For an existing local raw snapshot, run `scripts/transform.py`, then
+`scripts/validate.py` with the project Python and `make site-data`; these do not
+fetch new observations. Missing outputs fail checks rather than skipping them.
+`make test` defaults to fresh fixtures; the refresh workflow explicitly tests its
+production outputs. `offline-checks` also runs on pull requests without secrets.
+
+`python3 scripts/audit_nepr.py` reproduces the dated stage-one input diagnostic
+using only the standard library. The v2 loader shares its identity-handling rules.
 
 ## Repo layout
 
@@ -147,9 +156,10 @@ sql/        all business logic (DuckDB)
 schemas/    JSON Schema per processed dataset
 site/       static front end (ECharts + Leaflet), no build step
 tests/      pytest
+fixtures/   attributed offline examples + manifest
 data/
-  raw/      source snapshots + sample fixtures
-  processed/ single source of truth: *.json, *.schema.json, _runs.jsonl
+  raw/      source snapshots
+  processed/ generated JSON + _runs.jsonl (schemas live in schemas/)
 ```
 
 ## Status

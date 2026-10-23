@@ -1,0 +1,91 @@
+{
+  "comparison_processed_utc": "2026-10-22T08:47:19.991796+00:00",
+  "description": "Same cached source inputs and calculation clock for both steps. Source flow values were not refreshed or edited.",
+  "sources": [
+    {
+      "council": "hbrc",
+      "path": "data/raw/flow/hbrc/20260830.json",
+      "sha256": "1b68454dec306563953b5c3e2c382fef04ff273a9297259ca2f0a9899c855646",
+      "source": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts",
+      "fetched_utc": "2026-08-30T07:33:56.864804+00:00",
+      "sites": [
+        {
+          "site": "Ngaruroro River at Fernhill",
+          "first_observation": "2021-08-31",
+          "last_observation": "2026-08-30",
+          "observations": 1813
+        },
+        {
+          "site": "Tukituki River at Red Bridge",
+          "first_observation": "2021-08-31",
+          "last_observation": "2026-08-30",
+          "observations": 1826
+        },
+        {
+          "site": "Mohaka River at Raupunga",
+          "first_observation": "2021-08-31",
+          "last_observation": "2026-08-30",
+          "observations": 1693
+        }
+      ]
+    },
+    {
+      "council": "orc",
+      "path": "data/raw/flow/orc/20260830.json",
+      "sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834",
+      "source": "http://gisdata.orc.govt.nz/hilltop/Global.hts",
+      "fetched_utc": "2026-08-30T07:37:10.716444+00:00",
+      "sites": [
+        {
+          "site": "3 OClock Stream at Lambhill",
+          "first_observation": "2010-05-12",
+          "last_observation": "2021-01-09",
+          "observations": 3635
+        },
+        {
+          "site": "Amisfield Burn at Top Take u/s",
+          "first_observation": "2013-10-30",
+          "last_observation": "2020-12-01",
+          "observations": 2584
+        },
+        {
+          "site": "Arrow at Cornwall street d/s",
+          "first_observation": "2010-12-29",
+          "last_observation": "2021-04-23",
+          "observations": 3634
+        },
+        {
+          "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+          "first_observation": "2016-09-06",
+          "last_observation": "2021-02-01",
+          "observations": 1568
+        },
+        {
+          "site": "Benger burn at Booths",
+          "first_observation": "2011-12-01",
+          "last_observation": "2021-02-02",
+          "observations": 3128
+        },
+        {
+          "site": "Benger burn at SH8",
+          "first_observation": "2011-12-07",
+          "last_observation": "2021-02-02",
+          "observations": 1935
+        },
+        {
+          "site": "Boundary Creek at Top Race u/s",
+          "first_observation": "2015-09-17",
+          "last_observation": "2021-01-13",
+          "observations": 1824
+        },
+        {
+          "site": "Branch Burn at Cardrona Valley",
+          "first_observation": "2015-08-11",
+          "last_observation": "2020-12-10",
+          "observations": 1893
+        }
+      ]
+    }
+  ],
+  "before_processed_flow_sha256": "932c69d7e3d6ce9e4887f4697124cbc1870b6d9eb229a3212b0686795c6e3b3a"
+}

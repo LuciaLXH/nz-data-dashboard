@@ -1,0 +1,1197 @@
+{
+  "counts": {
+    "source_rows": 1126,
+    "empty_template_rows": 567,
+    "mapped_source_rows": 272,
+    "mapped_organizations": 34,
+    "missing_identity_rows": 1,
+    "conflicting_key_groups": 1,
+    "conflicting_rows": 2,
+    "consistent_repeat_rows_removed": 1,
+    "audit_candidate_records": 268
+  },
+  "missing_identity": [
+    {
+      "csv_record": 152,
+      "Account ID": "ACC-00008572",
+      "Org Name": "Mackenzie District Council",
+      "Supply ID": "",
+      "Supply name": "Albury"
+    }
+  ],
+  "conflicting_keys": [
+    {
+      "account_id": "ACC-00008562",
+      "supply_id": "OTO001",
+      "records": [
+        {
+          "csv_record": 318,
+          "Account ID": "ACC-00008562",
+          "Org Name": "Otorohanga District Council",
+          "Supply ID": "OTO001",
+          "Supply name": "Waipa"
+        },
+        {
+          "csv_record": 319,
+          "Account ID": "ACC-00008562",
+          "Org Name": "Otorohanga District Council",
+          "Supply ID": "OTO001",
+          "Supply name": "Otorohanga"
+        }
+      ],
+      "differing_reviewed_fields": [
+        "D-EH1.1 Method of determining connections",
+        "D-EH1.1 Number of residential connections",
+        "D-EH1.1 Reason not available",
+        "D-EH17 Amount of sludge produced (tonnes/year)",
+        "D-EH17 Reason not available",
+        "D-EH18 Amount of backwash water used (m3/year)",
+        "D-EH18 Reason not available",
+        "D-EH2.1 Number of non-residential connections",
+        "D-EH20.1 Disposal route for sludge",
+        "D-EH20.1 Reason not available",
+        "D-EH20.2 Comments",
+        "D-EH20.2 Reason not available",
+        "D-EH3 Total population served",
+        "D-EH4 Total volume of water supplied to network (m3/year)",
+        "D-EH7 Volume of non-residential water use (m3/year)",
+        "D-RE1 Total drinking water loss across network (m3/year)",
+        "D-RE2.1 Current annual real loss - CARL (m3/year)",
+        "D-RE2.2 Unavoidable annual real losses - UARL (m3/year)",
+        "D-RE3 Infrastructure leakage index - ILI",
+        "D-RE4 Data confidence",
+        "D-RE4 Median residential water consumption (L/connection/day)",
+        "D-RE4 Reason not available",
+        "Supply name"
+      ],
+      "other_differing_fields": [
+        "D-A5 Length of pipe in network (km)",
+        "D-A6 Number of drinking water abstraction points",
+        "D-A6 Reason not available",
+        "D-A7 Comments",
+        "D-A7 Main drinking water network source type"
+      ],
+      "values": [
+        {
+          "csv_record": 318,
+          "population_served": "200",
+          "supply_m3_year": "310181",
+          "loss_m3_year": "137788",
+          "residential_connections": "0",
+          "nonresidential_connections": "136",
+          "nonresidential_use_m3_year": "175449",
+          "carl_m3_year": "120873",
+          "uarl_m3_year": "15041",
+          "ili": "8.47",
+          "residential_median_l_connection_day": "0"
+        },
+        {
+          "csv_record": 319,
+          "population_served": "3050",
+          "supply_m3_year": "477689",
+          "loss_m3_year": "129538",
+          "residential_connections": "1384",
+          "nonresidential_connections": "241",
+          "nonresidential_use_m3_year": "115605",
+          "carl_m3_year": "63464",
+          "uarl_m3_year": "43891.25",
+          "ili": "1.45",
+          "residential_median_l_connection_day": "15"
+        }
+      ]
+    }
+  ],
+  "repeated_keys_consistent_for_reviewed_fields": [
+    {
+      "account_id": "ACC-00001119",
+      "supply_id": "RIV001",
+      "records": [
+        {
+          "csv_record": 406,
+          "Account ID": "ACC-00001119",
+          "Org Name": "Southland District Council",
+          "Supply ID": "RIV001",
+          "Supply name": "Riverton"
+        },
+        {
+          "csv_record": 407,
+          "Account ID": "ACC-00001119",
+          "Org Name": "Southland District Council",
+          "Supply ID": "RIV001",
+          "Supply name": "Riverton"
+        }
+      ],
+      "differing_reviewed_fields": [],
+      "other_differing_fields": [
+        "D-A6 Number of drinking water abstraction points",
+        "D-A7 Main drinking water network source type"
+      ]
+    }
+  ],
+  "candidate_record_numbers": [
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    50,
+    51,
+    52,
+    53,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72,
+    78,
+    79,
+    80,
+    81,
+    93,
+    94,
+    99,
+    100,
+    101,
+    102,
+    103,
+    104,
+    105,
+    106,
+    107,
+    108,
+    109,
+    110,
+    111,
+    112,
+    117,
+    118,
+    119,
+    120,
+    121,
+    122,
+    123,
+    124,
+    125,
+    126,
+    127,
+    128,
+    129,
+    130,
+    131,
+    132,
+    133,
+    134,
+    135,
+    136,
+    137,
+    138,
+    139,
+    140,
+    141,
+    153,
+    154,
+    155,
+    156,
+    157,
+    175,
+    176,
+    177,
+    178,
+    179,
+    180,
+    299,
+    315,
+    316,
+    317,
+    320,
+    321,
+    326,
+    327,
+    328,
+    329,
+    330,
+    331,
+    332,
+    333,
+    334,
+    335,
+    336,
+    357,
+    358,
+    359,
+    360,
+    361,
+    362,
+    363,
+    364,
+    365,
+    366,
+    367,
+    368,
+    369,
+    370,
+    371,
+    372,
+    373,
+    374,
+    375,
+    376,
+    377,
+    378,
+    389,
+    390,
+    391,
+    392,
+    393,
+    398,
+    399,
+    400,
+    401,
+    402,
+    403,
+    404,
+    405,
+    406,
+    408,
+    409,
+    410,
+    435,
+    436,
+    437,
+    438,
+    439,
+    440,
+    441,
+    442,
+    443,
+    444,
+    445,
+    446,
+    447,
+    448,
+    449,
+    450,
+    451,
+    452,
+    454,
+    455,
+    456,
+    457,
+    458,
+    459,
+    460,
+    461,
+    462,
+    463,
+    464,
+    465,
+    466,
+    467,
+    468,
+    469,
+    470,
+    471,
+    472,
+    473,
+    474,
+    475,
+    476,
+    477,
+    478,
+    479,
+    480,
+    481,
+    482,
+    483,
+    484,
+    485,
+    486,
+    487,
+    488,
+    489,
+    490,
+    491,
+    492,
+    493,
+    494,
+    495,
+    496,
+    497,
+    498,
+    499,
+    500,
+    501,
+    502,
+    503,
+    504,
+    505,
+    506,
+    507,
+    508,
+    509,
+    510,
+    511,
+    512,
+    513,
+    514,
+    515,
+    516,
+    517,
+    518,
+    519,
+    520,
+    521,
+    522,
+    523,
+    524,
+    525,
+    526,
+    527,
+    528,
+    529,
+    530
+  ],
+  "candidate_quality": {
+    "records": 268,
+    "missing": {
+      "population_served": 2,
+      "supply_m3_year": 10,
+      "loss_m3_year": 44,
+      "residential_connections": 2,
+      "nonresidential_connections": 12,
+      "nonresidential_use_m3_year": 76,
+      "carl_m3_year": 67,
+      "uarl_m3_year": 61,
+      "ili": 61,
+      "residential_median_l_connection_day": 68
+    },
+    "invalid_nonblank": {
+      "population_served": 0,
+      "supply_m3_year": 0,
+      "loss_m3_year": 0,
+      "residential_connections": 0,
+      "nonresidential_connections": 3,
+      "nonresidential_use_m3_year": 0,
+      "carl_m3_year": 0,
+      "uarl_m3_year": 0,
+      "ili": 0,
+      "residential_median_l_connection_day": 0
+    },
+    "private_loss_flags": {
+      "No": 145,
+      "Yes": 85,
+      "unknown": 38
+    },
+    "paired_supply_loss_records_before_boundary_filter": 215,
+    "paired_records_private_loss_excluded": 137,
+    "supply_without_loss_csv_records": [
+      442,
+      497,
+      498,
+      499,
+      500,
+      501,
+      35,
+      36,
+      37,
+      38,
+      39,
+      509,
+      511,
+      516,
+      466,
+      467,
+      469,
+      471,
+      51,
+      53,
+      56,
+      57,
+      58,
+      508,
+      13,
+      14,
+      15,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      329,
+      336,
+      9
+    ],
+    "loss_without_supply_csv_records": [
+      153,
+      154,
+      155,
+      156,
+      157
+    ],
+    "loss_above_supply_csv_records": [
+      327,
+      331
+    ]
+  },
+  "candidate_quality_by_operator_region": {
+    "auckland": {
+      "records": 25,
+      "missing": {
+        "population_served": 0,
+        "supply_m3_year": 3,
+        "loss_m3_year": 15,
+        "residential_connections": 0,
+        "nonresidential_connections": 1,
+        "nonresidential_use_m3_year": 15,
+        "carl_m3_year": 15,
+        "uarl_m3_year": 15,
+        "ili": 15,
+        "residential_median_l_connection_day": 15
+      },
+      "invalid_nonblank": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 0,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 0,
+        "carl_m3_year": 0,
+        "uarl_m3_year": 0,
+        "ili": 0,
+        "residential_median_l_connection_day": 0
+      },
+      "private_loss_flags": {
+        "No": 10,
+        "unknown": 15
+      },
+      "paired_supply_loss_records_before_boundary_filter": 10,
+      "paired_records_private_loss_excluded": 10,
+      "supply_without_loss_csv_records": [
+        13,
+        14,
+        15,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26
+      ],
+      "loss_without_supply_csv_records": [],
+      "loss_above_supply_csv_records": []
+    },
+    "canterbury": {
+      "records": 97,
+      "missing": {
+        "population_served": 2,
+        "supply_m3_year": 5,
+        "loss_m3_year": 15,
+        "residential_connections": 2,
+        "nonresidential_connections": 5,
+        "nonresidential_use_m3_year": 14,
+        "carl_m3_year": 27,
+        "uarl_m3_year": 23,
+        "ili": 24,
+        "residential_median_l_connection_day": 25
+      },
+      "invalid_nonblank": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 0,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 0,
+        "carl_m3_year": 0,
+        "uarl_m3_year": 0,
+        "ili": 0,
+        "residential_median_l_connection_day": 0
+      },
+      "private_loss_flags": {
+        "No": 67,
+        "Yes": 19,
+        "unknown": 11
+      },
+      "paired_supply_loss_records_before_boundary_filter": 77,
+      "paired_records_private_loss_excluded": 63,
+      "supply_without_loss_csv_records": [
+        497,
+        498,
+        499,
+        500,
+        501,
+        466,
+        467,
+        469,
+        471,
+        51,
+        53,
+        56,
+        57,
+        58,
+        9
+      ],
+      "loss_without_supply_csv_records": [
+        153,
+        154,
+        155,
+        156,
+        157
+      ],
+      "loss_above_supply_csv_records": []
+    },
+    "hawkes_bay": {
+      "records": 19,
+      "missing": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 6,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 5,
+        "carl_m3_year": 8,
+        "uarl_m3_year": 8,
+        "ili": 8,
+        "residential_median_l_connection_day": 5
+      },
+      "invalid_nonblank": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 0,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 0,
+        "carl_m3_year": 0,
+        "uarl_m3_year": 0,
+        "ili": 0,
+        "residential_median_l_connection_day": 0
+      },
+      "private_loss_flags": {
+        "No": 10,
+        "Yes": 1,
+        "unknown": 8
+      },
+      "paired_supply_loss_records_before_boundary_filter": 12,
+      "paired_records_private_loss_excluded": 10,
+      "supply_without_loss_csv_records": [
+        35,
+        36,
+        37,
+        38,
+        39,
+        508
+      ],
+      "loss_without_supply_csv_records": [],
+      "loss_above_supply_csv_records": []
+    },
+    "otago": {
+      "records": 45,
+      "missing": {
+        "population_served": 0,
+        "supply_m3_year": 1,
+        "loss_m3_year": 6,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 31,
+        "carl_m3_year": 11,
+        "uarl_m3_year": 9,
+        "ili": 8,
+        "residential_median_l_connection_day": 10
+      },
+      "invalid_nonblank": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 0,
+        "residential_connections": 0,
+        "nonresidential_connections": 3,
+        "nonresidential_use_m3_year": 0,
+        "carl_m3_year": 0,
+        "uarl_m3_year": 0,
+        "ili": 0,
+        "residential_median_l_connection_day": 0
+      },
+      "private_loss_flags": {
+        "No": 23,
+        "Yes": 20,
+        "unknown": 2
+      },
+      "paired_supply_loss_records_before_boundary_filter": 37,
+      "paired_records_private_loss_excluded": 19,
+      "supply_without_loss_csv_records": [
+        509,
+        511,
+        516,
+        329,
+        336
+      ],
+      "loss_without_supply_csv_records": [],
+      "loss_above_supply_csv_records": [
+        327,
+        331
+      ]
+    },
+    "southland": {
+      "records": 15,
+      "missing": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 0,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 0,
+        "carl_m3_year": 0,
+        "uarl_m3_year": 0,
+        "ili": 0,
+        "residential_median_l_connection_day": 0
+      },
+      "invalid_nonblank": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 0,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 0,
+        "carl_m3_year": 0,
+        "uarl_m3_year": 0,
+        "ili": 0,
+        "residential_median_l_connection_day": 0
+      },
+      "private_loss_flags": {
+        "Yes": 15
+      },
+      "paired_supply_loss_records_before_boundary_filter": 14,
+      "paired_records_private_loss_excluded": 0,
+      "supply_without_loss_csv_records": [],
+      "loss_without_supply_csv_records": [],
+      "loss_above_supply_csv_records": []
+    },
+    "waikato": {
+      "records": 67,
+      "missing": {
+        "population_served": 0,
+        "supply_m3_year": 1,
+        "loss_m3_year": 2,
+        "residential_connections": 0,
+        "nonresidential_connections": 6,
+        "nonresidential_use_m3_year": 11,
+        "carl_m3_year": 6,
+        "uarl_m3_year": 6,
+        "ili": 6,
+        "residential_median_l_connection_day": 13
+      },
+      "invalid_nonblank": {
+        "population_served": 0,
+        "supply_m3_year": 0,
+        "loss_m3_year": 0,
+        "residential_connections": 0,
+        "nonresidential_connections": 0,
+        "nonresidential_use_m3_year": 0,
+        "carl_m3_year": 0,
+        "uarl_m3_year": 0,
+        "ili": 0,
+        "residential_median_l_connection_day": 0
+      },
+      "private_loss_flags": {
+        "No": 35,
+        "Yes": 30,
+        "unknown": 2
+      },
+      "paired_supply_loss_records_before_boundary_filter": 65,
+      "paired_records_private_loss_excluded": 35,
+      "supply_without_loss_csv_records": [
+        442
+      ],
+      "loss_without_supply_csv_records": [],
+      "loss_above_supply_csv_records": []
+    }
+  },
+  "organization_mapping_inventory": [
+    {
+      "organization": "Ashburton District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 10,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Auckland Council",
+      "region_proxy": "auckland",
+      "source_rows": 15,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Central Hawke's Bay District Council",
+      "region_proxy": "hawkes_bay",
+      "source_rows": 5,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Central Otago District Council",
+      "region_proxy": "otago",
+      "source_rows": 8,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Christchurch City Council",
+      "region_proxy": "canterbury",
+      "source_rows": 9,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Clutha District Council",
+      "region_proxy": "otago",
+      "source_rows": 14,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Dunedin City Council",
+      "region_proxy": "otago",
+      "source_rows": 4,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Gore District Council",
+      "region_proxy": "southland",
+      "source_rows": 2,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Hamilton City Council",
+      "region_proxy": "waikato",
+      "source_rows": 1,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Hastings District Council",
+      "region_proxy": "hawkes_bay",
+      "source_rows": 10,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Hauraki District Council",
+      "region_proxy": "waikato",
+      "source_rows": 3,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Hurunui District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 16,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Invercargill City Council",
+      "region_proxy": "southland",
+      "source_rows": 1,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Kaikoura District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 8,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Mackenzie District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 6,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Matamata Piako District Council",
+      "region_proxy": "waikato",
+      "source_rows": 6,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Napier City Council",
+      "region_proxy": "hawkes_bay",
+      "source_rows": 1,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Otorohanga District Council",
+      "region_proxy": "waikato",
+      "source_rows": 7,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Papakura",
+      "region_proxy": "auckland",
+      "source_rows": 1,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Queenstown Lakes District Council",
+      "region_proxy": "otago",
+      "source_rows": 10,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Selwyn District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 22,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "South Waikato District Council",
+      "region_proxy": "waikato",
+      "source_rows": 5,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Southland District Council",
+      "region_proxy": "southland",
+      "source_rows": 13,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Taupo District Council",
+      "region_proxy": "waikato",
+      "source_rows": 18,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Thames Coromandel District Council",
+      "region_proxy": "waikato",
+      "source_rows": 10,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Timaru District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 11,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Waikato District Council",
+      "region_proxy": "waikato",
+      "source_rows": 11,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Waimakariri District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 11,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Waimate District Council",
+      "region_proxy": "canterbury",
+      "source_rows": 5,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Waipa District Council",
+      "region_proxy": "waikato",
+      "source_rows": 4,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Wairoa District Council",
+      "region_proxy": "hawkes_bay",
+      "source_rows": 3,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Waitaki District Council",
+      "region_proxy": "otago",
+      "source_rows": 9,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Waitomo District Council",
+      "region_proxy": "waikato",
+      "source_rows": 4,
+      "geography_status": "operator grouping; service area not verified"
+    },
+    {
+      "organization": "Watercare",
+      "region_proxy": "auckland",
+      "source_rows": 9,
+      "geography_status": "operator grouping; service area not verified"
+    }
+  ],
+  "unmapped_organizations_require_scope_review": [
+    "Buller District Council",
+    "Carterton District Council",
+    "Chatham Islands Council",
+    "Department of Conservation",
+    "Department of Corrections",
+    "Far North District Council",
+    "Gisborne District Council",
+    "Greater Wellington Regional Council",
+    "Grey District Council",
+    "Horowhenua District Council",
+    "Kaipara District Council",
+    "Kapiti Coast District Council",
+    "Kawerau District Council",
+    "Manawatu District Council",
+    "Marlborough District Council",
+    "Masterton District Council",
+    "Ministry of Education",
+    "Nelson City Council",
+    "New Plymouth District Council",
+    "New Zealand Defence Force",
+    "Opotiki District Council",
+    "Palmerston North City Council",
+    "Rangitikei District Council",
+    "Rotorua Lakes Council",
+    "Ruapehu District Council",
+    "South Taranaki District Council",
+    "South Wairarapa District Council",
+    "Stratford District Council",
+    "Tararua District Council",
+    "Tasman District Council",
+    "Tauranga City Council",
+    "Wellington Water Ltd.",
+    "Western Bay of Plenty District Council",
+    "Westland District Council",
+    "Whakatane District Council",
+    "Whanganui District Council",
+    "Whangarei District Council"
+  ],
+  "audit_version": 1,
+  "source_period": "2024/25",
+  "source_release": "2026-07-27",
+  "scope": "Diagnostic only; candidate exclusions are not applied by transform.py yet.",
+  "sources": [
+    {
+      "path": "data/raw/taumata_nepr/NEPM Final Data Extract for Release 27072026 DW_Network.csv",
+      "sha256": "e450cf967413c7d953396b758c61cf9cbc28a46ce7a2da510521ce45fcde6c38"
+    },
+    {
+      "path": "data/raw/taumata_nepr/NEPM Final Data Extract for Release 27072026 DW_Org.csv",
+      "sha256": "361460708660e76fbe8e5ad221bedc2c1b6c66115d2f7f4391669fa934e8cab2"
+    },
+    {
+      "path": "data/raw/taumata_nepr/NEPM Final Data Extract for Release 27072026 Data Dictionary.csv",
+      "sha256": "f1ef4bc724afdd1de40ca70e48a4d62d9701b10a78192fdad65ae9a68225db6d"
+    }
+  ],
+  "mapping_source": "scripts/transform.py: ORG_REGION",
+  "operator_transfers": [
+    {
+      "organization": "Ashburton District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Auckland Council",
+      "imports_m3_year": 3230000.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Central Hawke's Bay District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Central Otago District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Christchurch City Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 9692.0
+    },
+    {
+      "organization": "Clutha District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Dunedin City Council",
+      "imports_m3_year": null,
+      "exports_m3_year": null
+    },
+    {
+      "organization": "Gore District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 3645.0
+    },
+    {
+      "organization": "Hamilton City Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 875656.0
+    },
+    {
+      "organization": "Hastings District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Hauraki District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Hurunui District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Invercargill City Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Kaikoura District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Mackenzie District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Matamata Piako District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Napier City Council",
+      "imports_m3_year": null,
+      "exports_m3_year": null
+    },
+    {
+      "organization": "Otorohanga District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Papakura",
+      "imports_m3_year": 8565889.0,
+      "exports_m3_year": 46861.0
+    },
+    {
+      "organization": "Queenstown Lakes District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Selwyn District Council",
+      "imports_m3_year": null,
+      "exports_m3_year": null
+    },
+    {
+      "organization": "South Waikato District Council",
+      "imports_m3_year": 11813.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Southland District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Taupo District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Thames Coromandel District Council",
+      "imports_m3_year": null,
+      "exports_m3_year": null
+    },
+    {
+      "organization": "Timaru District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Waikato District Council",
+      "imports_m3_year": 1947309.0,
+      "exports_m3_year": null
+    },
+    {
+      "organization": "Waimakariri District Council",
+      "imports_m3_year": null,
+      "exports_m3_year": null
+    },
+    {
+      "organization": "Waimate District Council",
+      "imports_m3_year": 208.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Waipa District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 42700.0
+    },
+    {
+      "organization": "Wairoa District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": null
+    },
+    {
+      "organization": "Waitaki District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Waitomo District Council",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 0.0
+    },
+    {
+      "organization": "Watercare",
+      "imports_m3_year": 0.0,
+      "exports_m3_year": 9685474.0
+    }
+  ]
+}

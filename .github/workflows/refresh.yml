@@ -69,6 +69,8 @@ jobs:
           STATS_NZ_API_KEY: ${{ secrets.STATS_NZ_API_KEY }}
       - name: Run tests (schema, units, regions, DST, missing values, percentile)
         run: make test
+        env:
+          DASHBOARD_PROCESSED_DIR: data/processed
       - name: Build static site (copies data/processed + data/ref → site/data)
         run: make site-data
       # Persist this run's raw snapshots (fresh where fetch succeeded, the

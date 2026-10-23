@@ -1,0 +1,372 @@
+{
+ "schema_version": 1,
+ "sql": "sql/03_flow_percentile.sql",
+ "processed_utc": "2026-10-22T08:47:19.991796+00:00",
+ "input_mode": "snapshot",
+ "rows": [
+  {
+   "council": "hbrc",
+   "site": "Mohaka River at Raupunga",
+   "latest_date": "2026-08-30",
+   "latest_flow_m3s": 42.523,
+   "units": "m3/s",
+   "n_history": 74,
+   "pctile_pct": 31.1,
+   "band": "normal",
+   "median_hist_m3s": 56.572,
+   "min_hist_m3s": 23.85,
+   "max_hist_m3s": 193.196,
+   "stale_days": 53
+  },
+  {
+   "council": "hbrc",
+   "site": "Ngaruroro River at Fernhill",
+   "latest_date": "2026-08-30",
+   "latest_flow_m3s": 20.571,
+   "units": "m3/s",
+   "n_history": 74,
+   "pctile_pct": 9.5,
+   "band": "low",
+   "median_hist_m3s": 28.118,
+   "min_hist_m3s": 18.586,
+   "max_hist_m3s": 119.222,
+   "stale_days": 53
+  },
+  {
+   "council": "hbrc",
+   "site": "Tukituki River at Red Bridge",
+   "latest_date": "2026-08-30",
+   "latest_flow_m3s": 28.131,
+   "units": "m3/s",
+   "n_history": 74,
+   "pctile_pct": 40.5,
+   "band": "normal",
+   "median_hist_m3s": 31.334,
+   "min_hist_m3s": 16.365,
+   "max_hist_m3s": 214.054,
+   "stale_days": 53
+  },
+  {
+   "council": "orc",
+   "site": "3 OClock Stream at Lambhill",
+   "latest_date": "2021-01-09",
+   "latest_flow_m3s": 2.852,
+   "units": "cumecs (m3/s)",
+   "n_history": 134,
+   "pctile_pct": 94.8,
+   "band": "high",
+   "median_hist_m3s": 0.295,
+   "min_hist_m3s": 0.057,
+   "max_hist_m3s": 82.765,
+   "stale_days": 2112
+  },
+  {
+   "council": "orc",
+   "site": "Amisfield Burn at Top Take u/s",
+   "latest_date": "2020-12-01",
+   "latest_flow_m3s": 0.105,
+   "units": "cumecs (m3/s)",
+   "n_history": 112,
+   "pctile_pct": 5.4,
+   "band": "low",
+   "median_hist_m3s": 0.212,
+   "min_hist_m3s": 0.083,
+   "max_hist_m3s": 0.619,
+   "stale_days": 2151
+  },
+  {
+   "council": "orc",
+   "site": "Arrow at Cornwall street d/s",
+   "latest_date": "2021-04-23",
+   "latest_flow_m3s": 1.456,
+   "units": "cumecs (m3/s)",
+   "n_history": 145,
+   "pctile_pct": 26.2,
+   "band": "normal",
+   "median_hist_m3s": 1.716,
+   "min_hist_m3s": 0.855,
+   "max_hist_m3s": 18.754,
+   "stale_days": 2008
+  },
+  {
+   "council": "orc",
+   "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+   "latest_date": "2021-02-01",
+   "latest_flow_m3s": 0.38,
+   "units": "cumecs (m3/s)",
+   "n_history": 66,
+   "pctile_pct": 71.2,
+   "band": "normal",
+   "median_hist_m3s": 0.21,
+   "min_hist_m3s": 0.0,
+   "max_hist_m3s": 2.155,
+   "stale_days": 2089
+  },
+  {
+   "council": "orc",
+   "site": "Benger burn at Booths",
+   "latest_date": "2021-02-02",
+   "latest_flow_m3s": 0.315,
+   "units": "cumecs (m3/s)",
+   "n_history": 142,
+   "pctile_pct": 78.9,
+   "band": "high",
+   "median_hist_m3s": 0.154,
+   "min_hist_m3s": 0.041,
+   "max_hist_m3s": 12.449,
+   "stale_days": 2088
+  },
+  {
+   "council": "orc",
+   "site": "Benger burn at SH8",
+   "latest_date": "2021-02-02",
+   "latest_flow_m3s": 0.618,
+   "units": "cumecs (m3/s)",
+   "n_history": 67,
+   "pctile_pct": 77.6,
+   "band": "high",
+   "median_hist_m3s": 0.094,
+   "min_hist_m3s": 0.0,
+   "max_hist_m3s": 17.016,
+   "stale_days": 2088
+  },
+  {
+   "council": "orc",
+   "site": "Boundary Creek at Top Race u/s",
+   "latest_date": "2021-01-13",
+   "latest_flow_m3s": 0.105,
+   "units": "cumecs (m3/s)",
+   "n_history": 82,
+   "pctile_pct": 59.8,
+   "band": "normal",
+   "median_hist_m3s": 0.084,
+   "min_hist_m3s": 0.031,
+   "max_hist_m3s": 0.23,
+   "stale_days": 2108
+  },
+  {
+   "council": "orc",
+   "site": "Branch Burn at Cardrona Valley",
+   "latest_date": "2020-12-10",
+   "latest_flow_m3s": 0.455,
+   "units": "cumecs (m3/s)",
+   "n_history": 82,
+   "pctile_pct": 32.9,
+   "band": "normal",
+   "median_hist_m3s": 0.558,
+   "min_hist_m3s": 0.285,
+   "max_hist_m3s": 7.664,
+   "stale_days": 2142
+  }
+ ],
+ "quality": {
+  "excluded_observations": [
+   {
+    "council": "orc",
+    "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+    "date": "2018-01-04",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+    "date": "2018-01-12",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+    "date": "2018-01-13",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-20",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-23",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-24",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-25",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-26",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-02",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-03",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-04",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-05",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-06",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-07",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-08",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-09",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-10",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-13",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-14",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-15",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-16",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-17",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-18",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-19",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-20",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-21",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-22",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-23",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-24",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-25",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-28",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-29",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-30",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-31",
+    "reason": "non-numeric, non-finite or negative flow"
+   }
+  ],
+  "usable_observations": 25499,
+  "policy": "Raw observations retained; invalid values excluded from percentile analysis, never replaced with zero."
+ }
+}

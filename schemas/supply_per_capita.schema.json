@@ -1,34 +1,371 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://github.com/LuciaLXH/nz-data-dashboard/schemas/supply_per_capita.schema.json",
-  "title": "Demand-side supply pressure (W2, sql/02)",
-  "description": "Per-region demand-side pressure from the FULL NEPR 2024/25 unit-level extract (all registered supplies): population x weighted per-capita supply, leakage, CARL, ILI, implied daily demand and 5-year projection. Metering % is not published in the unit-level extract and is therefore not computed here (curated metering figures for the 9 main urban suppliers live in data/ref/water_demand.json).",
+  "title": "Network comparison v2: paired cohorts and separate scenarios",
   "type": "object",
-  "required": ["schema_version", "sql", "processed_utc", "rows"],
+  "required": [
+    "schema_version",
+    "processed_utc",
+    "input_mode",
+    "calculation_version",
+    "geography",
+    "default_loss_boundary",
+    "source_period",
+    "source_release",
+    "period_start",
+    "period_end",
+    "period_days",
+    "source_file",
+    "source_sha256",
+    "scenario_assumption",
+    "source_audit",
+    "rows"
+  ],
   "properties": {
-    "schema_version": {"const": 1},
-    "sql": {"type": "string"},
-    "processed_utc": {"type": "string", "format": "date-time"},
+    "schema_version": {
+      "const": 2
+    },
+    "processed_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "input_mode": {
+      "enum": [
+        "snapshot",
+        "offline_example"
+      ]
+    },
+    "calculation_version": {
+      "const": "network-comparison-v2"
+    },
+    "geography": {
+      "const": "operator_region_proxy"
+    },
+    "default_loss_boundary": {
+      "const": "No"
+    },
+    "source_period": {
+      "type": "string"
+    },
+    "source_release": {
+      "type": "string"
+    },
+    "period_start": {
+      "type": "string"
+    },
+    "period_end": {
+      "type": "string"
+    },
+    "period_days": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "source_file": {
+      "type": "string"
+    },
+    "source_sha256": {
+      "type": "string"
+    },
+    "scenario_assumption": {
+      "type": "string"
+    },
+    "source_audit": {
+      "type": "object"
+    },
     "rows": {
       "type": "array",
       "minItems": 6,
       "maxItems": 6,
       "items": {
         "type": "object",
-        "required": ["region", "pop_2025", "coverage_pct", "l_per_person_day_w", "loss_pct_w", "ili_w", "daily_demand_m3", "leak_m3_day", "cagr5_pct", "proj_demand_m3_day"],
+        "required": [
+          "region",
+          "population_base_year",
+          "population_base",
+          "cagr_start_year",
+          "cagr_end_year",
+          "cagr5_pct",
+          "projection_year",
+          "scenario_horizon_years",
+          "period_days",
+          "candidate_networks",
+          "reported_supply_networks",
+          "reported_supply_m3_year",
+          "reported_supply_m3_day",
+          "supply_population_networks",
+          "supply_population_supply_m3_year",
+          "supply_population_served_people",
+          "supply_l_person_day",
+          "supply_population_network_coverage_pct",
+          "supply_population_supply_coverage_pct",
+          "missing_or_invalid_supply_networks",
+          "missing_or_invalid_loss_networks",
+          "loss_above_supply_networks",
+          "paired_loss_pct",
+          "paired_networks",
+          "paired_supply_coverage_pct",
+          "scenario_growth_pct",
+          "scenario_base_supply_m3_day",
+          "scenario_projected_supply_m3_day",
+          "loss_cohorts"
+        ],
         "properties": {
-          "region": {"type": "string", "enum": ["auckland", "waikato", "hawkes_bay", "canterbury", "otago", "southland"]},
-          "pop_2025": {"type": "number", "minimum": 0},
-          "coverage_pct": {"type": "number", "minimum": 0, "maximum": 100},
-          "l_per_person_day_w": {"type": "number", "minimum": 0},
-          "loss_pct_w": {"type": "number", "minimum": 0, "maximum": 100},
-          "carl_l_conn_day_w": {"type": ["number", "null"], "minimum": 0},
-          "ili_w": {"type": "number", "minimum": 0},
-          "daily_demand_m3": {"type": "number", "minimum": 0},
-          "leak_m3_day": {"type": "number", "minimum": 0},
-          "cagr5_pct": {"type": "number"},
-          "proj_demand_m3_day": {"type": "number", "minimum": 0}
-        }
+          "region": {
+            "type": "string",
+            "enum": [
+              "auckland",
+              "waikato",
+              "hawkes_bay",
+              "canterbury",
+              "otago",
+              "southland"
+            ]
+          },
+          "population_base_year": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "population_base": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "cagr_start_year": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "cagr_end_year": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "cagr5_pct": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "projection_year": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "scenario_horizon_years": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "period_days": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "candidate_networks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reported_supply_networks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "reported_supply_m3_year": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "reported_supply_m3_day": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "supply_population_networks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "supply_population_supply_m3_year": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "supply_population_served_people": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "supply_l_person_day": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "supply_population_network_coverage_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "supply_population_supply_coverage_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "missing_or_invalid_supply_networks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "missing_or_invalid_loss_networks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "loss_above_supply_networks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "paired_loss_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "paired_networks": {
+            "type": "integer",
+            "minimum": 0
+          },
+          "paired_supply_coverage_pct": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0,
+            "maximum": 100
+          },
+          "scenario_growth_pct": {
+            "type": [
+              "number",
+              "null"
+            ]
+          },
+          "scenario_base_supply_m3_day": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "scenario_projected_supply_m3_day": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "minimum": 0
+          },
+          "loss_cohorts": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3,
+            "items": {
+              "type": "object",
+              "required": [
+                "boundary",
+                "boundary_candidate_networks",
+                "reported_loss_networks",
+                "reported_loss_m3_year",
+                "paired_networks",
+                "paired_supply_m3_year",
+                "paired_loss_m3_year",
+                "paired_loss_pct",
+                "paired_network_coverage_pct",
+                "paired_supply_coverage_pct",
+                "loss_above_supply_networks"
+              ],
+              "properties": {
+                "boundary": {
+                  "enum": [
+                    "No",
+                    "Yes",
+                    "unknown"
+                  ]
+                },
+                "boundary_candidate_networks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "reported_loss_networks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "reported_loss_m3_year": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "paired_networks": {
+                  "type": "integer",
+                  "minimum": 0
+                },
+                "paired_supply_m3_year": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "paired_loss_m3_year": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0
+                },
+                "paired_loss_pct": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "paired_network_coverage_pct": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "paired_supply_coverage_pct": {
+                  "type": [
+                    "number",
+                    "null"
+                  ],
+                  "minimum": 0,
+                  "maximum": 100
+                },
+                "loss_above_supply_networks": {
+                  "type": "integer",
+                  "minimum": 0
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
       }
     }
   }
