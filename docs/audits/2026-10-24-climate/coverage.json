@@ -1,0 +1,313 @@
+{
+  "scope": "Feasibility only; no ENSO effect estimate or dashboard update",
+  "roni": {
+    "rows": 920,
+    "first_season": [
+      "DJF",
+      "1950"
+    ],
+    "last_season": [
+      "JAS",
+      "2026"
+    ]
+  },
+  "era5": [
+    {
+      "returned_latitude": -37.0,
+      "returned_longitude": 174.75,
+      "timezone": "Pacific/Auckland",
+      "first_day": "1991-01-01",
+      "last_day": "2025-12-31",
+      "days": 12784,
+      "missing_values": 0
+    },
+    {
+      "returned_latitude": -42.75,
+      "returned_longitude": 171.0,
+      "timezone": "Pacific/Auckland",
+      "first_day": "1991-01-01",
+      "last_day": "2025-12-31",
+      "days": 12784,
+      "missing_values": 0
+    }
+  ],
+  "hbrc": {
+    "site": "Te Haroto Climate",
+    "metadata_from": "1998-12-16T13:00:00",
+    "metadata_to": "2026-10-24T20:00:00",
+    "sample_entries": 32,
+    "sample_first_timestamp": "2023-12-01T00:00:00",
+    "sample_last_timestamp": "2024-01-01T00:00:00",
+    "quality_entries": 0,
+    "status": "Raw sample only; daily interval convention and quality unresolved"
+  },
+  "ghcn": {
+    "NZ000093012": {
+      "first_accepted_day": "1966-01-02",
+      "last_accepted_day": "1998-12-28",
+      "accepted_days": 6623,
+      "measurement_flags_on_nonmissing_days": {
+        " ": 5818,
+        "D": 806
+      },
+      "complete_baseline_months_jan_to_dec": [
+        0,
+        0,
+        0,
+        0,
+        2,
+        1,
+        1,
+        2,
+        1,
+        0,
+        0,
+        0
+      ],
+      "passes_proposed_25_of_30_years_each_month": false,
+      "complete_months_2023_2024": 0
+    },
+    "NZ000093292": {
+      "first_accepted_day": "1981-12-20",
+      "last_accepted_day": "2025-08-24",
+      "accepted_days": 10389,
+      "measurement_flags_on_nonmissing_days": {
+        " ": 10349,
+        "D": 40
+      },
+      "complete_baseline_months_jan_to_dec": [
+        12,
+        18,
+        14,
+        11,
+        11,
+        13,
+        10,
+        13,
+        9,
+        14,
+        15,
+        14
+      ],
+      "passes_proposed_25_of_30_years_each_month": false,
+      "complete_months_2023_2024": 12
+    },
+    "NZ000093844": {
+      "first_accepted_day": "1979-04-01",
+      "last_accepted_day": "2025-03-03",
+      "accepted_days": 13955,
+      "measurement_flags_on_nonmissing_days": {
+        " ": 13583,
+        "D": 372,
+        "H": 111
+      },
+      "complete_baseline_months_jan_to_dec": [
+        16,
+        15,
+        7,
+        10,
+        14,
+        14,
+        13,
+        12,
+        12,
+        15,
+        11,
+        12
+      ],
+      "passes_proposed_25_of_30_years_each_month": false,
+      "complete_months_2023_2024": 17
+    },
+    "NZ000933090": {
+      "first_accepted_day": "1984-02-02",
+      "last_accepted_day": "2025-08-24",
+      "accepted_days": 10410,
+      "measurement_flags_on_nonmissing_days": {
+        " ": 9402,
+        "D": 1008
+      },
+      "complete_baseline_months_jan_to_dec": [
+        17,
+        15,
+        11,
+        10,
+        8,
+        9,
+        12,
+        9,
+        15,
+        16,
+        14,
+        16
+      ],
+      "passes_proposed_25_of_30_years_each_month": false,
+      "complete_months_2023_2024": 15
+    },
+    "NZ000936150": {
+      "first_accepted_day": "1981-02-02",
+      "last_accepted_day": "2025-08-24",
+      "accepted_days": 10569,
+      "measurement_flags_on_nonmissing_days": {
+        " ": 9190,
+        "D": 1379
+      },
+      "complete_baseline_months_jan_to_dec": [
+        11,
+        16,
+        5,
+        9,
+        11,
+        12,
+        9,
+        10,
+        10,
+        16,
+        14,
+        14
+      ],
+      "passes_proposed_25_of_30_years_each_month": false,
+      "complete_months_2023_2024": 16
+    },
+    "NZM00093110": {
+      "first_accepted_day": "1994-08-04",
+      "last_accepted_day": "2026-10-18",
+      "accepted_days": 9638,
+      "measurement_flags_on_nonmissing_days": {
+        " ": 8785,
+        "D": 759,
+        "G": 95
+      },
+      "complete_baseline_months_jan_to_dec": [
+        11,
+        16,
+        11,
+        10,
+        15,
+        11,
+        10,
+        9,
+        8,
+        13,
+        8,
+        13
+      ],
+      "passes_proposed_25_of_30_years_each_month": false,
+      "complete_months_2023_2024": 14
+    },
+    "NZM00093781": {
+      "first_accepted_day": "1960-04-02",
+      "last_accepted_day": "2025-08-24",
+      "accepted_days": 16872,
+      "measurement_flags_on_nonmissing_days": {
+        " ": 13995,
+        "D": 2877
+      },
+      "complete_baseline_months_jan_to_dec": [
+        13,
+        16,
+        5,
+        10,
+        10,
+        12,
+        10,
+        9,
+        11,
+        17,
+        15,
+        14
+      ],
+      "passes_proposed_25_of_30_years_each_month": false,
+      "complete_months_2023_2024": 16
+    }
+  },
+  "existing_flow": [
+    {
+      "council": "hbrc",
+      "site": "Ngaruroro River at Fernhill",
+      "days": 1813,
+      "first_day": "2021-08-31",
+      "last_day": "2026-08-30",
+      "source_file_sha256": "1b68454dec306563953b5c3e2c382fef04ff273a9297259ca2f0a9899c855646"
+    },
+    {
+      "council": "hbrc",
+      "site": "Tukituki River at Red Bridge",
+      "days": 1826,
+      "first_day": "2021-08-31",
+      "last_day": "2026-08-30",
+      "source_file_sha256": "1b68454dec306563953b5c3e2c382fef04ff273a9297259ca2f0a9899c855646"
+    },
+    {
+      "council": "hbrc",
+      "site": "Mohaka River at Raupunga",
+      "days": 1693,
+      "first_day": "2021-08-31",
+      "last_day": "2026-08-30",
+      "source_file_sha256": "1b68454dec306563953b5c3e2c382fef04ff273a9297259ca2f0a9899c855646"
+    },
+    {
+      "council": "orc",
+      "site": "3 OClock Stream at Lambhill",
+      "days": 3635,
+      "first_day": "2010-05-12",
+      "last_day": "2021-01-09",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    },
+    {
+      "council": "orc",
+      "site": "Amisfield Burn at Top Take u/s",
+      "days": 2584,
+      "first_day": "2013-10-30",
+      "last_day": "2020-12-01",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    },
+    {
+      "council": "orc",
+      "site": "Arrow at Cornwall street d/s",
+      "days": 3634,
+      "first_day": "2010-12-29",
+      "last_day": "2021-04-23",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    },
+    {
+      "council": "orc",
+      "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+      "days": 1568,
+      "first_day": "2016-09-06",
+      "last_day": "2021-02-01",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    },
+    {
+      "council": "orc",
+      "site": "Benger burn at Booths",
+      "days": 3128,
+      "first_day": "2011-12-01",
+      "last_day": "2021-02-02",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    },
+    {
+      "council": "orc",
+      "site": "Benger burn at SH8",
+      "days": 1935,
+      "first_day": "2011-12-07",
+      "last_day": "2021-02-02",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    },
+    {
+      "council": "orc",
+      "site": "Boundary Creek at Top Race u/s",
+      "days": 1824,
+      "first_day": "2015-09-17",
+      "last_day": "2021-01-13",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    },
+    {
+      "council": "orc",
+      "site": "Branch Burn at Cardrona Valley",
+      "days": 1893,
+      "first_day": "2015-08-11",
+      "last_day": "2020-12-10",
+      "source_file_sha256": "5fcf55a53eb24985b5d46d61bbf787cfdc65cc0cbc4cb67ae52c15faaeaed834"
+    }
+  ]
+}

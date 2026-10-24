@@ -1,9 +1,30 @@
 # Data dictionary
 
-Updated: 2026-10-23. Water, network contributions, population-growth and seasonal-flow outputs
-now use **schema v2** in the local implementation. The rules below are executable
-and reconciled to source contributions. Deployment is separate. See the
+Updated: 2026-10-24. Water, network contributions, population-growth and seasonal-flow outputs
+use **schema v2** in the local implementation. Those implemented rules are executable
+and reconciled to source contributions; the new climate definitions are proposed only.
+Deployment is separate. See the
 [source audit](SOURCE-AUDIT-2026-10-22.md) and [Chinese change record](CHANGELOG.zh-CN.md).
+
+## Proposed climate measures — 2026-10-24, not production fields
+
+The next research iteration uses the definitions below. They are planning
+contracts, not additions to schema v2 or claims that an ENSO effect is established.
+See the [feasibility audit](CLIMATE-FEASIBILITY-2026-10-24.zh-CN.md).
+
+| Proposed measure | Meaning and calculation | Required scope / missingness |
+|---|---|---|
+| Monthly precipitation (mm) / 月降水量 | Sum daily precipitation in a complete month; ERA5 includes rain and snow water equivalent | Source + model/station ID + returned coordinates + year/month + day-boundary convention. Never turn missing days into zero or scale a partial sum to a full month. Station and grid estimates remain separate. |
+| Same-month baseline (mm) / 同月常态 | Mean of eligible totals for that month during 1991–2020 | Proposed minimum 25 complete years for each month; disclose count. This is a project screening rule, not WMO certification. Failed baseline gives missing anomaly. |
+| Precipitation difference (mm) / 比常年多或少多少雨 | Total minus its same-location, same-month baseline | Keep source type visible; a point does not represent an administrative region. |
+| Precipitation anomaly (%) / 比常年多或少百分之几 | 100 × (total − baseline) / baseline | Baseline must be positive; zero gives missing percentage. Display mm alongside %, flag small denominators. Neither drought severity nor household supply remaining. |
+| Seasonal precipitation anomaly / 季节降水差异 | Sum a complete season and compare with the mean of complete same-season totals in baseline years; percentage uses seasonal baseline | Do not average monthly percentages. DJF year is January's year: DJF 2024 = Dec 2023–Feb 2024. Fetch Dec 1990 for a full DJF 1991 baseline; otherwise disclose/exclude the incomplete season. |
+| ENSO episode / 厄尔尼诺或拉尼娜事件 | Versioned NOAA CPC RONI, three-month relative Niño3.4 index; historical thresholds ±0.5°C sustained for at least five overlapping seasons | Store season/year, source version, threshold/run rule, retrieval date and provisional status. Latest values can change. Classification is not a causal estimate; fix transition-period rules before analysis. |
+| Event sample count / 比较了几次事件 | Distinct eligible episodes contributing to a location-season comparison | Count episodes, not overlapping windows. Record exclusions and show event-level variation. |
+
+Location eligibility, quality flags, valid-day/month counts and source licences
+must accompany future outputs. Current river percentiles retain their existing
+definition below; they are not automatically ENSO-adjusted.
 
 ## Reading the measures
 

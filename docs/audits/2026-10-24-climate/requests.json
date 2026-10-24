@@ -1,0 +1,216 @@
+[
+  {
+    "file": "roni.txt",
+    "url": "https://www.cpc.ncep.noaa.gov/data/indices/RONI.ascii.txt",
+    "http_status": 200,
+    "bytes": 14736,
+    "sha256": "24d79a53c8c30aaf32200c08447291655fc1d693f11165793ba6d3aa378d98ff",
+    "probe_batch": "probes-initial.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "ghcnd-stations.txt",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/ghcnd-stations.txt",
+    "http_status": 200,
+    "bytes": 11441354,
+    "sha256": "428eabc955883187935bce283766d5646e3ed7484b92eb0803874c0e8dd9b342",
+    "probe_batch": "probes-initial.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "ghcnd-readme.txt",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/readme.txt",
+    "http_status": 200,
+    "bytes": 29587,
+    "sha256": "0e4e6f0e6947cf1add884c328a01760f31c56ef5fb86b85ed57dd5dc4c4aeaa6",
+    "probe_batch": "probes-initial.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "NZ000093012.dly",
+    "requested_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000093012.dly",
+    "params": null,
+    "requested_utc": "2026-10-24T08:36:04.541881+00:00",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000093012.dly",
+    "status": 200,
+    "bytes": 456300,
+    "sha256": "f88e8e780a644f81d41cd88f49f510147203381df9073937a2d9d726698d53fb",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "NZ000093292.dly",
+    "requested_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000093292.dly",
+    "params": null,
+    "requested_utc": "2026-10-24T08:36:04.542410+00:00",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000093292.dly",
+    "status": 200,
+    "bytes": 624780,
+    "sha256": "8490f14ab158ec37b610d0e347d19d8e0b42c1a152ce2be370afb943743c5584",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "NZ000093844.dly",
+    "requested_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000093844.dly",
+    "params": null,
+    "requested_utc": "2026-10-24T08:36:04.542507+00:00",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000093844.dly",
+    "status": 200,
+    "bytes": 846990,
+    "sha256": "48606713465508275bc52ffab857923eece18d4a69cdeb4a36a42665f0ee4811",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "NZ000933090.dly",
+    "requested_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000933090.dly",
+    "params": null,
+    "requested_utc": "2026-10-24T08:36:06.808179+00:00",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000933090.dly",
+    "status": 200,
+    "bytes": 741960,
+    "sha256": "8fa6950dcbe13892c43c3fa5ff811c23defa4f9f80b429500593ec543c765b7a",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "NZ000936150.dly",
+    "requested_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000936150.dly",
+    "params": null,
+    "requested_utc": "2026-10-24T08:36:06.816102+00:00",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZ000936150.dly",
+    "status": 200,
+    "bytes": 631260,
+    "sha256": "c122533d0db9a01607cc13426a50ea582bb84ac196f69ef3656617d3a1f168bb",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "NZM00093110.dly",
+    "requested_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZM00093110.dly",
+    "params": null,
+    "requested_utc": "2026-10-24T08:36:06.853616+00:00",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZM00093110.dly",
+    "status": 200,
+    "bytes": 357480,
+    "sha256": "409f113deedaa1b16994a96f159ddae10ca0073affd3c95fb804a748454ccc80",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "NZM00093781.dly",
+    "requested_url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZM00093781.dly",
+    "params": null,
+    "requested_utc": "2026-10-24T08:36:08.788805+00:00",
+    "url": "https://www.ncei.noaa.gov/pub/data/ghcn/daily/all/NZM00093781.dly",
+    "status": 200,
+    "bytes": 710640,
+    "sha256": "f16f5cec1f8343476d2bec1de0dcf4ca9a0a9474b812f78061fe1da728599977",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "era5-two-points.json",
+    "requested_url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": "-37.0,-42.717",
+      "longitude": "174.8,170.983",
+      "start_date": "1991-01-01",
+      "end_date": "2025-12-31",
+      "daily": "precipitation_sum",
+      "models": "era5",
+      "timezone": "Pacific/Auckland",
+      "cell_selection": "land",
+      "elevation": "nan"
+    },
+    "requested_utc": "2026-10-24T08:36:08.975879+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=-37.0%2C-42.717&longitude=174.8%2C170.983&start_date=1991-01-01&end_date=2025-12-31&daily=precipitation_sum&models=era5&timezone=Pacific%2FAuckland&cell_selection=land&elevation=nan",
+    "status": 400,
+    "bytes": 100,
+    "sha256": "5fc431de8e0bf629ae4c6bc254b3e5d3891a7764fa3d579adec7ec05dcd15de5",
+    "error": "400 Client Error: Bad Request for url: https://archive-api.open-meteo.com/v1/archive?latitude=-37.0%2C-42.717&longitude=174.8%2C170.983&start_date=1991-01-01&end_date=2025-12-31&daily=precipitation_sum&models=era5&timezone=Pacific%2FAuckland&cell_selection=land&elevation=nan",
+    "probe_batch": "probes-samples.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "era5-two-points.json",
+    "requested_url": "https://archive-api.open-meteo.com/v1/archive",
+    "params": {
+      "latitude": "-37.0,-42.717",
+      "longitude": "174.8,170.983",
+      "start_date": "1991-01-01",
+      "end_date": "2025-12-31",
+      "daily": "precipitation_sum",
+      "models": "era5",
+      "timezone": "Pacific/Auckland",
+      "cell_selection": "land",
+      "elevation": "nan,nan"
+    },
+    "requested_utc": "2026-10-24T08:39:28.970986+00:00",
+    "url": "https://archive-api.open-meteo.com/v1/archive?latitude=-37.0%2C-42.717&longitude=174.8%2C170.983&start_date=1991-01-01&end_date=2025-12-31&daily=precipitation_sum&models=era5&timezone=Pacific%2FAuckland&cell_selection=land&elevation=nan%2Cnan",
+    "status": 200,
+    "bytes": 465502,
+    "sha256": "4c13213d062e930d2a9e07cfce02b1c24592a482bbc06175e4f21744abe37eb5",
+    "probe_batch": "probes-followup.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "orc-portal.html",
+    "requested_url": "https://envdata.orc.govt.nz",
+    "params": null,
+    "requested_utc": "2026-10-24T08:39:28.971384+00:00",
+    "url": "https://envdata.orc.govt.nz/AQWebPortal/Disclaimer",
+    "status": 200,
+    "bytes": 29461,
+    "sha256": "1ee714b5d6777879e982142eead35784d44ef8f6fce06a0ec2c99fdb6bdd715a",
+    "probe_batch": "probes-followup.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "hbrc-rain-metadata.xml",
+    "requested_url": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts",
+    "params": {
+      "Service": "Hilltop",
+      "Request": "MeasurementList",
+      "Site": "Te Haroto Climate"
+    },
+    "requested_utc": "2026-10-24T08:39:28.971514+00:00",
+    "url": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts?Service=Hilltop&Request=MeasurementList&Site=Te+Haroto+Climate",
+    "status": 200,
+    "bytes": 72,
+    "sha256": "164976029e0b9e7ee2741ad2b5ab505a83c67e0972ebeafea35dbb15e31dd981",
+    "probe_batch": "probes-followup.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "hbrc-rain-metadata-encoded.xml",
+    "url": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts?Service=Hilltop&Request=MeasurementList&Site=Te%20Haroto%20Climate",
+    "requested_utc": "2026-10-24T08:40:04.598760+00:00",
+    "status": 200,
+    "bytes": 14907,
+    "sha256": "378337204f858c76df1c86acf6a791e83c93a65b77b89a298a159d307d8b5aec",
+    "probe_batch": "probes-hbrc-encoded.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "hbrc-rain-dec2023.xml",
+    "url": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts?Service=Hilltop&Request=GetData&Site=Te%20Haroto%20Climate&Measurement=Rainfall&From=2023-12-01&To=2024-01-01&Interval=1%20Day&Interpolation=Total",
+    "requested_utc": "2026-10-24T08:40:29.860124+00:00",
+    "status": 200,
+    "bytes": 1916,
+    "sha256": "354d4754bbe896350363d07b7650d37a36f3b3b8c8efcda65e03e751986cda33",
+    "probe_batch": "probes-hbrc-data.json",
+    "checked_on": "2026-10-24"
+  },
+  {
+    "file": "hbrc-rain-quality.xml",
+    "url": "https://data.hbrc.govt.nz/Envirodata/EMAR.hts?Service=Hilltop&Request=GetData&Site=Te%20Haroto%20Climate&Measurement=Rainfall&From=2023-11-01&To=2024-01-01&tsType=StdQualSeries",
+    "requested_utc": "2026-10-24T08:40:29.868317+00:00",
+    "status": 200,
+    "bytes": 66,
+    "sha256": "757d0a83078eb057d61e077bff6e5405bee8ff50abf5f6a0b4ff1ec206987883",
+    "probe_batch": "probes-hbrc-data.json",
+    "checked_on": "2026-10-24"
+  }
+]

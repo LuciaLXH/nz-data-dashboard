@@ -1,0 +1,20 @@
+{
+  "base_commit": "77585f316fba9d2b22873a3efddaa37aded367bf",
+  "branch": "frontend/overview-preview",
+  "checked_on": "2026-10-24",
+  "ui_changed": false,
+  "public_inputs": {
+    "era5-two-points.json": "4c13213d062e930d2a9e07cfce02b1c24592a482bbc06175e4f21744abe37eb5",
+    "hbrc-rain-dec2023.xml": "354d4754bbe896350363d07b7650d37a36f3b3b8c8efcda65e03e751986cda33",
+    "hbrc-rain-metadata-encoded.xml": "378337204f858c76df1c86acf6a791e83c93a65b77b89a298a159d307d8b5aec",
+    "hbrc-rain-quality.xml": "757d0a83078eb057d61e077bff6e5405bee8ff50abf5f6a0b4ff1ec206987883",
+    "roni.txt": "24d79a53c8c30aaf32200c08447291655fc1d693f11165793ba6d3aa378d98ff"
+  },
+  "dashboard_assets_at_audit": {
+    "site/public.html": "5c75bc903d7d57be02fa1f71c7bc0c9b127226531d673781771b1b6bdbd18732",
+    "site/public.js": "5be1a1e142a9bb8a1d3a559b67576b482f539056e966fe690f3e83c216932c2d",
+    "site/public.css": "7c2093ff99d947b33d9633fa716afa14e462bde677053de0afef7fffca780168",
+    "site/public-analysis.js": "a23af7f184144504d741c92bc5c2fd94b480fb9773bead22bb50c7d19fefd0f6"
+  },
+  "not_archived": "GHCN raw records (redistribution review pending), ORC HTML (session-specific form token)"
+}

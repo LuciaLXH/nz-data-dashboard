@@ -1,7 +1,25 @@
 # Data source registry
 
-Initial checks: 2026-08-30. Maintenance notes updated: 2026-10-22.
+Initial checks: 2026-08-30. Maintenance notes updated: 2026-10-24.
 Endpoint behaviour below describes those checks; access and coverage may change.
+
+## Climate research candidates — audited 2026-10-24, not integrated
+
+See the [Chinese feasibility review](CLIMATE-FEASIBILITY-2026-10-24.zh-CN.md)
+and [request/coverage snapshots](audits/2026-10-24-climate/README.md).
+
+| Source | Evidence and intended use | Remaining conditions |
+|---|---|---|
+| NOAA CPC RONI | Downloaded 1950 DJF–2026 JAS; event timeline | Pin version, sustained-event rules and recent-value revision status |
+| Open-Meteo fixed ERA5 | Downloaded two grid points, 1991–2025, no missing daily precipitation | Extend east/west sample, observational checks; CC BY attribution and API usage conditions |
+| NOAA NCEI GHCN daily | Seven stations downloaded locally and screened | None passes proposed baseline completeness; resolve non-US source redistribution before publishing raw data |
+| HBRC rainfall, Te Haroto Climate | Measurement metadata and December 2023 sample downloaded | Quality query empty; verify day intervals, longer coverage and station representativeness |
+| ORC current Aquarius portal | Official replacement portal reachable at `https://envdata.orc.govt.nz` | No time series exported in this audit; validate histories, access and licence |
+| ESNZ DataHub / VCSN | Product and licence documentation reviewed | Account, possible fees and raw/derived redistribution conditions; no data downloaded |
+| WCRC rainfall / flow | Official viewer and data-request route reviewed | No station series downloaded; candidate west-coast validation |
+
+These sources are not yet dependencies of `make all` or the production dashboard.
+The old ORC endpoint's 2021 cutoff below does **not** describe the newer portal.
 
 ## River flow
 

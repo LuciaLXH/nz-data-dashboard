@@ -3,6 +3,41 @@
 Updated: 2026-10-24. This roadmap separates delivered functionality from
 remaining analytical and engineering work.
 
+## Next research iteration — agreed 2026-10-24
+
+The author approved testing whether El Niño periods have different precipitation
+patterns across NZ locations. The new question is: **Where is it more often drier
+or wetter during El Niño, and how consistent is that across events and seasons?**
+Do not assume a uniform North Island / South Island split or a causal attribution.
+The existing six-region population/supply analysis remains delivered background;
+it cannot test this hypothesis. The public page has not yet changed to this scope.
+
+[Feasibility audit in Chinese](CLIMATE-FEASIBILITY-2026-10-24.zh-CN.md) and
+[download/coverage evidence](audits/2026-10-24-climate/README.md) are complete.
+Two fixed-ERA5 grid points have continuous 1991–2025 daily precipitation; RONI
+is available. Seven downloaded GHCN station samples fail the proposed complete-month
+baseline screen. Existing HBRC/ORC flow caches do not overlap in time. HBRC rain
+is accessible, but sample quality and day-boundary interpretation remain unresolved;
+ORC's newer portal must be assessed separately from the old historical endpoint.
+
+Next deliverables, before frontend redesign:
+
+1. Freeze six representative locations including West Coast and east/west contrasts;
+   fetch fixed ERA5 histories, check dates/units and produce monthly precipitation
+   against a 1991–2020 baseline. Point values must not be labelled regional means.
+2. Freeze the RONI version and event/transition rules; compare complete summer
+   seasons across all eligible events and neutral/La Niña controls, then other
+   seasons separately. Show variation and counterexamples; overlapping seasons are
+   not independent events. Keep incomplete 2026 separate from completed history.
+3. Verify at least east/west station periods against the grid estimates before
+   promoting findings; resolve licensing and quality before publishing new raw
+   station records. Add catchment-aligned river cases only with overlapping dates.
+4. Use the results to redesign the bilingual reader journey. Preserve screenshots
+   before and after each visual change, plain-language notes and source snapshots.
+
+New metric definitions in the dictionary are **proposed**, not deployed fields.
+This audit changes no production data, metric formula, UI or deployment.
+
 ## Project motivation
 
 I started this project because of concerns about drought and water availability
@@ -79,7 +114,7 @@ Deployment and the next analytical iteration remain separate.
 | 2. Reproducible offline build | Complete locally | Attributed excerpts use the real pipeline; build/tests need no API key or raw cache after dependency installation. Core checks fail rather than skip missing outputs. Separate example banner, output folder and pull-request CI. |
 | 3. Publish revised findings | Local presentation checked; release pending | Snapshot table reconciled; desktop/mobile checked; publish the revised release and replace historical demonstration assets when a new demonstration is prepared. No restoration of the savings claim. |
 
-The project question is:
+The delivered six-region analysis answers:
 
 > How do population growth, network supply and water loss compare across six NZ regions?
 

@@ -1,0 +1,491 @@
+<?xml version="1.0" ?>
+<HilltopServer>
+<Agency>HBRC</Agency>
+<DataSource Name="Rainfall" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Incremental</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Rainfall">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Rainfall</RequestAs>
+<Divisor>1000</Divisor>
+<Units>mm</Units>
+<Format>#.#</Format>
+</Measurement>
+<Measurement Name="Checkgauge Difference">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Checkgauge Difference</RequestAs>
+<Units>%</Units>
+<Format>#.#</Format>
+<VM>1</VM>
+<VMStart>2016-02-25T14:45:00</VMStart>
+<VMFinish>2026-09-15T11:00:00</VMFinish>
+</Measurement>
+<Measurement Name="Consecutive Dry Days">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Consecutive Dry Days</RequestAs>
+<Units>Days</Units>
+<Format>#</Format>
+<VM>1</VM>
+<VMStart>1998-12-18T00:00:00</VMStart>
+<VMFinish>2026-10-24T00:00:00</VMFinish>
+</Measurement>
+<Measurement Name="RainDayMonth">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>RainDayMonth</RequestAs>
+<Units>Days &gt;0.1 mm</Units>
+<Format>#.##</Format>
+<MeasurementGroup>Rainfall Stats</MeasurementGroup>
+<VM>1</VM>
+<VMStart>1998-12-16T13:00:00</VMStart>
+<VMFinish>2026-10-24T20:00:00</VMFinish>
+</Measurement>
+<Measurement Name="RainDays &lt;10mm">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>RainDays &lt;10mm</RequestAs>
+<Units>Days</Units>
+<Format>#.##</Format>
+<VM>1</VM>
+<VMStart>1998-12-18T00:00:00</VMStart>
+<VMFinish>2026-10-24T00:00:00</VMFinish>
+</Measurement>
+<Measurement Name="RainDays &gt;10mm">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>RainDays &gt;10mm</RequestAs>
+<Units>Days</Units>
+<Format>#.##</Format>
+<VM>1</VM>
+<VMStart>1998-12-18T00:00:00</VMStart>
+<VMFinish>2026-10-24T00:00:00</VMFinish>
+</Measurement>
+<Measurement Name="Rainfall Daily Difference">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Rainfall Daily Difference</RequestAs>
+<Units>%</Units>
+<Format>#.#</Format>
+<VM>1</VM>
+<VMStart>1998-12-16T13:00:00</VMStart>
+<VMFinish>2026-10-24T20:00:00</VMFinish>
+</Measurement>
+</DataSource>
+<DataSource Name="Solar Radiation" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Solar Radiation">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Solar Radiation</RequestAs>
+<Units>watts/m2</Units>
+<Format>#.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Soil Moisture" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Soil Moisture">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Soil Moisture</RequestAs>
+<Divisor>10</Divisor>
+<Units>%</Units>
+<Format>###.##</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Rainfall Periodic" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Incremental</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2016-02-25T14:45:00</From>
+<To>2026-09-15T11:00:00</To>
+<Measurement Name="Rainfall Periodic">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Rainfall Periodic</RequestAs>
+<Divisor>1000</Divisor>
+<Units>mm</Units>
+<Format>###.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Average Air Temperature" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Histogram</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Average Air Temperature">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Average Air Temperature</RequestAs>
+<Units>deg c</Units>
+<Format>###.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Average Humidity" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Histogram</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Average Humidity">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Average Humidity</RequestAs>
+<Units>%</Units>
+<Format>###.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Maximum Wind Speed" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>1998-12-16T12:28:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Maximum Wind Speed">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Maximum Wind Speed</RequestAs>
+<Units>km/h</Units>
+<Format>###.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Time Maximum Wind" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2015-09-29T08:00:00</To>
+<Measurement Name="Time Maximum Wind">
+<Item>1</Item>
+<RequestAs>Time Maximum Wind [Time Maximum Wind]</RequestAs>
+<Format>#.##</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Average Wind Speed" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Histogram</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Average Wind Speed">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Average Wind Speed</RequestAs>
+<Units>km/h</Units>
+<Format>###.##</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Average Wind Direction" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>WindDirection</DataType>
+<Interpolation>Histogram</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Average Wind Direction">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Average Wind Direction</RequestAs>
+<Units>Deg </Units>
+<Format>###.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Maximum Wind Direction" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>WindDirection</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>1998-12-16T12:28:00</From>
+<To>2015-11-20T08:00:00</To>
+<Measurement Name="Maximum Wind Direction">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Maximum Wind Direction</RequestAs>
+<Units>deg</Units>
+<Format>###.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Soil Temperature 100mm" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="Soil Temperature 100mm">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>Soil Temperature 100mm</RequestAs>
+<Divisor>10</Divisor>
+<Units>Deg C</Units>
+<Format>###.#</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="PET Hourly" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2026-10-24T20:00:00</To>
+<Measurement Name="PET Hourly">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>PET Hourly</RequestAs>
+<Units>mm</Units>
+<Format>#.###</Format>
+</Measurement>
+<Measurement Name="PET Hourly Total">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>PET Hourly Total</RequestAs>
+<Format>#.##</Format>
+<VM>1</VM>
+<VMStart>2011-02-01T06:00:00</VMStart>
+<VMFinish>2026-10-24T20:00:00</VMFinish>
+</Measurement>
+</DataSource>
+<DataSource Name="PET Daily" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Instant</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>2016-04-22T09:00:00</From>
+<To>2026-10-24T09:00:00</To>
+<Measurement Name="PET Daily">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>PET Daily</RequestAs>
+<Units>mm</Units>
+<Format>#.###</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="PET Hourly (Incremental)" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Incremental</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2020-10-14T13:00:00</To>
+<Measurement Name="PET Hourly (Incremental)">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>PET Hourly (Incremental)</RequestAs>
+<Units>mm</Units>
+<Format>#.###</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="PET Daily (Incremental)" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Incremental</Interpolation>
+<ItemFormat>1</ItemFormat>
+<From>2016-04-22T09:00:00</From>
+<To>2020-10-13T09:00:00</To>
+<Measurement Name="PET Daily (Incremental)">
+<Item>1</Item>
+<DefaultMeasurement />
+<RequestAs>PET Daily (Incremental)</RequestAs>
+<Units>mm</Units>
+<Format>#.###</Format>
+</Measurement>
+</DataSource>
+<DataSource Name="Hydro Monitoring Form" Site="Te Haroto Climate" >
+<NumItems>0</NumItems>
+<TSType>StdSeries</TSType>
+<DataType>NameValuePairs</DataType>
+<Interpolation>Discrete</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2026-04-01T09:30:00</From>
+<To>2026-09-15T11:00:00</To>
+<TimeObjects>
+<SurveyTime> 1-Apr-2026 09:30:00</SurveyTime>
+<SurveyTime>10-Jun-2026 11:00:00</SurveyTime>
+<SurveyTime>11-Aug-2026 11:00:00</SurveyTime>
+<SurveyTime>15-Sep-2026 11:00:00</SurveyTime>
+</TimeObjects>
+</DataSource>
+<DataSource Name="Rainfall" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-08-11T10:46:00</To>
+</DataSource>
+<DataSource Name="Solar Radiation" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Soil Moisture" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Rainfall Periodic" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2016-02-25T14:45:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Average Air Temperature" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Average Humidity" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Maximum Wind Speed" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T12:28:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Time Maximum Wind" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2015-09-29T08:00:00</To>
+</DataSource>
+<DataSource Name="Average Wind Speed" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Average Wind Direction" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>WindDirection</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="Maximum Wind Direction" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>WindDirection</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T12:28:00</From>
+<To>2015-11-20T08:00:00</To>
+</DataSource>
+<DataSource Name="Soil Temperature 100mm" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>1998-12-16T13:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="PET Hourly" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2026-08-11T11:00:00</To>
+</DataSource>
+<DataSource Name="PET Daily" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2016-04-22T09:00:00</From>
+<To>2026-08-11T09:00:00</To>
+</DataSource>
+<DataSource Name="PET Hourly (Incremental)" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2011-02-01T06:00:00</From>
+<To>2020-10-14T13:00:00</To>
+</DataSource>
+<DataSource Name="PET Daily (Incremental)" Site="Te Haroto Climate" >
+<NumItems>1</NumItems>
+<TSType>StdQualSeries</TSType>
+<DataType>SimpleTimeSeries</DataType>
+<Interpolation>Event</Interpolation>
+<ItemFormat>0</ItemFormat>
+<From>2016-04-22T09:00:00</From>
+<To>2020-10-13T09:00:00</To>
+</DataSource>
+</HilltopServer>
