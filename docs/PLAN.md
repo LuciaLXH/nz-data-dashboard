@@ -1,6 +1,6 @@
 # Project roadmap
 
-Updated: 2026-10-23. This roadmap separates delivered functionality from
+Updated: 2026-10-24. This roadmap separates delivered functionality from
 remaining analytical and engineering work.
 
 ## Project motivation
@@ -35,6 +35,16 @@ not include ENSO indices, rainfall, soil moisture, or a complete supply-capacity
 model, so it cannot attribute observed conditions to El Niño or predict water
 shortages. This distinction should remain clear when the motivation is added to
 the README and dashboard.
+
+## Frontend preview — 2026-10-24
+
+The validated baseline `533b527` has been pushed to main. Its GitHub Actions
+release status must be checked separately from the push. The first frontend
+preview lives on `frontend/overview-preview`: three compact overview entry points,
+explicit action labels and a scope/date/missing-value reading guide. Metric
+calculations and served data are unchanged. Paired desktop/mobile screenshots
+are recorded in [the visual change log](changes/2026-10-24/README.md).
+Review this local preview before extending the design to navigation and charts.
 
 ## Current iteration
 

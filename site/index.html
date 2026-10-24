@@ -41,10 +41,22 @@
 
     <!-- ============ Key findings (landing) ============ -->
     <section id="findings">
-      <h2>Explore the evidence <span class="asof" id="asof-findings"></span></h2>
-      <p class="caption">Start with a comparison, then check what the numbers include.
-        Select a card to explore the charts, definitions or observation dates.</p>
+      <div class="overview-heading">
+        <p class="eyebrow">A guide to the evidence</p>
+        <h2>Three ways to explore water.</h2>
+        <p class="overview-intro">Compare reported supply across six regions, understand what water loss includes,
+          and put river observations in context.</p>
+        <span class="asof" id="asof-findings"></span>
+      </div>
       <div class="cards" id="finding-cards"><!-- filled by app.js --></div>
+      <div class="reading-guide">
+        <h3>Before you compare</h3>
+        <dl>
+          <div><dt>Check the scope</dt><dd>Water networks are grouped by operator. They do not represent every resident or supply in a region.</dd></div>
+          <div><dt>Check the date</dt><dd>Water reporting years, population years and river observation dates differ. A recent build does not make every observation recent.</dd></div>
+          <div><dt>Keep gaps visible</dt><dd>“Unavailable” means there is no comparable value. It does not mean zero water loss or zero river flow.</dd></div>
+        </dl>
+      </div>
     </section>
 
     <!-- ============ Map ============ -->

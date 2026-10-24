@@ -113,26 +113,27 @@ async function loadAll() {
 function buildFindings() {
   return [
     {
-      img: "fig1.png",
-      headline: "Compare network supply.",
-      num: "Six regions",
-      soWhat: "Supply per served person includes household use, other uses and water losses. Differences identify questions to investigate; they do not establish achievable savings.",
-      foot: "Selected NEPR 2024/25 networks · metric-specific coverage",
+      headline: "Compare network supply",
+      num: "Six regional groupings",
+      soWhat: "Explore population growth and supply per served person. Supply includes household use, other uses and losses; differences do not establish achievable savings.",
+      foot: "NEPR 2024/25 · check coverage for each measure",
+      action: "Explore water charts",
       target: "charts",
     },
     {
-      img: "fig2.png",
-      headline: "Check what water loss includes.",
+      headline: "Understand water loss",
       num: "Reporting scope matters",
-      soWhat: "Providers estimate water loss and may use different boundaries. Reported loss is not the volume that repairs could recover. Check missing values and private-side losses before comparing networks.",
-      foot: "Definitions and source review are available in Method",
+      soWhat: "Providers estimate losses using different reporting boundaries. Learn what is included before comparing rates, and why reported loss is not recoverable savings.",
+      foot: "Definitions · missing values · private-side losses",
+      action: "Read the definitions",
       target: "method",
     },
     {
-      headline: "Read each observation date.",
+      headline: "Put river flow in context",
       num: "Selected river sites",
-      soWhat: "This dashboard integrates HBRC telemetry and historical ORC records. A site's latest available reading may be old. These observations do not measure a region's drinking-water capacity.",
-      foot: "River coverage is limited to the sites included in this project",
+      soWhat: "Check each observation date and its seasonal history. HBRC telemetry and historical ORC records do not measure a region’s drinking-water capacity.",
+      foot: "Observation dates · historical coverage",
+      action: "View river observations",
       target: "flow-section",
     },
   ];
@@ -140,23 +141,23 @@ function buildFindings() {
 
 function renderFindings(cards) {
   el("finding-cards").innerHTML = cards.map((c, i) => `
-    <div class="card" data-target="${c.target}" tabindex="0" role="button" aria-label="Jump to evidence for finding ${i + 1}">
-      ${c.img ? `<img class="card-img" src="img/${c.img}" alt="" onerror="this.style.display='none'">` : ""}
-      <div class="card-body">
-        <div class="headline">${c.headline}</div>
-        <div class="num">${c.num}</div>
-        <p class="so-what">${c.soWhat}</p>
-        <div class="foot">${c.foot}</div>
-      </div>
-    </div>`).join("");
+    <button type="button" class="card" data-target="${c.target}" aria-label="${c.action}">
+      <span class="card-body">
+        <span class="card-step">0${i + 1}</span>
+        <span class="num">${c.num}</span>
+        <span class="headline">${c.headline}</span>
+        <span class="so-what">${c.soWhat}</span>
+        <span class="foot">${c.foot}</span>
+        <span class="card-action">${c.action} <span aria-hidden="true">↗</span></span>
+      </span>
+    </button>`).join("");
   document.querySelectorAll(".card[data-target]").forEach((card) => {
-    const go = () => {
+    card.addEventListener("click", () => {
       showSection(card.dataset.target);
-      card.classList.add("flash");
-      setTimeout(() => card.classList.remove("flash"), 1600);
-    };
-    card.addEventListener("click", go);
-    card.addEventListener("keydown", (e) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); go(); } });
+      const heading = document.querySelector(`#${card.dataset.target} h2`);
+      heading.setAttribute("tabindex", "-1");
+      heading.focus({ preventScroll: true });
+    });
   });
 }
 
