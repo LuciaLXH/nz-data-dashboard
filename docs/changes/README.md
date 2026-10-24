@@ -53,3 +53,16 @@
 Git 提交编号只是背景信息：快照包含未提交的本地修改，不能仅用 HEAD 代表截图版本。
 应结合清单中的校验值和保存的数据辨认状态。当前脚本针对本项目河流改动保存数据；
 后续涉及其他指标时，也应保存相应结果与输入出处。
+
+
+公众版等新增页面可指定路径与截图区域（数据仍需先构建）：
+
+```bash
+.venv/bin/python scripts/capture_change.py \
+  --page 'public.html?lang=zh' --selector '#public-content' \
+  --ready 'body[data-ready="true"]' --section public-reader \
+  --out docs/changes/YYYY-MM-DD/step/after-zh
+```
+
+从 2026-10-24 第二步起，新快照还保存供水、人口和地区 JSON，并记录页面路径及 CSS 选择器。
+语言版本共用数据；中文公众版并不表示英文详细分析页已经整体翻译。

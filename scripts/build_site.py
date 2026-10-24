@@ -12,7 +12,7 @@ def build_site(processed: Path, destination: Path):
     source = ROOT / 'site'
     if destination.resolve() != source.resolve():
         destination.mkdir(parents=True, exist_ok=True)
-        for name in ('index.html', 'app.js', 'style.css'):
+        for name in ('index.html', 'app.js', 'style.css', 'public.html', 'public.js', 'public.css'):
             shutil.copy2(source/name, destination/name)
         shutil.copytree(source/'img', destination/'img', dirs_exist_ok=True)
     target = destination/'data'

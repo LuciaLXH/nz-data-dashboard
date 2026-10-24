@@ -24,7 +24,7 @@ def sha(path):
     return hashlib.sha256(path.read_bytes()).hexdigest()
 
 
-def capture(site: Path, output: Path, section: str):
+def capture(site: Path, output: Path, section: str, page_path: str = "", selector: str | None = None, ready: str = "#health-strip .run-bars"):
     from playwright.sync_api import sync_playwright
     if output.exists():
         raise FileExistsError(f'Refusing to overwrite evidence: {output}')
@@ -46,30 +46,32 @@ def capture(site: Path, output: Path, section: str):
                                         device_scale_factor=1, timezone_id='Pacific/Auckland',
                                         locale='en-NZ', reduced_motion='reduce')
                 page.on('pageerror',lambda e:errors.append(str(e)))
-                page.goto(f'http://127.0.0.1:{server.server_port}/',wait_until='networkidle')
-                page.wait_for_selector('#health-strip .run-bars')
-                page.click(f'#sidenav a[data-section="{section}"]')
+                page.goto(f'http://127.0.0.1:{server.server_port}/{page_path}',wait_until='networkidle')
+                page.wait_for_selector(ready)
+                if selector is None:
+                    page.click(f'#sidenav a[data-section="{section}"]')
                 page.wait_for_timeout(400)
                 page.evaluate('document.fonts.ready')
                 if page.evaluate('document.documentElement.scrollWidth > innerWidth'):
                     errors.append(f'{name}: horizontal page overflow')
                 # Section crop keeps attention on the changed content; no arbitrary image edits.
-                page.locator('#'+section).screenshot(path=str(output/(name+'.png')),animations='disabled')
+                page.locator(selector or '#'+section).screenshot(path=str(output/(name+'.png')),animations='disabled')
                 views.append({'name':name,'width':width,'height':height,'device_scale_factor':1,
                               'screenshot':name+'.png'})
                 page.close()
             browser_version=browser.version
             browser.close()
-        shutil.copy2(site/'data/flow_percentile.json',output/'flow_percentile.json')
+        for name in ('flow_percentile.json', 'supply_per_capita.json', 'population_growth.json', 'regions.json'):
+            shutil.copy2(site/'data'/name,output/name)
         files = ['sql/03_flow_percentile.sql','scripts/transform.py','schemas/flow_percentile.schema.json',
                  'site/app.js','site/index.html','site/style.css','scripts/flow_policy.py','scripts/validate_flow.py']
         manifest={'captured_utc':datetime.now(timezone.utc).isoformat(),
-                  'section':section,'input_mode':flow.get('input_mode'),
+                  'section':section,'page_path':page_path or 'index.html','selector':selector or '#'+section,'input_mode':flow.get('input_mode'),
                   'processed_utc':flow['processed_utc'],'flow_schema_version':flow['schema_version'],
                   'git_head':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip(),
                   'working_tree': 'uncommitted work included; hashes, not HEAD alone, identify this state',
                   'source_code_sha256':{f:sha(ROOT/f) for f in files if (ROOT/f).exists()},
-                  'served_asset_sha256':{f:sha(site/f) for f in ['app.js','index.html','style.css']},
+                  'served_asset_sha256':{f:sha(site/f) for f in sorted(p.name for p in site.iterdir() if p.is_file() and p.suffix in ('.js','.html','.css'))},
                   'served_data_sha256':{f.name:sha(f) for f in sorted((site/'data').glob('*')) if f.is_file()},
                   'browser':{'name':'Chromium','version':browser_version,'timezone':'Pacific/Auckland','locale':'en-NZ'},
                   'views':views,'errors':errors}
@@ -88,5 +90,8 @@ if __name__=='__main__':
     parser.add_argument('--site',type=Path,default=ROOT/'site')
     parser.add_argument('--out',type=Path,required=True)
     parser.add_argument('--section',default='flow-section')
+    parser.add_argument('--page',default='',help='Page path with optional query, relative to the site')
+    parser.add_argument('--selector',help='CSS selector to capture; bypass section navigation')
+    parser.add_argument('--ready',default='#health-strip .run-bars',help='Selector that confirms data have rendered')
     args=parser.parse_args()
-    capture(args.site,args.out,args.section)
+    capture(args.site,args.out,args.section,args.page,args.selector,args.ready)

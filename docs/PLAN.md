@@ -36,6 +36,20 @@ model, so it cannot attribute observed conditions to El Niño or predict water
 shortages. This distinction should remain clear when the motivation is added to
 the README and dashboard.
 
+## Public audience and bilingual preview — 2026-10-24
+
+Working audience: everyday NZ residents, including Chinese readers; this is a
+working assumption pending author feedback and actual reader testing. The new
+`public.html?lang=zh` / `?lang=en` view uses the same audited results and prioritizes
+region selection, plain-language interpretation, dated climate context and routes
+to official notices. The existing English explorer retains maps and full tables.
+See [audience decisions and evaluation plan](AUDIENCE.zh-CN.md) and
+[paired evidence](changes/2026-10-24/02-public-bilingual/README.md).
+Do not describe 2024–2026 as uninterrupted strengthening of El Niño. Climate
+context does not establish causation for the dashboard’s supply/flow records.
+Next: confirm audience priorities, test comprehension with nontechnical readers,
+then decide whether this view becomes the main entry and extend the design.
+
 ## Frontend preview — 2026-10-24
 
 The validated baseline `533b527` has been pushed to main. Its GitHub Actions

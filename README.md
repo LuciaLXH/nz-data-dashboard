@@ -7,6 +7,12 @@
 
 [**Live site →**](https://lucialxh.github.io/nz-data-dashboard/) · [The SQL →](sql/) · [Analysis →](ANALYSIS.md)
 
+**Public reading preview (this branch):** [中文](site/public.html?lang=zh) · [English](site/public.html?lang=en).
+After starting the local server, open `http://localhost:8000/public.html?lang=zh`.
+The public view uses the same metrics; the detailed explorer remains in English.
+[Audience and content decisions](docs/AUDIENCE.zh-CN.md).
+
+
 > **Local revision: water, population and seasonal-flow schema v2 implemented.** Identity conflicts
 > are quarantined, supply/person uses matched records, and loss rates use total
 > loss divided by total supply within the same reporting boundary. Coverage and
