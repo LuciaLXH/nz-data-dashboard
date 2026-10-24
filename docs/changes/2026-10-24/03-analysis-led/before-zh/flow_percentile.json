@@ -1,0 +1,972 @@
+{
+ "schema_version": 2,
+ "sql": "sql/03_flow_percentile.sql",
+ "processed_utc": "2026-10-22T21:13:03.921268+00:00",
+ "input_mode": "snapshot",
+ "rows": [
+  {
+   "council": "hbrc",
+   "site": "Mohaka River at Raupunga",
+   "latest_date": "2026-08-30",
+   "units": "m3/s",
+   "n_history": 67,
+   "n_below_latest": 16,
+   "history_first_date": "2021-08-31",
+   "history_last_date": "2025-09-06",
+   "median_hist_m3s": 63.8035,
+   "min_hist_m3s": 28.0122,
+   "max_hist_m3s": 193.1958,
+   "latest_flow_m3s": 42.5226,
+   "n_history_seasons": 5,
+   "n_history_years": 5,
+   "n_qualified_years": 4,
+   "history_year_start": 2021,
+   "history_year_end": 2025,
+   "expected_history_days": 75,
+   "history_coverage_pct": 89.33333333333333,
+   "history_years": [
+    {
+     "season_year": 2021,
+     "observed_days": 7,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2022,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2023,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2024,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2025,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 23.880597014925375,
+   "stale_days": 53,
+   "band": "low",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "hbrc",
+   "site": "Ngaruroro River at Fernhill",
+   "latest_date": "2026-08-30",
+   "units": "m3/s",
+   "n_history": 67,
+   "n_below_latest": 7,
+   "history_first_date": "2021-08-31",
+   "history_last_date": "2025-09-06",
+   "median_hist_m3s": 30.3196,
+   "min_hist_m3s": 18.586,
+   "max_hist_m3s": 119.2218,
+   "latest_flow_m3s": 20.571,
+   "n_history_seasons": 5,
+   "n_history_years": 5,
+   "n_qualified_years": 4,
+   "history_year_start": 2021,
+   "history_year_end": 2025,
+   "expected_history_days": 75,
+   "history_coverage_pct": 89.33333333333333,
+   "history_years": [
+    {
+     "season_year": 2021,
+     "observed_days": 7,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2022,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2023,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2024,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2025,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 10.447761194029852,
+   "stale_days": 53,
+   "band": "low",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "hbrc",
+   "site": "Tukituki River at Red Bridge",
+   "latest_date": "2026-08-30",
+   "units": "m3/s",
+   "n_history": 67,
+   "n_below_latest": 30,
+   "history_first_date": "2021-08-31",
+   "history_last_date": "2025-09-06",
+   "median_hist_m3s": 30.6201,
+   "min_hist_m3s": 16.3646,
+   "max_hist_m3s": 214.0543,
+   "latest_flow_m3s": 28.1314,
+   "n_history_seasons": 5,
+   "n_history_years": 5,
+   "n_qualified_years": 4,
+   "history_year_start": 2021,
+   "history_year_end": 2025,
+   "expected_history_days": 75,
+   "history_coverage_pct": 89.33333333333333,
+   "history_years": [
+    {
+     "season_year": 2021,
+     "observed_days": 7,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2022,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2023,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2024,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2025,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 44.776119402985074,
+   "stale_days": 53,
+   "band": "normal",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "3 OClock Stream at Lambhill",
+   "latest_date": "2021-01-09",
+   "units": "cumecs (m3/s)",
+   "n_history": 127,
+   "n_below_latest": 127,
+   "history_first_date": "2011-01-10",
+   "history_last_date": "2020-01-16",
+   "median_hist_m3s": 0.2872,
+   "min_hist_m3s": 0.057,
+   "max_hist_m3s": 2.2406,
+   "latest_flow_m3s": 2.8521,
+   "n_history_seasons": 10,
+   "n_history_years": 10,
+   "n_qualified_years": 7,
+   "history_year_start": 2011,
+   "history_year_end": 2020,
+   "expected_history_days": 150,
+   "history_coverage_pct": 84.66666666666667,
+   "history_years": [
+    {
+     "season_year": 2011,
+     "observed_days": 7,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2012,
+     "observed_days": 7,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2013,
+     "observed_days": 8,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2014,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2015,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2016,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2017,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2020,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 100.0,
+   "stale_days": 2112,
+   "band": "high",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "Amisfield Burn at Top Take u/s",
+   "latest_date": "2020-12-01",
+   "units": "cumecs (m3/s)",
+   "n_history": 105,
+   "n_below_latest": 0,
+   "history_first_date": "2013-11-24",
+   "history_last_date": "2019-12-08",
+   "median_hist_m3s": 0.2225,
+   "min_hist_m3s": 0.1075,
+   "max_hist_m3s": 0.6193,
+   "latest_flow_m3s": 0.1048,
+   "n_history_seasons": 7,
+   "n_history_years": 7,
+   "n_qualified_years": 7,
+   "history_year_start": 2013,
+   "history_year_end": 2019,
+   "expected_history_days": 105,
+   "history_coverage_pct": 100.0,
+   "history_years": [
+    {
+     "season_year": 2013,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2014,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2015,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2016,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2017,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 0.0,
+   "stale_days": 2151,
+   "band": "low",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "Arrow at Cornwall street d/s",
+   "latest_date": "2021-04-23",
+   "units": "cumecs (m3/s)",
+   "n_history": 138,
+   "n_below_latest": 38,
+   "history_first_date": "2011-04-16",
+   "history_last_date": "2020-04-30",
+   "median_hist_m3s": 1.7327,
+   "min_hist_m3s": 0.8547,
+   "max_hist_m3s": 18.7536,
+   "latest_flow_m3s": 1.4559,
+   "n_history_seasons": 10,
+   "n_history_years": 10,
+   "n_qualified_years": 9,
+   "history_year_start": 2011,
+   "history_year_end": 2020,
+   "expected_history_days": 150,
+   "history_coverage_pct": 92.0,
+   "history_years": [
+    {
+     "season_year": 2011,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2012,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2013,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2014,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2015,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2016,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2017,
+     "observed_days": 3,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2020,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 27.536231884057973,
+   "stale_days": 2008,
+   "band": "normal",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+   "latest_date": "2021-02-01",
+   "units": "cumecs (m3/s)",
+   "n_history": 59,
+   "n_below_latest": 47,
+   "history_first_date": "2017-01-25",
+   "history_last_date": "2020-02-08",
+   "median_hist_m3s": 0.1999,
+   "min_hist_m3s": 0.0,
+   "max_hist_m3s": 2.155,
+   "latest_flow_m3s": 0.3798,
+   "n_history_seasons": 4,
+   "n_history_years": 4,
+   "n_qualified_years": 4,
+   "history_year_start": 2017,
+   "history_year_end": 2020,
+   "expected_history_days": 60,
+   "history_coverage_pct": 98.33333333333333,
+   "history_years": [
+    {
+     "season_year": 2017,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 14,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2020,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 79.66101694915254,
+   "stale_days": 2089,
+   "band": "high",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "Benger burn at Booths",
+   "latest_date": "2021-02-02",
+   "units": "cumecs (m3/s)",
+   "n_history": 135,
+   "n_below_latest": 112,
+   "history_first_date": "2012-01-26",
+   "history_last_date": "2020-02-09",
+   "median_hist_m3s": 0.1511,
+   "min_hist_m3s": 0.0409,
+   "max_hist_m3s": 12.4486,
+   "latest_flow_m3s": 0.3154,
+   "n_history_seasons": 9,
+   "n_history_years": 9,
+   "n_qualified_years": 9,
+   "history_year_start": 2012,
+   "history_year_end": 2020,
+   "expected_history_days": 135,
+   "history_coverage_pct": 100.0,
+   "history_years": [
+    {
+     "season_year": 2012,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2013,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2014,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2015,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2016,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2017,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2020,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 82.96296296296296,
+   "stale_days": 2088,
+   "band": "high",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "Benger burn at SH8",
+   "latest_date": "2021-02-02",
+   "units": "cumecs (m3/s)",
+   "n_history": 60,
+   "n_below_latest": 52,
+   "history_first_date": "2012-01-26",
+   "history_last_date": "2018-02-09",
+   "median_hist_m3s": 0.07555,
+   "min_hist_m3s": 0.0,
+   "max_hist_m3s": 17.0161,
+   "latest_flow_m3s": 0.6182,
+   "n_history_seasons": 9,
+   "n_history_years": 4,
+   "n_qualified_years": 4,
+   "history_year_start": 2012,
+   "history_year_end": 2020,
+   "expected_history_days": 135,
+   "history_coverage_pct": 44.44444444444444,
+   "history_years": [
+    {
+     "season_year": 2012,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2013,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2014,
+     "observed_days": 0,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2015,
+     "observed_days": 0,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2016,
+     "observed_days": 0,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2017,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 0,
+     "expected_days": 15,
+     "qualifies": false
+    },
+    {
+     "season_year": 2020,
+     "observed_days": 0,
+     "expected_days": 15,
+     "qualifies": false
+    }
+   ],
+   "pctile_pct": 86.66666666666667,
+   "stale_days": 2088,
+   "band": "high",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "Boundary Creek at Top Race u/s",
+   "latest_date": "2021-01-13",
+   "units": "cumecs (m3/s)",
+   "n_history": 75,
+   "n_below_latest": 49,
+   "history_first_date": "2016-01-06",
+   "history_last_date": "2020-01-20",
+   "median_hist_m3s": 0.0742,
+   "min_hist_m3s": 0.0307,
+   "max_hist_m3s": 0.2186,
+   "latest_flow_m3s": 0.1053,
+   "n_history_seasons": 5,
+   "n_history_years": 5,
+   "n_qualified_years": 5,
+   "history_year_start": 2016,
+   "history_year_end": 2020,
+   "expected_history_days": 75,
+   "history_coverage_pct": 100.0,
+   "history_years": [
+    {
+     "season_year": 2016,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2017,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2020,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 65.33333333333333,
+   "stale_days": 2108,
+   "band": "normal",
+   "history_status": "sufficient"
+  },
+  {
+   "council": "orc",
+   "site": "Branch Burn at Cardrona Valley",
+   "latest_date": "2020-12-10",
+   "units": "cumecs (m3/s)",
+   "n_history": 75,
+   "n_below_latest": 26,
+   "history_first_date": "2015-12-03",
+   "history_last_date": "2019-12-17",
+   "median_hist_m3s": 0.5661,
+   "min_hist_m3s": 0.285,
+   "max_hist_m3s": 7.6639,
+   "latest_flow_m3s": 0.4546,
+   "n_history_seasons": 5,
+   "n_history_years": 5,
+   "n_qualified_years": 5,
+   "history_year_start": 2015,
+   "history_year_end": 2019,
+   "expected_history_days": 75,
+   "history_coverage_pct": 100.0,
+   "history_years": [
+    {
+     "season_year": 2015,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2016,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2017,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2018,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    },
+    {
+     "season_year": 2019,
+     "observed_days": 15,
+     "expected_days": 15,
+     "qualifies": true
+    }
+   ],
+   "pctile_pct": 34.666666666666664,
+   "stale_days": 2142,
+   "band": "normal",
+   "history_status": "sufficient"
+  }
+ ],
+ "quality": {
+  "excluded_observations": [
+   {
+    "council": "orc",
+    "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+    "date": "2018-01-04",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+    "date": "2018-01-12",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Bannock Burn at Cairnmuir Road 100m upstream",
+    "date": "2018-01-13",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-20",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-23",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-24",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-25",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-11-26",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-02",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-03",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-04",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-05",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-06",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-07",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-08",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-09",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-10",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-13",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-14",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-15",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-16",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-17",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-18",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-19",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-20",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-21",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-22",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-23",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-24",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-25",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-28",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-29",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-30",
+    "reason": "non-numeric, non-finite or negative flow"
+   },
+   {
+    "council": "orc",
+    "site": "Benger burn at Booths",
+    "date": "2020-12-31",
+    "reason": "non-numeric, non-finite or negative flow"
+   }
+  ],
+  "usable_observations": 25499,
+  "policy": "Raw observations retained; invalid values excluded from percentile analysis, never replaced with zero."
+ },
+ "policy": {
+  "calculation_version": "seasonal-history-v2",
+  "window_radius_days": 7,
+  "min_history_years": 3,
+  "min_days_per_year": 10,
+  "leap_day_rule": "February 29 anchors to February 28 in non-leap years",
+  "current_season": "excluded; only windows ending before the latest observation",
+  "weighting": "pooled daily observations across all eligible prior seasonal windows"
+ },
+ "council_snapshot_fetched_utc": {
+  "hbrc": "2026-08-30T07:33:56.864804+00:00",
+  "orc": "2026-08-30T07:37:10.716444+00:00"
+ }
+}

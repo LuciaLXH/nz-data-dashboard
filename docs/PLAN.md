@@ -47,6 +47,11 @@ See [audience decisions and evaluation plan](AUDIENCE.zh-CN.md) and
 [paired evidence](changes/2026-10-24/02-public-bilingual/README.md).
 Do not describe 2024–2026 as uninterrupted strengthening of El Niño. Climate
 context does not establish causation for the dashboard’s supply/flow records.
+Following author feedback, the public preview now leads with population/supply
+contrasts and boundary-specific loss-versus-coverage comparisons. Linked plots
+retain the audited values; background and detailed river tables are expandable.
+See [the analysis-led revision](changes/2026-10-24/03-analysis-led/README.md).
+Its purpose is interpreting public water data, not providing live household alerts.
 Next: confirm audience priorities, test comprehension with nontechnical readers,
 then decide whether this view becomes the main entry and extend the design.
 
