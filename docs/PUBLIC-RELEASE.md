@@ -4,6 +4,10 @@ The author asked to restore the public website to the version shown in their
 portfolio while the new design and research remain in development. The URL stays
 `https://lucialxh.github.io/nz-data-dashboard/`.
 
+Deployment `1d187fb` succeeded in [run 40237354178](https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/40237354178).
+Direct live verification matched all served datasets and primary assets to the
+prepared snapshot; desktop/mobile screenshots are in the linked evidence record.
+
 ## What is being published
 
 The public payload is the last successful schema-v1 artifact before the audited

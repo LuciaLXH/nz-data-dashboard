@@ -1,0 +1,114 @@
+{
+  "verified_utc": "2026-10-25T21:51:26.537886+00:00",
+  "url": "https://lucialxh.github.io/nz-data-dashboard/",
+  "deployment_commit": "1d187fb694e6c902c984bc7ff680bd1a24e04e8c",
+  "deployment_run": "https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/40237354178",
+  "offline_check_run": "https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/40237354193",
+  "release": {
+    "source_commit": "19669bc653bb007a64958b88f683f55beb40407d",
+    "original_run_id": 40053730463,
+    "original_run_url": "https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/40053730463",
+    "artifact_id": 12544971255,
+    "artifact_name": "github-pages-40053730463-1",
+    "original_artifact_tar_sha256": "2ad7ac3cc8f7b8fe1a2373c100ed5375544d2271d52ff830c2b5805efdd1bca6",
+    "archive": "releases/legacy-19669bc/site.tar.gz",
+    "archive_sha256": "a98343de198814758ae1b355070afe52bce8de0faf33acae8800daab946c9476",
+    "original_assets_sha256": {
+      "index.html": "80c5a8de85de6bfd3884f5ec91b18a1b8f45d656eb984c2b3bee086b84298e5d",
+      "app.js": "2f4c7070ced435121cd952cf9a670014bfbda9289af3b135b116100a9b1b8705",
+      "style.css": "54de19b2ae407c207d33ab6628b126de4baeedfd4ffd60b62897000ac5ddbe44"
+    },
+    "flow_processed_utc": "2026-10-24T02:28:00.023056+00:00",
+    "frozen": true,
+    "mode": "legacy_snapshot",
+    "presentation_change": "Added historical-demo context; original datasets unchanged"
+  },
+  "checks": [
+    {
+      "path": "index.html",
+      "sha256": "16326ce4d9e19c53293a3ee5f7d5628f8603a25408987b2610e1857d74322c9f",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "app.js",
+      "sha256": "2f4c7070ced435121cd952cf9a670014bfbda9289af3b135b116100a9b1b8705",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "style.css",
+      "sha256": "54de19b2ae407c207d33ab6628b126de4baeedfd4ffd60b62897000ac5ddbe44",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "release.json",
+      "sha256": "0dd82a8d83117a04949969085ffb28184ef9c2b619aa4d2540e6b6551d9cb9b8",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/_runs.jsonl",
+      "sha256": "d4b610351bc6239f3e3cb1e9f142d04397287c4b3c089701fa06465dfeac62ba",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/boundaries.geojson",
+      "sha256": "eab02d27e27aa69b1c0bccaa65a547680273dc8649341afe1d362e700ef75ef7",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/flow_percentile.json",
+      "sha256": "3f57f9345f6985ef3bb60182f9093aae9eebedcbf4a4f19616502e1e62303a5b",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/flow_sites.json",
+      "sha256": "b061efe371e61f18508c5a7a8e48c482b3e574ba2697405ffcde9d7f1aff0925",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/population_growth.json",
+      "sha256": "152903e497e86f7ec02b06bb94bd92553ee75335126638160167506436cc2701",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/regions.json",
+      "sha256": "aafb1ab739d6788f535d46ad805ce07b7ff05f6ebdb20d61039edbdacdf047cd",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/supply_per_capita.json",
+      "sha256": "7e13c7cfad6f3653e48fecdf4dca02c584b142f885c036360cf9db48b7a54bdc",
+      "matches_prepared_release": true
+    },
+    {
+      "path": "data/water_consents.json",
+      "sha256": "141cf737be93bd80cd97a31fa1391028ea8536259e080b0d4133a06826b220df",
+      "matches_prepared_release": true
+    }
+  ],
+  "views": [
+    {
+      "viewport": [
+        1440,
+        1000
+      ],
+      "home": "desktop-home.png",
+      "charts": "desktop-charts.png"
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "home": "mobile-home.png",
+      "charts": "mobile-charts.png"
+    }
+  ],
+  "browser": "151.0.7922.34",
+  "page_errors": [],
+  "screenshots_sha256": {
+    "mobile-charts.png": "6de774e02bbce820f1f445d0c9d8c8658705bed9a25317f1d5df9793badd07e0",
+    "desktop-charts.png": "2c94c6b3d86d29ae8cfa2449b7bbab0f2a2d0a2ede386d082e7b8e314ac00291",
+    "desktop-home.png": "b6d94163def61c46dae722fab46160cce36e4083e7d54eb58fd9e1b571f09b0f",
+    "mobile-home.png": "b6ed98cbce7a7af6a0a23c1fdb36291374bd07844a7d694dce03b78b50ff5807"
+  }
+}

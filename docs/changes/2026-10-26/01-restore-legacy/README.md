@@ -9,6 +9,10 @@
 |---|---|---|
 | 修改前：当前线上 schema v2 | [截图](before-charts/desktop.png) | [截图](before-charts/mobile.png) |
 | 修改后：本地验证的历史发布快照 schema v1 | [截图](after-local-charts/desktop.png) | [截图](after-local-charts/mobile.png) |
+| 发布后：直接打开原网址验证 | [线上截图](after-live/desktop-charts.png) | [线上截图](after-live/mobile-charts.png) |
+
+首页也保留了[修改前](before-home/desktop.png)、[本地修改后](after-local-home/desktop.png)与
+[线上发布后](after-live/desktop-home.png)的完整画面，包括新增的历史演示说明；各目录均有手机版。
 
 修改前来自线上成功发布 run `40229179362` 的完整成品。
 `before-live-verification.json` 记录当时直接访问线上页面、脚本、样式及供水/河流数据所得的校验值，
@@ -35,3 +39,8 @@
 本地旧版成品的全部数据与归档逐字节一致；发布工具核对压缩包及主要资源的 SHA-256，
 检查 schema v1 配套，拒绝覆盖输出目录及不安全归档路径。
 离线构建和完整测试结果、浏览器检查及上线验证见同目录的验证记录；上线前本地截图不冒充线上结果。
+
+发布提交 `1d187fb` 已通过[部署](https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/40237354178)
+和[离线 CI](https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/40237354193)。
+直接访问原网址确认 schema v1、历史说明及两柱一折线图；全部发布数据和主要资源哈希与本地待发布成品一致。
+线上验证时间、数据校验与截图哈希见 [after-live/manifest.json](after-live/manifest.json)。
