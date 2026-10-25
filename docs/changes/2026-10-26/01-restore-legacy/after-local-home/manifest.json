@@ -1,0 +1,67 @@
+{
+  "captured_utc": "2026-10-25T21:48:08.212914+00:00",
+  "section": "findings",
+  "page_path": "index.html",
+  "selector": "body",
+  "input_mode": null,
+  "processed_utc": "2026-10-24T02:28:00.023056+00:00",
+  "flow_schema_version": 1,
+  "git_head": "1c08f5b2389183cc897e3a6e6b5b22a02eac5a2d",
+  "working_tree": "uncommitted work included; hashes, not HEAD alone, identify this state",
+  "source_code_sha256": {
+    "sql/03_flow_percentile.sql": "b20919db84b1915e11222a7c7edec2e46d8528668ff4becf250f8b7ba8d9ef15",
+    "scripts/transform.py": "d2e41bd49982f28de59564226e62b4fcfaf59f8971242f8d6c3ac12324320815",
+    "schemas/flow_percentile.schema.json": "662f438414f5088538c114d5624146a4f43d464dee624e3f28a59acbb2c7fe2b",
+    "site/app.js": "68bb6b0744f3aaffc8033032e4399334ce3e1dbcb204fb69aaa75cb4c060ecc2",
+    "site/index.html": "de9c80f3238cc292059273ecb9f3027152f51f7d8e002e33f47c0b238c76141c",
+    "site/style.css": "aad85826a9d7b0af6cc8c6bb63f3ba7f2cd4f4f5f70297f546c7e914f8c4ea72",
+    "scripts/flow_policy.py": "0fc95530761dada2de81c947cb4573ac336adf577ae57cd2cbda068e103cbf33",
+    "scripts/validate_flow.py": "94f0af74ee1027254b65eae6f7b15c4091d8a1ef139944a42593707d73a3f9ed"
+  },
+  "served_asset_sha256": {
+    "app.js": "2f4c7070ced435121cd952cf9a670014bfbda9289af3b135b116100a9b1b8705",
+    "index.html": "16326ce4d9e19c53293a3ee5f7d5628f8603a25408987b2610e1857d74322c9f",
+    "style.css": "54de19b2ae407c207d33ab6628b126de4baeedfd4ffd60b62897000ac5ddbe44"
+  },
+  "served_data_sha256": {
+    "_runs.jsonl": "d4b610351bc6239f3e3cb1e9f142d04397287c4b3c089701fa06465dfeac62ba",
+    "boundaries.geojson": "eab02d27e27aa69b1c0bccaa65a547680273dc8649341afe1d362e700ef75ef7",
+    "flow_percentile.json": "3f57f9345f6985ef3bb60182f9093aae9eebedcbf4a4f19616502e1e62303a5b",
+    "flow_sites.json": "b061efe371e61f18508c5a7a8e48c482b3e574ba2697405ffcde9d7f1aff0925",
+    "population_growth.json": "152903e497e86f7ec02b06bb94bd92553ee75335126638160167506436cc2701",
+    "regions.json": "aafb1ab739d6788f535d46ad805ce07b7ff05f6ebdb20d61039edbdacdf047cd",
+    "supply_per_capita.json": "7e13c7cfad6f3653e48fecdf4dca02c584b142f885c036360cf9db48b7a54bdc",
+    "water_consents.json": "141cf737be93bd80cd97a31fa1391028ea8536259e080b0d4133a06826b220df"
+  },
+  "browser": {
+    "name": "Chromium",
+    "version": "151.0.7922.34",
+    "timezone": "Pacific/Auckland",
+    "locale": "en-NZ"
+  },
+  "views": [
+    {
+      "name": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "device_scale_factor": 1,
+      "screenshot": "desktop.png"
+    },
+    {
+      "name": "mobile",
+      "width": 390,
+      "height": 844,
+      "device_scale_factor": 1,
+      "screenshot": "mobile.png"
+    }
+  ],
+  "errors": [],
+  "evidence_sha256": {
+    "supply_per_capita.json": "7e13c7cfad6f3653e48fecdf4dca02c584b142f885c036360cf9db48b7a54bdc",
+    "desktop.png": "e8b52fe1ddf032e066922486a17b7faee4648eedb3386c1718696a3e3c822a30",
+    "population_growth.json": "152903e497e86f7ec02b06bb94bd92553ee75335126638160167506436cc2701",
+    "regions.json": "aafb1ab739d6788f535d46ad805ce07b7ff05f6ebdb20d61039edbdacdf047cd",
+    "mobile.png": "b6ed98cbce7a7af6a0a23c1fdb36291374bd07844a7d694dce03b78b50ff5807",
+    "flow_percentile.json": "3f57f9345f6985ef3bb60182f9093aae9eebedcbf4a4f19616502e1e62303a5b"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "run_id": 40229179362,
+  "source_commit": "533b527c34b8f1eaae66dcbaaa6e3dcdc2dbbc30",
+  "checks": [
+    {
+      "file": "index.html",
+      "live_sha256": "436c1e5ba4652e78b0aed6afa888da585c984857c5d89b99583900357dcf79db",
+      "artifact_sha256": "436c1e5ba4652e78b0aed6afa888da585c984857c5d89b99583900357dcf79db",
+      "match": true
+    },
+    {
+      "file": "app.js",
+      "live_sha256": "54c5ee43c95c1be9e5ec2e68cfea5470fa61dd48551b407d5fc71c69ab8110ea",
+      "artifact_sha256": "54c5ee43c95c1be9e5ec2e68cfea5470fa61dd48551b407d5fc71c69ab8110ea",
+      "match": true
+    },
+    {
+      "file": "style.css",
+      "live_sha256": "307f577473ae65b835692c21fd54e9cb97e9ad79037364ed24c29ca368d41ac1",
+      "artifact_sha256": "307f577473ae65b835692c21fd54e9cb97e9ad79037364ed24c29ca368d41ac1",
+      "match": true
+    },
+    {
+      "file": "data/supply_per_capita.json",
+      "live_sha256": "90444992ad0f06a9753c58c04a4a97d6bfa70ca7ff8cd1a5489b8f4686f41553",
+      "artifact_sha256": "90444992ad0f06a9753c58c04a4a97d6bfa70ca7ff8cd1a5489b8f4686f41553",
+      "match": true
+    },
+    {
+      "file": "data/flow_percentile.json",
+      "live_sha256": "7f6857d076bcb281389e86c533b36f457e03f4d4ccd479cf632e7e2b39c0cad8",
+      "artifact_sha256": "7f6857d076bcb281389e86c533b36f457e03f4d4ccd479cf632e7e2b39c0cad8",
+      "match": true
+    }
+  ]
+}

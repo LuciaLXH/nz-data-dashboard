@@ -1,0 +1,91 @@
+{
+ "schema_version": 1,
+ "sql": "sql/02_supply_per_capita.sql",
+ "processed_utc": "2026-10-24T02:28:00.023056+00:00",
+ "rows": [
+  {
+   "region": "canterbury",
+   "pop_2025": 698200,
+   "pop_served": 611378.0,
+   "coverage_pct": 87.6,
+   "l_per_person_day_w": 438.9,
+   "loss_pct_w": 28.3,
+   "carl_l_conn_day_w": 375.0,
+   "ili_w": 4.15,
+   "daily_demand_m3": 306470.0,
+   "leak_m3_day": 86832.0,
+   "cagr5_pct": 1.57,
+   "proj_demand_m3_day": 331285.0
+  },
+  {
+   "region": "waikato",
+   "pop_2025": 532100,
+   "pop_served": 433985.0,
+   "coverage_pct": 81.6,
+   "l_per_person_day_w": 441.4,
+   "loss_pct_w": 18.5,
+   "carl_l_conn_day_w": 243.1,
+   "ili_w": 3.1,
+   "daily_demand_m3": 234846.0,
+   "leak_m3_day": 43543.0,
+   "cagr5_pct": 1.39,
+   "proj_demand_m3_day": 251685.0
+  },
+  {
+   "region": "auckland",
+   "pop_2025": 1816000,
+   "pop_served": 1744743.0,
+   "coverage_pct": 96.1,
+   "l_per_person_day_w": 269.7,
+   "loss_pct_w": 19.6,
+   "carl_l_conn_day_w": 184.2,
+   "ili_w": 2.26,
+   "daily_demand_m3": 489839.0,
+   "leak_m3_day": 96215.0,
+   "cagr5_pct": 1.19,
+   "proj_demand_m3_day": 519595.0
+  },
+  {
+   "region": "otago",
+   "pop_2025": 253900,
+   "pop_served": 243903.0,
+   "coverage_pct": 96.1,
+   "l_per_person_day_w": 510.9,
+   "loss_pct_w": 27.0,
+   "carl_l_conn_day_w": 364.6,
+   "ili_w": 3.18,
+   "daily_demand_m3": 129720.0,
+   "leak_m3_day": 35037.0,
+   "cagr5_pct": 0.8,
+   "proj_demand_m3_day": 134983.0
+  },
+  {
+   "region": "southland",
+   "pop_2025": 104800,
+   "pop_served": 71431.0,
+   "coverage_pct": 68.2,
+   "l_per_person_day_w": 536.2,
+   "loss_pct_w": 18.3,
+   "carl_l_conn_day_w": 478.4,
+   "ili_w": 7.25,
+   "daily_demand_m3": 56198.0,
+   "leak_m3_day": 10308.0,
+   "cagr5_pct": 0.5,
+   "proj_demand_m3_day": 57628.0
+  },
+  {
+   "region": "hawkes_bay",
+   "pop_2025": 179700,
+   "pop_served": 143638.0,
+   "coverage_pct": 79.9,
+   "l_per_person_day_w": 609.7,
+   "loss_pct_w": 24.4,
+   "carl_l_conn_day_w": 348.0,
+   "ili_w": 4.96,
+   "daily_demand_m3": 109562.0,
+   "leak_m3_day": 26736.0,
+   "cagr5_pct": 0.22,
+   "proj_demand_m3_day": 110795.0
+  }
+ ]
+}

@@ -1,5 +1,11 @@
 # NZ Water × Population
 
+> **Temporary public demo, 26 October 2026:** the live URL displays a frozen
+> historical release matching the portfolio screenshots while the revised design
+> is developed. Its earlier estimates are under review. Current audited code stays
+> in this repository; the bilingual/climate work stays on `frontend/overview-preview`.
+> [Publication status and how to resume](docs/PUBLIC-RELEASE.md).
+
 [![pipeline](https://github.com/LuciaLXH/nz-data-dashboard/actions/workflows/refresh.yml/badge.svg)](https://github.com/LuciaLXH/nz-data-dashboard/actions)
 [![data: CC BY 4.0](https://img.shields.io/badge/data-CC%20BY%204.0-1c6b67)](#data-sources--licences)
 
@@ -59,7 +65,9 @@ LAWA snapshot ────┘                                                   
 
 - `data/processed/` is the **single source of truth** for the front end:
   versioned JSON + JSON Schema + a UTC timestamp per source.
-- The pipeline runs every six hours. Source release/observation dates differ
+- In normal publication mode, the pipeline runs every six hours. During the temporary
+  historical-demo period, scheduled runs republish the frozen snapshot without fetching new data.
+  Source release/observation dates differ
   from refresh time; source-specific fetching and freshness rules remain pending.
 - The site's **Data Health** panel reads `_runs.jsonl`: last successful run,
   row counts, null rates, schema version, last 20 runs.

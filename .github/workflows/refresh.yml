@@ -2,14 +2,19 @@ name: refresh
 
 on:
   schedule:
-    # Cron times are UTC. make data currently fetches both flow and population
-    # on every trigger; NEPR/LAWA reference snapshots are updated manually.
+    # Cron times are UTC. In legacy_snapshot mode these only republish the
+    # frozen demo; current mode fetches flow/population before publication.
     - cron: "0 */6 * * *"     # flow / level
     - cron: "0 3 1 * *"       # additional monthly run (1st of month)
   workflow_dispatch:
   push:
     branches: [main]
-    paths: ["site/**", "scripts/**", "sql/**", "schemas/**", "tests/**", "data/ref/**", "data/raw/taumata_nepr/**", "requirements.txt", "Makefile", ".github/workflows/**"]
+    paths: ["site/**", "scripts/**", "sql/**", "schemas/**", "tests/**", "data/ref/**", "data/raw/taumata_nepr/**", "releases/**", "requirements.txt", "Makefile", ".github/workflows/**"]
+
+# Temporary public demo matching the portfolio screenshots. Set to "current"
+# when the revised site is ready; see docs/PUBLIC-RELEASE.md.
+env:
+  PUBLIC_SITE_MODE: legacy_snapshot
 
 # deploy-pages needs write permissions on pages + a short-lived id token.
 # actions: write lets actions/cache persist data/raw/flow between runs so a
@@ -38,7 +43,8 @@ jobs:
       # is unreachable this run, fetch_hilltop records it in _status.json and
       # the pipeline serves the cached snapshot (stale, not blank — see
       # scripts/fetch_hilltop.py). Unique key per run + prefix fallback: save
-      # always creates a fresh entry, restore picks the newest one.
+      # always creates a fresh entry, restore picks the newest one. Also restore
+      # in snapshot mode to keep the recovery cache accessed during the pause.
       - uses: actions/cache/restore@v4
         id: snapshots
         with:
@@ -63,27 +69,33 @@ jobs:
         with:
           python-version: "3.12"
       - run: pip install -r requirements.txt
+        if: env.PUBLIC_SITE_MODE == 'current'
       - name: Fetch, transform, validate
+        if: env.PUBLIC_SITE_MODE == 'current'
         run: make data
         env:
           STATS_NZ_API_KEY: ${{ secrets.STATS_NZ_API_KEY }}
       - name: Run tests (schema, units, regions, DST, missing values, percentile)
+        if: env.PUBLIC_SITE_MODE == 'current'
         run: make test
         env:
           DASHBOARD_PROCESSED_DIR: data/processed
       - name: Build static site (copies data/processed + data/ref → site/data)
+        if: env.PUBLIC_SITE_MODE == 'current'
         run: make site-data
       # Persist this run's raw snapshots (fresh where fetch succeeded, the
       # restored ones where it degraded) for the next run's fallback.
       - uses: actions/cache/save@v4
         # Save only validated snapshots, and preserve validation history.
-        if: success()
+        if: success() && env.PUBLIC_SITE_MODE == 'current'
         with:
           path: |
             data/raw/flow
             data/raw/population
             data/processed/_runs.jsonl
           key: pipeline-v3-${{ github.run_id }}-${{ github.run_attempt }}
+      - name: Prepare selected public release
+        run: python scripts/prepare_public_release.py --mode "$PUBLIC_SITE_MODE" --output .tmp/public-site
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Choose artifact name
@@ -93,7 +105,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           name: ${{ steps.artifact-name.outputs.name }}
-          path: site
+          path: .tmp/public-site
           retention-days: 7
 
   # A transient Pages API error can now be recovered with "Re-run failed

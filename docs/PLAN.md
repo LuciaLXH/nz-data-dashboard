@@ -3,6 +3,15 @@
 Updated: 2026-10-23. This roadmap separates delivered functionality from
 remaining analytical and engineering work.
 
+## Temporary public presentation — 2026-10-26
+
+The author requested the portfolio-matching legacy demo while the new page is
+unfinished. Publication is temporarily pinned to the 24 October schema-v1 artifact
+from `19669bc`; the audited pipeline remains here and the later bilingual/climate
+work remains on `frontend/overview-preview` at `1c08f5b`.
+This does not reverse the audit's findings. See [publication controls](PUBLIC-RELEASE.md)
+and [paired evidence](changes/2026-10-26/01-restore-legacy/README.md).
+
 ## Project motivation
 
 I started this project because of concerns about drought and water availability

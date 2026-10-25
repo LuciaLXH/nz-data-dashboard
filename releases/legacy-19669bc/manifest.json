@@ -1,0 +1,17 @@
+{
+  "source_commit": "19669bc653bb007a64958b88f683f55beb40407d",
+  "original_run_id": 40053730463,
+  "original_run_url": "https://github.com/LuciaLXH/nz-data-dashboard/actions/runs/40053730463",
+  "artifact_id": 12544971255,
+  "artifact_name": "github-pages-40053730463-1",
+  "original_artifact_tar_sha256": "2ad7ac3cc8f7b8fe1a2373c100ed5375544d2271d52ff830c2b5805efdd1bca6",
+  "archive": "releases/legacy-19669bc/site.tar.gz",
+  "archive_sha256": "a98343de198814758ae1b355070afe52bce8de0faf33acae8800daab946c9476",
+  "original_assets_sha256": {
+    "index.html": "80c5a8de85de6bfd3884f5ec91b18a1b8f45d656eb984c2b3bee086b84298e5d",
+    "app.js": "2f4c7070ced435121cd952cf9a670014bfbda9289af3b135b116100a9b1b8705",
+    "style.css": "54de19b2ae407c207d33ab6628b126de4baeedfd4ffd60b62897000ac5ddbe44"
+  },
+  "flow_processed_utc": "2026-10-24T02:28:00.023056+00:00",
+  "frozen": true
+}

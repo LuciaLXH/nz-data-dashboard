@@ -1,0 +1,92 @@
+{
+  "checked_utc": "2026-10-25T21:49:23.068622+00:00",
+  "views": [
+    {
+      "width": 1440,
+      "section_scroll_widths": {
+        "original": {
+          "findings": 1440,
+          "map-section": 1440,
+          "consents-section": 1440,
+          "charts": 1440,
+          "flow-section": 1440,
+          "method": 1440
+        },
+        "restored": {
+          "findings": 1440,
+          "map-section": 1440,
+          "consents-section": 1440,
+          "charts": 1440,
+          "flow-section": 1440,
+          "method": 1440
+        }
+      },
+      "inherited_overflow_sections": [],
+      "sections_checked": 6,
+      "six_region_bar_bar_line": "passed",
+      "new_overflow": false
+    },
+    {
+      "width": 820,
+      "section_scroll_widths": {
+        "original": {
+          "findings": 820,
+          "map-section": 820,
+          "consents-section": 821,
+          "charts": 820,
+          "flow-section": 820,
+          "method": 820
+        },
+        "restored": {
+          "findings": 820,
+          "map-section": 820,
+          "consents-section": 821,
+          "charts": 820,
+          "flow-section": 820,
+          "method": 820
+        }
+      },
+      "inherited_overflow_sections": [
+        "consents-section"
+      ],
+      "sections_checked": 6,
+      "six_region_bar_bar_line": "passed",
+      "new_overflow": false
+    },
+    {
+      "width": 390,
+      "section_scroll_widths": {
+        "original": {
+          "findings": 390,
+          "map-section": 390,
+          "consents-section": 391,
+          "charts": 390,
+          "flow-section": 654,
+          "method": 390
+        },
+        "restored": {
+          "findings": 390,
+          "map-section": 390,
+          "consents-section": 391,
+          "charts": 390,
+          "flow-section": 654,
+          "method": 390
+        }
+      },
+      "inherited_overflow_sections": [
+        "consents-section",
+        "flow-section"
+      ],
+      "sections_checked": 6,
+      "six_region_bar_bar_line": "passed",
+      "new_overflow": false
+    }
+  ],
+  "page_errors": [],
+  "browser": "151.0.7922.34",
+  "status": "passed regression comparison",
+  "offline_build": "passed",
+  "pytest": "67 passed",
+  "data_integrity": "All archived dataset bytes unchanged",
+  "limitation": "Original narrow-layout overflow/label overlap retained; this is a restoration, not a responsive redesign"
+}

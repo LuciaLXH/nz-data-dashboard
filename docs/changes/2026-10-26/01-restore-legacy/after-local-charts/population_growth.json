@@ -1,0 +1,343 @@
+{
+ "schema_version": 1,
+ "sql": "sql/01_region_population_growth.sql",
+ "processed_utc": "2026-10-24T02:28:00.023056+00:00",
+ "rows": [
+  {
+   "region": "auckland",
+   "year": 2019,
+   "pop": 1680500,
+   "yoy_growth_pct": 1.55,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "auckland",
+   "year": 2020,
+   "pop": 1712000,
+   "yoy_growth_pct": 1.87,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "auckland",
+   "year": 2021,
+   "pop": 1704000,
+   "yoy_growth_pct": -0.47,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "auckland",
+   "year": 2022,
+   "pop": 1694400,
+   "yoy_growth_pct": -0.56,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "auckland",
+   "year": 2023,
+   "pop": 1755200,
+   "yoy_growth_pct": 3.59,
+   "cagr5_pct": 1.19,
+   "pop_gain_5yr": 100400
+  },
+  {
+   "region": "auckland",
+   "year": 2024,
+   "pop": 1798300,
+   "yoy_growth_pct": 2.46,
+   "cagr5_pct": 1.36,
+   "pop_gain_5yr": 117800
+  },
+  {
+   "region": "auckland",
+   "year": 2025,
+   "pop": 1816000,
+   "yoy_growth_pct": 0.98,
+   "cagr5_pct": 1.19,
+   "pop_gain_5yr": 104000
+  },
+  {
+   "region": "canterbury",
+   "year": 2019,
+   "pop": 632000,
+   "yoy_growth_pct": 1.48,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "canterbury",
+   "year": 2020,
+   "pop": 645900,
+   "yoy_growth_pct": 2.2,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "canterbury",
+   "year": 2021,
+   "pop": 652600,
+   "yoy_growth_pct": 1.04,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "canterbury",
+   "year": 2022,
+   "pop": 658300,
+   "yoy_growth_pct": 0.87,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "canterbury",
+   "year": 2023,
+   "pop": 676600,
+   "yoy_growth_pct": 2.78,
+   "cagr5_pct": 1.67,
+   "pop_gain_5yr": 53800
+  },
+  {
+   "region": "canterbury",
+   "year": 2024,
+   "pop": 690600,
+   "yoy_growth_pct": 2.07,
+   "cagr5_pct": 1.79,
+   "pop_gain_5yr": 58600
+  },
+  {
+   "region": "canterbury",
+   "year": 2025,
+   "pop": 698200,
+   "yoy_growth_pct": 1.1,
+   "cagr5_pct": 1.57,
+   "pop_gain_5yr": 52300
+  },
+  {
+   "region": "hawkes_bay",
+   "year": 2019,
+   "pop": 173800,
+   "yoy_growth_pct": 0.81,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "hawkes_bay",
+   "year": 2020,
+   "pop": 177700,
+   "yoy_growth_pct": 2.24,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "hawkes_bay",
+   "year": 2021,
+   "pop": 178500,
+   "yoy_growth_pct": 0.45,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "hawkes_bay",
+   "year": 2022,
+   "pop": 177700,
+   "yoy_growth_pct": -0.45,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "hawkes_bay",
+   "year": 2023,
+   "pop": 179000,
+   "yoy_growth_pct": 0.73,
+   "cagr5_pct": 0.75,
+   "pop_gain_5yr": 6600
+  },
+  {
+   "region": "hawkes_bay",
+   "year": 2024,
+   "pop": 179800,
+   "yoy_growth_pct": 0.45,
+   "cagr5_pct": 0.68,
+   "pop_gain_5yr": 6000
+  },
+  {
+   "region": "hawkes_bay",
+   "year": 2025,
+   "pop": 179700,
+   "yoy_growth_pct": -0.06,
+   "cagr5_pct": 0.22,
+   "pop_gain_5yr": 2000
+  },
+  {
+   "region": "otago",
+   "year": 2019,
+   "pop": 238400,
+   "yoy_growth_pct": 1.45,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "otago",
+   "year": 2020,
+   "pop": 244000,
+   "yoy_growth_pct": 2.35,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "otago",
+   "year": 2021,
+   "pop": 243400,
+   "yoy_growth_pct": -0.25,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "otago",
+   "year": 2022,
+   "pop": 243400,
+   "yoy_growth_pct": 0.0,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "otago",
+   "year": 2023,
+   "pop": 248500,
+   "yoy_growth_pct": 2.1,
+   "cagr5_pct": 1.12,
+   "pop_gain_5yr": 13500
+  },
+  {
+   "region": "otago",
+   "year": 2024,
+   "pop": 252400,
+   "yoy_growth_pct": 1.57,
+   "cagr5_pct": 1.15,
+   "pop_gain_5yr": 14000
+  },
+  {
+   "region": "otago",
+   "year": 2025,
+   "pop": 253900,
+   "yoy_growth_pct": 0.59,
+   "cagr5_pct": 0.8,
+   "pop_gain_5yr": 9900
+  },
+  {
+   "region": "southland",
+   "year": 2019,
+   "pop": 101400,
+   "yoy_growth_pct": 0.9,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "southland",
+   "year": 2020,
+   "pop": 102200,
+   "yoy_growth_pct": 0.79,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "southland",
+   "year": 2021,
+   "pop": 101400,
+   "yoy_growth_pct": -0.78,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "southland",
+   "year": 2022,
+   "pop": 101000,
+   "yoy_growth_pct": -0.39,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "southland",
+   "year": 2023,
+   "pop": 102700,
+   "yoy_growth_pct": 1.68,
+   "cagr5_pct": 0.43,
+   "pop_gain_5yr": 2200
+  },
+  {
+   "region": "southland",
+   "year": 2024,
+   "pop": 104200,
+   "yoy_growth_pct": 1.46,
+   "cagr5_pct": 0.55,
+   "pop_gain_5yr": 2800
+  },
+  {
+   "region": "southland",
+   "year": 2025,
+   "pop": 104800,
+   "yoy_growth_pct": 0.58,
+   "cagr5_pct": 0.5,
+   "pop_gain_5yr": 2600
+  },
+  {
+   "region": "waikato",
+   "year": 2019,
+   "pop": 483900,
+   "yoy_growth_pct": 1.75,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "waikato",
+   "year": 2020,
+   "pop": 496500,
+   "yoy_growth_pct": 2.6,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "waikato",
+   "year": 2021,
+   "pop": 501400,
+   "yoy_growth_pct": 0.99,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "waikato",
+   "year": 2022,
+   "pop": 504300,
+   "yoy_growth_pct": 0.58,
+   "cagr5_pct": null,
+   "pop_gain_5yr": null
+  },
+  {
+   "region": "waikato",
+   "year": 2023,
+   "pop": 516800,
+   "yoy_growth_pct": 2.48,
+   "cagr5_pct": 1.68,
+   "pop_gain_5yr": 41200
+  },
+  {
+   "region": "waikato",
+   "year": 2024,
+   "pop": 527000,
+   "yoy_growth_pct": 1.97,
+   "cagr5_pct": 1.72,
+   "pop_gain_5yr": 43100
+  },
+  {
+   "region": "waikato",
+   "year": 2025,
+   "pop": 532100,
+   "yoy_growth_pct": 0.97,
+   "cagr5_pct": 1.39,
+   "pop_gain_5yr": 35600
+  }
+ ]
+}

@@ -1,0 +1,6 @@
+{
+  "status": "failed strict no-overflow check",
+  "width": 820,
+  "section": "consents-section",
+  "action": "Compare against unmodified archived UI to distinguish inherited layout from a rollback regression"
+}
